@@ -288,7 +288,6 @@ Class: Leader
 Pic: Leader Brock
 Gender: Male
 Music: Male
-Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 
@@ -594,7 +593,6 @@ Class: Leader
 Pic: Leader Blue
 Gender: Male
 Music: Male
-Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 
@@ -1012,7 +1010,6 @@ Class: RocketA
 Pic: Giovanni
 Gender: Male
 Music: Male
-Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 
@@ -1252,7 +1249,6 @@ Class: Leader
 Pic: Leader Erika
 Gender: Male
 Music: Male
-Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 
@@ -1949,7 +1945,6 @@ Class: RocketA
 Pic: Ariana
 Gender: Male
 Music: Rocket
-Items: Full Restore / Full Restore
 Double Battle: No
 AI: Smart Trainer
 
@@ -3105,7 +3100,6 @@ Class: Team Rocket
 Pic: Rocket Grunt M
 Gender: Male
 Music: Rocket
-Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 
@@ -3157,7 +3151,6 @@ Class: Team Rocket
 Pic: Rocket Grunt M
 Gender: Male
 Music: Rocket
-Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 
@@ -3665,7 +3658,6 @@ Class: Rival
 Pic: Silver
 Gender: Male
 Music: Silver
-Items: Potion
 Double Battle: No
 AI: Smart Trainer
 Mugshot: Yellow
@@ -3977,7 +3969,6 @@ Class: Rival
 Pic: Silver
 Gender: Male
 Music: Silver
-Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 Mugshot: Green
@@ -4036,7 +4027,6 @@ Class: Rival
 Pic: Silver
 Gender: Male
 Music: Silver
-Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 Mugshot: Pink
@@ -4510,7 +4500,6 @@ Class: Rival
 Pic: Silver
 Gender: Male
 Music: Silver
-Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 Mugshot: Pink
@@ -4624,7 +4613,6 @@ Class: Rival
 Pic: Silver
 Gender: Male
 Music: Silver
-Items: Potion
 Double Battle: No
 AI: Smart Trainer
 Mugshot: Yellow
@@ -4667,7 +4655,6 @@ Class: Leader
 Pic: Leader Misty
 Gender: Male
 Music: Male
-Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 
@@ -4717,7 +4704,6 @@ Class: Leader
 Pic: Leader Blue
 Gender: Male
 Music: Male
-Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 
@@ -5444,7 +5430,6 @@ Class: Team Rocket
 Pic: Rocket Grunt M
 Gender: Male
 Music: Rocket
-Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 
@@ -5458,7 +5443,6 @@ Class: Leader
 Pic: Leader Janine
 Gender: Male
 Music: Male
-Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 
@@ -5978,7 +5962,6 @@ Class: RocketA
 Pic: Archer
 Gender: Male
 Music: Rocket
-Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 
@@ -6054,7 +6037,6 @@ Class: Leader
 Pic: Leader Blaine
 Gender: Male
 Music: Male
-Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 
@@ -6416,7 +6398,6 @@ Class: Leader
 Pic: Leader Surge
 Gender: Male
 Music: Male
-Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 
@@ -6785,7 +6766,6 @@ Class: Rival
 Pic: Silver
 Gender: Male
 Music: Silver
-Items: Potion
 Double Battle: No
 AI: Smart Trainer
 Mugshot: Yellow
@@ -10778,7 +10758,6 @@ Class: Leader
 Pic: Leader Sabrina
 Gender: Male
 Music: Male
-Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 
@@ -11782,7 +11761,6 @@ Class: RocketA
 Pic: Archer
 Gender: Male
 Music: Rocket
-Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 
@@ -12061,7 +12039,6 @@ Class: Rival
 Pic: Silver
 Gender: Male
 Music: Silver
-Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 Mugshot: Green
@@ -12344,7 +12321,6 @@ Class: Rival
 Pic: Silver
 Gender: Male
 Music: Silver
-Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 Mugshot: Pink
@@ -12395,7 +12371,6 @@ Class: Rival
 Pic: Silver
 Gender: Male
 Music: Silver
-Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 Mugshot: Green
@@ -13696,7 +13671,6 @@ Class: Pkmn Trainer 1
 Pic: Red
 Gender: Male
 Music: Hg Champion
-Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 
@@ -13779,7 +13753,6 @@ Class: RocketA
 Pic: Archer
 Gender: Male
 Music: Rocket
-Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 
