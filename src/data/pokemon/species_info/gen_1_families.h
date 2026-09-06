@@ -14197,8 +14197,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggMoveLearnset = sCuboneEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_MAROWAK, CONDITIONS({IF_NOT_REGION, REGION_ALOLA})}
                             #if P_ALOLAN_FORMS
-                                ,{EVO_ITEM, ITEM_STRANGE_SOUVENIR, SPECIES_MAROWAK_ALOLA},
-                                {EVO_NONE, 0, SPECIES_MAROWAK_ALOLA_TOTEM}
+                                ,{EVO_ITEM, ITEM_STRANGE_SOUVENIR, SPECIES_MAROWAK_ALOLA}
                             #endif
                             ),
     },
