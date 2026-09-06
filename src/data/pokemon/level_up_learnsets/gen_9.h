@@ -3834,6 +3834,7 @@ static const struct LevelUpMove sElectivireLevelUpLearnset[] = {
     LEVEL_UP_MOVE(52, MOVE_LIGHT_SCREEN),
     LEVEL_UP_MOVE(58, MOVE_THUNDER),
     LEVEL_UP_MOVE(64, MOVE_GIGA_IMPACT),
+    LEVEL_UP_MOVE(72, MOVE_PLASMA_FISTS),
     LEVEL_UP_END
 };
 #endif //P_GEN_4_CROSS_EVOS
