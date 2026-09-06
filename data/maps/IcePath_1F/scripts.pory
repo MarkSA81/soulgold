@@ -7,8 +7,9 @@ IcePath_1F_MapScripts::
 
 IcePath_1F_OnTransition: 
 	call Common_EventScript_SetupRivalGfxId
+	setflag FLAG_HIDE_ICEPATH_RIVAL
 	goto_if_ne VAR_RIVAL_STATE, 9, IcePath_1F_OnTransition_SetTime
-	goto_if_unset FLAG_DEFEATED_MAHOGANY_TOWN_GYM, IcePath_1F_OnTransition_SetTime
+	clearflag FLAG_HIDE_ICEPATH_RIVAL
 
 IcePath_1F_OnTransition_SetTime:
 	callnative SetTimeBasedEncounters

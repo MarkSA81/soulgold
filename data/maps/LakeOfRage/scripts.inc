@@ -1026,7 +1026,7 @@ LakeOfRageCresseliaPath_Text_1:
 
 LakeOfRageCresseliaPath_Text_2:
 # 510 "data/maps/LakeOfRage/scripts.pory"
-	.string "Wood yew look at that. An inconspicious \n"
+	.string "Wood yew look at that. An inconspicuous\n"
 	.string "row of trees extends before you.$"
 
 LakeOfRageRoute50Sign_Text_0:

@@ -242,10 +242,9 @@ OlivineCity_Gym_EventScript_JasmineVictory::
 	setflag FLAG_DEFEATED_OLIVINE_CITY_GYM
 	addvar VAR_NUM_BADGES, 1
 	setvar VAR_0x8008, 6
-	setvar VAR_RIVAL_STATE, 9
-    setflag FLAG_HIDE_OLIVINE_RIVAL
+	call_if_lt VAR_RIVAL_STATE, 9, OlivineCity_Gym_EventScript_AdvanceRival
+	setflag FLAG_HIDE_OLIVINE_RIVAL
 	setflag FLAG_HIDE_ECRUTEAK_RIVAL
-	clearflag FLAG_HIDE_ICEPATH_RIVAL
 	call Common_EventScript_SetGymTrainers
 	giveitem ITEM_TM_FLASH_CANNON
 	msgbox OlivineCity_Gym_Text_JasmineIronTailSpeech, MSGBOX_DEFAULT
@@ -254,6 +253,11 @@ OlivineCity_Gym_EventScript_JasmineVictory::
 	release
 	end
 
+OlivineCity_Gym_EventScript_AdvanceRival::
+	setvar VAR_RIVAL_STATE, 9
+	clearflag FLAG_HIDE_ICEPATH_RIVAL
+	return
+
 OlivineCity_Gym_EventScript_CianwoodCheckMahog::
 	goto_if_set FLAG_DEFEATED_MAHOGANY_TOWN_GYM, OlivineCity_Gym_EventScript_Jasmine_Battle3
 	goto OlivineCity_Gym_EventScript_Jasmine_Battle2
@@ -261,7 +265,7 @@ OlivineCity_Gym_EventScript_CianwoodCheckMahog::
 OlivineCity_Gym_EventScript_MahogCheckCianwood::
 	goto_if_set FLAG_DEFEATED_CIANWOOD_GYM, OlivineCity_Gym_EventScript_Jasmine_Battle3
 	goto OlivineCity_Gym_EventScript_Jasmine_Battle2
-	
+
 OlivineCity_Gym_EventScript_Jasmine_Battle1::
 	trainerbattle_no_intro TRAINER_JASMINE_1, OlivineCity_Gym_Text_JasmineBetterTrainer
 	setflag FLAG_RECEIVED_BADGE_5

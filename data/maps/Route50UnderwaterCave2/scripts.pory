@@ -10,7 +10,9 @@ script GroudonEncounter {
             setflag(FLAG_GOT_REDORB)
         }
         if (!flag(FLAG_ONETIME_GROUDON)) {
-            addvar(VAR_POSTGAME_RIVAL_LEGENDARYQ, 1)
+            if (var(VAR_POSTGAME_RIVAL_LEGENDARYQ) == 7 || var(VAR_POSTGAME_RIVAL_LEGENDARYQ) == 8) {
+                addvar(VAR_POSTGAME_RIVAL_LEGENDARYQ, 1)
+            }
             setflag(FLAG_ONETIME_GROUDON)
         }
     }

@@ -111,7 +111,7 @@ NewBarkTownRivalHouseRival::
 	compare VAR_RIVAL_STATE, 12
 	goto_if_ge NewBarkTownRivalHouseRival_5
 NewBarkTownRivalHouseRival_4:
-# 212 "data/maps/NewBarkTown_House3/scripts.pory"
+# 250 "data/maps/NewBarkTown_House3/scripts.pory"
 	release
 	end
 
@@ -124,155 +124,258 @@ NewBarkTownRivalHouseRival_2:
 
 NewBarkTownRivalHouseRival_5:
 # 70 "data/maps/NewBarkTown_House3/scripts.pory"
-	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 0
-	goto_if_eq NewBarkTownRivalHouseRival_8
-# 105 "data/maps/NewBarkTown_House3/scripts.pory"
-	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 1
-	goto_if_eq NewBarkTownRivalHouseRival_11
-NewBarkTownRivalHouseRival_10:
-# 109 "data/maps/NewBarkTown_House3/scripts.pory"
-	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 2
-	goto_if_eq NewBarkTownRivalHouseRival_14
-NewBarkTownRivalHouseRival_13:
-# 115 "data/maps/NewBarkTown_House3/scripts.pory"
-	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 3
-	goto_if_eq NewBarkTownRivalHouseRival_17
-# 137 "data/maps/NewBarkTown_House3/scripts.pory"
-	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 4
-	goto_if_eq NewBarkTownRivalHouseRival_20
-NewBarkTownRivalHouseRival_19:
-# 142 "data/maps/NewBarkTown_House3/scripts.pory"
-	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 5
-	goto_if_eq NewBarkTownRivalHouseRival_23
-NewBarkTownRivalHouseRival_22:
-# 152 "data/maps/NewBarkTown_House3/scripts.pory"
-	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 6
-	goto_if_eq NewBarkTownRivalHouseRival_26
-# 174 "data/maps/NewBarkTown_House3/scripts.pory"
 	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 7
-	goto_if_eq NewBarkTownRivalHouseRival_29
-# 174 "data/maps/NewBarkTown_House3/scripts.pory"
-	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 8
-	goto_if_eq NewBarkTownRivalHouseRival_29
-# 185 "data/maps/NewBarkTown_House3/scripts.pory"
-	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 9
-	goto_if_eq NewBarkTownRivalHouseRival_34
-# 207 "data/maps/NewBarkTown_House3/scripts.pory"
-	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 10
+	goto_if_ge NewBarkTownRivalHouseRival_9
+NewBarkTownRivalHouseRival_7:
+# 84 "data/maps/NewBarkTown_House3/scripts.pory"
+	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 5
+	goto_if_ge NewBarkTownRivalHouseRival_14
+NewBarkTownRivalHouseRival_12:
+# 95 "data/maps/NewBarkTown_House3/scripts.pory"
+	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 0
+	goto_if_eq NewBarkTownRivalHouseRival_20
+# 130 "data/maps/NewBarkTown_House3/scripts.pory"
+	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 1
+	goto_if_eq NewBarkTownRivalHouseRival_27
+NewBarkTownRivalHouseRival_26:
+# 134 "data/maps/NewBarkTown_House3/scripts.pory"
+	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 2
+	goto_if_eq NewBarkTownRivalHouseRival_30
+NewBarkTownRivalHouseRival_29:
+# 140 "data/maps/NewBarkTown_House3/scripts.pory"
+	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 3
+	goto_if_eq NewBarkTownRivalHouseRival_33
+# 162 "data/maps/NewBarkTown_House3/scripts.pory"
+	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 4
 	goto_if_eq NewBarkTownRivalHouseRival_36
+NewBarkTownRivalHouseRival_35:
+# 167 "data/maps/NewBarkTown_House3/scripts.pory"
+	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 5
+	goto_if_eq NewBarkTownRivalHouseRival_39
+NewBarkTownRivalHouseRival_38:
+# 177 "data/maps/NewBarkTown_House3/scripts.pory"
+	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 6
+	goto_if_eq NewBarkTownRivalHouseRival_42
+# 207 "data/maps/NewBarkTown_House3/scripts.pory"
+	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 7
+	goto_if_eq NewBarkTownRivalHouseRival_45
+# 207 "data/maps/NewBarkTown_House3/scripts.pory"
+	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 8
+	goto_if_eq NewBarkTownRivalHouseRival_45
+NewBarkTownRivalHouseRival_44:
+# 212 "data/maps/NewBarkTown_House3/scripts.pory"
+	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 7
+	goto_if_eq NewBarkTownRivalHouseRival_53
+# 212 "data/maps/NewBarkTown_House3/scripts.pory"
+	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 8
+	goto_if_eq NewBarkTownRivalHouseRival_53
+# 223 "data/maps/NewBarkTown_House3/scripts.pory"
+	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 9
+	goto_if_eq NewBarkTownRivalHouseRival_65
+# 245 "data/maps/NewBarkTown_House3/scripts.pory"
+	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 10
+	goto_if_eq NewBarkTownRivalHouseRival_67
 	goto NewBarkTownRivalHouseRival_4
 
 NewBarkTownRivalHouseRival_8:
 # 71 "data/maps/NewBarkTown_House3/scripts.pory"
-	msgbox NewBarkTownRivalHouseRival_Text_1
-# 101 "data/maps/NewBarkTown_House3/scripts.pory"
-	setvar VAR_POSTGAME_RIVAL_LEGENDARYQ, 1
-# 102 "data/maps/NewBarkTown_House3/scripts.pory"
-	release
-	end
+	checkitem ITEM_HM_DIVE
+# 72 "data/maps/NewBarkTown_House3/scripts.pory"
+	compare VAR_RESULT, FALSE
+	goto_if_eq NewBarkTownRivalHouseRival_17
+	goto NewBarkTownRivalHouseRival_7
 
-NewBarkTownRivalHouseRival_11:
-# 106 "data/maps/NewBarkTown_House3/scripts.pory"
-	msgbox NewBarkTownRivalHouseRival_Text_2
-	goto NewBarkTownRivalHouseRival_10
+NewBarkTownRivalHouseRival_9:
+# 70 "data/maps/NewBarkTown_House3/scripts.pory"
+	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 10
+	goto_if_le NewBarkTownRivalHouseRival_8
+	goto NewBarkTownRivalHouseRival_7
+
+NewBarkTownRivalHouseRival_13:
+# 85 "data/maps/NewBarkTown_House3/scripts.pory"
+	getcaughtmon SPECIES_DARKRAI
+# 86 "data/maps/NewBarkTown_House3/scripts.pory"
+	compare VAR_RESULT, FALSE
+	goto_if_eq NewBarkTownRivalHouseRival_22
+	goto NewBarkTownRivalHouseRival_12
 
 NewBarkTownRivalHouseRival_14:
-# 110 "data/maps/NewBarkTown_House3/scripts.pory"
-	msgbox NewBarkTownRivalHouseRival_Text_3
-	goto NewBarkTownRivalHouseRival_13
+# 84 "data/maps/NewBarkTown_House3/scripts.pory"
+	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 10
+	goto_if_le NewBarkTownRivalHouseRival_13
+	goto NewBarkTownRivalHouseRival_12
 
 NewBarkTownRivalHouseRival_17:
-# 116 "data/maps/NewBarkTown_House3/scripts.pory"
-	msgbox NewBarkTownRivalHouseRival_Text_4
-# 133 "data/maps/NewBarkTown_House3/scripts.pory"
-	setvar VAR_POSTGAME_RIVAL_LEGENDARYQ, 4
-# 134 "data/maps/NewBarkTown_House3/scripts.pory"
-	release
-	end
+# 73 "data/maps/NewBarkTown_House3/scripts.pory"
+	msgbox NewBarkTownRivalHouseRival_Text_1
+# 75 "data/maps/NewBarkTown_House3/scripts.pory"
+	giveitem ITEM_HM_DIVE
+# 76 "data/maps/NewBarkTown_House3/scripts.pory"
+	createfieldmugshotrival
+# 77 "data/maps/NewBarkTown_House3/scripts.pory"
+	checkitem ITEM_HM_DIVE
+# 78 "data/maps/NewBarkTown_House3/scripts.pory"
+	compare VAR_RESULT, FALSE
+	goto_if_eq NewBarkTownRivalHouseRival_24
+	goto NewBarkTownRivalHouseRival_7
 
 NewBarkTownRivalHouseRival_20:
-# 138 "data/maps/NewBarkTown_House3/scripts.pory"
+# 96 "data/maps/NewBarkTown_House3/scripts.pory"
+	msgbox NewBarkTownRivalHouseRival_Text_3
+# 126 "data/maps/NewBarkTown_House3/scripts.pory"
+	setvar VAR_POSTGAME_RIVAL_LEGENDARYQ, 1
+# 127 "data/maps/NewBarkTown_House3/scripts.pory"
+	release
+	end
+
+NewBarkTownRivalHouseRival_22:
+# 87 "data/maps/NewBarkTown_House3/scripts.pory"
+	msgbox NewBarkTownRivalHouseRival_Text_2
+# 91 "data/maps/NewBarkTown_House3/scripts.pory"
+	release
+	end
+
+NewBarkTownRivalHouseRival_24:
+# 79 "data/maps/NewBarkTown_House3/scripts.pory"
+	release
+	end
+
+NewBarkTownRivalHouseRival_27:
+# 131 "data/maps/NewBarkTown_House3/scripts.pory"
+	msgbox NewBarkTownRivalHouseRival_Text_4
+	goto NewBarkTownRivalHouseRival_26
+
+NewBarkTownRivalHouseRival_30:
+# 135 "data/maps/NewBarkTown_House3/scripts.pory"
 	msgbox NewBarkTownRivalHouseRival_Text_5
-	goto NewBarkTownRivalHouseRival_19
+	goto NewBarkTownRivalHouseRival_29
 
-NewBarkTownRivalHouseRival_23:
-# 143 "data/maps/NewBarkTown_House3/scripts.pory"
+NewBarkTownRivalHouseRival_33:
+# 141 "data/maps/NewBarkTown_House3/scripts.pory"
 	msgbox NewBarkTownRivalHouseRival_Text_6
-# 150 "data/maps/NewBarkTown_House3/scripts.pory"
-	setvar VAR_POSTGAME_RIVAL_LEGENDARYQ, 6
-	goto NewBarkTownRivalHouseRival_22
-
-NewBarkTownRivalHouseRival_26:
-# 153 "data/maps/NewBarkTown_House3/scripts.pory"
-	msgbox NewBarkTownRivalHouseRival_Text_7
-# 165 "data/maps/NewBarkTown_House3/scripts.pory"
-	giveitem ITEM_HM_DIVE
-# 166 "data/maps/NewBarkTown_House3/scripts.pory"
-	setvar VAR_POSTGAME_RIVAL_LEGENDARYQ, 7
-# 167 "data/maps/NewBarkTown_House3/scripts.pory"
-	createfieldmugshotrival
-# 168 "data/maps/NewBarkTown_House3/scripts.pory"
-	msgbox NewBarkTownRivalHouseRival_Text_8
-# 171 "data/maps/NewBarkTown_House3/scripts.pory"
-	release
-	end
-
-NewBarkTownRivalHouseRival_29:
-# 175 "data/maps/NewBarkTown_House3/scripts.pory"
-	msgbox NewBarkTownRivalHouseRival_Text_9
-# 182 "data/maps/NewBarkTown_House3/scripts.pory"
-	release
-	end
-
-NewBarkTownRivalHouseRival_34:
-# 186 "data/maps/NewBarkTown_House3/scripts.pory"
-	msgbox NewBarkTownRivalHouseRival_Text_10
-# 199 "data/maps/NewBarkTown_House3/scripts.pory"
-	giveitem ITEM_OVAL_CHARM
-# 200 "data/maps/NewBarkTown_House3/scripts.pory"
-	createfieldmugshotrival
-# 201 "data/maps/NewBarkTown_House3/scripts.pory"
-	msgbox NewBarkTownRivalHouseRival_Text_11
-# 203 "data/maps/NewBarkTown_House3/scripts.pory"
-	setvar VAR_POSTGAME_RIVAL_LEGENDARYQ, 10
-# 204 "data/maps/NewBarkTown_House3/scripts.pory"
+# 158 "data/maps/NewBarkTown_House3/scripts.pory"
+	setvar VAR_POSTGAME_RIVAL_LEGENDARYQ, 4
+# 159 "data/maps/NewBarkTown_House3/scripts.pory"
 	release
 	end
 
 NewBarkTownRivalHouseRival_36:
+# 163 "data/maps/NewBarkTown_House3/scripts.pory"
+	msgbox NewBarkTownRivalHouseRival_Text_7
+	goto NewBarkTownRivalHouseRival_35
+
+NewBarkTownRivalHouseRival_39:
+# 168 "data/maps/NewBarkTown_House3/scripts.pory"
+	msgbox NewBarkTownRivalHouseRival_Text_8
+# 175 "data/maps/NewBarkTown_House3/scripts.pory"
+	setvar VAR_POSTGAME_RIVAL_LEGENDARYQ, 6
+	goto NewBarkTownRivalHouseRival_38
+
+NewBarkTownRivalHouseRival_42:
+# 178 "data/maps/NewBarkTown_House3/scripts.pory"
+	msgbox NewBarkTownRivalHouseRival_Text_9
+# 190 "data/maps/NewBarkTown_House3/scripts.pory"
+	checkitem ITEM_HM_DIVE
+# 191 "data/maps/NewBarkTown_House3/scripts.pory"
+	compare VAR_RESULT, FALSE
+	goto_if_eq NewBarkTownRivalHouseRival_50
+NewBarkTownRivalHouseRival_49:
+# 194 "data/maps/NewBarkTown_House3/scripts.pory"
+	checkitem ITEM_HM_DIVE
+# 195 "data/maps/NewBarkTown_House3/scripts.pory"
+	compare VAR_RESULT, FALSE
+	goto_if_eq NewBarkTownRivalHouseRival_62
+# 199 "data/maps/NewBarkTown_House3/scripts.pory"
+	setvar VAR_POSTGAME_RIVAL_LEGENDARYQ, 7
+# 200 "data/maps/NewBarkTown_House3/scripts.pory"
+	createfieldmugshotrival
+# 201 "data/maps/NewBarkTown_House3/scripts.pory"
+	msgbox NewBarkTownRivalHouseRival_Text_10
+# 204 "data/maps/NewBarkTown_House3/scripts.pory"
+	release
+	end
+
+NewBarkTownRivalHouseRival_45:
 # 208 "data/maps/NewBarkTown_House3/scripts.pory"
+	goto_if_set FLAG_ONETIME_GROUDON, NewBarkTownRivalHouseRival_58
+	goto NewBarkTownRivalHouseRival_44
+
+NewBarkTownRivalHouseRival_50:
+# 192 "data/maps/NewBarkTown_House3/scripts.pory"
+	giveitem ITEM_HM_DIVE
+	goto NewBarkTownRivalHouseRival_49
+
+NewBarkTownRivalHouseRival_53:
+# 213 "data/maps/NewBarkTown_House3/scripts.pory"
+	msgbox NewBarkTownRivalHouseRival_Text_11
+# 220 "data/maps/NewBarkTown_House3/scripts.pory"
+	release
+	end
+
+NewBarkTownRivalHouseRival_57:
+# 209 "data/maps/NewBarkTown_House3/scripts.pory"
+	setvar VAR_POSTGAME_RIVAL_LEGENDARYQ, 9
+	goto NewBarkTownRivalHouseRival_44
+
+NewBarkTownRivalHouseRival_58:
+# 208 "data/maps/NewBarkTown_House3/scripts.pory"
+	goto_if_set FLAG_ONETIME_KYOGRE, NewBarkTownRivalHouseRival_57
+	goto NewBarkTownRivalHouseRival_44
+
+NewBarkTownRivalHouseRival_62:
+# 196 "data/maps/NewBarkTown_House3/scripts.pory"
+	release
+	end
+
+NewBarkTownRivalHouseRival_65:
+# 224 "data/maps/NewBarkTown_House3/scripts.pory"
 	msgbox NewBarkTownRivalHouseRival_Text_12
+# 237 "data/maps/NewBarkTown_House3/scripts.pory"
+	giveitem ITEM_OVAL_CHARM
+# 238 "data/maps/NewBarkTown_House3/scripts.pory"
+	createfieldmugshotrival
+# 239 "data/maps/NewBarkTown_House3/scripts.pory"
+	msgbox NewBarkTownRivalHouseRival_Text_13
+# 241 "data/maps/NewBarkTown_House3/scripts.pory"
+	setvar VAR_POSTGAME_RIVAL_LEGENDARYQ, 10
+# 242 "data/maps/NewBarkTown_House3/scripts.pory"
+	release
+	end
+
+NewBarkTownRivalHouseRival_67:
+# 246 "data/maps/NewBarkTown_House3/scripts.pory"
+	msgbox NewBarkTownRivalHouseRival_Text_14
 	goto NewBarkTownRivalHouseRival_4
 
 
 NewBarkTownRivalHouseMarill::
-# 218 "data/maps/NewBarkTown_House3/scripts.pory"
+# 256 "data/maps/NewBarkTown_House3/scripts.pory"
 	lock
-# 219 "data/maps/NewBarkTown_House3/scripts.pory"
+# 257 "data/maps/NewBarkTown_House3/scripts.pory"
 	faceplayer
-# 220 "data/maps/NewBarkTown_House3/scripts.pory"
+# 258 "data/maps/NewBarkTown_House3/scripts.pory"
 	playmoncry SPECIES_MARILL, CRY_MODE_NORMAL
-# 221 "data/maps/NewBarkTown_House3/scripts.pory"
+# 259 "data/maps/NewBarkTown_House3/scripts.pory"
 	msgbox NewBarkTownRivalHouseMarill_Text_0
-# 222 "data/maps/NewBarkTown_House3/scripts.pory"
+# 260 "data/maps/NewBarkTown_House3/scripts.pory"
 	waitmoncry
-# 223 "data/maps/NewBarkTown_House3/scripts.pory"
+# 261 "data/maps/NewBarkTown_House3/scripts.pory"
 	release
 	end
 
 
 NewBarkTownRivalHouseAzumarill::
-# 228 "data/maps/NewBarkTown_House3/scripts.pory"
+# 266 "data/maps/NewBarkTown_House3/scripts.pory"
 	lock
-# 229 "data/maps/NewBarkTown_House3/scripts.pory"
+# 267 "data/maps/NewBarkTown_House3/scripts.pory"
 	faceplayer
-# 230 "data/maps/NewBarkTown_House3/scripts.pory"
+# 268 "data/maps/NewBarkTown_House3/scripts.pory"
 	playmoncry SPECIES_AZUMARILL, CRY_MODE_NORMAL
-# 231 "data/maps/NewBarkTown_House3/scripts.pory"
+# 269 "data/maps/NewBarkTown_House3/scripts.pory"
 	msgbox NewBarkTownRivalHouseAzumarill_Text_0
-# 232 "data/maps/NewBarkTown_House3/scripts.pory"
+# 270 "data/maps/NewBarkTown_House3/scripts.pory"
 	waitmoncry
-# 233 "data/maps/NewBarkTown_House3/scripts.pory"
+# 271 "data/maps/NewBarkTown_House3/scripts.pory"
 	release
 	end
 
@@ -321,7 +424,18 @@ NewBarkTownRivalHouseRival_Text_0:
 	.string "any new places?$"
 
 NewBarkTownRivalHouseRival_Text_1:
-# 71 "data/maps/NewBarkTown_House3/scripts.pory"
+# 73 "data/maps/NewBarkTown_House3/scripts.pory"
+	.string "You'll need this to explore the\n"
+	.string "underwater areas of Johto!$"
+
+NewBarkTownRivalHouseRival_Text_2:
+# 87 "data/maps/NewBarkTown_House3/scripts.pory"
+	.string "We still need to investigate Darkrai.\p"
+	.string "Take Cresselia to the old inn in\n"
+	.string "Cherrygrove City!$"
+
+NewBarkTownRivalHouseRival_Text_3:
+# 96 "data/maps/NewBarkTown_House3/scripts.pory"
 	.string "Hey {PLAYER}! What's up?\p"
 	.string "So I've been doing some thinking, and\n"
 	.string "decided that I want to help Prof. Elm.\l"
@@ -345,19 +459,19 @@ NewBarkTownRivalHouseRival_Text_1:
 	.string "I hear that someone living near or in\n"
 	.string "the Lake of Rage might know more.$"
 
-NewBarkTownRivalHouseRival_Text_2:
-# 106 "data/maps/NewBarkTown_House3/scripts.pory"
+NewBarkTownRivalHouseRival_Text_4:
+# 131 "data/maps/NewBarkTown_House3/scripts.pory"
 	.string "I hear that someone living near or in\n"
 	.string "the Lake of Rage might know more.$"
 
-NewBarkTownRivalHouseRival_Text_3:
-# 110 "data/maps/NewBarkTown_House3/scripts.pory"
+NewBarkTownRivalHouseRival_Text_5:
+# 135 "data/maps/NewBarkTown_House3/scripts.pory"
 	.string "Oh you found Cresselia's location?\p"
 	.string "That's great! You should catch it\n"
 	.string "if you're able to!$"
 
-NewBarkTownRivalHouseRival_Text_4:
-# 116 "data/maps/NewBarkTown_House3/scripts.pory"
+NewBarkTownRivalHouseRival_Text_6:
+# 141 "data/maps/NewBarkTown_House3/scripts.pory"
 	.string "You caught Cresselia? \n"
 	.string "Nice!\p"
 	.string "I've been researching Darkrai's\n"
@@ -372,22 +486,22 @@ NewBarkTownRivalHouseRival_Text_4:
 	.string "and go check out the inn in Cherrygrove\l"
 	.string "City. See if you can find out anything!$"
 
-NewBarkTownRivalHouseRival_Text_5:
-# 138 "data/maps/NewBarkTown_House3/scripts.pory"
+NewBarkTownRivalHouseRival_Text_7:
+# 163 "data/maps/NewBarkTown_House3/scripts.pory"
 	.string "Go check out the old inn in\n"
 	.string "Cherrygrove City. Remember to\l"
 	.string "take Cresselia with you!$"
 
-NewBarkTownRivalHouseRival_Text_6:
-# 143 "data/maps/NewBarkTown_House3/scripts.pory"
+NewBarkTownRivalHouseRival_Text_8:
+# 168 "data/maps/NewBarkTown_House3/scripts.pory"
 	.string "You caught Darkrai! Excellent!\p"
 	.string "You look like you just had a\n"
 	.string "nightmare though, did something\l"
 	.string "happen?\p"
 	.string "Anyway!$"
 
-NewBarkTownRivalHouseRival_Text_7:
-# 153 "data/maps/NewBarkTown_House3/scripts.pory"
+NewBarkTownRivalHouseRival_Text_9:
+# 178 "data/maps/NewBarkTown_House3/scripts.pory"
 	.string "{PLAYER}! I've found another lead\n"
 	.string "on legendaries!\p"
 	.string "Apparently, Hoenn's very own duo\n"
@@ -398,14 +512,14 @@ NewBarkTownRivalHouseRival_Text_7:
 	.string "hard for them.\p"
 	.string "You're going to need this!$"
 
-NewBarkTownRivalHouseRival_Text_8:
-# 168 "data/maps/NewBarkTown_House3/scripts.pory"
+NewBarkTownRivalHouseRival_Text_10:
+# 201 "data/maps/NewBarkTown_House3/scripts.pory"
 	.string "They are probably quite far away\n"
 	.string "from each other, so you should\l"
 	.string "scour the region far and wide.$"
 
-NewBarkTownRivalHouseRival_Text_9:
-# 175 "data/maps/NewBarkTown_House3/scripts.pory"
+NewBarkTownRivalHouseRival_Text_11:
+# 213 "data/maps/NewBarkTown_House3/scripts.pory"
 	.string "Groudon is likely hidden in a cave which\n"
 	.string "can only be accessed underwater. Maybe\l"
 	.string "close to a hotter climate?\p"
@@ -413,8 +527,8 @@ NewBarkTownRivalHouseRival_Text_9:
 	.string "the open sea. So check on the\l"
 	.string "coastlines!$"
 
-NewBarkTownRivalHouseRival_Text_10:
-# 186 "data/maps/NewBarkTown_House3/scripts.pory"
+NewBarkTownRivalHouseRival_Text_12:
+# 224 "data/maps/NewBarkTown_House3/scripts.pory"
 	.string "You caught them both?!\p"
 	.string "Send me your Pokédex data about them\n"
 	.string "later. Elm is going to be thrilled\l"
@@ -426,20 +540,20 @@ NewBarkTownRivalHouseRival_Text_10:
 	.string "I don't have much to give, but you\n"
 	.string "can have this!$"
 
-NewBarkTownRivalHouseRival_Text_11:
-# 201 "data/maps/NewBarkTown_House3/scripts.pory"
+NewBarkTownRivalHouseRival_Text_13:
+# 239 "data/maps/NewBarkTown_House3/scripts.pory"
 	.string "So, thanks {PLAYER}! For being\n"
 	.string "a genuine friend!$"
 
-NewBarkTownRivalHouseRival_Text_12:
-# 208 "data/maps/NewBarkTown_House3/scripts.pory"
+NewBarkTownRivalHouseRival_Text_14:
+# 246 "data/maps/NewBarkTown_House3/scripts.pory"
 	.string "Hey {PLAYER}! How's it going?\n"
 	.string "Caught any new special Pokémon?$"
 
 NewBarkTownRivalHouseMarill_Text_0:
-# 221 "data/maps/NewBarkTown_House3/scripts.pory"
+# 259 "data/maps/NewBarkTown_House3/scripts.pory"
 	.string "Marii!$"
 
 NewBarkTownRivalHouseAzumarill_Text_0:
-# 231 "data/maps/NewBarkTown_House3/scripts.pory"
+# 269 "data/maps/NewBarkTown_House3/scripts.pory"
 	.string "Azumarill: Azuu!$"

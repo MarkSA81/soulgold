@@ -487,226 +487,234 @@ OlivineCity_Gym_EventScript_JasmineVictory::
 # 244 "data/maps/OlivineCity_Gym/scripts.pory"
 	setvar VAR_0x8008, 6
 # 245 "data/maps/OlivineCity_Gym/scripts.pory"
-	setvar VAR_RIVAL_STATE, 9
+	call_if_lt VAR_RIVAL_STATE, 9, OlivineCity_Gym_EventScript_AdvanceRival
 # 246 "data/maps/OlivineCity_Gym/scripts.pory"
-    setflag FLAG_HIDE_OLIVINE_RIVAL
+	setflag FLAG_HIDE_OLIVINE_RIVAL
 # 247 "data/maps/OlivineCity_Gym/scripts.pory"
 	setflag FLAG_HIDE_ECRUTEAK_RIVAL
 # 248 "data/maps/OlivineCity_Gym/scripts.pory"
-	clearflag FLAG_HIDE_ICEPATH_RIVAL
-# 249 "data/maps/OlivineCity_Gym/scripts.pory"
 	call Common_EventScript_SetGymTrainers
-# 250 "data/maps/OlivineCity_Gym/scripts.pory"
+# 249 "data/maps/OlivineCity_Gym/scripts.pory"
 	giveitem ITEM_TM_FLASH_CANNON
-# 251 "data/maps/OlivineCity_Gym/scripts.pory"
+# 250 "data/maps/OlivineCity_Gym/scripts.pory"
 	msgbox OlivineCity_Gym_Text_JasmineIronTailSpeech, MSGBOX_DEFAULT
-# 252 "data/maps/OlivineCity_Gym/scripts.pory"
+# 251 "data/maps/OlivineCity_Gym/scripts.pory"
 	setvar VAR_OLIVINE_CITY_STATE, 8
-# 253 "data/maps/OlivineCity_Gym/scripts.pory"
+# 252 "data/maps/OlivineCity_Gym/scripts.pory"
 	closemessage
-# 254 "data/maps/OlivineCity_Gym/scripts.pory"
+# 253 "data/maps/OlivineCity_Gym/scripts.pory"
 	release
-# 255 "data/maps/OlivineCity_Gym/scripts.pory"
+# 254 "data/maps/OlivineCity_Gym/scripts.pory"
 	end
-# 256 "data/maps/OlivineCity_Gym/scripts.pory"
+# 255 "data/maps/OlivineCity_Gym/scripts.pory"
 
+# 256 "data/maps/OlivineCity_Gym/scripts.pory"
+OlivineCity_Gym_EventScript_AdvanceRival::
 # 257 "data/maps/OlivineCity_Gym/scripts.pory"
-OlivineCity_Gym_EventScript_CianwoodCheckMahog::
+	setvar VAR_RIVAL_STATE, 9
 # 258 "data/maps/OlivineCity_Gym/scripts.pory"
-	goto_if_set FLAG_DEFEATED_MAHOGANY_TOWN_GYM, OlivineCity_Gym_EventScript_Jasmine_Battle3
+	clearflag FLAG_HIDE_ICEPATH_RIVAL
 # 259 "data/maps/OlivineCity_Gym/scripts.pory"
-	goto OlivineCity_Gym_EventScript_Jasmine_Battle2
+	return
 # 260 "data/maps/OlivineCity_Gym/scripts.pory"
 
 # 261 "data/maps/OlivineCity_Gym/scripts.pory"
-OlivineCity_Gym_EventScript_MahogCheckCianwood::
+OlivineCity_Gym_EventScript_CianwoodCheckMahog::
 # 262 "data/maps/OlivineCity_Gym/scripts.pory"
-	goto_if_set FLAG_DEFEATED_CIANWOOD_GYM, OlivineCity_Gym_EventScript_Jasmine_Battle3
+	goto_if_set FLAG_DEFEATED_MAHOGANY_TOWN_GYM, OlivineCity_Gym_EventScript_Jasmine_Battle3
 # 263 "data/maps/OlivineCity_Gym/scripts.pory"
 	goto OlivineCity_Gym_EventScript_Jasmine_Battle2
 # 264 "data/maps/OlivineCity_Gym/scripts.pory"
-	
+
 # 265 "data/maps/OlivineCity_Gym/scripts.pory"
-OlivineCity_Gym_EventScript_Jasmine_Battle1::
+OlivineCity_Gym_EventScript_MahogCheckCianwood::
 # 266 "data/maps/OlivineCity_Gym/scripts.pory"
-	trainerbattle_no_intro TRAINER_JASMINE_1, OlivineCity_Gym_Text_JasmineBetterTrainer
+	goto_if_set FLAG_DEFEATED_CIANWOOD_GYM, OlivineCity_Gym_EventScript_Jasmine_Battle3
 # 267 "data/maps/OlivineCity_Gym/scripts.pory"
-	setflag FLAG_RECEIVED_BADGE_5
+	goto OlivineCity_Gym_EventScript_Jasmine_Battle2
 # 268 "data/maps/OlivineCity_Gym/scripts.pory"
-	goto OlivineCity_Gym_EventScript_JasmineVictory
+
 # 269 "data/maps/OlivineCity_Gym/scripts.pory"
-
+OlivineCity_Gym_EventScript_Jasmine_Battle1::
 # 270 "data/maps/OlivineCity_Gym/scripts.pory"
-OlivineCity_Gym_EventScript_Jasmine_Battle2::
+	trainerbattle_no_intro TRAINER_JASMINE_1, OlivineCity_Gym_Text_JasmineBetterTrainer
 # 271 "data/maps/OlivineCity_Gym/scripts.pory"
-	trainerbattle_no_intro TRAINER_JASMINE_1_2, OlivineCity_Gym_Text_JasmineBetterTrainer
+	setflag FLAG_RECEIVED_BADGE_5
 # 272 "data/maps/OlivineCity_Gym/scripts.pory"
-	setflag FLAG_RECEIVED_BADGE_6
+	goto OlivineCity_Gym_EventScript_JasmineVictory
 # 273 "data/maps/OlivineCity_Gym/scripts.pory"
-	goto OlivineCity_Gym_EventScript_JasmineVictory
+
 # 274 "data/maps/OlivineCity_Gym/scripts.pory"
-
+OlivineCity_Gym_EventScript_Jasmine_Battle2::
 # 275 "data/maps/OlivineCity_Gym/scripts.pory"
-OlivineCity_Gym_EventScript_Jasmine_Battle3::
+	trainerbattle_no_intro TRAINER_JASMINE_1_2, OlivineCity_Gym_Text_JasmineBetterTrainer
 # 276 "data/maps/OlivineCity_Gym/scripts.pory"
-	trainerbattle_no_intro TRAINER_JASMINE_1_3, OlivineCity_Gym_Text_JasmineBetterTrainer
+	setflag FLAG_RECEIVED_BADGE_6
 # 277 "data/maps/OlivineCity_Gym/scripts.pory"
-	setflag FLAG_RECEIVED_BADGE_7
-# 278 "data/maps/OlivineCity_Gym/scripts.pory"
 	goto OlivineCity_Gym_EventScript_JasmineVictory
+# 278 "data/maps/OlivineCity_Gym/scripts.pory"
+
 # 279 "data/maps/OlivineCity_Gym/scripts.pory"
-
+OlivineCity_Gym_EventScript_Jasmine_Battle3::
 # 280 "data/maps/OlivineCity_Gym/scripts.pory"
-OlivineCity_Gym_EventScript_Jasmine_Defeated::
+	trainerbattle_no_intro TRAINER_JASMINE_1_3, OlivineCity_Gym_Text_JasmineBetterTrainer
 # 281 "data/maps/OlivineCity_Gym/scripts.pory"
-	msgbox OlivineCity_Gym_Text_JasmineGoodLuck, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_BADGE_7
 # 282 "data/maps/OlivineCity_Gym/scripts.pory"
-	closemessage
+	goto OlivineCity_Gym_EventScript_JasmineVictory
 # 283 "data/maps/OlivineCity_Gym/scripts.pory"
-	release
+
 # 284 "data/maps/OlivineCity_Gym/scripts.pory"
-	end
+OlivineCity_Gym_EventScript_Jasmine_Defeated::
 # 285 "data/maps/OlivineCity_Gym/scripts.pory"
-
+	msgbox OlivineCity_Gym_Text_JasmineGoodLuck, MSGBOX_DEFAULT
 # 286 "data/maps/OlivineCity_Gym/scripts.pory"
-
+	closemessage
 # 287 "data/maps/OlivineCity_Gym/scripts.pory"
-OlivineCity_Gym_Text_JasmineSteelTypeIntro:
+	release
 # 288 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "…Thank you for your help at the\n"
+	end
 # 289 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "Lighthouse…\p"
+
 # 290 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "But this is different.\n"
+
 # 291 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "Please allow me to introduce myself.\p"
+OlivineCity_Gym_Text_JasmineSteelTypeIntro:
 # 292 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "I am Jasmine, a Gym Leader.\n"
+	.string "…Thank you for your help at the\n"
 # 293 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "I use the Steel-type.\p"
+	.string "Lighthouse…\p"
 # 294 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "…Do you know about the Steel-type?\p"
+	.string "But this is different.\n"
 # 295 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "It's a type that was only recently\n"
+	.string "Please allow me to introduce myself.\p"
 # 296 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "discovered.\p"
+	.string "I am Jasmine, a Gym Leader.\n"
 # 297 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "…Um… May I begin?$"
+	.string "I use the Steel-type.\p"
 # 298 "data/maps/OlivineCity_Gym/scripts.pory"
-
+	.string "…Do you know about the Steel-type?\p"
 # 299 "data/maps/OlivineCity_Gym/scripts.pory"
-OlivineCity_Gym_Text_JasmineBetterTrainer:
+	.string "It's a type that was only recently\n"
 # 300 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "…You are a better trainer than me,\n"
+	.string "discovered.\p"
 # 301 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "in both skill and kindness.\p"
+	.string "…Um… May I begin?$"
 # 302 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "In accordance with League rules,\n"
+
 # 303 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "I confer upon you this Badge.$"
+OlivineCity_Gym_Text_JasmineBetterTrainer:
 # 304 "data/maps/OlivineCity_Gym/scripts.pory"
-
+	.string "…You are a better trainer than me,\n"
 # 305 "data/maps/OlivineCity_Gym/scripts.pory"
-OlivineCity_Gym_Text_ReceivedMineralBadge:
+	.string "in both skill and kindness.\p"
 # 306 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "{PLAYER} received Mineralbadge.$"
+	.string "In accordance with League rules,\n"
 # 307 "data/maps/OlivineCity_Gym/scripts.pory"
-
+	.string "I confer upon you this Badge.$"
 # 308 "data/maps/OlivineCity_Gym/scripts.pory"
-OlivineCity_Gym_Text_JasmineBadgeSpeech:
-# 309 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "…Um… Please take this too…$"
-# 310 "data/maps/OlivineCity_Gym/scripts.pory"
 
+# 309 "data/maps/OlivineCity_Gym/scripts.pory"
+OlivineCity_Gym_Text_ReceivedMineralBadge:
+# 310 "data/maps/OlivineCity_Gym/scripts.pory"
+	.string "{PLAYER} received Mineralbadge.$"
 # 311 "data/maps/OlivineCity_Gym/scripts.pory"
-OlivineCity_Gym_Text_JasmineIronTailSpeech:
+
 # 312 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "…You could use that TM to teach\n"
+OlivineCity_Gym_Text_JasmineBadgeSpeech:
 # 313 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "Flash Cannon.$"
+	.string "…Um… Please take this too…$"
 # 314 "data/maps/OlivineCity_Gym/scripts.pory"
 
 # 315 "data/maps/OlivineCity_Gym/scripts.pory"
-OlivineCity_Gym_Text_JasmineGoodLuck:
+OlivineCity_Gym_Text_JasmineIronTailSpeech:
 # 316 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "Um… I don't know how to say this,\n"
+	.string "…You could use that TM to teach\n"
 # 317 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "but good luck…$"
+	.string "Flash Cannon.$"
 # 318 "data/maps/OlivineCity_Gym/scripts.pory"
 
 # 319 "data/maps/OlivineCity_Gym/scripts.pory"
-OlivineCity_Gym_Text_JasmineRematchText:
+OlivineCity_Gym_Text_JasmineGoodLuck:
 # 320 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "…Congratulations, Johto Champion.\p"
+	.string "Um… I don't know how to say this,\n"
 # 321 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "You have become so strong…\p"
+	.string "but good luck…$"
 # 322 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "I wonder if I have improved.\p"
-# 323 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "Would you like to test that?\p"
-# 324 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "Want to have a rematch with me?$"
-# 325 "data/maps/OlivineCity_Gym/scripts.pory"
 
+# 323 "data/maps/OlivineCity_Gym/scripts.pory"
+OlivineCity_Gym_Text_JasmineRematchText:
+# 324 "data/maps/OlivineCity_Gym/scripts.pory"
+	.string "…Congratulations, Johto Champion.\p"
+# 325 "data/maps/OlivineCity_Gym/scripts.pory"
+	.string "You have become so strong…\p"
 # 326 "data/maps/OlivineCity_Gym/scripts.pory"
-OlivineCity_Gym_Text_JasmineRematchDefeatText:
+	.string "I wonder if I have improved.\p"
 # 327 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "…You are a better trainer than me,\n"
+	.string "Would you like to test that?\p"
 # 328 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "in both skill and kindness.$"
+	.string "Want to have a rematch with me?$"
 # 329 "data/maps/OlivineCity_Gym/scripts.pory"
 
 # 330 "data/maps/OlivineCity_Gym/scripts.pory"
-OlivineCity_Gym_EventScript_Statue::
+OlivineCity_Gym_Text_JasmineRematchDefeatText:
 # 331 "data/maps/OlivineCity_Gym/scripts.pory"
-	lock
+	.string "…You are a better trainer than me,\n"
 # 332 "data/maps/OlivineCity_Gym/scripts.pory"
-	goto_if_set FLAG_DEFEATED_OLIVINE_CITY_GYM, OlivineCity_Gym_EventScript_Statue2
+	.string "in both skill and kindness.$"
 # 333 "data/maps/OlivineCity_Gym/scripts.pory"
-	msgbox OlivineCity_Gym_Text_GymStatue, MSGBOX_DEFAULT
+
 # 334 "data/maps/OlivineCity_Gym/scripts.pory"
-	closemessage
+OlivineCity_Gym_EventScript_Statue::
 # 335 "data/maps/OlivineCity_Gym/scripts.pory"
-	release
+	lock
 # 336 "data/maps/OlivineCity_Gym/scripts.pory"
-	end
+	goto_if_set FLAG_DEFEATED_OLIVINE_CITY_GYM, OlivineCity_Gym_EventScript_Statue2
 # 337 "data/maps/OlivineCity_Gym/scripts.pory"
-
+	msgbox OlivineCity_Gym_Text_GymStatue, MSGBOX_DEFAULT
 # 338 "data/maps/OlivineCity_Gym/scripts.pory"
-OlivineCity_Gym_EventScript_Statue2::
-# 339 "data/maps/OlivineCity_Gym/scripts.pory"
-	msgbox OlivineCity_Gym_Text_GymStatueCertified, MSGBOX_DEFAULT
-# 340 "data/maps/OlivineCity_Gym/scripts.pory"
 	closemessage
-# 341 "data/maps/OlivineCity_Gym/scripts.pory"
+# 339 "data/maps/OlivineCity_Gym/scripts.pory"
 	release
-# 342 "data/maps/OlivineCity_Gym/scripts.pory"
+# 340 "data/maps/OlivineCity_Gym/scripts.pory"
 	end
+# 341 "data/maps/OlivineCity_Gym/scripts.pory"
+
+# 342 "data/maps/OlivineCity_Gym/scripts.pory"
+OlivineCity_Gym_EventScript_Statue2::
 # 343 "data/maps/OlivineCity_Gym/scripts.pory"
-
+	msgbox OlivineCity_Gym_Text_GymStatueCertified, MSGBOX_DEFAULT
 # 344 "data/maps/OlivineCity_Gym/scripts.pory"
-OlivineCity_Gym_Text_GymStatue:
+	closemessage
 # 345 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "Olivine City Pokémon Gym$"
+	release
 # 346 "data/maps/OlivineCity_Gym/scripts.pory"
-
+	end
 # 347 "data/maps/OlivineCity_Gym/scripts.pory"
-OlivineCity_Gym_Text_GymStatueCertified:
+
 # 348 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "Olivine City Pokémon Gym\p"
+OlivineCity_Gym_Text_GymStatue:
 # 349 "data/maps/OlivineCity_Gym/scripts.pory"
-	.string "Jasmine's Certified Trainers:\n"
+	.string "Olivine City Pokémon Gym$"
 # 350 "data/maps/OlivineCity_Gym/scripts.pory"
+
+# 351 "data/maps/OlivineCity_Gym/scripts.pory"
+OlivineCity_Gym_Text_GymStatueCertified:
+# 352 "data/maps/OlivineCity_Gym/scripts.pory"
+	.string "Olivine City Pokémon Gym\p"
+# 353 "data/maps/OlivineCity_Gym/scripts.pory"
+	.string "Jasmine's Certified Trainers:\n"
+# 354 "data/maps/OlivineCity_Gym/scripts.pory"
 	.string "{PLAYER}$"
 
 OlivineCity_Gym_EventScript_Steelix::
-# 354 "data/maps/OlivineCity_Gym/scripts.pory"
+# 358 "data/maps/OlivineCity_Gym/scripts.pory"
 	playmoncry SPECIES_STEELIX, CRY_MODE_NORMAL
-# 355 "data/maps/OlivineCity_Gym/scripts.pory"
+# 359 "data/maps/OlivineCity_Gym/scripts.pory"
 	msgbox OlivineCity_Gym_EventScript_Steelix_Text_0, MSGBOX_NPC
 	return
 
 
 OlivineCity_Gym_EventScript_Steelix_Text_0:
-# 355 "data/maps/OlivineCity_Gym/scripts.pory"
+# 359 "data/maps/OlivineCity_Gym/scripts.pory"
 	.string "Steel!!$"
