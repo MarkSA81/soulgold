@@ -15991,6 +15991,7 @@ static const struct LevelUpMove sBarbaracleLevelUpLearnset[] = {
     LEVEL_UP_MOVE(48, MOVE_CROSS_CHOP),
     LEVEL_UP_MOVE(54, MOVE_STONE_EDGE),
     LEVEL_UP_MOVE(60, MOVE_CLOSE_COMBAT),
+    LEVEL_UP_MOVE(66, MOVE_STONE_AXE),
     LEVEL_UP_END
 };
 #endif //P_FAMILY_BINACLE
@@ -18696,6 +18697,7 @@ static const struct LevelUpMove sInteleonLevelUpLearnset[] = {
     LEVEL_UP_MOVE(50, MOVE_RAIN_DANCE),
     LEVEL_UP_MOVE(54, MOVE_AURA_SPHERE),
     LEVEL_UP_MOVE(62, MOVE_HYDRO_PUMP),
+    LEVEL_UP_MOVE(74, MOVE_ORIGIN_PULSE),
     LEVEL_UP_END
 };
 #endif //P_FAMILY_SOBBLE
