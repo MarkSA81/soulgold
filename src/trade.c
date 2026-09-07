@@ -4582,7 +4582,7 @@ static void CreateInGameTradePokemonInternal(u8 whichPlayerMon, u8 whichInGameTr
     struct Pokemon *pokemon = &gEnemyParty[0];
 
     CreateMon(pokemon, inGameTrade->species, level, inGameTrade->personality, OTID_STRUCT_PRESET(inGameTrade->otId));
-    isShiny = RandomUniform(RNG_IN_GAME_TRADE_SHINY, 0, MAX_u16) < RELEASE_SHINY_ODDS * 12;
+    isShiny = RandomUniform(RNG_IN_GAME_TRADE_SHINY, 0, MAX_u16) < GetTradeShinyGenerationOdds();
     SetMonData(pokemon, MON_DATA_IS_SHINY, &isShiny);
     GiveMonInitialMoveset(pokemon);
 

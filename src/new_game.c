@@ -1,4 +1,5 @@
 #include "global.h"
+#include "event_object_movement.h"
 #include "new_game.h"
 #include "derby.h"
 #include "random.h"
@@ -79,6 +80,8 @@ struct NewGameOptions
     u8 battleSpeed;
     u8 partyMenuStyle;
     enum ReplayBattleFormat battleFormat;
+    u16 followerMegaOff;
+    enum ShinyRateOption shinyRate;
 };
 
 EWRAM_DATA bool8 gDifferentSaveFile = FALSE;
@@ -140,6 +143,8 @@ static void SetDefaultOptions(void)
     gSaveBlock2Ptr->optionsDarkBattleUi = FALSE;
     gSaveBlock2Ptr->optionsBattleSpeed = OPTIONS_BATTLE_SCENE_2X;
     VarSet(VAR_BATTLE_SPEED, OPTIONS_BATTLE_SCENE_2X);
+    VarSet(VAR_FOLLOWER_MEGA_OFF, 0);
+    VarSet(VAR_SHINY_RATE, SHINY_RATE_256);
     SetDefaultPartyMenuStyle();
                
 }
@@ -220,6 +225,8 @@ void NewGameInitData(void)
         .battleSpeed = VarGet(VAR_BATTLE_SPEED),
         .partyMenuStyle = GetCurrentPartyMenuStyle(),
         .battleFormat = GetReplayBattleFormat(),
+        .followerMegaOff = !IsFollowerMegaEnabled(),
+        .shinyRate = GetShinyRateOption(),
     };
 
     if (options.overworldSpeed > OPTIONS_OVERWORLD_SPEED_4X)
@@ -303,6 +310,8 @@ void NewGameInitData(void)
     gSaveBlock1Ptr->optionsPartyMenuStyle = options.partyMenuStyle;
     gSaveBlock1Ptr->optionsPartyMenuStyleMagic = PARTY_MENU_OPTION_SAVE_MAGIC;
     SetReplayBattleFormat(options.battleFormat);
+    VarSet(VAR_FOLLOWER_MEGA_OFF, options.followerMegaOff);
+    VarSet(VAR_SHINY_RATE, options.shinyRate);
     VarSet(VAR_BATTLE_FACILITY_BGM, 0);
     ResetItemFlags();
     ResetDexNav();

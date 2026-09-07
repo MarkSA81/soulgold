@@ -1043,6 +1043,28 @@ u32 GetCurrentShinyOdds(void)
     return SHINY_ODDS;
 }
 
+enum ShinyRateOption GetShinyRateOption(void)
+{
+    u32 selection = VarGet(VAR_SHINY_RATE);
+    return selection >= SHINY_RATE_256 && selection < SHINY_RATE_COUNT ? selection : SHINY_RATE_256;
+}
+
+u32 GetShinyGenerationOdds(void)
+{
+    switch (GetShinyRateOption())
+    {
+    case SHINY_RATE_256: return 256;
+    case SHINY_RATE_512: return 128;
+    case SHINY_RATE_1024: return 64;
+    default: return 256;
+    }
+}
+
+u32 GetTradeShinyGenerationOdds(void)
+{
+    return 12 * GetShinyGenerationOdds();
+}
+
 void CreateMonWithIVs(struct Pokemon *mon, u16 species, u8 level, u32 personality, struct OriginalTrainerId trainerId, u8 fixedIV)
 {
     CreateMon(mon, species, level, personality, trainerId);
@@ -1123,7 +1145,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u32 personal
 {
     u8 speciesName[POKEMON_NAME_LENGTH + 1];
     u32 value;
-    u32 shinyOdds = GetCurrentShinyOdds();
+    u32 shinyOdds = GetShinyGenerationOdds();
     bool32 isShiny;
 
     ZeroBoxMonData(boxMon);

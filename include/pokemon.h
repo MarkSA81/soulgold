@@ -672,6 +672,9 @@ extern const struct AbilityInfo gAbilitiesInfo[];
 extern const struct NatureInfo gNaturesInfo[];
 
 u32 GetCurrentShinyOdds(void);
+enum ShinyRateOption GetShinyRateOption(void);
+u32 GetShinyGenerationOdds(void);
+u32 GetTradeShinyGenerationOdds(void);
 void ZeroBoxMonData(struct BoxPokemon *boxMon);
 void ZeroMonData(struct Pokemon *mon);
 void ZeroPlayerPartyMons(void);
