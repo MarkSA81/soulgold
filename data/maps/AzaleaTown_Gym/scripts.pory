@@ -796,7 +796,7 @@ AzaleaTown_Gym_Text_TwinsAmyMay2After:
 	.string "May: Our bug Pokémon lost!\n"
 	.string "Oh, what a shame.\p"
 	.string "Bugsy's won't lose though!\p"
-	.string "His Pineco makes short work\n"
+	.string "His Scyther makes short work\n"
 	.string "of Rock-type Pokémon!$"
 
 AzaleaTown_Gym_Text_GymGuide:
@@ -805,9 +805,9 @@ AzaleaTown_Gym_Text_GymGuide:
 	.string "of bug Pokémon is for real.\p"
 	.string "It's going to be tough\n"
 	.string "without my advice.\p"
-	.string "Let's see… Bugsy's bagworm Pokémon\n"
+	.string "Let's see… Bugsy's Mantis Pokémon\n"
 	.string "knows a move that covers its\l"
-	.string "Rock-type weakness.\p"
+	.string "escape while attacking.\p"
 	.string "Oh, and don't forget about those\n"
 	.string "nasty critical hits! Good luck!$"
 
