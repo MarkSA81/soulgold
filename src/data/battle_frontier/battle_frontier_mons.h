@@ -973,7 +973,7 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] = {
     },
     [FRONTIER_MON_POLIWRATH_1] = {
         .species = SPECIES_POLIWRATH,
-        .moves = {MOVE_SURGING_STRIKES, MOVE_FOCUS_PUNCH, MOVE_EARTHQUAKE, MOVE_SUBSTITUTE},
+        .moves = {MOVE_RAGE_FIST, MOVE_FOCUS_PUNCH, MOVE_EARTHQUAKE, MOVE_SUBSTITUTE},
         .heldItem = ITEM_SHELL_BELL,
         .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 0, 31),
         .ev = TRAINER_PARTY_EVS(112, 252, 0, 144, 0, 0),
@@ -982,7 +982,7 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] = {
     },
     [FRONTIER_MON_POLIWRATH_2] = {
         .species = SPECIES_POLIWRATH,
-        .moves = {MOVE_SURGING_STRIKES, MOVE_CLOSE_COMBAT, MOVE_HYPNOSIS, MOVE_BELLY_DRUM},
+        .moves = {MOVE_RAGE_FIST, MOVE_CLOSE_COMBAT, MOVE_HYPNOSIS, MOVE_BELLY_DRUM},
         .heldItem = ITEM_SITRUS_BERRY,
         .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 0, 31),
         .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
@@ -11611,7 +11611,7 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] = {
     },
     [FRONTIER_MON_INDEEDEE_F_2] = {
         .species = SPECIES_INDEEDEE_F,
-        .moves = {MOVE_EXPANDING_FORCE, MOVE_FOLLOW_ME, MOVE_HELPING_HAND, MOVE_FAKE_OUT},
+        .moves = {MOVE_EXPANDING_FORCE, MOVE_FOLLOW_ME, MOVE_HELPING_HAND, MOVE_HEAL_PULSE},
         .heldItem = ITEM_FOCUS_SASH,
         .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
         .ev = TRAINER_PARTY_EVS(252, 0, 252, 0, 0, 4),

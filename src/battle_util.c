@@ -1575,13 +1575,19 @@ void UpdateSentPokesToOpponentValue(enum BattlerId battler)
 
 void BattleScriptPush(const u8 *bsPtr)
 {
-    assertf(gBattleResources->battleScriptsStack->size < UINT8_MAX, "attempted to push a battle script, but battleScriptsStack is full!");
+    assertf(gBattleResources->battleScriptsStack->size < ARRAY_COUNT(gBattleResources->battleScriptsStack->ptr), "attempted to push a battle script, but battleScriptsStack is full!")
+    {
+        return;
+    }
     gBattleResources->battleScriptsStack->ptr[gBattleResources->battleScriptsStack->size++] = bsPtr;
 }
 
 void BattleScriptPushCursor(void)
 {
-    assertf(gBattleResources->battleScriptsStack->size < UINT8_MAX, "attempted to push cursor, but battleScriptsStack is full!");
+    assertf(gBattleResources->battleScriptsStack->size < ARRAY_COUNT(gBattleResources->battleScriptsStack->ptr), "attempted to push cursor, but battleScriptsStack is full!")
+    {
+        return;
+    }
     gBattleResources->battleScriptsStack->ptr[gBattleResources->battleScriptsStack->size++] = gBattlescriptCurrInstr;
 }
 
@@ -3974,6 +3980,10 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
         if ((traitCheck = SearchTraits(battlerTraits, ABILITY_FAIRY_AURA)) && !gSpecialStatuses[battler].switchInTraitDone[traitCheck - 1]
          && shouldAbilityTrigger)
             effect += CommonSwitchInAbilities(battler, ABILITY_FAIRY_AURA, traitCheck, BattleScript_FairyAuraActivates);
+
+        if ((traitCheck = SearchTraits(battlerTraits, ABILITY_MALICE_AURA)) && !gSpecialStatuses[battler].switchInTraitDone[traitCheck - 1]
+         && shouldAbilityTrigger)
+            effect += CommonSwitchInAbilities(battler, ABILITY_MALICE_AURA, traitCheck, BattleScript_MaliceAuraActivates);
 
         if ((traitCheck = SearchTraits(battlerTraits, ABILITY_AURA_BREAK)) && !gSpecialStatuses[battler].switchInTraitDone[traitCheck - 1]
          && shouldAbilityTrigger)
@@ -6904,12 +6914,19 @@ bool32 IsAnyTerrainAffected(enum BattlerId battler, u32 fieldStatuses)
 
 bool32 IsBattlerTerrainAffected(enum BattlerId battler, u32 fieldStatus, u32 terrainFlag)
 {
+    bool32 hasElectrolevitate;
+
     if (!(fieldStatus & terrainFlag))
         return FALSE;
     if (IsSemiInvulnerable(battler, CHECK_ALL))
         return FALSE;
 
-    return IsBattlerGrounded(battler);
+    hasElectrolevitate = fieldStatus & terrainFlag & STATUS_FIELD_ELECTRIC_TERRAIN
+                      && (gAiLogicData->aiCalcInProgress
+                        ? AI_BATTLER_HAS_TRAIT(battler, ABILITY_ELECTROLEVITATE)
+                        : BattlerHasTrait(battler, ABILITY_ELECTROLEVITATE));
+
+    return IsBattlerGrounded(battler) || hasElectrolevitate;
 }
 
 enum Stat GetHighestStatId(enum BattlerId battler)
@@ -7867,8 +7884,8 @@ bool32 IsBattlerGrounded(enum BattlerId battler)
 
     // Regular ability check split out here as the AI switching logic uses battle context to figure out the Ability instead. (Multi)
     hasLevitate = gAiLogicData->aiCalcInProgress
-                ? (AI_BATTLER_HAS_TRAIT(battler, ABILITY_LEVITATE) || AI_BATTLER_HAS_TRAIT(battler, ABILITY_EELEVATE) || AI_BATTLER_HAS_TRAIT(battler, ABILITY_ALLSEEING_IDOL))
-                : (BattlerHasTrait(battler, ABILITY_LEVITATE) || BattlerHasTrait(battler, ABILITY_EELEVATE) || BattlerHasTrait(battler, ABILITY_ALLSEEING_IDOL));
+                ? (AI_BATTLER_HAS_TRAIT(battler, ABILITY_LEVITATE) || AI_BATTLER_HAS_TRAIT(battler, ABILITY_EELEVATE) || AI_BATTLER_HAS_TRAIT(battler, ABILITY_ELECTROLEVITATE) || AI_BATTLER_HAS_TRAIT(battler, ABILITY_ALLSEEING_IDOL))
+                : (BattlerHasTrait(battler, ABILITY_LEVITATE) || BattlerHasTrait(battler, ABILITY_EELEVATE) || BattlerHasTrait(battler, ABILITY_ELECTROLEVITATE) || BattlerHasTrait(battler, ABILITY_ALLSEEING_IDOL));
     ignoresGravity = gAiLogicData->aiCalcInProgress
                    ? AI_BATTLER_HAS_TRAIT(battler, ABILITY_ALLSEEING_IDOL)
                    : BattlerHasTrait(battler, ABILITY_ALLSEEING_IDOL);
@@ -8583,6 +8600,8 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct BattleContext *ctx, u32
         modifier = uq4_12_multiply(modifier, UQ_4_12(1.2));
     if (SearchTraits(battlerTraits, ABILITY_SHEER_FORCE) && MoveIsAffectedBySheerForce(move))
         {modifier = uq4_12_multiply(modifier, UQ_4_12(1.3));}
+    if (SearchTraits(battlerTraits, ABILITY_OGRE_FORCE) && MoveIsAffectedBySheerForce(move))
+        modifier = uq4_12_multiply(modifier, UQ_4_12(1.15));
     if (SearchTraits(battlerTraits, ABILITY_SAND_FORCE) && (moveType == TYPE_STEEL || moveType == TYPE_ROCK || moveType == TYPE_GROUND)
         && ctx->weather & B_WEATHER_SANDSTORM)
         modifier = uq4_12_multiply(modifier, UQ_4_12(1.3));
@@ -8667,7 +8686,8 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct BattleContext *ctx, u32
 
     // field abilities
     if ((IsAbilityOnField(ABILITY_DARK_AURA) && moveType == TYPE_DARK)
-     || (IsAbilityOnField(ABILITY_FAIRY_AURA) && moveType == TYPE_FAIRY))
+     || (IsAbilityOnField(ABILITY_FAIRY_AURA) && moveType == TYPE_FAIRY)
+     || (moveType == TYPE_GHOST && IsAbilityOnField(ABILITY_MALICE_AURA)))
     {
         if (IsAbilityOnField(ABILITY_AURA_BREAK))
             modifier = uq4_12_multiply(modifier, UQ_4_12(0.75));
@@ -9596,24 +9616,49 @@ static inline uq4_12_t GetCollisionCourseElectroDriftModifier(enum Move move, uq
     return UQ_4_12(1.0);
 }
 
+static bool32 HasTrueshotAura(enum BattlerId battler)
+{
+    enum Ability battlerTraits[MAX_MON_TRAITS];
+    if (gAiLogicData != NULL && gAiLogicData->aiCalcInProgress)
+    {
+        if (AI_BATTLER_HAS_TRAIT(battler, ABILITY_TRUESHOT_AURA))
+            return TRUE;
+        return IsDoubleBattle()
+            && IsBattlerAlive(BATTLE_PARTNER(battler))
+            && AI_BATTLER_HAS_TRAIT(BATTLE_PARTNER(battler), ABILITY_TRUESHOT_AURA);
+    }
+
+    STORE_BATTLER_TRAITS(battler);
+    if (SearchTraits(battlerTraits, ABILITY_TRUESHOT_AURA))
+        return TRUE;
+
+    if (IsDoubleBattle() && IsBattlerAlive(BATTLE_PARTNER(battler)))
+    {
+        STORE_BATTLER_TRAITS(BATTLE_PARTNER(battler));
+        return SearchTraits(battlerTraits, ABILITY_TRUESHOT_AURA) != 0;
+    }
+    return FALSE;
+}
+
 static inline uq4_12_t GetAttackerAbilitiesModifier(enum BattlerId battlerAtk, uq4_12_t typeEffectivenessModifier, bool32 isCrit)
 {
+    uq4_12_t modifier = UQ_4_12(1.0);
     enum Ability battlerTraits[MAX_MON_TRAITS];
     STORE_BATTLER_TRAITS(battlerAtk);
 
     if (SearchTraits(battlerTraits, ABILITY_NEUROFORCE)
      && typeEffectivenessModifier >= UQ_4_12(2.0))
-        return UQ_4_12(1.25);
+        modifier = uq4_12_multiply(modifier, UQ_4_12(1.25));
 
-    if (SearchTraits(battlerTraits, ABILITY_SNIPER)
-     && isCrit)
-        return UQ_4_12(1.5);
+    if (isCrit
+     && SearchTraits(battlerTraits, ABILITY_SNIPER))
+        modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
 
     if (SearchTraits(battlerTraits, ABILITY_TINTED_LENS)
      && typeEffectivenessModifier <= UQ_4_12(0.5))
-        return UQ_4_12(2.0);
+        modifier = uq4_12_multiply(modifier, UQ_4_12(2.0));
 
-    return UQ_4_12(1.0);
+    return modifier;
 }
 
 static inline uq4_12_t GetDefenderAbilitiesModifier(struct BattleContext *ctx)
@@ -10186,6 +10231,8 @@ s32 CalcCritChanceStage(struct BattleContext *ctx)
                     + ((B_AFFECTION_MECHANICS == TRUE && GetBattlerAffectionHearts(ctx->battlerAtk) == AFFECTION_FIVE_HEARTS) ? 2 : 0)
                     + ((gAiLogicData->aiCalcInProgress ? AI_BATTLER_HAS_TRAIT(ctx->battlerAtk, ABILITY_SUPER_LUCK) : BattlerHasTrait(ctx->battlerAtk, ABILITY_SUPER_LUCK)) ? 1 : 0)
                     + gBattleMons[ctx->battlerAtk].volatiles.bonusCritStages;
+        if (HasTrueshotAura(ctx->battlerAtk))
+            critChance += 2;
         if (critChance >= ARRAY_COUNT(sCriticalHitOdds))
             critChance = ARRAY_COUNT(sCriticalHitOdds) - 1;
     }
@@ -10241,6 +10288,9 @@ s32 CalcCritChanceStageGen1(struct BattleContext *ctx)
 
     if (holdEffectCritStage > 0)
         critChance *= 4 * holdEffectCritStage;
+
+    if (HasTrueshotAura(ctx->battlerAtk))
+        critChance *= 8;
 
     if (gAiLogicData->aiCalcInProgress ? AI_BATTLER_HAS_TRAIT(ctx->battlerAtk, ABILITY_SUPER_LUCK) : BattlerHasTrait(ctx->battlerAtk, ABILITY_SUPER_LUCK))
         critChance *= 4;
@@ -10758,6 +10808,8 @@ static inline uq4_12_t CalcTypeEffectivenessMultiplierInternal(struct BattleCont
         levitatingAbility = ABILITY_LEVITATE;
     else if (SearchTraits(battlerTraits, ABILITY_EELEVATE))
         levitatingAbility = ABILITY_EELEVATE;
+    else if (SearchTraits(battlerTraits, ABILITY_ELECTROLEVITATE))
+        levitatingAbility = ABILITY_ELECTROLEVITATE;
     else if (SearchTraits(battlerTraits, ABILITY_ALLSEEING_IDOL))
         levitatingAbility = ABILITY_ALLSEEING_IDOL;
 
@@ -10864,7 +10916,7 @@ static inline uq4_12_t CalcTypeEffectivenessMultiplierInternal(struct BattleCont
         && ctx->moveType == TYPE_GROUND
         && BattlerHasHeldItemEffect(ctx->battlerDef, HOLD_EFFECT_IRON_BALL, TRUE)
         && IS_BATTLER_OF_TYPE(ctx->battlerDef, TYPE_FLYING)
-        && !IsBattlerGroundedInverseCheck(ctx->battlerDef, NOT_INVERSE_BATTLE, FALSE, BattlerHasTrait(ctx->battlerDef, ABILITY_LEVITATE) || BattlerHasTrait(ctx->battlerDef, ABILITY_EELEVATE) || BattlerHasTrait(ctx->battlerDef, ABILITY_ALLSEEING_IDOL), BattlerHasTrait(ctx->battlerDef, ABILITY_ALLSEEING_IDOL), TRUE) // We want to ignore Iron Ball so skip item check // We want to ignore Iron Ball so skip item check
+        && !IsBattlerGroundedInverseCheck(ctx->battlerDef, NOT_INVERSE_BATTLE, FALSE, BattlerHasTrait(ctx->battlerDef, ABILITY_LEVITATE) || BattlerHasTrait(ctx->battlerDef, ABILITY_EELEVATE) || BattlerHasTrait(ctx->battlerDef, ABILITY_ELECTROLEVITATE) || BattlerHasTrait(ctx->battlerDef, ABILITY_ALLSEEING_IDOL), BattlerHasTrait(ctx->battlerDef, ABILITY_ALLSEEING_IDOL), TRUE) // We want to ignore Iron Ball so skip item check // We want to ignore Iron Ball so skip item check
         && !FlagGet(B_FLAG_INVERSE_BATTLE))
     {
         modifier = UQ_4_12(1.0);
@@ -11013,7 +11065,7 @@ uq4_12_t CalcPartyMonTypeEffectivenessMultiplier(enum Move move, u16 speciesDef,
         if (mon != NULL)
         {
             if (ctx.moveType == TYPE_GROUND
-             && (MonHasTrait(mon, ABILITY_LEVITATE) || MonHasTrait(mon, ABILITY_EELEVATE) || MonHasTrait(mon, ABILITY_ALLSEEING_IDOL))
+             && (MonHasTrait(mon, ABILITY_LEVITATE) || MonHasTrait(mon, ABILITY_EELEVATE) || MonHasTrait(mon, ABILITY_ELECTROLEVITATE) || MonHasTrait(mon, ABILITY_ALLSEEING_IDOL))
              && (!(gFieldStatuses & STATUS_FIELD_GRAVITY) || MonHasTrait(mon, ABILITY_ALLSEEING_IDOL)))
                 modifier = UQ_4_12(0.0);
             if (MonHasTrait(mon, ABILITY_WONDER_GUARD) && modifier <= UQ_4_12(1.0) && GetMovePower(move) != 0)
@@ -12448,7 +12500,7 @@ bool32 CanMonParticipateInSkyBattle(struct Pokemon *mon)
 {
     u32 species = GetMonData(mon, MON_DATA_SPECIES);
 
-    bool32 hasLevitateAbility = (MonHasTrait(mon, ABILITY_LEVITATE) || MonHasTrait(mon, ABILITY_EELEVATE) || MonHasTrait(mon, ABILITY_ALLSEEING_IDOL));
+    bool32 hasLevitateAbility = (MonHasTrait(mon, ABILITY_LEVITATE) || MonHasTrait(mon, ABILITY_EELEVATE) || MonHasTrait(mon, ABILITY_ELECTROLEVITATE) || MonHasTrait(mon, ABILITY_ALLSEEING_IDOL));
     bool32 isFlyingType = GetSpeciesType(species, 0) == TYPE_FLYING || GetSpeciesType(species, 1) == TYPE_FLYING;
     bool32 monIsValidAndNotEgg = GetMonData(mon, MON_DATA_SANITY_HAS_SPECIES) && !GetMonData(mon, MON_DATA_IS_EGG);
 

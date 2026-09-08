@@ -584,7 +584,9 @@ script Cherrygrove_FadedSign {
 
 script Cherrygrove_DarkraiEventDoor {
 	lock
-	if (var(VAR_POSTGAME_RIVAL_LEGENDARYQ) == 4) {
+	// old saves with weird progression state (usually people who have cheated Dive HM)
+	getcaughtmon(SPECIES_DARKRAI)
+	if (var(VAR_POSTGAME_RIVAL_LEGENDARYQ) == 4 || (var(VAR_POSTGAME_RIVAL_LEGENDARYQ) >= 5 && var(VAR_POSTGAME_RIVAL_LEGENDARYQ) <= 10 && var(VAR_RESULT) == FALSE)) {
 		msgbox("Darkrai might be residing in this 
 				old inn.
 		

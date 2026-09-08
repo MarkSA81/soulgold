@@ -6949,7 +6949,7 @@
       "hiddenAbilities": [],
       "innates": [
         "ABILITY_PLUS",
-        "ABILITY_LEVITATE",
+        "ABILITY_ELECTROLEVITATE",
         "ABILITY_ELECTRIC_SURGE"
       ],
       "sprite": "sprites/pokemon/raichu_alola.png",
@@ -28485,9 +28485,9 @@
       ],
       "hiddenAbilities": [],
       "innates": [
-        "ABILITY_RATTLED",
         "ABILITY_PRANKSTER",
-        "ABILITY_INFILTRATOR"
+        "ABILITY_INFILTRATOR",
+        "ABILITY_LEVITATE"
       ],
       "sprite": "sprites/pokemon/gengar.png",
       "shinySprite": "sprites/pokemon/gengar_shiny.png",
@@ -28749,8 +28749,8 @@
       ],
       "innates": [
         "ABILITY_RATTLED",
-        "ABILITY_MERCILESS",
-        "ABILITY_CURSED_BODY"
+        "ABILITY_CURSED_BODY",
+        "ABILITY_LEVITATE"
       ],
       "sprite": "sprites/pokemon/gengar_mega.png",
       "shinySprite": "sprites/pokemon/gengar_mega_shiny.png",
@@ -42221,7 +42221,17 @@
           "itemName": "Upgrade"
         }
       ],
-      "locations": [],
+      "locations": [
+        {
+          "map": "MAP_GOLDENROD_CITY_GAME_CORNER",
+          "name": "Goldenrod Game Corner",
+          "time": "",
+          "method": "Exchange",
+          "minLevel": 15,
+          "maxLevel": 15,
+          "rate": null
+        }
+      ],
       "heldItems": [],
       "slug": "porygon"
     },
@@ -62561,6 +62571,15 @@
           "minLevel": 30,
           "maxLevel": 45,
           "rate": 5
+        },
+        {
+          "map": "MAP_GOLDENROD_CITY_GAME_CORNER",
+          "name": "Goldenrod Game Corner",
+          "time": "",
+          "method": "Exchange",
+          "minLevel": 15,
+          "maxLevel": 15,
+          "rate": null
         }
       ],
       "heldItems": [
@@ -86770,7 +86789,7 @@
         "ABILITY_CUTE_CHARM"
       ],
       "innates": [
-        "ABILITY_CLEAR_BODY",
+        "ABILITY_GUARDIAN",
         "ABILITY_FAE_SOUL",
         "ABILITY_REGENERATOR"
       ],
@@ -105950,6 +105969,15 @@
           "minLevel": 30,
           "maxLevel": 30,
           "rate": 25
+        },
+        {
+          "map": "MAP_GOLDENROD_CITY_GAME_CORNER",
+          "name": "Goldenrod Game Corner",
+          "time": "",
+          "method": "Exchange",
+          "minLevel": 15,
+          "maxLevel": 15,
+          "rate": null
         }
       ],
       "heldItems": [
@@ -111246,8 +111274,12 @@
           "move": "MOVE_GIGA_IMPACT"
         },
         {
-          "level": 65,
+          "level": 68,
           "move": "MOVE_ELECTRIC_TERRAIN"
+        },
+        {
+          "level": 72,
+          "move": "MOVE_PLASMA_FISTS"
         }
       ],
       "tmhm": [
@@ -118135,8 +118167,8 @@
       ],
       "innates": [
         "ABILITY_CURSED_BODY",
-        "ABILITY_DARK_AURA",
-        "ABILITY_GRIM_NEIGH"
+        "ABILITY_SPECTRAL_DRAIN",
+        "ABILITY_SPECTRAL"
       ],
       "sprite": "sprites/pokemon/giratina_altered.png",
       "shinySprite": "sprites/pokemon/giratina_altered_shiny.png",
@@ -118332,8 +118364,8 @@
       "hiddenAbilities": [],
       "innates": [
         "ABILITY_CURSED_BODY",
-        "ABILITY_DARK_AURA",
-        "ABILITY_GRIM_NEIGH"
+        "ABILITY_MALICE_AURA",
+        "ABILITY_RITUAL"
       ],
       "sprite": "sprites/pokemon/giratina_origin.png",
       "shinySprite": "sprites/pokemon/giratina_origin_shiny.png",
@@ -137886,6 +137918,15 @@
           "minLevel": 28,
           "maxLevel": 30,
           "rate": 30
+        },
+        {
+          "map": "MAP_GOLDENROD_CITY_GAME_CORNER",
+          "name": "Goldenrod Game Corner",
+          "time": "",
+          "method": "Exchange",
+          "minLevel": 15,
+          "maxLevel": 15,
+          "rate": null
         }
       ],
       "heldItems": [],
@@ -139391,6 +139432,15 @@
           "minLevel": 50,
           "maxLevel": 55,
           "rate": 5
+        },
+        {
+          "map": "MAP_GOLDENROD_CITY_GAME_CORNER",
+          "name": "Goldenrod Game Corner",
+          "time": "",
+          "method": "Exchange",
+          "minLevel": 15,
+          "maxLevel": 15,
+          "rate": null
         }
       ],
       "heldItems": [],
@@ -152971,6 +153021,10 @@
         {
           "level": 60,
           "move": "MOVE_CLOSE_COMBAT"
+        },
+        {
+          "level": 66,
+          "move": "MOVE_STONE_AXE"
         }
       ],
       "tmhm": [
@@ -153197,6 +153251,10 @@
         {
           "level": 60,
           "move": "MOVE_CLOSE_COMBAT"
+        },
+        {
+          "level": 66,
+          "move": "MOVE_STONE_AXE"
         }
       ],
       "tmhm": [
@@ -162664,8 +162722,8 @@
       ],
       "innates": [
         "ABILITY_FLAME_BODY",
-        "ABILITY_QUICK_FEET",
-        "ABILITY_GUTS"
+        "ABILITY_COSTAR",
+        "ABILITY_BACKDRAFT"
       ],
       "sprite": "sprites/pokemon/incineroar.png",
       "shinySprite": "sprites/pokemon/incineroar_shiny.png",
@@ -173279,7 +173337,7 @@
       "hiddenAbilities": [],
       "innates": [
         "ABILITY_ACIDIC",
-        "ABILITY_POISON_TOUCH",
+        "ABILITY_CORROSION",
         "ABILITY_LIQUID_OOZE"
       ],
       "sprite": "sprites/pokemon/naganadel.png",
@@ -175834,8 +175892,8 @@
       ],
       "innates": [
         "ABILITY_MEGA_LAUNCHER",
-        "ABILITY_KEEN_EYE",
-        "ABILITY_WATER_VEIL"
+        "ABILITY_RAIN_DISH",
+        "ABILITY_TRUESHOT_AURA"
       ],
       "sprite": "sprites/pokemon/inteleon.png",
       "shinySprite": "sprites/pokemon/inteleon_shiny.png",
@@ -175863,6 +175921,10 @@
         {
           "level": 1,
           "move": "MOVE_ACROBATICS"
+        },
+        {
+          "level": 1,
+          "move": "MOVE_FOCUS_ENERGY"
         },
         {
           "level": 12,
@@ -175899,6 +175961,10 @@
         {
           "level": 62,
           "move": "MOVE_HYDRO_PUMP"
+        },
+        {
+          "level": 74,
+          "move": "MOVE_ORIGIN_PULSE"
         }
       ],
       "tmhm": [
@@ -176015,8 +176081,8 @@
       ],
       "innates": [
         "ABILITY_MEGA_LAUNCHER",
-        "ABILITY_KEEN_EYE",
-        "ABILITY_SUPER_LUCK"
+        "ABILITY_RAIN_DISH",
+        "ABILITY_TRUESHOT_AURA"
       ],
       "sprite": "sprites/pokemon/inteleon_gmax.png",
       "shinySprite": "sprites/pokemon/inteleon_gmax_shiny.png",
@@ -176044,6 +176110,10 @@
         {
           "level": 1,
           "move": "MOVE_ACROBATICS"
+        },
+        {
+          "level": 1,
+          "move": "MOVE_FOCUS_ENERGY"
         },
         {
           "level": 12,
@@ -176080,6 +176150,10 @@
         {
           "level": 62,
           "move": "MOVE_HYDRO_PUMP"
+        },
+        {
+          "level": 74,
+          "move": "MOVE_ORIGIN_PULSE"
         }
       ],
       "tmhm": [
@@ -184903,194 +184977,6 @@
       "slug": "zarude"
     },
     {
-      "id": 1231,
-      "constant": "SPECIES_ZARUDE_DADA",
-      "dex": 610,
-      "name": "Zarude",
-      "types": [
-        "TYPE_DARK",
-        "TYPE_GRASS"
-      ],
-      "stats": {
-        "hp": 105,
-        "atk": 120,
-        "def": 105,
-        "spa": 70,
-        "spd": 95,
-        "spe": 105
-      },
-      "evYield": {
-        "atk": 3
-      },
-      "eggGroups": [
-        "EGG_GROUP_NO_EGGS_DISCOVERED"
-      ],
-      "categories": [
-        "mythical"
-      ],
-      "bst": 600,
-      "abilities": [
-        "ABILITY_LEAF_GUARD"
-      ],
-      "regularAbilities": [
-        "ABILITY_LEAF_GUARD"
-      ],
-      "hiddenAbilities": [],
-      "innates": [
-        "ABILITY_PICKPOCKET",
-        "ABILITY_UNNERVE",
-        "ABILITY_INFILTRATOR"
-      ],
-      "sprite": "sprites/pokemon/zarude_dada.png",
-      "shinySprite": "sprites/pokemon/zarude_dada_shiny.png",
-      "levelUp": [
-        {
-          "level": 1,
-          "move": "MOVE_SCRATCH"
-        },
-        {
-          "level": 1,
-          "move": "MOVE_BIND"
-        },
-        {
-          "level": 6,
-          "move": "MOVE_LEER"
-        },
-        {
-          "level": 12,
-          "move": "MOVE_VINE_WHIP"
-        },
-        {
-          "level": 18,
-          "move": "MOVE_GROWTH"
-        },
-        {
-          "level": 24,
-          "move": "MOVE_FURY_SWIPES"
-        },
-        {
-          "level": 30,
-          "move": "MOVE_SCARY_FACE"
-        },
-        {
-          "level": 36,
-          "move": "MOVE_GRASS_KNOT"
-        },
-        {
-          "level": 42,
-          "move": "MOVE_BITE"
-        },
-        {
-          "level": 48,
-          "move": "MOVE_U_TURN"
-        },
-        {
-          "level": 54,
-          "move": "MOVE_SWAGGER"
-        },
-        {
-          "level": 60,
-          "move": "MOVE_ENERGY_BALL"
-        },
-        {
-          "level": 66,
-          "move": "MOVE_SYNTHESIS"
-        },
-        {
-          "level": 72,
-          "move": "MOVE_HAMMER_ARM"
-        },
-        {
-          "level": 78,
-          "move": "MOVE_THRASH"
-        },
-        {
-          "level": 84,
-          "move": "MOVE_POWER_WHIP"
-        },
-        {
-          "level": 90,
-          "move": "MOVE_JUNGLE_HEALING"
-        }
-      ],
-      "tmhm": [
-        "MOVE_BULK_UP",
-        "MOVE_HIDDEN_POWER",
-        "MOVE_SUNNY_DAY",
-        "MOVE_TAUNT",
-        "MOVE_HYPER_BEAM",
-        "MOVE_PROTECT",
-        "MOVE_FRUSTRATION",
-        "MOVE_SOLAR_BEAM",
-        "MOVE_RETURN",
-        "MOVE_BRICK_BREAK",
-        "MOVE_ROCK_TOMB",
-        "MOVE_AERIAL_ACE",
-        "MOVE_FACADE",
-        "MOVE_REST",
-        "MOVE_THIEF",
-        "MOVE_LOW_SWEEP",
-        "MOVE_ROUND",
-        "MOVE_ENERGY_BALL",
-        "MOVE_FLING",
-        "MOVE_BRUTAL_SWING",
-        "MOVE_TRAILBLAZE",
-        "MOVE_ACROBATICS",
-        "MOVE_PAYBACK",
-        "MOVE_GIGA_IMPACT",
-        "MOVE_SWORDS_DANCE",
-        "MOVE_DIG",
-        "MOVE_ROCK_SLIDE",
-        "MOVE_DRAIN_PUNCH",
-        "MOVE_GRASS_KNOT",
-        "MOVE_GIGA_DRAIN",
-        "MOVE_U_TURN",
-        "MOVE_SUBSTITUTE",
-        "MOVE_SNARL",
-        "MOVE_DARK_PULSE"
-      ],
-      "tutors": [
-        "MOVE_BODY_SLAM",
-        "MOVE_BULLET_SEED",
-        "MOVE_CLOSE_COMBAT",
-        "MOVE_CRUNCH",
-        "MOVE_DARKEST_LARIAT",
-        "MOVE_DOUBLE_EDGE",
-        "MOVE_ENCORE",
-        "MOVE_ENDURE",
-        "MOVE_FOCUS_PUNCH",
-        "MOVE_GRASSY_GLIDE",
-        "MOVE_GRASSY_TERRAIN",
-        "MOVE_HELPING_HAND",
-        "MOVE_HYPER_VOICE",
-        "MOVE_IRON_TAIL",
-        "MOVE_KNOCK_OFF",
-        "MOVE_LASH_OUT",
-        "MOVE_LEAF_STORM",
-        "MOVE_LOW_KICK",
-        "MOVE_MEGA_KICK",
-        "MOVE_MEGA_PUNCH",
-        "MOVE_MIMIC",
-        "MOVE_NASTY_PLOT",
-        "MOVE_PETAL_BLIZZARD",
-        "MOVE_POWER_WHIP",
-        "MOVE_SEED_BOMB",
-        "MOVE_SLEEP_TALK",
-        "MOVE_SNORE",
-        "MOVE_SOLAR_BLADE",
-        "MOVE_STOMPING_TANTRUM",
-        "MOVE_SUPERPOWER",
-        "MOVE_SWAGGER",
-        "MOVE_SWIFT",
-        "MOVE_THROAT_CHOP"
-      ],
-      "eggMoves": [],
-      "evolutions": [],
-      "locations": [],
-      "heldItems": [],
-      "slug": "zarude-dada"
-    },
-    {
       "id": 894,
       "constant": "SPECIES_REGIELEKI",
       "dex": 611,
@@ -191402,7 +191288,7 @@
       "innates": [
         "ABILITY_SUPER_LUCK",
         "ABILITY_LEAF_GUARD",
-        "ABILITY_SHEER_FORCE"
+        "ABILITY_OGRE_FORCE"
       ],
       "sprite": "sprites/pokemon/ogerpon_teal.png",
       "shinySprite": "sprites/pokemon/ogerpon_teal_shiny.png",
@@ -191587,7 +191473,7 @@
       "innates": [
         "ABILITY_WATER_VEIL",
         "ABILITY_MENDING",
-        "ABILITY_SHEER_FORCE"
+        "ABILITY_OGRE_FORCE"
       ],
       "sprite": "sprites/pokemon/ogerpon_wellspring.png",
       "shinySprite": "sprites/pokemon/ogerpon_wellspring_shiny.png",
@@ -191762,7 +191648,7 @@
       "innates": [
         "ABILITY_FLASH_FIRE",
         "ABILITY_BLAZING_SUN",
-        "ABILITY_SHEER_FORCE"
+        "ABILITY_OGRE_FORCE"
       ],
       "sprite": "sprites/pokemon/ogerpon_hearthflame.png",
       "shinySprite": "sprites/pokemon/ogerpon_hearthflame_shiny.png",
@@ -191937,7 +191823,7 @@
       "innates": [
         "ABILITY_ROCK_HEAD",
         "ABILITY_STONE_FACE",
-        "ABILITY_SHEER_FORCE"
+        "ABILITY_OGRE_FORCE"
       ],
       "sprite": "sprites/pokemon/ogerpon_cornerstone.png",
       "shinySprite": "sprites/pokemon/ogerpon_cornerstone_shiny.png",
@@ -192113,7 +191999,7 @@
       "innates": [
         "ABILITY_DEFIANT",
         "ABILITY_LEAF_GUARD",
-        "ABILITY_SHEER_FORCE"
+        "ABILITY_OGRE_FORCE"
       ],
       "sprite": "sprites/pokemon/ogerpon_teal_tera.png",
       "shinySprite": "sprites/pokemon/ogerpon_teal_tera_shiny.png",
@@ -192289,7 +192175,7 @@
       "innates": [
         "ABILITY_WATER_VEIL",
         "ABILITY_MENDING",
-        "ABILITY_SHEER_FORCE"
+        "ABILITY_OGRE_FORCE"
       ],
       "sprite": "sprites/pokemon/ogerpon_wellspring_tera.png",
       "shinySprite": "sprites/pokemon/ogerpon_wellspring_tera_shiny.png",
@@ -192465,7 +192351,7 @@
       "innates": [
         "ABILITY_FLASH_FIRE",
         "ABILITY_BRIMSTONE",
-        "ABILITY_SHEER_FORCE"
+        "ABILITY_OGRE_FORCE"
       ],
       "sprite": "sprites/pokemon/ogerpon_hearthflame_tera.png",
       "shinySprite": "sprites/pokemon/ogerpon_hearthflame_tera_shiny.png",
@@ -192641,7 +192527,7 @@
       "innates": [
         "ABILITY_ROCK_HEAD",
         "ABILITY_STONE_FACE",
-        "ABILITY_SHEER_FORCE"
+        "ABILITY_OGRE_FORCE"
       ],
       "sprite": "sprites/pokemon/ogerpon_cornerstone_tera.png",
       "shinySprite": "sprites/pokemon/ogerpon_cornerstone_tera_shiny.png",
@@ -224081,12 +223967,6 @@
         ],
         "innate": [
           {
-            "species": "SPECIES_RAICHU_ALOLA",
-            "name": "Raichu",
-            "dex": 24,
-            "sprite": "sprites/pokemon/raichu_alola.png"
-          },
-          {
             "species": "SPECIES_ALAKAZAM_MEGA",
             "name": "Alakazam",
             "dex": 57,
@@ -224103,6 +223983,18 @@
             "name": "Magneton",
             "dex": 74,
             "sprite": "sprites/pokemon/magneton.png"
+          },
+          {
+            "species": "SPECIES_GENGAR",
+            "name": "Gengar",
+            "dex": 84,
+            "sprite": "sprites/pokemon/gengar.png"
+          },
+          {
+            "species": "SPECIES_GENGAR_MEGA",
+            "name": "Gengar",
+            "dex": 84,
+            "sprite": "sprites/pokemon/gengar_mega.png"
           },
           {
             "species": "SPECIES_GYARADOS_MEGA",
@@ -224535,12 +224427,6 @@
             "name": "Porygon2",
             "dex": 199,
             "sprite": "sprites/pokemon/porygon2.png"
-          },
-          {
-            "species": "SPECIES_MILOTIC",
-            "name": "Milotic",
-            "dex": 270,
-            "sprite": "sprites/pokemon/milotic.png"
           },
           {
             "species": "SPECIES_EXCADRILL",
@@ -226510,12 +226396,6 @@
             "sprite": "sprites/pokemon/drizzile.png"
           },
           {
-            "species": "SPECIES_INTELEON",
-            "name": "Inteleon",
-            "dex": 575,
-            "sprite": "sprites/pokemon/inteleon.png"
-          },
-          {
             "species": "SPECIES_OGERPON_WELLSPRING",
             "name": "Ogerpon",
             "dex": 694,
@@ -226832,6 +226712,18 @@
             "name": "Drizzile",
             "dex": 574,
             "sprite": "sprites/pokemon/drizzile.png"
+          },
+          {
+            "species": "SPECIES_INTELEON",
+            "name": "Inteleon",
+            "dex": 575,
+            "sprite": "sprites/pokemon/inteleon.png"
+          },
+          {
+            "species": "SPECIES_INTELEON_GMAX",
+            "name": "Inteleon",
+            "dex": 575,
+            "sprite": "sprites/pokemon/inteleon_gmax.png"
           },
           {
             "species": "SPECIES_DONDOZO",
@@ -228189,18 +228081,6 @@
             "sprite": "sprites/pokemon/kingdra.png"
           },
           {
-            "species": "SPECIES_INTELEON",
-            "name": "Inteleon",
-            "dex": 575,
-            "sprite": "sprites/pokemon/inteleon.png"
-          },
-          {
-            "species": "SPECIES_INTELEON_GMAX",
-            "name": "Inteleon",
-            "dex": 575,
-            "sprite": "sprites/pokemon/inteleon_gmax.png"
-          },
-          {
             "species": "SPECIES_QUAXLY",
             "name": "Quaxly",
             "dex": 629,
@@ -229395,12 +229275,6 @@
             "name": "Heracross",
             "dex": 184,
             "sprite": "sprites/pokemon/heracross_mega.png"
-          },
-          {
-            "species": "SPECIES_INCINEROAR",
-            "name": "Incineroar",
-            "dex": 526,
-            "sprite": "sprites/pokemon/incineroar.png"
           },
           {
             "species": "SPECIES_ANNIHILAPE",
@@ -233095,12 +232969,6 @@
             "sprite": "sprites/pokemon/torracat.png"
           },
           {
-            "species": "SPECIES_INCINEROAR",
-            "name": "Incineroar",
-            "dex": 526,
-            "sprite": "sprites/pokemon/incineroar.png"
-          },
-          {
             "species": "SPECIES_CINDERACE",
             "name": "Cinderace",
             "dex": 572,
@@ -233899,12 +233767,6 @@
             "name": "Zarude",
             "dex": 610,
             "sprite": "sprites/pokemon/zarude.png"
-          },
-          {
-            "species": "SPECIES_ZARUDE_DADA",
-            "name": "Zarude",
-            "dex": 610,
-            "sprite": "sprites/pokemon/zarude_dada.png"
           }
         ],
         "innate": [
@@ -234350,12 +234212,6 @@
             "name": "Meloetta",
             "dex": 465,
             "sprite": "sprites/pokemon/meloetta_pirouette.png"
-          },
-          {
-            "species": "SPECIES_INTELEON_GMAX",
-            "name": "Inteleon",
-            "dex": 575,
-            "sprite": "sprites/pokemon/inteleon_gmax.png"
           },
           {
             "species": "SPECIES_SIRFETCHD",
@@ -236493,12 +236349,6 @@
             "sprite": "sprites/pokemon/zarude.png"
           },
           {
-            "species": "SPECIES_ZARUDE_DADA",
-            "name": "Zarude",
-            "dex": 610,
-            "sprite": "sprites/pokemon/zarude_dada.png"
-          },
-          {
             "species": "SPECIES_MEOWSCARADA",
             "name": "Meowscarada",
             "dex": 625,
@@ -236725,54 +236575,6 @@
             "name": "Haxorus",
             "dex": 438,
             "sprite": "sprites/pokemon/haxorus.png"
-          },
-          {
-            "species": "SPECIES_OGERPON_TEAL",
-            "name": "Ogerpon",
-            "dex": 694,
-            "sprite": "sprites/pokemon/ogerpon_teal.png"
-          },
-          {
-            "species": "SPECIES_OGERPON_WELLSPRING",
-            "name": "Ogerpon",
-            "dex": 694,
-            "sprite": "sprites/pokemon/ogerpon_wellspring.png"
-          },
-          {
-            "species": "SPECIES_OGERPON_HEARTHFLAME",
-            "name": "Ogerpon",
-            "dex": 694,
-            "sprite": "sprites/pokemon/ogerpon_hearthflame.png"
-          },
-          {
-            "species": "SPECIES_OGERPON_CORNERSTONE",
-            "name": "Ogerpon",
-            "dex": 694,
-            "sprite": "sprites/pokemon/ogerpon_cornerstone.png"
-          },
-          {
-            "species": "SPECIES_OGERPON_TEAL_TERA",
-            "name": "Ogerpon",
-            "dex": 694,
-            "sprite": "sprites/pokemon/ogerpon_teal_tera.png"
-          },
-          {
-            "species": "SPECIES_OGERPON_WELLSPRING_TERA",
-            "name": "Ogerpon",
-            "dex": 694,
-            "sprite": "sprites/pokemon/ogerpon_wellspring_tera.png"
-          },
-          {
-            "species": "SPECIES_OGERPON_HEARTHFLAME_TERA",
-            "name": "Ogerpon",
-            "dex": 694,
-            "sprite": "sprites/pokemon/ogerpon_hearthflame_tera.png"
-          },
-          {
-            "species": "SPECIES_OGERPON_CORNERSTONE_TERA",
-            "name": "Ogerpon",
-            "dex": 694,
-            "sprite": "sprites/pokemon/ogerpon_cornerstone_tera.png"
           }
         ]
       }
@@ -237042,12 +236844,6 @@
             "name": "Zarude",
             "dex": 610,
             "sprite": "sprites/pokemon/zarude.png"
-          },
-          {
-            "species": "SPECIES_ZARUDE_DADA",
-            "name": "Zarude",
-            "dex": 610,
-            "sprite": "sprites/pokemon/zarude_dada.png"
           },
           {
             "species": "SPECIES_IRON_JUGULIS",
@@ -238845,12 +238641,6 @@
             "sprite": "sprites/pokemon/toxapex.png"
           },
           {
-            "species": "SPECIES_NAGANADEL",
-            "name": "Naganadel",
-            "dex": 563,
-            "sprite": "sprites/pokemon/naganadel.png"
-          },
-          {
             "species": "SPECIES_TOXTRICITY_AMPED",
             "name": "Toxtricity",
             "dex": 585,
@@ -239748,12 +239538,6 @@
             "sprite": "sprites/pokemon/zarude.png"
           },
           {
-            "species": "SPECIES_ZARUDE_DADA",
-            "name": "Zarude",
-            "dex": 610,
-            "sprite": "sprites/pokemon/zarude_dada.png"
-          },
-          {
             "species": "SPECIES_FLUTTER_MANE",
             "name": "Flutter Mane",
             "dex": 668,
@@ -240136,12 +239920,6 @@
           }
         ],
         "innate": [
-          {
-            "species": "SPECIES_GENGAR",
-            "name": "Gengar",
-            "dex": 84,
-            "sprite": "sprites/pokemon/gengar.png"
-          },
           {
             "species": "SPECIES_GENGAR_MEGA",
             "name": "Gengar",
@@ -242644,18 +242422,6 @@
             "sprite": "sprites/pokemon/honchkrow.png"
           },
           {
-            "species": "SPECIES_GIRATINA_ALTERED",
-            "name": "Giratina",
-            "dex": 375,
-            "sprite": "sprites/pokemon/giratina_altered.png"
-          },
-          {
-            "species": "SPECIES_GIRATINA_ORIGIN",
-            "name": "Giratina",
-            "dex": 375,
-            "sprite": "sprites/pokemon/giratina_origin.png"
-          },
-          {
             "species": "SPECIES_OBSTAGOON",
             "name": "Obstagoon",
             "dex": 593,
@@ -242721,7 +242487,7 @@
     "ABILITY_AURA_BREAK": {
       "constant": "ABILITY_AURA_BREAK",
       "name": "Aura Break",
-      "description": "Reverses the effects of Dark Aura and Fairy Aura, weakening those moves instead.",
+      "description": "Reverses the effects of Dark, Fairy, and Malice Auras, weakening those moves instead.",
       "power": 0,
       "accuracy": 0,
       "pp": 0,
@@ -243218,12 +242984,6 @@
             "name": "Arbok",
             "dex": 22,
             "sprite": "sprites/pokemon/arbok.png"
-          },
-          {
-            "species": "SPECIES_GENGAR_MEGA",
-            "name": "Gengar",
-            "dex": 84,
-            "sprite": "sprites/pokemon/gengar_mega.png"
           },
           {
             "species": "SPECIES_ARIADOS",
@@ -244142,6 +243902,12 @@
             "name": "Slowking",
             "dex": 174,
             "sprite": "sprites/pokemon/slowking_galar.png"
+          },
+          {
+            "species": "SPECIES_NAGANADEL",
+            "name": "Naganadel",
+            "dex": 563,
+            "sprite": "sprites/pokemon/naganadel.png"
           },
           {
             "species": "SPECIES_GLIMMORA_MEGA",
@@ -246321,20 +246087,7 @@
             "sprite": "sprites/pokemon/spectrier.png"
           }
         ],
-        "innate": [
-          {
-            "species": "SPECIES_GIRATINA_ALTERED",
-            "name": "Giratina",
-            "dex": 375,
-            "sprite": "sprites/pokemon/giratina_altered.png"
-          },
-          {
-            "species": "SPECIES_GIRATINA_ORIGIN",
-            "name": "Giratina",
-            "dex": 375,
-            "sprite": "sprites/pokemon/giratina_origin.png"
-          }
-        ]
+        "innate": []
       }
     },
     "ABILITY_AS_ONE_ICE_RIDER": {
@@ -247720,7 +247473,14 @@
             "sprite": "sprites/pokemon/flamigo.png"
           }
         ],
-        "innate": []
+        "innate": [
+          {
+            "species": "SPECIES_INCINEROAR",
+            "name": "Incineroar",
+            "dex": 526,
+            "sprite": "sprites/pokemon/incineroar.png"
+          }
+        ]
       }
     },
     "ABILITY_TOXIC_DEBRIS": {
@@ -252522,6 +252282,12 @@
         "base": [],
         "innate": [
           {
+            "species": "SPECIES_GIRATINA_ORIGIN",
+            "name": "Giratina",
+            "dex": 375,
+            "sprite": "sprites/pokemon/giratina_origin.png"
+          },
+          {
             "species": "SPECIES_LITWICK",
             "name": "Litwick",
             "dex": 433,
@@ -252603,6 +252369,12 @@
           }
         ],
         "innate": [
+          {
+            "species": "SPECIES_GIRATINA_ALTERED",
+            "name": "Giratina",
+            "dex": 375,
+            "sprite": "sprites/pokemon/giratina_altered.png"
+          },
           {
             "species": "SPECIES_GOLURK",
             "name": "Golurk",
@@ -253193,6 +252965,12 @@
             "name": "Froslass",
             "dex": 366,
             "sprite": "sprites/pokemon/froslass_mega.png"
+          },
+          {
+            "species": "SPECIES_GIRATINA_ALTERED",
+            "name": "Giratina",
+            "dex": 375,
+            "sprite": "sprites/pokemon/giratina_altered.png"
           },
           {
             "species": "SPECIES_YAMASK_GALAR",
@@ -254512,6 +254290,12 @@
             "sprite": "sprites/pokemon/dragonite_mega.png"
           },
           {
+            "species": "SPECIES_MILOTIC",
+            "name": "Milotic",
+            "dex": 270,
+            "sprite": "sprites/pokemon/milotic.png"
+          },
+          {
             "species": "SPECIES_GOGOAT",
             "name": "Gogoat",
             "dex": 485,
@@ -254539,6 +254323,12 @@
             "name": "Pelipper",
             "dex": 228,
             "sprite": "sprites/pokemon/pelipper.png"
+          },
+          {
+            "species": "SPECIES_INCINEROAR",
+            "name": "Incineroar",
+            "dex": 526,
+            "sprite": "sprites/pokemon/incineroar.png"
           },
           {
             "species": "SPECIES_KILOWATTREL",
@@ -255447,6 +255237,146 @@
             "name": "Serperior",
             "dex": 385,
             "sprite": "sprites/pokemon/serperior.png"
+          }
+        ]
+      }
+    },
+    "ABILITY_ELECTROLEVITATE": {
+      "constant": "ABILITY_ELECTROLEVITATE",
+      "name": "Electromagnetism",
+      "description": "The Pokemon is immune to Ground-type moves and grounded entry hazards, but benefits from effects of Electric Terrain.",
+      "power": 0,
+      "accuracy": 0,
+      "pp": 0,
+      "priority": 0,
+      "type": "",
+      "category": "",
+      "slug": "electrolevitate",
+      "usage": {
+        "base": [],
+        "innate": [
+          {
+            "species": "SPECIES_RAICHU_ALOLA",
+            "name": "Raichu",
+            "dex": 24,
+            "sprite": "sprites/pokemon/raichu_alola.png"
+          }
+        ]
+      }
+    },
+    "ABILITY_MALICE_AURA": {
+      "constant": "ABILITY_MALICE_AURA",
+      "name": "Malice Aura",
+      "description": "Boosts the power of all Ghost-type moves in battle by 33%.",
+      "power": 0,
+      "accuracy": 0,
+      "pp": 0,
+      "priority": 0,
+      "type": "",
+      "category": "",
+      "slug": "malice-aura",
+      "usage": {
+        "base": [],
+        "innate": [
+          {
+            "species": "SPECIES_GIRATINA_ORIGIN",
+            "name": "Giratina",
+            "dex": 375,
+            "sprite": "sprites/pokemon/giratina_origin.png"
+          }
+        ]
+      }
+    },
+    "ABILITY_TRUESHOT_AURA": {
+      "constant": "ABILITY_TRUESHOT_AURA",
+      "name": "Trueshot Aura",
+      "description": "Raises own and ally's critical-hit ratio by two stages.",
+      "power": 0,
+      "accuracy": 0,
+      "pp": 0,
+      "priority": 0,
+      "type": "",
+      "category": "",
+      "slug": "trueshot-aura",
+      "usage": {
+        "base": [],
+        "innate": [
+          {
+            "species": "SPECIES_INTELEON",
+            "name": "Inteleon",
+            "dex": 575,
+            "sprite": "sprites/pokemon/inteleon.png"
+          },
+          {
+            "species": "SPECIES_INTELEON_GMAX",
+            "name": "Inteleon",
+            "dex": 575,
+            "sprite": "sprites/pokemon/inteleon_gmax.png"
+          }
+        ]
+      }
+    },
+    "ABILITY_OGRE_FORCE": {
+      "constant": "ABILITY_OGRE_FORCE",
+      "name": "Ogre Force",
+      "description": "Moves with added effects deal 15% more damage.",
+      "power": 0,
+      "accuracy": 0,
+      "pp": 0,
+      "priority": 0,
+      "type": "",
+      "category": "",
+      "slug": "ogre-force",
+      "usage": {
+        "base": [],
+        "innate": [
+          {
+            "species": "SPECIES_OGERPON_TEAL",
+            "name": "Ogerpon",
+            "dex": 694,
+            "sprite": "sprites/pokemon/ogerpon_teal.png"
+          },
+          {
+            "species": "SPECIES_OGERPON_WELLSPRING",
+            "name": "Ogerpon",
+            "dex": 694,
+            "sprite": "sprites/pokemon/ogerpon_wellspring.png"
+          },
+          {
+            "species": "SPECIES_OGERPON_HEARTHFLAME",
+            "name": "Ogerpon",
+            "dex": 694,
+            "sprite": "sprites/pokemon/ogerpon_hearthflame.png"
+          },
+          {
+            "species": "SPECIES_OGERPON_CORNERSTONE",
+            "name": "Ogerpon",
+            "dex": 694,
+            "sprite": "sprites/pokemon/ogerpon_cornerstone.png"
+          },
+          {
+            "species": "SPECIES_OGERPON_TEAL_TERA",
+            "name": "Ogerpon",
+            "dex": 694,
+            "sprite": "sprites/pokemon/ogerpon_teal_tera.png"
+          },
+          {
+            "species": "SPECIES_OGERPON_WELLSPRING_TERA",
+            "name": "Ogerpon",
+            "dex": 694,
+            "sprite": "sprites/pokemon/ogerpon_wellspring_tera.png"
+          },
+          {
+            "species": "SPECIES_OGERPON_HEARTHFLAME_TERA",
+            "name": "Ogerpon",
+            "dex": 694,
+            "sprite": "sprites/pokemon/ogerpon_hearthflame_tera.png"
+          },
+          {
+            "species": "SPECIES_OGERPON_CORNERSTONE_TERA",
+            "name": "Ogerpon",
+            "dex": 694,
+            "sprite": "sprites/pokemon/ogerpon_cornerstone_tera.png"
           }
         ]
       }
@@ -256917,7 +256847,7 @@
       "move": "MOVE_DRAINING_KISS",
       "label": "TM64",
       "name": "TM64 Draining Kiss",
-      "description": "Steals the foe's HP with a kiss, healing over half the damage.",
+      "description": "Steals the foe's HP with a kiss, healing half the damage.",
       "moveName": "Draining Kiss",
       "type": "TYPE_FAIRY",
       "category": "DAMAGE_CATEGORY_SPECIAL",
@@ -287065,7 +286995,7 @@
           "displayName": "Raichu Alola",
           "innates": [
             "ABILITY_PLUS",
-            "ABILITY_LEVITATE",
+            "ABILITY_ELECTROLEVITATE",
             "ABILITY_ELECTRIC_SURGE"
           ],
           "itemConstant": "ITEM_SITRUS_BERRY",
@@ -287868,7 +287798,7 @@
           "constant": "SPECIES_MILOTIC",
           "displayName": "Milotic",
           "innates": [
-            "ABILITY_CLEAR_BODY",
+            "ABILITY_GUARDIAN",
             "ABILITY_FAE_SOUL",
             "ABILITY_REGENERATOR"
           ],
@@ -290385,9 +290315,9 @@
           "constant": "SPECIES_GENGAR",
           "displayName": "Gengar",
           "innates": [
-            "ABILITY_RATTLED",
             "ABILITY_PRANKSTER",
-            "ABILITY_INFILTRATOR"
+            "ABILITY_INFILTRATOR",
+            "ABILITY_LEVITATE"
           ],
           "itemConstant": "ITEM_SITRUS_BERRY",
           "itemName": "Sitrus Berry",
@@ -291529,9 +291459,9 @@
           "constant": "SPECIES_GENGAR",
           "displayName": "Gengar",
           "innates": [
-            "ABILITY_RATTLED",
             "ABILITY_PRANKSTER",
-            "ABILITY_INFILTRATOR"
+            "ABILITY_INFILTRATOR",
+            "ABILITY_LEVITATE"
           ],
           "itemConstant": "ITEM_SITRUS_BERRY",
           "itemName": "Sitrus Berry",
@@ -296805,7 +296735,7 @@
           "displayName": "Raichu Alola",
           "innates": [
             "ABILITY_PLUS",
-            "ABILITY_LEVITATE",
+            "ABILITY_ELECTROLEVITATE",
             "ABILITY_ELECTRIC_SURGE"
           ],
           "itemConstant": "",
@@ -301321,9 +301251,9 @@
           "constant": "SPECIES_GENGAR",
           "displayName": "Gengar",
           "innates": [
-            "ABILITY_RATTLED",
             "ABILITY_PRANKSTER",
-            "ABILITY_INFILTRATOR"
+            "ABILITY_INFILTRATOR",
+            "ABILITY_LEVITATE"
           ],
           "itemConstant": "",
           "itemName": "",
@@ -302827,9 +302757,9 @@
           "constant": "SPECIES_GENGAR",
           "displayName": "Gengar",
           "innates": [
-            "ABILITY_RATTLED",
             "ABILITY_PRANKSTER",
-            "ABILITY_INFILTRATOR"
+            "ABILITY_INFILTRATOR",
+            "ABILITY_LEVITATE"
           ],
           "itemConstant": "",
           "itemName": "",
@@ -303899,9 +303829,9 @@
           "constant": "SPECIES_GENGAR",
           "displayName": "Gengar",
           "innates": [
-            "ABILITY_RATTLED",
             "ABILITY_PRANKSTER",
-            "ABILITY_INFILTRATOR"
+            "ABILITY_INFILTRATOR",
+            "ABILITY_LEVITATE"
           ],
           "itemConstant": "ITEM_FOCUS_SASH",
           "itemName": "Focus Sash",
@@ -304097,9 +304027,9 @@
           "constant": "SPECIES_GENGAR",
           "displayName": "Gengar",
           "innates": [
-            "ABILITY_RATTLED",
             "ABILITY_PRANKSTER",
-            "ABILITY_INFILTRATOR"
+            "ABILITY_INFILTRATOR",
+            "ABILITY_LEVITATE"
           ],
           "itemConstant": "ITEM_FOCUS_SASH",
           "itemName": "Focus Sash",
@@ -311535,9 +311465,9 @@
           "constant": "SPECIES_GENGAR",
           "displayName": "Gengar",
           "innates": [
-            "ABILITY_RATTLED",
             "ABILITY_PRANKSTER",
-            "ABILITY_INFILTRATOR"
+            "ABILITY_INFILTRATOR",
+            "ABILITY_LEVITATE"
           ],
           "itemConstant": "ITEM_AIR_BALLOON",
           "itemName": "Air Balloon",
@@ -311753,9 +311683,9 @@
           "constant": "SPECIES_GENGAR",
           "displayName": "Gengar",
           "innates": [
-            "ABILITY_RATTLED",
             "ABILITY_PRANKSTER",
-            "ABILITY_INFILTRATOR"
+            "ABILITY_INFILTRATOR",
+            "ABILITY_LEVITATE"
           ],
           "itemConstant": "ITEM_AIR_BALLOON",
           "itemName": "Air Balloon",
@@ -312386,9 +312316,9 @@
           "constant": "SPECIES_GENGAR",
           "displayName": "Gengar",
           "innates": [
-            "ABILITY_RATTLED",
             "ABILITY_PRANKSTER",
-            "ABILITY_INFILTRATOR"
+            "ABILITY_INFILTRATOR",
+            "ABILITY_LEVITATE"
           ],
           "itemConstant": "ITEM_AIR_BALLOON",
           "itemName": "Air Balloon",
@@ -312617,9 +312547,9 @@
           "constant": "SPECIES_GENGAR",
           "displayName": "Gengar",
           "innates": [
-            "ABILITY_RATTLED",
             "ABILITY_PRANKSTER",
-            "ABILITY_INFILTRATOR"
+            "ABILITY_INFILTRATOR",
+            "ABILITY_LEVITATE"
           ],
           "itemConstant": "ITEM_AIR_BALLOON",
           "itemName": "Air Balloon",
@@ -319316,9 +319246,9 @@
           "constant": "SPECIES_GENGAR",
           "displayName": "Gengar",
           "innates": [
-            "ABILITY_RATTLED",
             "ABILITY_PRANKSTER",
-            "ABILITY_INFILTRATOR"
+            "ABILITY_INFILTRATOR",
+            "ABILITY_LEVITATE"
           ],
           "itemConstant": "ITEM_GHOSTITE",
           "itemName": "Ghostite",
@@ -320686,9 +320616,9 @@
           "constant": "SPECIES_GENGAR",
           "displayName": "Gengar",
           "innates": [
-            "ABILITY_RATTLED",
             "ABILITY_PRANKSTER",
-            "ABILITY_INFILTRATOR"
+            "ABILITY_INFILTRATOR",
+            "ABILITY_LEVITATE"
           ],
           "itemConstant": "ITEM_GHOSTITE",
           "itemName": "Ghostite",
@@ -322344,9 +322274,9 @@
           "constant": "SPECIES_GENGAR",
           "displayName": "Gengar",
           "innates": [
-            "ABILITY_RATTLED",
             "ABILITY_PRANKSTER",
-            "ABILITY_INFILTRATOR"
+            "ABILITY_INFILTRATOR",
+            "ABILITY_LEVITATE"
           ],
           "itemConstant": "ITEM_GHOSTITE",
           "itemName": "Ghostite",
@@ -322543,9 +322473,9 @@
           "constant": "SPECIES_GENGAR",
           "displayName": "Gengar",
           "innates": [
-            "ABILITY_RATTLED",
             "ABILITY_PRANKSTER",
-            "ABILITY_INFILTRATOR"
+            "ABILITY_INFILTRATOR",
+            "ABILITY_LEVITATE"
           ],
           "itemConstant": "ITEM_GHOSTITE",
           "itemName": "Ghostite",
@@ -328598,9 +328528,9 @@
           "constant": "SPECIES_GENGAR",
           "displayName": "Gengar",
           "innates": [
-            "ABILITY_RATTLED",
             "ABILITY_PRANKSTER",
-            "ABILITY_INFILTRATOR"
+            "ABILITY_INFILTRATOR",
+            "ABILITY_LEVITATE"
           ],
           "itemConstant": "ITEM_GHOSTITE",
           "itemName": "Ghostite",
@@ -328710,8 +328640,8 @@
           "displayName": "Giratina",
           "innates": [
             "ABILITY_CURSED_BODY",
-            "ABILITY_DARK_AURA",
-            "ABILITY_GRIM_NEIGH"
+            "ABILITY_SPECTRAL_DRAIN",
+            "ABILITY_SPECTRAL"
           ],
           "itemConstant": "ITEM_GRISEOUS_ORB",
           "itemName": "Griseous Orb",
@@ -328834,9 +328764,9 @@
           "constant": "SPECIES_GENGAR",
           "displayName": "Gengar",
           "innates": [
-            "ABILITY_RATTLED",
             "ABILITY_PRANKSTER",
-            "ABILITY_INFILTRATOR"
+            "ABILITY_INFILTRATOR",
+            "ABILITY_LEVITATE"
           ],
           "itemConstant": "ITEM_GHOSTITE",
           "itemName": "Ghostite",
@@ -328947,8 +328877,8 @@
           "displayName": "Giratina",
           "innates": [
             "ABILITY_CURSED_BODY",
-            "ABILITY_DARK_AURA",
-            "ABILITY_GRIM_NEIGH"
+            "ABILITY_SPECTRAL_DRAIN",
+            "ABILITY_SPECTRAL"
           ],
           "itemConstant": "ITEM_GRISEOUS_ORB",
           "itemName": "Griseous Orb",
@@ -332577,9 +332507,9 @@
           "constant": "SPECIES_GENGAR",
           "displayName": "Gengar",
           "innates": [
-            "ABILITY_RATTLED",
             "ABILITY_PRANKSTER",
-            "ABILITY_INFILTRATOR"
+            "ABILITY_INFILTRATOR",
+            "ABILITY_LEVITATE"
           ],
           "itemConstant": "ITEM_LIFE_ORB",
           "itemName": "Life Orb",
@@ -332732,9 +332662,9 @@
           "constant": "SPECIES_GENGAR",
           "displayName": "Gengar",
           "innates": [
-            "ABILITY_RATTLED",
             "ABILITY_PRANKSTER",
-            "ABILITY_INFILTRATOR"
+            "ABILITY_INFILTRATOR",
+            "ABILITY_LEVITATE"
           ],
           "itemConstant": "ITEM_CHOICE_SCARF",
           "itemName": "Choice Scarf",
@@ -334161,9 +334091,9 @@
           "constant": "SPECIES_GENGAR",
           "displayName": "Gengar",
           "innates": [
-            "ABILITY_RATTLED",
             "ABILITY_PRANKSTER",
-            "ABILITY_INFILTRATOR"
+            "ABILITY_INFILTRATOR",
+            "ABILITY_LEVITATE"
           ],
           "itemConstant": "ITEM_LIFE_ORB",
           "itemName": "Life Orb",
@@ -334336,9 +334266,9 @@
           "constant": "SPECIES_GENGAR",
           "displayName": "Gengar",
           "innates": [
-            "ABILITY_RATTLED",
             "ABILITY_PRANKSTER",
-            "ABILITY_INFILTRATOR"
+            "ABILITY_INFILTRATOR",
+            "ABILITY_LEVITATE"
           ],
           "itemConstant": "ITEM_CHOICE_SCARF",
           "itemName": "Choice Scarf",
@@ -335658,7 +335588,7 @@
       "category": "Information",
       "order": 1,
       "source": "guides/FAQ.md",
-      "content": "## Browse by category\n\n- [Basics](#basics)\n- [Story progression and key items](#story-progression-and-key-items)\n- [Pok\u00e9mon availability and encounters](#pokemon-availability-and-encounters)\n- [Gameplay mechanics](#gameplay-mechanics)\n- [Training and customization](#training-and-customization)\n- [Items, money, and Pickup](#items-money-and-pickup)\n- [Postgame and optional battles](#postgame-and-optional-battles)\n\n## Basics\n\n### Saves compatible between versions?\n- Always\n\n### Hard mode differences?\n- Gym battles are double battles unless enforced into singles by another setting\n- Trainers with no pre-assigned moves for their Pok\u00e9mon generate slightly smarter movepools based on progression.\n\n### Kanto?\n- No kanto, pure Johto focus.\n\n### When is Morning/Day/Evening/Night?\n- Morning is 06:00-10:00, Day 10:00-19:00, Evening 19:00-20:00 and Night 20:00-06:00.\n\n### When does night time start?\n- 20:00 ingame time.\n\n### Dexnav?\n- After obtaining first set of Pok\u00e9 Balls.\n\n### Unregistering dexnav species?\n- Select in the dexnav screen.\n\n### Where is X Item/Pok\u00e9mon/TM?\n- Check docs or ingame pokedex.\n\n## Story progression and key items\n\n### Exp. Share?\n- Given right before arriving in the Violet City.\n\n### HMs?\n- Requires only owning the HM and the corresponding badge. Additionally you can Fly using the Region Map in Pok\u00e9gear after obtaining the HM.\n\n### Strength HM?\n- Olivine Cafe.\n\n### Waterfall hM?\n- Ice path.\n\n### How do I access Whitney's Gym?\n- Go to the Radio Tower and complete the quiz on the first floor\n\n### How do I remove the weird tree after beating 3rd Gym?\n- Go to Goldenrod Flower Shop next to the gym and get Squirtbottle to wake up the tree.\n\n### What's Candy Jar and how do I get it?\n- After beating the first gym, Elm's aide will give it to you alongside the egg. It will accumulate extra exp from battles and convert them to Exp Candy on use.\n\n### Mega Ring?\n- After Team Rocket takeover event in Goldenrod City.\n\n### How to get starter megastone/bondstone?\n- Given to you by Elm at a certain point in story.\n\n### Coin case?\n- Goldenrod Underground\n\n### Cameron locations?\n- Ruins of Alph, Route 34, Cianwood City, Kitakami Border and Route 28.\n\n## Pok\u00e9mon availability and encounters\n\n### How do I get the other starters?\n- The Gachapon machine in Goldenrod Casino, behind the rewards counter, can give starters from any generation. 3000 Coins is the minimum entry, but putting more increases the chance of not receiving a duplicate starter.\n\n### Regional Pok\u00e9mon?\n- Most are available in the Baoba's Safari Zone, but several can be found before this.\n\n### Shiny odds?\n- 1/256. Eggs will show with blue dots if they are shiny.\n\n### Shiny locks?\n- None. Even NPC trades can be shiny.\n\n### How often do Hidden Grotto contents respawn?\n- Once per day, but you can also use Beckoning Bell item from Battle Factory after Gym 3.\n\n### Are Pok\u00e9mon found from Hidden Grottos any different from regular wild ones?\n- Pok\u00e9mon from Hidden Grottos have atleast two perfect IVs and their Hidden Ability. They have 60% chance of containing a Pok\u00e9mon, 30% of having a generic item and 10% of having a grotto specific item\n\n### Fossils?\n- Smash rocks in Ruins of Alph.\n\n### Baby forms?\n- Breed with incenses, see https://bulbapedia.bulbagarden.net/wiki/Baby_Pok%C3%A9mon#List_of_baby_Pok%C3%A9mon for more information.\n\n### What are the ingame trades?\n- Pawmi in Violet (for Cottonee)\n- G-Slowpoke in Azalea (for regular Slowpoke)\n- Honedge in Goldenrod Dept Store (for Clefairy),\n- Hisui-Voltorb in Olivine (for Mareanie)\n- Gabite in Blackthorn City (for Dragonair)\n- Meltan in Rinto Village (for Tinkaton)\n\n## Gameplay mechanics\n\n### Type changes?\n- None during the main game. Only some might gain one extra type during postgame from an innate.\n\n### BST Changes?\n- None.\n\n### Moves changes?\n- Yes, some Pok\u00e9mon learn extra moves for a bit more late game power. Such as Attack Order Beedrill.\n\n### How to mega evolve?\n- Press start when selecting moves while the Pok\u00e9mon is wielding appropriate Mega stone and you have the Mega Ring\n\n### Should I hold off evolving Growlithe/Vulpix/etc?\n- No, the evolved forms learn all the moves the pre-evoluion form does.\n\n### How do I change Rotom form?\n- After obtaining a Rotom, bring it to the guard on the first floor of Goldenrod Apartment building. You can then access the basement with form changing appliances.\n\n## Training and customization\n\n### Grinding Exp for late game?\n- Kitakami has an Audino/Blissey trainer for a fee of 10,000 pokedollars.\n\n### Nature mints?\n- Olivine beach cafe sells them.\n\n### Ability changing?\n- Battle Factory (after 3rd gym) offers them for playing a few rounds. Few can also be found in the overworld.\n\n### Tutor moves?\n- There's a tutor move master in Olivine City in the top-right house who will sell you infinite access to all Tutor moves for 44444 pokedollars. After buying it, you can teach tutor moves from the summary screen.\n\n### Egg moves?\n- Blackthorn City egg move master sells you infinite access to egg moves for 88888 pokedollars similar to tutor move master.\n\n### Why do innates unlock so late?\n- They are meant to act as a form of postgame progression. Most Pok\u00e9mon stop learning moves around 60~ usually, so this gives something to look forward to after that. If you really want to play with innates during the main game, you can activate them from the bookcase behind the starter case table in Elm's lab. However this will be a very unbalanced experience and not the intended way to play.\n\n### Raising IVs?\n- Fishing and Battle Factory (after gym 3) can net you feather items which permanently raise your IVs by 5 with each use. Additionally Hyper Training is available in Rinto Village with Bottle Caps (which can also be obtained by fishing with Super Rod).\n\n### Raising EVs?\n- EV items such as Power Weight have been greatly buffed, and they are buyable in Goldenrod. Additionally vitamins like Protein are not capped at 100 EVs anymore, and there are EX versions of the items that raise the stats instantly to max.\n\n### Lowering EVs?\n- Goldenrod Dept. Store sells EV reducing berries?\n\n## Items, money, and Pickup\n\n### Tips for finding items that are held by wild Pok\u00e9mon?\n- Have a Pok\u00e9mon with ability Compoundeyes or Super Luck in the first party slot to increase the chances of wild Pok\u00e9mon holding an item.\n\n### Tips for getting money?\n- Early game, have a Pok\u00e9mon with ability Pickup. In this hack if the held item slot is occuped, items picked by Pickup will still go to bag. Later on you can fish feathers or smash rocks for shards and sell them for quick cash. After reaching Goldenrod, you can start coveting/thieving Yanmas on Route 35 for Wide Lenses, they sell for a lot of money and can be easily farmed with Dexnav chain. Butterfree learns Covet and Persian learns Thief. After obtaining 8 badges, Battle Factory will stock Nuggets and Big Nuggets. In the post game you can farm money from the Rocket Arcade facility.\n\n### What items can Pickup find?\n- Below is the table of items found with Pickup. Note that the items go straight to bag if held item slot is occupied.\n\n| Item | Lv. 1\u201310 | Lv. 11\u201320 | Lv. 21\u201330 | Lv. 31\u201340 | Lv. 41\u201350 | Lv. 51\u201360 | Lv. 61\u201370 | Lv. 71\u201380 | Lv. 81\u201390 | Lv. 91\u2013100 |\n| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |\n| Potion | 35% | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n| Tiny Mushroom | 25% | 10% | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n| Repel | 8% | 30% | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n| Super Potion | 8% | 10% | 30% | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n| Pok\u00e9 Doll | 8% | 10% | 9% | 30% | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n| Big Mushroom | 3% | 10% | 9% | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n| Super Repel | 3% | 10% | 9% | 9% | 30% | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n| Full Heal | 3% | 3% | 9% | 8% | 9% | 30% | \u2014 | \u2014 | \u2014 | \u2014 |\n| Revive | 3% | 3% | 3% | 8% | 8% | 9% | 30% | \u2014 | \u2014 | \u2014 |\n| Hyper Potion | 3% | 3% | 3% | 4% | 8% | 9% | 8% | 30% | \u2014 | \u2014 |\n| Ether | 1% | 1% | 3% | 4% | 4% | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n| Max Repel | \u2014 | 3% | 3% | 4% | 4% | 9% | 8% | 8% | 30% | \u2014 |\n| Moon Stone | \u2014 | 3% | 3% | 4% | 4% | 4% | 4% | 5% | 9% | 10% |\n| Sun Stone | \u2014 | 3% | 3% | 4% | 4% | 4% | 4% | 5% | 9% | 10% |\n| Rare Candy | \u2014 | 1% | 1% | 1% | 1% | 4% | 4% | 5% | 4% | 5% |\n| Nugget | \u2014 | \u2014 | 3% | 4% | 4% | 4% | 4% | 5% | 4% | 5% |\n| Max Potion | \u2014 | \u2014 | 3% | 4% | 4% | 4% | 8% | 8% | 9% | 30% |\n| Max Ether | \u2014 | \u2014 | 1% | 1% | 4% | 4% | 4% | \u2014 | \u2014 | \u2014 |\n| PP Up | \u2014 | \u2014 | 1% | 1% | 1% | 4% | 4% | 5% | 4% | 5% |\n| Big Nugget | \u2014 | \u2014 | 1% | 1% | 1% | 1% | 4% | 5% | 4% | 5% |\n| Destiny Knot | \u2014 | \u2014 | 1% | 1% | 1% | 1% | 1% | 1% | 1% | 1% |\n| Leftovers | \u2014 | \u2014 | 1% | 1% | 1% | 1% | 1% | 1% | 1% | 1% |\n| Mental Herb | \u2014 | \u2014 | 1% | 1% | 1% | 1% | 1% | 1% | 1% | 1% |\n| Power Herb | \u2014 | \u2014 | 1% | 1% | 1% | 1% | 1% | 1% | 1% | 1% |\n| White Herb | \u2014 | \u2014 | 1% | 1% | 1% | 1% | 1% | 1% | 1% | 1% |\n| Balm Mushroom | \u2014 | \u2014 | 1% | 4% | 4% | 4% | 4% | 5% | 4% | 5% |\n| Max Revive | \u2014 | \u2014 | \u2014 | 4% | 4% | 4% | 4% | 7% | 9% | 9% |\n| Ability Capsule | \u2014 | \u2014 | \u2014 | \u2014 | 1% | 1% | 4% | 5% | 4% | 5% |\n| Ability Patch | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | 1% | 1% | 4% | 5% |\n| Bottle Cap | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | 1% | 1% | 1% |\n\n## Postgame and optional battles\n\n### How do I get Dive HM?\n- Complete Mt. Silver event in the postgame and then speak with your rival in their house to start a questline that eventually rewards Dive.\n\n### Where are the Route Experts?\n- Route 31, Goldenrod Shore, Route 47, Route 43 and Route 27.\n\n### Gym leader rematch locations in postgame?\n- Falkner: Violet City school\n- Bugsy: National Park\n- Whitney: Goldenrod Dept. Store\n- Morty: Bellchime Trail\n- Chuck: Route 47 bridge\n- Jasmine: Olivine cafe\n- Pryce: Lake of Rage\n- Clair: Dragon's Den cave"
+      "content": "## Browse by category\n\n- [Basics](#basics)\n- [Story progression and key items](#story-progression-and-key-items)\n- [Pok\u00e9mon availability and encounters](#pokemon-availability-and-encounters)\n- [Gameplay mechanics](#gameplay-mechanics)\n- [Training and customization](#training-and-customization)\n- [Items, money, and Pickup](#items-money-and-pickup)\n- [Postgame and optional battles](#postgame-and-optional-battles)\n\n## Basics\n\n### What is the latest version of the hack?\n- 1.1.1 and it's only available on Hackdex\n\n### Saves compatible between versions?\n- Always\n\n### Are there any cheats?\n- No, cheats are not supported and they are likely to corrupt your save, don't trust 3rd party sites offering them.\n\n### Hard mode differences?\n- Gym battles are double battles unless enforced into singles by another setting\n- Trainers with no pre-assigned moves for their Pok\u00e9mon generate slightly smarter movepools based on progression.\n\n### Kanto?\n- No kanto, pure Johto focus.\n\n### When is Morning/Day/Evening/Night?\n- Morning is 06:00-10:00, Day 10:00-19:00, Evening 19:00-20:00 and Night 20:00-06:00.\n\n### When does night time start?\n- 20:00 ingame time.\n\n### Dexnav?\n- After obtaining first set of Pok\u00e9 Balls.\n\n### Unregistering dexnav species?\n- Select in the dexnav screen.\n\n### Where is X Item/Pok\u00e9mon/TM?\n- Check docs or ingame pokedex.\n\n## Story progression and key items\n\n### Exp. Share?\n- Given right before arriving in the Violet City.\n\n### HMs?\n- Requires only owning the HM and the corresponding badge. Additionally you can Fly using the Region Map in Pok\u00e9gear after obtaining the HM.\n\n### Strength HM?\n- Olivine Cafe.\n\n### Waterfall hM?\n- Ice path.\n\n### How do I access Whitney's Gym?\n- Go to the Radio Tower and complete the quiz on the first floor\n\n### How do I remove the weird tree after beating 3rd Gym?\n- Go to Goldenrod Flower Shop next to the gym and get Squirtbottle to wake up the tree.\n\n### What's Candy Jar and how do I get it?\n- After beating the first gym, Elm's aide will give it to you alongside the egg. It will accumulate extra exp from battles and convert them to Exp Candy on use.\n\n### Mega Ring?\n- After Team Rocket takeover event in Goldenrod City.\n\n### How to get starter megastone/bondstone?\n- Given to you by Elm at a certain point in story.\n\n### Coin case?\n- Goldenrod Underground\n\n### Cameron locations?\n- Ruins of Alph, Route 34, Cianwood City, Kitakami Border and Route 28.\n\n## Pok\u00e9mon availability and encounters\n\n### How do I get the other starters?\n- The Gachapon machine in Goldenrod Casino, behind the rewards counter, can give starters from any generation. 3000 Coins is the minimum entry, but putting more increases the chance of not receiving a duplicate starter.\n\n### Regional Pok\u00e9mon?\n- Most are available in the Baoba's Safari Zone, but several can be found before this.\n\n### Shiny odds?\n- 1/256. Eggs will show with blue dots if they are shiny.\n\n### Shiny locks?\n- None. Even NPC trades can be shiny.\n\n### How often do Hidden Grotto contents respawn?\n- Once per day, but you can also use Beckoning Bell item from Battle Factory after Gym 3.\n\n### Are Pok\u00e9mon found from Hidden Grottos any different from regular wild ones?\n- Pok\u00e9mon from Hidden Grottos have atleast two perfect IVs and their Hidden Ability. They have 60% chance of containing a Pok\u00e9mon, 30% of having a generic item and 10% of having a grotto specific item\n\n### Fossils?\n- Smash rocks in Ruins of Alph.\n\n### Baby forms?\n- Breed with incenses, see https://bulbapedia.bulbagarden.net/wiki/Baby_Pok%C3%A9mon#List_of_baby_Pok%C3%A9mon for more information.\n\n### What are the ingame trades?\n- Pawmi in Violet (for Cottonee)\n- G-Slowpoke in Azalea (for regular Slowpoke)\n- Honedge in Goldenrod Dept Store (for Clefairy),\n- Hisui-Voltorb in Olivine (for Mareanie)\n- Gabite in Blackthorn City (for Dragonair)\n- Meltan in Rinto Village (for Tinkaton)\n\n## Gameplay mechanics\n\n### Type changes?\n- None during the main game. Only some might gain one extra type during postgame from an innate.\n\n### BST Changes?\n- None.\n\n### Moves changes?\n- Yes, some Pok\u00e9mon learn extra moves for a bit more late game power. Such as Attack Order Beedrill.\n\n### How to mega evolve?\n- Press start when selecting moves while the Pok\u00e9mon is wielding appropriate Mega stone and you have the Mega Ring\n\n### Should I hold off evolving Growlithe/Vulpix/etc?\n- No, the evolved forms learn all the moves the pre-evoluion form does.\n\n### How do I change Rotom form?\n- After obtaining a Rotom, bring it to the guard on the first floor of Goldenrod Apartment building. You can then access the basement with form changing appliances.\n\n## Training and customization\n\n### Grinding Exp for late game?\n- Kitakami has an Audino/Blissey trainer for a fee of 10,000 pokedollars.\n\n### Nature mints?\n- Olivine beach cafe sells them.\n\n### Ability changing?\n- Battle Factory (after 3rd gym) offers them for playing a few rounds. Few can also be found in the overworld.\n\n### Tutor moves?\n- There's a tutor move master in Olivine City in the top-right house who will sell you infinite access to all Tutor moves for 44444 pokedollars. After buying it, you can teach tutor moves from the summary screen.\n\n### Egg moves?\n- Blackthorn City egg move master sells you infinite access to egg moves for 88888 pokedollars similar to tutor move master.\n\n### Why do innates unlock so late?\n- They are meant to act as a form of postgame progression. Most Pok\u00e9mon stop learning moves around 60~ usually, so this gives something to look forward to after that. If you really want to play with innates during the main game, you can activate them from the bookcase behind the starter case table in Elm's lab. However this will be a very unbalanced experience and not the intended way to play.\n\n### Raising IVs?\n- Fishing and Battle Factory (after gym 3) can net you feather items which permanently raise your IVs by 5 with each use. Additionally Hyper Training is available in Rinto Village with Bottle Caps (which can also be obtained by fishing with Super Rod).\n\n### Raising EVs?\n- EV items such as Power Weight have been greatly buffed, and they are buyable in Goldenrod. Additionally vitamins like Protein are not capped at 100 EVs anymore, and there are EX versions of the items that raise the stats instantly to max.\n\n### Lowering EVs?\n- Goldenrod Dept. Store sells EV reducing berries?\n\n## Items, money, and Pickup\n\n### Tips for finding items that are held by wild Pok\u00e9mon?\n- Have a Pok\u00e9mon with ability Compoundeyes or Super Luck in the first party slot to increase the chances of wild Pok\u00e9mon holding an item.\n\n### Tips for getting money?\n- Early game, have a Pok\u00e9mon with ability Pickup. In this hack if the held item slot is occuped, items picked by Pickup will still go to bag. Later on you can fish feathers or smash rocks for shards and sell them for quick cash. After reaching Goldenrod, you can start coveting/thieving Yanmas on Route 35 for Wide Lenses, they sell for a lot of money and can be easily farmed with Dexnav chain. Butterfree learns Covet and Persian learns Thief. After obtaining 8 badges, Battle Factory will stock Nuggets and Big Nuggets. In the post game you can farm money from the Rocket Arcade facility.\n\n### What items can Pickup find?\n- Below is the table of items found with Pickup. Note that the items go straight to bag if held item slot is occupied.\n\n| Item | Lv. 1\u201310 | Lv. 11\u201320 | Lv. 21\u201330 | Lv. 31\u201340 | Lv. 41\u201350 | Lv. 51\u201360 | Lv. 61\u201370 | Lv. 71\u201380 | Lv. 81\u201390 | Lv. 91\u2013100 |\n| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |\n| Potion | 35% | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n| Tiny Mushroom | 25% | 10% | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n| Repel | 8% | 30% | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n| Super Potion | 8% | 10% | 30% | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n| Pok\u00e9 Doll | 8% | 10% | 9% | 30% | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n| Big Mushroom | 3% | 10% | 9% | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n| Super Repel | 3% | 10% | 9% | 9% | 30% | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n| Full Heal | 3% | 3% | 9% | 8% | 9% | 30% | \u2014 | \u2014 | \u2014 | \u2014 |\n| Revive | 3% | 3% | 3% | 8% | 8% | 9% | 30% | \u2014 | \u2014 | \u2014 |\n| Hyper Potion | 3% | 3% | 3% | 4% | 8% | 9% | 8% | 30% | \u2014 | \u2014 |\n| Ether | 1% | 1% | 3% | 4% | 4% | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n| Max Repel | \u2014 | 3% | 3% | 4% | 4% | 9% | 8% | 8% | 30% | \u2014 |\n| Moon Stone | \u2014 | 3% | 3% | 4% | 4% | 4% | 4% | 5% | 9% | 10% |\n| Sun Stone | \u2014 | 3% | 3% | 4% | 4% | 4% | 4% | 5% | 9% | 10% |\n| Rare Candy | \u2014 | 1% | 1% | 1% | 1% | 4% | 4% | 5% | 4% | 5% |\n| Nugget | \u2014 | \u2014 | 3% | 4% | 4% | 4% | 4% | 5% | 4% | 5% |\n| Max Potion | \u2014 | \u2014 | 3% | 4% | 4% | 4% | 8% | 8% | 9% | 30% |\n| Max Ether | \u2014 | \u2014 | 1% | 1% | 4% | 4% | 4% | \u2014 | \u2014 | \u2014 |\n| PP Up | \u2014 | \u2014 | 1% | 1% | 1% | 4% | 4% | 5% | 4% | 5% |\n| Big Nugget | \u2014 | \u2014 | 1% | 1% | 1% | 1% | 4% | 5% | 4% | 5% |\n| Destiny Knot | \u2014 | \u2014 | 1% | 1% | 1% | 1% | 1% | 1% | 1% | 1% |\n| Leftovers | \u2014 | \u2014 | 1% | 1% | 1% | 1% | 1% | 1% | 1% | 1% |\n| Mental Herb | \u2014 | \u2014 | 1% | 1% | 1% | 1% | 1% | 1% | 1% | 1% |\n| Power Herb | \u2014 | \u2014 | 1% | 1% | 1% | 1% | 1% | 1% | 1% | 1% |\n| White Herb | \u2014 | \u2014 | 1% | 1% | 1% | 1% | 1% | 1% | 1% | 1% |\n| Balm Mushroom | \u2014 | \u2014 | 1% | 4% | 4% | 4% | 4% | 5% | 4% | 5% |\n| Max Revive | \u2014 | \u2014 | \u2014 | 4% | 4% | 4% | 4% | 7% | 9% | 9% |\n| Ability Capsule | \u2014 | \u2014 | \u2014 | \u2014 | 1% | 1% | 4% | 5% | 4% | 5% |\n| Ability Patch | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | 1% | 1% | 4% | 5% |\n| Bottle Cap | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | 1% | 1% | 1% |\n\n## Postgame and optional battles\n\n### How do I get Dive HM?\n- Complete Mt. Silver event in the postgame and then speak with your rival in their house to start a questline that eventually rewards Dive.\n\n### Where are the Route Experts?\n- Route 31, Goldenrod Shore, Route 47, Route 43 and Route 27.\n\n### Gym leader rematch locations in postgame?\n- Falkner: Violet City school\n- Bugsy: National Park\n- Whitney: Goldenrod Dept. Store\n- Morty: Bellchime Trail\n- Chuck: Route 47 bridge\n- Jasmine: Olivine cafe\n- Pryce: Lake of Rage\n- Clair: Dragon's Den cave"
     },
     {
       "slug": "howtoreportbugs",

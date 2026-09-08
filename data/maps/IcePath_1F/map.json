@@ -217,8 +217,8 @@
       "x": 32,
       "y": 8,
       "elevation": 0,
-      "var": "VAR_ICE_PATH_STATE",
-      "var_value": "0",
+      "var": "VAR_RIVAL_STATE",
+      "var_value": "9",
       "script": "IcePath_1F_Rival"
     },
     {
@@ -226,8 +226,8 @@
       "x": 32,
       "y": 9,
       "elevation": 0,
-      "var": "VAR_ICE_PATH_STATE",
-      "var_value": "0",
+      "var": "VAR_RIVAL_STATE",
+      "var_value": "9",
       "script": "IcePath_1F_Rival"
     },
     {
@@ -235,8 +235,8 @@
       "x": 32,
       "y": 7,
       "elevation": 0,
-      "var": "VAR_ICE_PATH_STATE",
-      "var_value": "0",
+      "var": "VAR_RIVAL_STATE",
+      "var_value": "9",
       "script": "IcePath_1F_Rival"
     }
   ],

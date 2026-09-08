@@ -4177,7 +4177,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_FAIRY),
         .abilities = { ABILITY_SURGE_SURFER, ABILITY_NONE, ABILITY_NONE },
-        .innates = { ABILITY_PLUS, ABILITY_LEVITATE, ABILITY_ELECTRIC_SURGE },
+        .innates = { ABILITY_PLUS, ABILITY_ELECTROLEVITATE, ABILITY_ELECTRIC_SURGE },
 		.bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Raichu"),
         .cryId = CRY_RAICHU,
@@ -12756,7 +12756,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS),
         .abilities = GENGAR_ABILITIES,
-        .innates = { ABILITY_RATTLED, ABILITY_PRANKSTER, ABILITY_INFILTRATOR },
+        .innates = { ABILITY_PRANKSTER, ABILITY_INFILTRATOR, ABILITY_LEVITATE },
 		.bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Gengar"),
         .cryId = CRY_GENGAR,
@@ -12829,7 +12829,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS),
         .abilities = { ABILITY_SHADOW_TAG, ABILITY_SHADOW_TAG, ABILITY_SHADOW_TAG },
-        .innates = { ABILITY_RATTLED, ABILITY_MERCILESS, ABILITY_CURSED_BODY },
+        .innates = { ABILITY_RATTLED, ABILITY_CURSED_BODY, ABILITY_LEVITATE },
 		.bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Gengar"),
     #if P_MODIFIED_MEGA_CRIES
@@ -14197,8 +14197,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggMoveLearnset = sCuboneEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_MAROWAK, CONDITIONS({IF_NOT_REGION, REGION_ALOLA})}
                             #if P_ALOLAN_FORMS
-                                ,{EVO_ITEM, ITEM_STRANGE_SOUVENIR, SPECIES_MAROWAK_ALOLA},
-                                {EVO_NONE, 0, SPECIES_MAROWAK_ALOLA_TOTEM}
+                                ,{EVO_ITEM, ITEM_STRANGE_SOUVENIR, SPECIES_MAROWAK_ALOLA}
                             #endif
                             ),
     },

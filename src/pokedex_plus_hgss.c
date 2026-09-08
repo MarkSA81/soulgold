@@ -2376,20 +2376,20 @@ static void LoadPokedexBgPalette(bool8 isSearchResults)
     if (!HGSS_DARK_MODE)
     {
         if (isSearchResults == TRUE)
-            LoadPalette(sPokedexPlusHGSS_SearchResults_Pal + 1, BG_PLTT_ID(0) + 1, PLTT_SIZEOF(6 * 16 - 1));
+            LoadPalette(sPokedexPlusHGSS_SearchResults_Pal + 1, BG_PLTT_ID(0) + 1, sizeof(sPokedexPlusHGSS_SearchResults_Pal) - PLTT_SIZEOF(1));
         else if (!IsNationalPokedexEnabled())
-            LoadPalette(sPokedexPlusHGSS_Default_Pal + 1, BG_PLTT_ID(0) + 1, PLTT_SIZEOF(6 * 16 - 1));
+            LoadPalette(sPokedexPlusHGSS_Default_Pal + 1, BG_PLTT_ID(0) + 1, sizeof(sPokedexPlusHGSS_Default_Pal) - PLTT_SIZEOF(1));
         else
-            LoadPalette(sPokedexPlusHGSS_National_Pal + 1, BG_PLTT_ID(0) + 1, PLTT_SIZEOF(6 * 16 - 1));
+            LoadPalette(sPokedexPlusHGSS_National_Pal + 1, BG_PLTT_ID(0) + 1, sizeof(sPokedexPlusHGSS_National_Pal) - PLTT_SIZEOF(1));
     }
     else
     {
         if (isSearchResults == TRUE)
-            LoadPalette(sPokedexPlusHGSS_SearchResults_dark_Pal + 1, BG_PLTT_ID(0) + 1, PLTT_SIZEOF(6 * 16 - 1));
+            LoadPalette(sPokedexPlusHGSS_SearchResults_dark_Pal + 1, BG_PLTT_ID(0) + 1, sizeof(sPokedexPlusHGSS_SearchResults_dark_Pal) - PLTT_SIZEOF(1));
         else if (!IsNationalPokedexEnabled())
-            LoadPalette(sPokedexPlusHGSS_Default_dark_Pal + 1, BG_PLTT_ID(0) + 1, PLTT_SIZEOF(6 * 16 - 1));
+            LoadPalette(sPokedexPlusHGSS_Default_dark_Pal + 1, BG_PLTT_ID(0) + 1, sizeof(sPokedexPlusHGSS_Default_dark_Pal) - PLTT_SIZEOF(1));
         else
-            LoadPalette(sPokedexPlusHGSS_National_dark_Pal + 1, BG_PLTT_ID(0) + 1, PLTT_SIZEOF(6 * 16 - 1));
+            LoadPalette(sPokedexPlusHGSS_National_dark_Pal + 1, BG_PLTT_ID(0) + 1, sizeof(sPokedexPlusHGSS_National_dark_Pal) - PLTT_SIZEOF(1));
     }
 
     LoadPalette(GetOverworldTextboxPalettePtr(), BG_PLTT_ID(15), PLTT_SIZE_4BPP);

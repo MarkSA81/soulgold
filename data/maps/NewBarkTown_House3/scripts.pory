@@ -67,6 +67,31 @@ script NewBarkTownRivalHouseRival {
         end
     }
     if (var(VAR_RIVAL_STATE) >= 12) {
+        if (var(VAR_POSTGAME_RIVAL_LEGENDARYQ) >= 7 && var(VAR_POSTGAME_RIVAL_LEGENDARYQ) <= 10) {
+            checkitem(ITEM_HM_DIVE)
+            if (var(VAR_RESULT) == FALSE) {
+                msgbox("You'll need this to explore the
+                        underwater areas of Johto!")
+                giveitem(ITEM_HM_DIVE)
+                createfieldmugshotrival
+                checkitem(ITEM_HM_DIVE)
+                if (var(VAR_RESULT) == FALSE) {
+                    release
+                    end
+                }
+            }
+        }
+        if (var(VAR_POSTGAME_RIVAL_LEGENDARYQ) >= 5 && var(VAR_POSTGAME_RIVAL_LEGENDARYQ) <= 10) {
+            getcaughtmon(SPECIES_DARKRAI)
+            if (var(VAR_RESULT) == FALSE) {
+                msgbox("We still need to investigate Darkrai.
+                        
+                        Take Cresselia to the old inn in
+                        Cherrygrove City!")
+                release
+                end
+            }
+        }
         if (var(VAR_POSTGAME_RIVAL_LEGENDARYQ) == 0) {
             msgbox("Hey {PLAYER}! What's up?
             
@@ -162,7 +187,15 @@ script NewBarkTownRivalHouseRival {
                     hard for them.
                     
                     You're going to need this!")
-            giveitem(ITEM_HM_DIVE)
+            checkitem(ITEM_HM_DIVE)
+            if (var(VAR_RESULT) == FALSE) {
+                giveitem(ITEM_HM_DIVE)
+            }
+            checkitem(ITEM_HM_DIVE)
+            if (var(VAR_RESULT) == FALSE) {
+                release
+                end
+            }
             setvar(VAR_POSTGAME_RIVAL_LEGENDARYQ, 7)
             createfieldmugshotrival
             msgbox("They are probably quite far away
@@ -170,6 +203,11 @@ script NewBarkTownRivalHouseRival {
                     scour the region far and wide.")
             release
             end
+        }
+        if (var(VAR_POSTGAME_RIVAL_LEGENDARYQ) == 7 || var(VAR_POSTGAME_RIVAL_LEGENDARYQ) == 8) {
+            if (flag(FLAG_ONETIME_GROUDON) && flag(FLAG_ONETIME_KYOGRE)) {  
+                setvar(VAR_POSTGAME_RIVAL_LEGENDARYQ, 9)
+            }
         }
         if (var(VAR_POSTGAME_RIVAL_LEGENDARYQ) == 7 || var(VAR_POSTGAME_RIVAL_LEGENDARYQ) == 8) {
             msgbox("Groudon is likely hidden in a cave which

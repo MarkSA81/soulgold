@@ -1,4 +1,6 @@
 #include "global.h"
+#include "event_object_movement.h"
+#include "pokemon.h"
 #include "option_menu.h"
 #include "bg.h"
 #include "difficulty.h"
@@ -81,6 +83,8 @@ enum
     MENUITEM_SURF_MUSIC,
     MENUITEM_PARTY_MENU,
     MENUITEM_BATTLE_FORMAT,
+    MENUITEM_FOLLOWER_MEGA,
+    MENUITEM_SHINY_RATE,
     MENUITEM_COUNT_PG3,
 };
 
@@ -177,6 +181,7 @@ static u8 DarkBattleUi_ProcessInput(u8 selection);
 static void DarkBattleUi_DrawChoices(u8 selection);
 static u8 FastMegas_ProcessInput(u8 selection);
 static void FastMegas_DrawChoices(u8 selection);
+static void ShinyRate_DrawChoices(u8 selection);
 static u8 FastWeather_ProcessInput(u8 selection);
 static void FastWeather_DrawChoices(u8 selection);
 static u8 SurfMusic_ProcessInput(u8 selection);
@@ -195,6 +200,8 @@ EWRAM_DATA static bool8 sArrowPressed = FALSE;
 EWRAM_DATA static bool8 sUiAnimationsOff = FALSE;
 EWRAM_DATA static bool8 sDarkBattleUi = FALSE;
 EWRAM_DATA static bool8 sFastMegas = FALSE;
+EWRAM_DATA static bool8 sFollowerMega = FALSE;
+EWRAM_DATA static u8 sShinyRate = 0;
 EWRAM_DATA static bool8 sFastWeather = FALSE;
 EWRAM_DATA static bool8 sSurfMusic = FALSE;
 EWRAM_DATA static u8 sPartyMenuStyle = PARTY_MENU_DEFAULT_OPTION;
@@ -239,6 +246,12 @@ static const u8 gText_IntroSlideOn[]       = _("{COLOR GREEN}{SHADOW LIGHT_GREEN
 static const u8 gText_IntroSlideOff[]      = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Off");
 static const u8 gText_BattleUiLight[]      = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Light");
 static const u8 gText_BattleUiDark[]       = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Dark");
+static const u8 *const sShinyRateLabels[SHINY_RATE_COUNT] = {
+        [SHINY_RATE_256] = COMPOUND_STRING("{COLOR GREEN}{SHADOW LIGHT_GREEN}<1/256>"),
+        [SHINY_RATE_512] = COMPOUND_STRING("{COLOR GREEN}{SHADOW LIGHT_GREEN}<1/512>"),
+        [SHINY_RATE_1024] = COMPOUND_STRING("{COLOR GREEN}{SHADOW LIGHT_GREEN}<1/1024>"),
+    };
+
 static const u8 gText_FastMegasOn[]        = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}On");
 static const u8 gText_FastMegasOff[]       = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Off");
 static const u8 gText_FastWeatherOn[]      = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}On");
@@ -302,7 +315,9 @@ static const u8 *const sOptionMenuItemsNames_Pg3[MENUITEM_COUNT_PG3] =
 {
     [MENUITEM_INTRO_SLIDE] = COMPOUND_STRING("Battle intro"),
     [MENUITEM_UI_ANIMATIONS] = COMPOUND_STRING("UI animations"),
-    [MENUITEM_DARK_BATTLE_UI] = COMPOUND_STRING("Battle UI"),
+    [MENUITEM_DARK_BATTLE_UI] = COMPOUND_STRING("Battle/Bag UI"),
+    [MENUITEM_FOLLOWER_MEGA] = COMPOUND_STRING("Follower Mega"),
+    [MENUITEM_SHINY_RATE] = COMPOUND_STRING("Shiny odds"),
     [MENUITEM_FAST_MEGAS] = COMPOUND_STRING("Fast megas"),
     [MENUITEM_FAST_WEATHER] = COMPOUND_STRING("Fast weather"),
     [MENUITEM_SURF_MUSIC] = COMPOUND_STRING("Surf music"),
@@ -394,14 +409,22 @@ static const u8 *const sOptionMenuHelpTexts_Pg3[MENUITEM_COUNT_PG3] =
         "the pause menu. Off makes these\n"
         "interfaces appear immediately."),
     [MENUITEM_DARK_BATTLE_UI] = COMPOUND_STRING(
-        "Light uses the standard HGSS\n"
-        "healthbox frames. Dark uses a\n"
-        "darker version. Shiny healthboxes\n"
-        "keep their own colors."),
+        "Light uses the standard UI. Dark\n"
+        "uses dark healthboxes, battle\n"
+        "menus, and Bag screens.\n"
+        "Shiny healthboxes are unchanged."),
+    [MENUITEM_FOLLOWER_MEGA] = COMPOUND_STRING(
+        "Show Mega forms on follower\n"
+        "instead of base form when equipped\n"
+        "with Mega Stone. Some newer Megas\n"
+        "lack overworld sprites currently."),
+    [MENUITEM_SHINY_RATE] = COMPOUND_STRING(
+        "Odds of running into shiny Pokémon.\n"
+        "Does not change existing shinyness."),
     [MENUITEM_FAST_MEGAS] = COMPOUND_STRING(
         "On uses a near-instant Mega\n"
         "Evolution animation. Off plays\n"
-        "the complete sequence."),
+        "the complete animation."),
     [MENUITEM_FAST_WEATHER] = COMPOUND_STRING(
         "On skips repeated weather text\n"
         "and animations after it begins.\n"
@@ -412,8 +435,7 @@ static const u8 *const sOptionMenuHelpTexts_Pg3[MENUITEM_COUNT_PG3] =
     [MENUITEM_PARTY_MENU] = COMPOUND_STRING(
         "Custom uses the redesigned screen.\n"
         "HGSS and BW use their respective\n"
-        "DS-style layouts. This applies\n"
-        "wherever the party menu is opened."),
+        "DS-style layouts."),
     [MENUITEM_BATTLE_FORMAT] = COMPOUND_STRING(
         "Default uses intended formats.\n"
         "Singles/Doubles override eligible\n"
@@ -509,6 +531,8 @@ static void ReadAllCurrentSettings(u8 taskId)
         sUiAnimationsOff = gSaveBlock2Ptr->optionsUiAnimationsOff;
         sDarkBattleUi = gSaveBlock2Ptr->optionsDarkBattleUi;
         sFastMegas = gSaveBlock2Ptr->optionsFastMegas;
+        sFollowerMega = IsFollowerMegaEnabled();
+        sShinyRate = GetShinyRateOption();
         sFastWeather = gSaveBlock2Ptr->optionsFastWeather;
         sSurfMusic = gSaveBlock2Ptr->optionsSurfMusic;
         sPartyMenuStyle = GetSavedPartyMenuStyle();
@@ -697,6 +721,12 @@ static void DrawOptionChoices(u8 taskId, u8 option)
     case OPTION_MENU_PG3_START + MENUITEM_DARK_BATTLE_UI:
         DarkBattleUi_DrawChoices(sDarkBattleUi);
         break;
+    case OPTION_MENU_PG3_START + MENUITEM_FOLLOWER_MEGA:
+        FastMegas_DrawChoices(sFollowerMega);
+        break;
+    case OPTION_MENU_PG3_START + MENUITEM_SHINY_RATE:
+        ShinyRate_DrawChoices(sShinyRate);
+        break;
     case OPTION_MENU_PG3_START + MENUITEM_FAST_MEGAS:
         FastMegas_DrawChoices(sFastMegas);
         break;
@@ -824,6 +854,23 @@ static void ProcessOptionInput(u8 taskId)
         sDarkBattleUi = DarkBattleUi_ProcessInput(sDarkBattleUi);
         if (previousOption != sDarkBattleUi)
             DarkBattleUi_DrawChoices(sDarkBattleUi);
+        break;
+    case OPTION_MENU_PG3_START + MENUITEM_FOLLOWER_MEGA:
+        sFollowerMega = FastMegas_ProcessInput(sFollowerMega);
+        FastMegas_DrawChoices(sFollowerMega);
+        break;
+    case OPTION_MENU_PG3_START + MENUITEM_SHINY_RATE:
+        if (JOY_NEW(DPAD_RIGHT))
+        {
+            sShinyRate = sShinyRate == SHINY_RATE_1024 ? SHINY_RATE_256 : sShinyRate + 1;
+            sArrowPressed = TRUE;
+        }
+        else if (JOY_NEW(DPAD_LEFT))
+        {
+            sShinyRate = sShinyRate == SHINY_RATE_256 ? SHINY_RATE_1024 : sShinyRate - 1;
+            sArrowPressed = TRUE;
+        }
+        ShinyRate_DrawChoices(sShinyRate);
         break;
     case OPTION_MENU_PG3_START + MENUITEM_FAST_MEGAS:
         previousOption = sFastMegas;
@@ -993,6 +1040,8 @@ static void SaveCurrentSettings(u8 taskId)
     gSaveBlock2Ptr->optionsUiAnimationsOff = sUiAnimationsOff;
     gSaveBlock2Ptr->optionsDarkBattleUi = sDarkBattleUi;
     gSaveBlock2Ptr->optionsFastMegas = sFastMegas;
+    VarSet(VAR_FOLLOWER_MEGA_OFF, !sFollowerMega);
+    VarSet(VAR_SHINY_RATE, sShinyRate);
     gSaveBlock2Ptr->optionsFastWeather = sFastWeather;
     gSaveBlock2Ptr->optionsSurfMusic = sSurfMusic;
     SetSavedPartyMenuStyle(sPartyMenuStyle);
@@ -1960,4 +2009,10 @@ static void DrawBgWindowFrames(void)
     FillBgTilemapBufferRect(1, TILE_BOT_CORNER_R, 28, 19,  1,  1,  7);
 
     CopyBgTilemapBufferToVram(1);
+}
+
+static void ShinyRate_DrawChoices(u8 selection)
+{
+    FillWindowPixelRect(WIN_OPTIONS, PIXEL_FILL(1), 130, sOptionDrawY, 78, 16);
+    DrawOptionMenuChoice(sShinyRateLabels[selection], 130, sOptionDrawY, 1);
 }

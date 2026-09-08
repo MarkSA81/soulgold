@@ -2103,10 +2103,10 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_AURA_BREAK] =
     {
         .name = _("Aura Break"),
-        .description = COMPOUND_STRING("Reverse aura abilities."),
+        .description = COMPOUND_STRING("Reverses aura abilities."),
         .longDescription = COMPOUND_STRING("Reverses the effects of\n"
-                                           "Dark Aura and Fairy\n"
-                                           "Aura, weakening those\n"
+                                           "Dark, Fairy, and Malice\n"
+                                           "Auras, weakening those\n"
                                            "moves instead."),
         .aiRating = 3,
         .breakable = TRUE,
@@ -5665,5 +5665,48 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
                                            "weaknesses."),
         .aiRating = 8,
         .breakable = TRUE,
+    },
+
+    [ABILITY_ELECTROLEVITATE] =
+    {
+        .name = _("Electromagnetism"),
+        .description = COMPOUND_STRING("Avoids Ground-moves."),
+        .longDescription = COMPOUND_STRING("The Pokemon is immune\n"
+                                           "to Ground-type moves and\n"
+                                           "grounded entry hazards,\n"
+                                           "but benefits from effects\n"
+                                           "of Electric Terrain."),
+        .aiRating = 7,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_MALICE_AURA] =
+    {
+        .name = _("Malice Aura"),
+        .description = COMPOUND_STRING("Boosts Ghost moves."),
+        .longDescription = COMPOUND_STRING("Boosts the power of all\n"
+                                           "Ghost-type moves in\n"
+                                           "battle by 33%."),
+        .aiRating = 6,
+        .breakable = B_UPDATED_ABILITY_DATA < GEN_8,
+    },
+
+    [ABILITY_TRUESHOT_AURA] =
+    {
+        .name = _("Trueshot Aura"),
+        .description = COMPOUND_STRING("Raises team's critical hits."),
+        .longDescription = COMPOUND_STRING("Raises own and ally's\n"
+                                           "critical-hit ratio by two\n"
+                                           "stages."),
+        .aiRating = 10,
+    },
+
+    [ABILITY_OGRE_FORCE] =
+    {
+        .name = _("Ogre Force"),
+        .description = COMPOUND_STRING("Boosts moves with effects."),
+        .longDescription = COMPOUND_STRING("Moves with added effects\n"
+                                           "deal 15% more damage."),
+        .aiRating = 7,
     },
 };

@@ -565,7 +565,7 @@ static bool32 IsDaycareEggShiny(u32 personality)
     if (P_FLAG_FORCE_SHINY != 0 && FlagGet(P_FLAG_FORCE_SHINY))
         return TRUE;
 
-    return GET_SHINY_VALUE(READ_OTID_FROM_SAVE, personality) < GetCurrentShinyOdds();
+    return GET_SHINY_VALUE(READ_OTID_FROM_SAVE, personality) < GetShinyGenerationOdds();
 }
 
 static void _TriggerPendingDaycareEgg(struct DayCare *daycare)

@@ -217,7 +217,7 @@ static void InitDomeTrainers(void);
 
 static EWRAM_DATA struct TourneyTreeInfoCard *sInfoCard = {0};
 static EWRAM_DATA u8 *sTilemapBuffer = NULL;
-static EWRAM_DATA struct PwtDomeMoveCache sPwtDomeMoveCache[DOME_TOURNAMENT_TRAINERS_COUNT][FRONTIER_PARTY_SIZE] = {0};
+static EWRAM_DATA struct PwtDomeMoveCache sPwtDomeMoveCache = {0};
 
 static const u8 sPwtDomeText_DefaultIntro[] = _("Show me what brought you this far.");
 static const u8 sPwtDomeText_DefaultPlayerWon[] = _("That was a championship-caliber battle.");
@@ -503,7 +503,7 @@ static enum Move GetDomeTournamentMove(u16 tournamentTrainerId, u8 tournamentMon
     else if (IsPwtDomeTrainerId(trainerId))
     {
         const struct TrainerMon *partyEntry = GetDomeTournamentMon(tournamentTrainerId, tournamentMonId);
-        struct PwtDomeMoveCache *cache = &sPwtDomeMoveCache[tournamentTrainerId][tournamentMonId];
+        struct PwtDomeMoveCache *cache = &sPwtDomeMoveCache;
         enum TrainerBattleType battleType = VarGet(VAR_FRONTIER_BATTLE_MODE) == FRONTIER_MODE_DOUBLES
                                            ? TRAINER_BATTLE_TYPE_DOUBLES
                                            : TRAINER_BATTLE_TYPE_SINGLES;
@@ -2927,8 +2927,8 @@ static int GetTypeEffectivenessPoints(enum Move move, int targetSpecies, int mod
     defAbility = GetSpeciesAbility(targetSpecies, 0);
     moveType = GetMoveType(move);
 
-    if ((defAbility == ABILITY_LEVITATE || defAbility == ABILITY_EELEVATE || defAbility == ABILITY_ALLSEEING_IDOL
-      || SpeciesHasInnate(targetSpecies, ABILITY_LEVITATE) || SpeciesHasInnate(targetSpecies, ABILITY_EELEVATE) || SpeciesHasInnate(targetSpecies, ABILITY_ALLSEEING_IDOL))
+    if ((defAbility == ABILITY_LEVITATE || defAbility == ABILITY_EELEVATE || defAbility == ABILITY_ELECTROLEVITATE || defAbility == ABILITY_ALLSEEING_IDOL
+      || SpeciesHasInnate(targetSpecies, ABILITY_LEVITATE) || SpeciesHasInnate(targetSpecies, ABILITY_EELEVATE) || SpeciesHasInnate(targetSpecies, ABILITY_ELECTROLEVITATE) || SpeciesHasInnate(targetSpecies, ABILITY_ALLSEEING_IDOL))
      && moveType == TYPE_GROUND)
     {
         // They likely meant to return here, as 8 is the number of points normally used in this mode for moves with no effect.

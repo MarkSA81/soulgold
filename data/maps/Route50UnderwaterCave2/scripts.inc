@@ -13,7 +13,7 @@ GroudonEncounter::
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_eq GroudonEncounter_2
 GroudonEncounter_1:
-# 17 "data/maps/Route50UnderwaterCave2/scripts.pory"
+# 19 "data/maps/Route50UnderwaterCave2/scripts.pory"
 	release
 	end
 
@@ -34,8 +34,18 @@ GroudonEncounter_5:
 
 GroudonEncounter_7:
 # 13 "data/maps/Route50UnderwaterCave2/scripts.pory"
-	addvar VAR_POSTGAME_RIVAL_LEGENDARYQ, 1
-# 14 "data/maps/Route50UnderwaterCave2/scripts.pory"
+	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 7
+	goto_if_eq GroudonEncounter_10
+# 13 "data/maps/Route50UnderwaterCave2/scripts.pory"
+	compare VAR_POSTGAME_RIVAL_LEGENDARYQ, 8
+	goto_if_eq GroudonEncounter_10
+GroudonEncounter_9:
+# 16 "data/maps/Route50UnderwaterCave2/scripts.pory"
 	setflag FLAG_ONETIME_GROUDON
 	goto GroudonEncounter_1
+
+GroudonEncounter_10:
+# 14 "data/maps/Route50UnderwaterCave2/scripts.pory"
+	addvar VAR_POSTGAME_RIVAL_LEGENDARYQ, 1
+	goto GroudonEncounter_9
 

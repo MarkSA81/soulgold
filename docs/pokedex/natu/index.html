@@ -6,8 +6,14 @@
     <base href="../../">
     <title>Soulgold Documentation</title>
     <meta name="theme-color" content="#263532">
-    <link rel="stylesheet" href="assets/styles.css?v=20260903-1">
-    <link rel="stylesheet" href="assets/refined.css?v=20260903-1">
+    <link rel="stylesheet" href="assets/styles.css?v=20260906-2">
+    <link rel="stylesheet" href="assets/refined.css?v=20260906-2">
+    <link rel="preload" href="data/ui.json?v=20260906-2" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="data/ability-index.json?v=20260906-2" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="data/species-meta.json?v=20260906-2" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="data/species.json?v=20260906-2" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="data/moves.json?v=20260906-2" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="data/species-details/natu.json?v=20260906-2" as="fetch" crossorigin="anonymous">
   </head>
   <body>
     <div class="top-chrome">
@@ -44,6 +50,97 @@
         <a class="tab" data-tab="abilities" href="abilities/">Abilities</a>
         <a class="tab" data-tab="guides" href="guides/">Guides</a>
       </nav>
+      <script>
+        (() => {
+          const media = window.matchMedia("(max-width: 1100px)");
+          const nav = document.getElementById("sectionNav");
+          const toggle = document.getElementById("mobileMenuToggle");
+          const closeButton = document.getElementById("mobileMenuClose");
+          const backdrop = document.getElementById("navBackdrop");
+          if (!nav || !toggle || !closeButton || !backdrop) return;
+          let ignoreClickUntil = 0;
+          let protectToggleUntil = Number.POSITIVE_INFINITY;
+          const minimumTabPressMs = 90;
+
+          function pressTab(link) {
+            link.classList.add("touch-pressed");
+            link.dataset.touchPressedAt = String(performance.now());
+          }
+
+          function releasePressedTabs() {
+            nav.querySelectorAll(".tab.touch-pressed").forEach((link) => {
+              const pressedAt = Number(link.dataset.touchPressedAt) || performance.now();
+              const delay = Math.max(0, minimumTabPressMs - (performance.now() - pressedAt));
+              window.setTimeout(() => {
+                link.classList.remove("touch-pressed");
+                delete link.dataset.touchPressedAt;
+              }, delay);
+            });
+          }
+
+          function open() {
+            if (!media.matches) return;
+            if (!document.body.classList.contains("nav-open") && Number.isFinite(protectToggleUntil)) {
+              protectToggleUntil = performance.now() + 350;
+            }
+            nav.inert = false;
+            nav.setAttribute("aria-hidden", "false");
+            document.body.classList.add("nav-open");
+            toggle.setAttribute("aria-expanded", "true");
+            toggle.setAttribute("aria-label", "Close documentation sections");
+            requestAnimationFrame(() => (nav.querySelector(".tab.active") || closeButton).focus());
+          }
+
+          function close({ restoreFocus = false } = {}) {
+            const wasOpen = document.body.classList.contains("nav-open");
+            document.body.classList.remove("nav-open");
+            toggle.setAttribute("aria-expanded", "false");
+            toggle.setAttribute("aria-label", "Open documentation sections");
+            if (media.matches) {
+              nav.inert = true;
+              nav.setAttribute("aria-hidden", "true");
+            } else {
+              nav.inert = false;
+              nav.removeAttribute("aria-hidden");
+            }
+            if (restoreFocus && wasOpen) toggle.focus();
+          }
+
+          function markReady() {
+            protectToggleUntil = performance.now() + 700;
+          }
+
+          toggle.addEventListener("pointerdown", (event) => {
+            if (event.pointerType !== "touch") return;
+            ignoreClickUntil = performance.now() + 700;
+            event.preventDefault();
+            open();
+          });
+          toggle.addEventListener("click", () => {
+            if (performance.now() < ignoreClickUntil) return;
+            open();
+          });
+          closeButton.addEventListener("click", () => close({ restoreFocus: true }));
+          nav.addEventListener("pointerdown", (event) => {
+            if (event.pointerType === "mouse") return;
+            const link = event.target.closest(".tab");
+            if (link) pressTab(link);
+          });
+          nav.addEventListener("pointerup", releasePressedTabs);
+          nav.addEventListener("pointercancel", releasePressedTabs);
+          backdrop.addEventListener("click", (event) => {
+            const bounds = toggle.getBoundingClientRect();
+            const repeatedToggleTap = performance.now() < protectToggleUntil
+              && event.clientX >= bounds.left && event.clientX <= bounds.right
+              && event.clientY >= bounds.top && event.clientY <= bounds.bottom;
+            if (!repeatedToggleTap) close({ restoreFocus: true });
+          });
+          if (media.addEventListener) media.addEventListener("change", close);
+          else media.addListener(close);
+          close();
+          window.soulgoldMobileNav = { open, close, sync: close, markReady };
+        })();
+      </script>
     </div>
 
     <main>
@@ -141,6 +238,6 @@
     </div>
     <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">↑</button>
 
-    <script src="assets/app.js?v=20260901-1"></script>
+    <script src="assets/app.js?v=20260906-2"></script>
   </body>
 </html>

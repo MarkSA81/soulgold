@@ -86,7 +86,7 @@ static bool32 Achievement_PredicateCaughtAllParadoxPokemon(void);
 static bool32 Achievement_PredicateHasLevel100Pokemon(void);
 static bool32 Achievement_IsInScaledChaosFacility(void);
 static u32 Achievement_CountCollectedTMs(void);
-static u32 Achievement_GetBestBattlePyramidRounds(void);
+static u32 Achievement_GetBestBattlePyramidFloorStreak(void);
 static void Achievement_QueuePopup(enum AchievementId id);
 
 static const u8 sText_AchReceiveStarterName[] = _("I Choose You!");
@@ -152,9 +152,9 @@ static const u8 sText_AchFactory100Desc[] = _("Win 100 Battle Factory battles in
 static const u8 sText_AchPyramid3Name[] = _("Pyramid Explorer");
 static const u8 sText_AchPyramid3Desc[] = _("Clear 3 Battle Pyramid rounds.");
 static const u8 sText_AchPyramid10Name[] = _("Pyramid Expert");
-static const u8 sText_AchPyramid10Desc[] = _("Clear 10 Battle Pyramid rounds.");
+static const u8 sText_AchPyramid10Desc[] = _("Clear 6 Battle Pyramid rounds.");
 static const u8 sText_AchPyramid20Name[] = _("Pyramid Master");
-static const u8 sText_AchPyramid20Desc[] = _("Clear 20 Battle Pyramid rounds.");
+static const u8 sText_AchPyramid20Desc[] = _("Clear 10 Battle Pyramid rounds.");
 static const u8 sText_AchCatchLugiaName[] = _("Sea Guardian");
 static const u8 sText_AchCatchLugiaDesc[] = _("Catch Lugia.");
 static const u8 sText_AchCatchHoOhName[] = _("Rainbow Guardian");
@@ -399,8 +399,8 @@ static const struct Achievement sAchievements[] =
     {ACH_BATTLE_FACTORY_50, sText_AchFactory50Name, sText_AchFactory50Desc, ACH_TIER_GOLD, ACH_COUNTER_BATTLE_FACTORY_WINS, 50, TRAINER_NONE_ACH, NULL},
     {ACH_BATTLE_FACTORY_100, sText_AchFactory100Name, sText_AchFactory100Desc, ACH_TIER_PLATINUM, ACH_COUNTER_BATTLE_FACTORY_WINS, 100, TRAINER_NONE_ACH, NULL},
     {ACH_BATTLE_PYRAMID_3, sText_AchPyramid3Name, sText_AchPyramid3Desc, ACH_TIER_SILVER, ACH_COUNTER_BATTLE_PYRAMID_ROUNDS, 3, TRAINER_NONE_ACH, NULL},
-    {ACH_BATTLE_PYRAMID_10, sText_AchPyramid10Name, sText_AchPyramid10Desc, ACH_TIER_GOLD, ACH_COUNTER_BATTLE_PYRAMID_ROUNDS, 10, TRAINER_NONE_ACH, NULL},
-    {ACH_BATTLE_PYRAMID_20, sText_AchPyramid20Name, sText_AchPyramid20Desc, ACH_TIER_PLATINUM, ACH_COUNTER_BATTLE_PYRAMID_ROUNDS, 20, TRAINER_NONE_ACH, NULL},
+    {ACH_BATTLE_PYRAMID_10, sText_AchPyramid10Name, sText_AchPyramid10Desc, ACH_TIER_GOLD, ACH_COUNTER_BATTLE_PYRAMID_ROUNDS, 6, TRAINER_NONE_ACH, NULL},
+    {ACH_BATTLE_PYRAMID_20, sText_AchPyramid20Name, sText_AchPyramid20Desc, ACH_TIER_PLATINUM, ACH_COUNTER_BATTLE_PYRAMID_ROUNDS, 10, TRAINER_NONE_ACH, NULL},
     {ACH_BATTLE_CAFE_DAILY, sText_AchBattleCafeDailyName, sText_AchBattleCafeDailyDesc, ACH_TIER_BRONZE, ACH_COUNTER_NONE, 0, TRAINER_NONE_ACH, NULL},
     {ACH_BATTLE_CAFE_RUSH, sText_AchBattleCafeRushName, sText_AchBattleCafeRushDesc, ACH_TIER_SILVER, ACH_COUNTER_NONE, 0, TRAINER_NONE_ACH, NULL},
     {ACH_BATTLE_CAFE_SUPER_CHALLENGE, sText_AchBattleCafeSuperChallengeName, sText_AchBattleCafeSuperChallengeDesc, ACH_TIER_GOLD, ACH_COUNTER_NONE, 0, TRAINER_NONE_ACH, NULL},
@@ -1087,7 +1087,7 @@ static u32 Achievement_CountCollectedTMs(void)
     return count;
 }
 
-static u32 Achievement_GetBestBattlePyramidRounds(void)
+static u32 Achievement_GetBestBattlePyramidFloorStreak(void)
 {
     u8 lvlMode;
     u32 best = 0;
@@ -1099,7 +1099,7 @@ static u32 Achievement_GetBestBattlePyramidRounds(void)
         if (best < gSaveBlock2Ptr->frontier.pyramidWinStreaks[lvlMode])
             best = gSaveBlock2Ptr->frontier.pyramidWinStreaks[lvlMode];
     }
-    return best / FRONTIER_STAGES_PER_CHALLENGE;
+    return best;
 }
 
 u16 Achievement_GetCount(void)
@@ -1193,7 +1193,7 @@ u32 Achievement_GetCounter(enum AchievementCounter counter)
     case ACH_COUNTER_BATTLE_FACTORY_WINS:
         return gSaveBlock2Ptr->frontier.factoryTotalWins;
     case ACH_COUNTER_BATTLE_PYRAMID_ROUNDS:
-        return Achievement_GetBestBattlePyramidRounds();
+        return GetGameStat(GAME_STAT_BATTLE_PYRAMID_FLOORS) / FRONTIER_STAGES_PER_CHALLENGE;
     case ACH_COUNTER_ROCKET_ARCADE_WINS:
         return gSaveBlock2Ptr->frontier.arcadeTotalWins;
     case ACH_COUNTER_TITLE_DEFENSE_WINS:
@@ -1426,6 +1426,22 @@ void Achievement_SetCounterMax(enum AchievementCounter counter, u32 value)
         gSaveBlock1Ptr->achievements.counters[counter] = value;
         Achievement_CheckCounter(counter);
     }
+}
+
+void Achievement_MigrateBattlePyramidFloorClears(void)
+{
+    if (FlagGet(FLAG_PYRAMID_ACHIEVEMENT_MIGRATION_COMPLETE))
+        return;
+
+    SetGameStat(GAME_STAT_BATTLE_PYRAMID_FLOORS, Achievement_GetBestBattlePyramidFloorStreak());
+    FlagSet(FLAG_PYRAMID_ACHIEVEMENT_MIGRATION_COMPLETE);
+    Achievement_CheckCounter(ACH_COUNTER_BATTLE_PYRAMID_ROUNDS);
+}
+
+void Achievement_RecordBattlePyramidFloorClear(void)
+{
+    IncrementGameStat(GAME_STAT_BATTLE_PYRAMID_FLOORS);
+    Achievement_CheckCounter(ACH_COUNTER_BATTLE_PYRAMID_ROUNDS);
 }
 
 void Achievement_OnTrainerDefeated(u16 trainerId)

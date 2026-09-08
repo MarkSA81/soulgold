@@ -507,7 +507,7 @@ script LakeOfRageCresseliaPath {
 			end
 		}
 	}
-	msgbox("Wood yew look at that. An inconspicious 
+	msgbox("Wood yew look at that. An inconspicuous
 			row of trees extends before you.")
 	release
 	end

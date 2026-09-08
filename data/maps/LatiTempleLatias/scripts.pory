@@ -16,6 +16,24 @@ script LatiTemple_Latias {
     end
 }
 
+script ResetLatiasPuzzle {
+    lock
+    msgbox("Would you like to reset the puzzle?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        clearflag(FLAG_LATITEMPLE_SWITCH1)
+        clearflag(FLAG_LATITEMPLE_SWITCH2)
+        clearflag(FLAG_LATITEMPLE_SWITCH3)
+        clearflag(FLAG_LATITEMPLE_SWITCH4)
+        clearflag(FLAG_LATITEMPLE_SWITCH5)
+        playse(SE_PIN)
+        call(LatiTemple_RefreshPuzzle)
+        special(DrawWholeMapView)
+        waitse
+    }
+    releaseall
+    end
+}
+
 script LatiTemple_Switch1 {
     lockall
     if (flag(FLAG_LATITEMPLE_SWITCH1)) {
