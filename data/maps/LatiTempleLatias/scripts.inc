@@ -30,304 +30,343 @@ LatiTemple_Latias_2:
 	goto LatiTemple_Latias_1
 
 
-LatiTemple_Switch1::
+ResetLatiasPuzzle::
 # 20 "data/maps/LatiTempleLatias/scripts.pory"
-	lockall
+	lock
 # 21 "data/maps/LatiTempleLatias/scripts.pory"
-	goto_if_set FLAG_LATITEMPLE_SWITCH1, LatiTemple_Switch1_2
+	msgbox ResetLatiasPuzzle_Text_0, MSGBOX_YESNO
+# 22 "data/maps/LatiTempleLatias/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq ResetLatiasPuzzle_2
+ResetLatiasPuzzle_1:
+# 33 "data/maps/LatiTempleLatias/scripts.pory"
+	releaseall
+	end
+
+ResetLatiasPuzzle_2:
+# 23 "data/maps/LatiTempleLatias/scripts.pory"
+	clearflag FLAG_LATITEMPLE_SWITCH1
 # 24 "data/maps/LatiTempleLatias/scripts.pory"
+	clearflag FLAG_LATITEMPLE_SWITCH2
+# 25 "data/maps/LatiTempleLatias/scripts.pory"
+	clearflag FLAG_LATITEMPLE_SWITCH3
+# 26 "data/maps/LatiTempleLatias/scripts.pory"
+	clearflag FLAG_LATITEMPLE_SWITCH4
+# 27 "data/maps/LatiTempleLatias/scripts.pory"
+	clearflag FLAG_LATITEMPLE_SWITCH5
+# 28 "data/maps/LatiTempleLatias/scripts.pory"
+	playse SE_PIN
+# 29 "data/maps/LatiTempleLatias/scripts.pory"
+	call LatiTemple_RefreshPuzzle
+# 30 "data/maps/LatiTempleLatias/scripts.pory"
+	special DrawWholeMapView
+# 31 "data/maps/LatiTempleLatias/scripts.pory"
+	waitse
+	goto ResetLatiasPuzzle_1
+
+
+LatiTemple_Switch1::
+# 38 "data/maps/LatiTempleLatias/scripts.pory"
+	lockall
+# 39 "data/maps/LatiTempleLatias/scripts.pory"
+	goto_if_set FLAG_LATITEMPLE_SWITCH1, LatiTemple_Switch1_2
+# 42 "data/maps/LatiTempleLatias/scripts.pory"
 	setflag FLAG_LATITEMPLE_SWITCH1
 LatiTemple_Switch1_1:
-# 26 "data/maps/LatiTempleLatias/scripts.pory"
+# 44 "data/maps/LatiTempleLatias/scripts.pory"
 	playse SE_PIN
-# 27 "data/maps/LatiTempleLatias/scripts.pory"
+# 45 "data/maps/LatiTempleLatias/scripts.pory"
 	call LatiTemple_RefreshPuzzle
-# 28 "data/maps/LatiTempleLatias/scripts.pory"
+# 46 "data/maps/LatiTempleLatias/scripts.pory"
 	special DrawWholeMapView
-# 29 "data/maps/LatiTempleLatias/scripts.pory"
+# 47 "data/maps/LatiTempleLatias/scripts.pory"
 	waitse
-# 30 "data/maps/LatiTempleLatias/scripts.pory"
+# 48 "data/maps/LatiTempleLatias/scripts.pory"
 	releaseall
 	return
 
 LatiTemple_Switch1_2:
-# 22 "data/maps/LatiTempleLatias/scripts.pory"
+# 40 "data/maps/LatiTempleLatias/scripts.pory"
 	clearflag FLAG_LATITEMPLE_SWITCH1
 	goto LatiTemple_Switch1_1
 
 
 LatiTemple_Switch2::
-# 34 "data/maps/LatiTempleLatias/scripts.pory"
+# 52 "data/maps/LatiTempleLatias/scripts.pory"
 	lockall
-# 35 "data/maps/LatiTempleLatias/scripts.pory"
+# 53 "data/maps/LatiTempleLatias/scripts.pory"
 	goto_if_set FLAG_LATITEMPLE_SWITCH2, LatiTemple_Switch2_2
-# 38 "data/maps/LatiTempleLatias/scripts.pory"
+# 56 "data/maps/LatiTempleLatias/scripts.pory"
 	setflag FLAG_LATITEMPLE_SWITCH2
 LatiTemple_Switch2_1:
-# 40 "data/maps/LatiTempleLatias/scripts.pory"
+# 58 "data/maps/LatiTempleLatias/scripts.pory"
 	playse SE_PIN
-# 41 "data/maps/LatiTempleLatias/scripts.pory"
+# 59 "data/maps/LatiTempleLatias/scripts.pory"
 	call LatiTemple_RefreshPuzzle
-# 42 "data/maps/LatiTempleLatias/scripts.pory"
+# 60 "data/maps/LatiTempleLatias/scripts.pory"
 	special DrawWholeMapView
-# 43 "data/maps/LatiTempleLatias/scripts.pory"
+# 61 "data/maps/LatiTempleLatias/scripts.pory"
 	waitse
-# 44 "data/maps/LatiTempleLatias/scripts.pory"
+# 62 "data/maps/LatiTempleLatias/scripts.pory"
 	releaseall
 	return
 
 LatiTemple_Switch2_2:
-# 36 "data/maps/LatiTempleLatias/scripts.pory"
+# 54 "data/maps/LatiTempleLatias/scripts.pory"
 	clearflag FLAG_LATITEMPLE_SWITCH2
 	goto LatiTemple_Switch2_1
 
 
 LatiTemple_Switch3::
-# 48 "data/maps/LatiTempleLatias/scripts.pory"
+# 66 "data/maps/LatiTempleLatias/scripts.pory"
 	lockall
-# 49 "data/maps/LatiTempleLatias/scripts.pory"
+# 67 "data/maps/LatiTempleLatias/scripts.pory"
 	goto_if_set FLAG_LATITEMPLE_SWITCH3, LatiTemple_Switch3_2
-# 52 "data/maps/LatiTempleLatias/scripts.pory"
+# 70 "data/maps/LatiTempleLatias/scripts.pory"
 	setflag FLAG_LATITEMPLE_SWITCH3
 LatiTemple_Switch3_1:
-# 54 "data/maps/LatiTempleLatias/scripts.pory"
+# 72 "data/maps/LatiTempleLatias/scripts.pory"
 	playse SE_PIN
-# 55 "data/maps/LatiTempleLatias/scripts.pory"
+# 73 "data/maps/LatiTempleLatias/scripts.pory"
 	call LatiTemple_RefreshPuzzle
-# 56 "data/maps/LatiTempleLatias/scripts.pory"
+# 74 "data/maps/LatiTempleLatias/scripts.pory"
 	special DrawWholeMapView
-# 57 "data/maps/LatiTempleLatias/scripts.pory"
+# 75 "data/maps/LatiTempleLatias/scripts.pory"
 	waitse
-# 58 "data/maps/LatiTempleLatias/scripts.pory"
+# 76 "data/maps/LatiTempleLatias/scripts.pory"
 	releaseall
 	return
 
 LatiTemple_Switch3_2:
-# 50 "data/maps/LatiTempleLatias/scripts.pory"
+# 68 "data/maps/LatiTempleLatias/scripts.pory"
 	clearflag FLAG_LATITEMPLE_SWITCH3
 	goto LatiTemple_Switch3_1
 
 
 LatiTemple_Switch4::
-# 62 "data/maps/LatiTempleLatias/scripts.pory"
+# 80 "data/maps/LatiTempleLatias/scripts.pory"
 	lockall
-# 63 "data/maps/LatiTempleLatias/scripts.pory"
+# 81 "data/maps/LatiTempleLatias/scripts.pory"
 	goto_if_set FLAG_LATITEMPLE_SWITCH4, LatiTemple_Switch4_2
-# 66 "data/maps/LatiTempleLatias/scripts.pory"
+# 84 "data/maps/LatiTempleLatias/scripts.pory"
 	setflag FLAG_LATITEMPLE_SWITCH4
 LatiTemple_Switch4_1:
-# 68 "data/maps/LatiTempleLatias/scripts.pory"
+# 86 "data/maps/LatiTempleLatias/scripts.pory"
 	playse SE_PIN
-# 69 "data/maps/LatiTempleLatias/scripts.pory"
+# 87 "data/maps/LatiTempleLatias/scripts.pory"
 	call LatiTemple_RefreshPuzzle
-# 70 "data/maps/LatiTempleLatias/scripts.pory"
+# 88 "data/maps/LatiTempleLatias/scripts.pory"
 	special DrawWholeMapView
-# 71 "data/maps/LatiTempleLatias/scripts.pory"
+# 89 "data/maps/LatiTempleLatias/scripts.pory"
 	waitse
-# 72 "data/maps/LatiTempleLatias/scripts.pory"
+# 90 "data/maps/LatiTempleLatias/scripts.pory"
 	releaseall
 	return
 
 LatiTemple_Switch4_2:
-# 64 "data/maps/LatiTempleLatias/scripts.pory"
+# 82 "data/maps/LatiTempleLatias/scripts.pory"
 	clearflag FLAG_LATITEMPLE_SWITCH4
 	goto LatiTemple_Switch4_1
 
 
 LatiTemple_Switch5::
-# 76 "data/maps/LatiTempleLatias/scripts.pory"
+# 94 "data/maps/LatiTempleLatias/scripts.pory"
 	lockall
-# 77 "data/maps/LatiTempleLatias/scripts.pory"
+# 95 "data/maps/LatiTempleLatias/scripts.pory"
 	goto_if_set FLAG_LATITEMPLE_SWITCH5, LatiTemple_Switch5_2
-# 80 "data/maps/LatiTempleLatias/scripts.pory"
+# 98 "data/maps/LatiTempleLatias/scripts.pory"
 	setflag FLAG_LATITEMPLE_SWITCH5
 LatiTemple_Switch5_1:
-# 82 "data/maps/LatiTempleLatias/scripts.pory"
+# 100 "data/maps/LatiTempleLatias/scripts.pory"
 	playse SE_PIN
-# 83 "data/maps/LatiTempleLatias/scripts.pory"
+# 101 "data/maps/LatiTempleLatias/scripts.pory"
 	call LatiTemple_RefreshPuzzle
-# 84 "data/maps/LatiTempleLatias/scripts.pory"
+# 102 "data/maps/LatiTempleLatias/scripts.pory"
 	special DrawWholeMapView
-# 85 "data/maps/LatiTempleLatias/scripts.pory"
+# 103 "data/maps/LatiTempleLatias/scripts.pory"
 	waitse
-# 86 "data/maps/LatiTempleLatias/scripts.pory"
+# 104 "data/maps/LatiTempleLatias/scripts.pory"
 	releaseall
 	return
 
 LatiTemple_Switch5_2:
-# 78 "data/maps/LatiTempleLatias/scripts.pory"
+# 96 "data/maps/LatiTempleLatias/scripts.pory"
 	clearflag FLAG_LATITEMPLE_SWITCH5
 	goto LatiTemple_Switch5_1
 
 
 LatiTemple_RefreshPuzzle::
-# 90 "data/maps/LatiTempleLatias/scripts.pory"
+# 108 "data/maps/LatiTempleLatias/scripts.pory"
 	call LatiTemple_SetSwitch1State
-# 91 "data/maps/LatiTempleLatias/scripts.pory"
+# 109 "data/maps/LatiTempleLatias/scripts.pory"
 	call LatiTemple_SetSwitch2State
-# 92 "data/maps/LatiTempleLatias/scripts.pory"
+# 110 "data/maps/LatiTempleLatias/scripts.pory"
 	call LatiTemple_SetSwitch3State
-# 93 "data/maps/LatiTempleLatias/scripts.pory"
+# 111 "data/maps/LatiTempleLatias/scripts.pory"
 	call LatiTemple_SetSwitch4State
-# 94 "data/maps/LatiTempleLatias/scripts.pory"
+# 112 "data/maps/LatiTempleLatias/scripts.pory"
 	call LatiTemple_SetSwitch5State
 	return
 
 
 LatiTemple_SetSwitch1State::
-# 99 "data/maps/LatiTempleLatias/scripts.pory"
-	goto_if_set FLAG_LATITEMPLE_SWITCH1, LatiTemple_SetSwitch1State_2
-# 113 "data/maps/LatiTempleLatias/scripts.pory"
-	setmetatile 17, 27, METATILE_LatiTemple_ActiveGray, FALSE
-# 114 "data/maps/LatiTempleLatias/scripts.pory"
-	setmetatile 33, 33, METATILE_LatiTemple_ActiveGray, FALSE
-# 116 "data/maps/LatiTempleLatias/scripts.pory"
-	setmetatile 36, 21, METATILE_LatiTemple_InactiveGreen, TRUE
 # 117 "data/maps/LatiTempleLatias/scripts.pory"
+	goto_if_set FLAG_LATITEMPLE_SWITCH1, LatiTemple_SetSwitch1State_2
+# 131 "data/maps/LatiTempleLatias/scripts.pory"
+	setmetatile 17, 27, METATILE_LatiTemple_ActiveGray, FALSE
+# 132 "data/maps/LatiTempleLatias/scripts.pory"
+	setmetatile 33, 33, METATILE_LatiTemple_ActiveGray, FALSE
+# 134 "data/maps/LatiTempleLatias/scripts.pory"
+	setmetatile 36, 21, METATILE_LatiTemple_InactiveGreen, TRUE
+# 135 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 18, 23, METATILE_LatiTemple_InactiveGreen, TRUE
-# 119 "data/maps/LatiTempleLatias/scripts.pory"
+# 137 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 18, 17, METATILE_LatiTemple_InactiveGray, TRUE
-# 120 "data/maps/LatiTempleLatias/scripts.pory"
+# 138 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 34, 1, METATILE_LatiTemple_InactiveGray, TRUE
-# 122 "data/maps/LatiTempleLatias/scripts.pory"
+# 140 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 21, 4, METATILE_LatiTemple_ActiveGreen, FALSE
-# 123 "data/maps/LatiTempleLatias/scripts.pory"
+# 141 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 51, 31, METATILE_LatiTemple_ActiveGreen, FALSE
-# 124 "data/maps/LatiTempleLatias/scripts.pory"
+# 142 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 32, 21, METATILE_LatiTemple_CrystalSwitchInactive, TRUE
 LatiTemple_SetSwitch1State_1:
 	return
 
 LatiTemple_SetSwitch1State_2:
-# 100 "data/maps/LatiTempleLatias/scripts.pory"
+# 118 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 17, 27, METATILE_LatiTemple_InactiveGray, TRUE
-# 101 "data/maps/LatiTempleLatias/scripts.pory"
+# 119 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 33, 33, METATILE_LatiTemple_InactiveGray, TRUE
-# 103 "data/maps/LatiTempleLatias/scripts.pory"
+# 121 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 36, 21, METATILE_LatiTemple_ActiveGreen, FALSE
-# 104 "data/maps/LatiTempleLatias/scripts.pory"
+# 122 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 18, 23, METATILE_LatiTemple_ActiveGreen, FALSE
-# 106 "data/maps/LatiTempleLatias/scripts.pory"
+# 124 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 18, 17, METATILE_LatiTemple_ActiveGray, FALSE
-# 107 "data/maps/LatiTempleLatias/scripts.pory"
+# 125 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 34, 1, METATILE_LatiTemple_ActiveGray, FALSE
-# 109 "data/maps/LatiTempleLatias/scripts.pory"
+# 127 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 21, 4, METATILE_LatiTemple_InactiveGreen, TRUE
-# 110 "data/maps/LatiTempleLatias/scripts.pory"
+# 128 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 51, 31, METATILE_LatiTemple_InactiveGreen, TRUE
-# 111 "data/maps/LatiTempleLatias/scripts.pory"
+# 129 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 32, 21, METATILE_LatiTemple_CrystalSwitchActive, TRUE
 	goto LatiTemple_SetSwitch1State_1
 
 
 LatiTemple_SetSwitch2State::
-# 130 "data/maps/LatiTempleLatias/scripts.pory"
+# 148 "data/maps/LatiTempleLatias/scripts.pory"
 	goto_if_set FLAG_LATITEMPLE_SWITCH2, LatiTemple_SetSwitch2State_2
-# 135 "data/maps/LatiTempleLatias/scripts.pory"
+# 153 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 45, 25, METATILE_LatiTemple_InactiveGray, TRUE
-# 136 "data/maps/LatiTempleLatias/scripts.pory"
+# 154 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 54, 20, METATILE_LatiTemple_InactiveGray, TRUE
-# 137 "data/maps/LatiTempleLatias/scripts.pory"
+# 155 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 32, 3, METATILE_LatiTemple_CrystalSwitchInactive, TRUE
 LatiTemple_SetSwitch2State_1:
 	return
 
 LatiTemple_SetSwitch2State_2:
-# 131 "data/maps/LatiTempleLatias/scripts.pory"
+# 149 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 45, 25, METATILE_LatiTemple_ActiveGray, FALSE
-# 132 "data/maps/LatiTempleLatias/scripts.pory"
+# 150 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 54, 20, METATILE_LatiTemple_ActiveGray, FALSE
-# 133 "data/maps/LatiTempleLatias/scripts.pory"
+# 151 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 32, 3, METATILE_LatiTemple_CrystalSwitchActive, TRUE
 	goto LatiTemple_SetSwitch2State_1
 
 
 LatiTemple_SetSwitch3State::
-# 143 "data/maps/LatiTempleLatias/scripts.pory"
-	goto_if_set FLAG_LATITEMPLE_SWITCH3, LatiTemple_SetSwitch3State_2
-# 154 "data/maps/LatiTempleLatias/scripts.pory"
-	setmetatile 37, 30, METATILE_LatiTemple_ActiveBlue, FALSE
-# 155 "data/maps/LatiTempleLatias/scripts.pory"
-	setmetatile 28, 21, METATILE_LatiTemple_ActiveBlue, FALSE
-# 157 "data/maps/LatiTempleLatias/scripts.pory"
-	setmetatile 45, 11, METATILE_LatiTemple_ActiveGreen, FALSE
-# 158 "data/maps/LatiTempleLatias/scripts.pory"
-	setmetatile 43, 18, METATILE_LatiTemple_ActiveGreen, FALSE
-# 160 "data/maps/LatiTempleLatias/scripts.pory"
-	setmetatile 51, 23, METATILE_LatiTemple_InactiveBlue, TRUE
 # 161 "data/maps/LatiTempleLatias/scripts.pory"
+	goto_if_set FLAG_LATITEMPLE_SWITCH3, LatiTemple_SetSwitch3State_2
+# 172 "data/maps/LatiTempleLatias/scripts.pory"
+	setmetatile 37, 30, METATILE_LatiTemple_ActiveBlue, FALSE
+# 173 "data/maps/LatiTempleLatias/scripts.pory"
+	setmetatile 28, 21, METATILE_LatiTemple_ActiveBlue, FALSE
+# 175 "data/maps/LatiTempleLatias/scripts.pory"
+	setmetatile 45, 11, METATILE_LatiTemple_ActiveGreen, FALSE
+# 176 "data/maps/LatiTempleLatias/scripts.pory"
+	setmetatile 43, 18, METATILE_LatiTemple_ActiveGreen, FALSE
+# 178 "data/maps/LatiTempleLatias/scripts.pory"
+	setmetatile 51, 23, METATILE_LatiTemple_InactiveBlue, TRUE
+# 179 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 14, 10, METATILE_LatiTemple_InactiveBlue, TRUE
-# 162 "data/maps/LatiTempleLatias/scripts.pory"
+# 180 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 46, 21, METATILE_LatiTemple_CrystalSwitchInactive, TRUE
 LatiTemple_SetSwitch3State_1:
 	return
 
 LatiTemple_SetSwitch3State_2:
-# 144 "data/maps/LatiTempleLatias/scripts.pory"
+# 162 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 37, 30, METATILE_LatiTemple_InactiveBlue, TRUE
-# 145 "data/maps/LatiTempleLatias/scripts.pory"
+# 163 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 28, 21, METATILE_LatiTemple_InactiveBlue, TRUE
-# 147 "data/maps/LatiTempleLatias/scripts.pory"
+# 165 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 45, 11, METATILE_LatiTemple_InactiveGreen, TRUE
-# 148 "data/maps/LatiTempleLatias/scripts.pory"
+# 166 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 43, 18, METATILE_LatiTemple_InactiveGreen, TRUE
-# 150 "data/maps/LatiTempleLatias/scripts.pory"
+# 168 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 51, 23, METATILE_LatiTemple_ActiveBlue, FALSE
-# 151 "data/maps/LatiTempleLatias/scripts.pory"
+# 169 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 14, 10, METATILE_LatiTemple_ActiveBlue, FALSE
-# 152 "data/maps/LatiTempleLatias/scripts.pory"
+# 170 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 46, 21, METATILE_LatiTemple_CrystalSwitchActive, TRUE
 	goto LatiTemple_SetSwitch3State_1
 
 
 LatiTemple_SetSwitch4State::
-# 168 "data/maps/LatiTempleLatias/scripts.pory"
+# 186 "data/maps/LatiTempleLatias/scripts.pory"
 	goto_if_set FLAG_LATITEMPLE_SWITCH4, LatiTemple_SetSwitch4State_2
-# 173 "data/maps/LatiTempleLatias/scripts.pory"
+# 191 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 21, 30, METATILE_LatiTemple_InactiveBlue, TRUE
-# 174 "data/maps/LatiTempleLatias/scripts.pory"
+# 192 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 41, 31, METATILE_LatiTemple_InactiveBlue, TRUE
-# 175 "data/maps/LatiTempleLatias/scripts.pory"
+# 193 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 15, 6, METATILE_LatiTemple_CrystalSwitchInactive, TRUE
 LatiTemple_SetSwitch4State_1:
 	return
 
 LatiTemple_SetSwitch4State_2:
-# 169 "data/maps/LatiTempleLatias/scripts.pory"
+# 187 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 21, 30, METATILE_LatiTemple_ActiveBlue, FALSE
-# 170 "data/maps/LatiTempleLatias/scripts.pory"
+# 188 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 41, 31, METATILE_LatiTemple_ActiveBlue, FALSE
-# 171 "data/maps/LatiTempleLatias/scripts.pory"
+# 189 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 15, 6, METATILE_LatiTemple_CrystalSwitchActive, TRUE
 	goto LatiTemple_SetSwitch4State_1
 
 
 LatiTemple_SetSwitch5State::
-# 181 "data/maps/LatiTempleLatias/scripts.pory"
+# 199 "data/maps/LatiTempleLatias/scripts.pory"
 	goto_if_set FLAG_LATITEMPLE_SWITCH5, LatiTemple_SetSwitch5State_2
-# 189 "data/maps/LatiTempleLatias/scripts.pory"
+# 207 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 30, 5, METATILE_LatiTemple_ActiveBlue, FALSE
-# 190 "data/maps/LatiTempleLatias/scripts.pory"
+# 208 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 51, 11, METATILE_LatiTemple_ActiveBlue, FALSE
-# 192 "data/maps/LatiTempleLatias/scripts.pory"
+# 210 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 12, 30, METATILE_LatiTemple_InactiveGreen, TRUE
-# 193 "data/maps/LatiTempleLatias/scripts.pory"
+# 211 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 5, 23, METATILE_LatiTemple_InactiveGreen, TRUE
-# 194 "data/maps/LatiTempleLatias/scripts.pory"
+# 212 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 51, 28, METATILE_LatiTemple_CrystalSwitchInactive, TRUE
 LatiTemple_SetSwitch5State_1:
 	return
 
 LatiTemple_SetSwitch5State_2:
-# 182 "data/maps/LatiTempleLatias/scripts.pory"
+# 200 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 30, 5, METATILE_LatiTemple_InactiveBlue, TRUE
-# 183 "data/maps/LatiTempleLatias/scripts.pory"
+# 201 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 51, 11, METATILE_LatiTemple_InactiveBlue, TRUE
-# 185 "data/maps/LatiTempleLatias/scripts.pory"
+# 203 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 12, 30, METATILE_LatiTemple_ActiveGreen, FALSE
-# 186 "data/maps/LatiTempleLatias/scripts.pory"
+# 204 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 5, 23, METATILE_LatiTemple_ActiveGreen, FALSE
-# 187 "data/maps/LatiTempleLatias/scripts.pory"
+# 205 "data/maps/LatiTempleLatias/scripts.pory"
 	setmetatile 51, 28, METATILE_LatiTemple_CrystalSwitchActive, TRUE
 	goto LatiTemple_SetSwitch5State_1
 
+
+ResetLatiasPuzzle_Text_0:
+# 21 "data/maps/LatiTempleLatias/scripts.pory"
+	.string "Would you like to reset the puzzle?$"
