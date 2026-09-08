@@ -9616,24 +9616,40 @@ static inline uq4_12_t GetCollisionCourseElectroDriftModifier(enum Move move, uq
     return UQ_4_12(1.0);
 }
 
+static bool32 HasTrueshotAura(enum BattlerId battler)
+{
+    enum Ability battlerTraits[MAX_MON_TRAITS];
+    STORE_BATTLER_TRAITS(battler);
+    if (SearchTraits(battlerTraits, ABILITY_TRUESHOT_AURA))
+        return TRUE;
+
+    if (IsDoubleBattle() && IsBattlerAlive(BATTLE_PARTNER(battler)))
+    {
+        STORE_BATTLER_TRAITS(BATTLE_PARTNER(battler));
+        return SearchTraits(battlerTraits, ABILITY_TRUESHOT_AURA) != 0;
+    }
+    return FALSE;
+}
+
 static inline uq4_12_t GetAttackerAbilitiesModifier(enum BattlerId battlerAtk, uq4_12_t typeEffectivenessModifier, bool32 isCrit)
 {
+    uq4_12_t modifier = UQ_4_12(1.0);
     enum Ability battlerTraits[MAX_MON_TRAITS];
     STORE_BATTLER_TRAITS(battlerAtk);
 
     if (SearchTraits(battlerTraits, ABILITY_NEUROFORCE)
      && typeEffectivenessModifier >= UQ_4_12(2.0))
-        return UQ_4_12(1.25);
+        modifier = uq4_12_multiply(modifier, UQ_4_12(1.25));
 
-    if (SearchTraits(battlerTraits, ABILITY_SNIPER)
-     && isCrit)
-        return UQ_4_12(1.5);
+    if (isCrit
+     && SearchTraits(battlerTraits, ABILITY_SNIPER))
+        modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
 
     if (SearchTraits(battlerTraits, ABILITY_TINTED_LENS)
      && typeEffectivenessModifier <= UQ_4_12(0.5))
-        return UQ_4_12(2.0);
+        modifier = uq4_12_multiply(modifier, UQ_4_12(2.0));
 
-    return UQ_4_12(1.0);
+    return modifier;
 }
 
 static inline uq4_12_t GetDefenderAbilitiesModifier(struct BattleContext *ctx)
@@ -10206,6 +10222,8 @@ s32 CalcCritChanceStage(struct BattleContext *ctx)
                     + ((B_AFFECTION_MECHANICS == TRUE && GetBattlerAffectionHearts(ctx->battlerAtk) == AFFECTION_FIVE_HEARTS) ? 2 : 0)
                     + ((gAiLogicData->aiCalcInProgress ? AI_BATTLER_HAS_TRAIT(ctx->battlerAtk, ABILITY_SUPER_LUCK) : BattlerHasTrait(ctx->battlerAtk, ABILITY_SUPER_LUCK)) ? 1 : 0)
                     + gBattleMons[ctx->battlerAtk].volatiles.bonusCritStages;
+        if (HasTrueshotAura(ctx->battlerAtk))
+            critChance += 2;
         if (critChance >= ARRAY_COUNT(sCriticalHitOdds))
             critChance = ARRAY_COUNT(sCriticalHitOdds) - 1;
     }
@@ -10261,6 +10279,9 @@ s32 CalcCritChanceStageGen1(struct BattleContext *ctx)
 
     if (holdEffectCritStage > 0)
         critChance *= 4 * holdEffectCritStage;
+
+    if (HasTrueshotAura(ctx->battlerAtk))
+        critChance *= 8;
 
     if (gAiLogicData->aiCalcInProgress ? AI_BATTLER_HAS_TRAIT(ctx->battlerAtk, ABILITY_SUPER_LUCK) : BattlerHasTrait(ctx->battlerAtk, ABILITY_SUPER_LUCK))
         critChance *= 4;
