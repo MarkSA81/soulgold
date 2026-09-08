@@ -232,7 +232,10 @@ DOUBLE_BATTLE_TEST("Trueshot Aura uses cached abilities and innates in AI calcul
         if (source == 2)
             gAiLogicData->abilities[GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT)] = ABILITY_TRUESHOT_AURA;
         if (source == 3)
+        {
             gAiLogicData->innates[GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT)][0] = ABILITY_TRUESHOT_AURA;
+            gAiLogicData->activeInnateCount[GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT)] = 1;
+        }
         gAiLogicData->aiCalcInProgress = TRUE;
         EXPECT_EQ(CalcCritChanceStage(&ctx), source == 0 ? 0 : 2);
         gAiLogicData->aiCalcInProgress = FALSE;

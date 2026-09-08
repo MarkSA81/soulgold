@@ -9619,6 +9619,15 @@ static inline uq4_12_t GetCollisionCourseElectroDriftModifier(enum Move move, uq
 static bool32 HasTrueshotAura(enum BattlerId battler)
 {
     enum Ability battlerTraits[MAX_MON_TRAITS];
+    if (gAiLogicData != NULL && gAiLogicData->aiCalcInProgress)
+    {
+        if (AI_BATTLER_HAS_TRAIT(battler, ABILITY_TRUESHOT_AURA))
+            return TRUE;
+        return IsDoubleBattle()
+            && IsBattlerAlive(BATTLE_PARTNER(battler))
+            && AI_BATTLER_HAS_TRAIT(BATTLE_PARTNER(battler), ABILITY_TRUESHOT_AURA);
+    }
+
     STORE_BATTLER_TRAITS(battler);
     if (SearchTraits(battlerTraits, ABILITY_TRUESHOT_AURA))
         return TRUE;
