@@ -942,7 +942,6 @@ static const struct MenuAction MultichoiceList_BattleArcadeRecords[] =
 {
     {gText_Single2},
     {gText_Double2},
-    {gText_Multi},
     {gText_Cancel2},
 };
 
