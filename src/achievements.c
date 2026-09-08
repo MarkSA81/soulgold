@@ -152,9 +152,9 @@ static const u8 sText_AchFactory100Desc[] = _("Win 100 Battle Factory battles in
 static const u8 sText_AchPyramid3Name[] = _("Pyramid Explorer");
 static const u8 sText_AchPyramid3Desc[] = _("Clear 3 Battle Pyramid rounds.");
 static const u8 sText_AchPyramid10Name[] = _("Pyramid Expert");
-static const u8 sText_AchPyramid10Desc[] = _("Clear 10 Battle Pyramid rounds.");
+static const u8 sText_AchPyramid10Desc[] = _("Clear 6 Battle Pyramid rounds.");
 static const u8 sText_AchPyramid20Name[] = _("Pyramid Master");
-static const u8 sText_AchPyramid20Desc[] = _("Clear 20 Battle Pyramid rounds.");
+static const u8 sText_AchPyramid20Desc[] = _("Clear 10 Battle Pyramid rounds.");
 static const u8 sText_AchCatchLugiaName[] = _("Sea Guardian");
 static const u8 sText_AchCatchLugiaDesc[] = _("Catch Lugia.");
 static const u8 sText_AchCatchHoOhName[] = _("Rainbow Guardian");
@@ -399,8 +399,8 @@ static const struct Achievement sAchievements[] =
     {ACH_BATTLE_FACTORY_50, sText_AchFactory50Name, sText_AchFactory50Desc, ACH_TIER_GOLD, ACH_COUNTER_BATTLE_FACTORY_WINS, 50, TRAINER_NONE_ACH, NULL},
     {ACH_BATTLE_FACTORY_100, sText_AchFactory100Name, sText_AchFactory100Desc, ACH_TIER_PLATINUM, ACH_COUNTER_BATTLE_FACTORY_WINS, 100, TRAINER_NONE_ACH, NULL},
     {ACH_BATTLE_PYRAMID_3, sText_AchPyramid3Name, sText_AchPyramid3Desc, ACH_TIER_SILVER, ACH_COUNTER_BATTLE_PYRAMID_ROUNDS, 3, TRAINER_NONE_ACH, NULL},
-    {ACH_BATTLE_PYRAMID_10, sText_AchPyramid10Name, sText_AchPyramid10Desc, ACH_TIER_GOLD, ACH_COUNTER_BATTLE_PYRAMID_ROUNDS, 10, TRAINER_NONE_ACH, NULL},
-    {ACH_BATTLE_PYRAMID_20, sText_AchPyramid20Name, sText_AchPyramid20Desc, ACH_TIER_PLATINUM, ACH_COUNTER_BATTLE_PYRAMID_ROUNDS, 20, TRAINER_NONE_ACH, NULL},
+    {ACH_BATTLE_PYRAMID_10, sText_AchPyramid10Name, sText_AchPyramid10Desc, ACH_TIER_GOLD, ACH_COUNTER_BATTLE_PYRAMID_ROUNDS, 6, TRAINER_NONE_ACH, NULL},
+    {ACH_BATTLE_PYRAMID_20, sText_AchPyramid20Name, sText_AchPyramid20Desc, ACH_TIER_PLATINUM, ACH_COUNTER_BATTLE_PYRAMID_ROUNDS, 10, TRAINER_NONE_ACH, NULL},
     {ACH_BATTLE_CAFE_DAILY, sText_AchBattleCafeDailyName, sText_AchBattleCafeDailyDesc, ACH_TIER_BRONZE, ACH_COUNTER_NONE, 0, TRAINER_NONE_ACH, NULL},
     {ACH_BATTLE_CAFE_RUSH, sText_AchBattleCafeRushName, sText_AchBattleCafeRushDesc, ACH_TIER_SILVER, ACH_COUNTER_NONE, 0, TRAINER_NONE_ACH, NULL},
     {ACH_BATTLE_CAFE_SUPER_CHALLENGE, sText_AchBattleCafeSuperChallengeName, sText_AchBattleCafeSuperChallengeDesc, ACH_TIER_GOLD, ACH_COUNTER_NONE, 0, TRAINER_NONE_ACH, NULL},

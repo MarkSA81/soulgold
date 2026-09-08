@@ -3,8 +3,10 @@
 #include "field_move.h"
 #include "fldeff.h"
 #include "fldeff_misc.h"
+#include "item.h"
 #include "party_menu.h"
 #include "constants/field_move.h"
+#include "constants/map_types.h"
 #include "constants/moves.h"
 #include "constants/party_menu.h"
 
@@ -40,7 +42,10 @@ static bool32 IsFieldMoveUnlocked_Fly(void)
 
 static bool32 IsFieldMoveUnlocked_Dive(void)
 {
-    return FlagGet(FLAG_BADGE07_GET);
+    if (gMapHeader.mapType == MAP_TYPE_UNDERWATER)
+        return TRUE;
+
+    return FlagGet(FLAG_IS_CHAMPION) && CheckBagHasItem(ITEM_HM_DIVE, 1);
 }
 
 static bool32 IsFieldMoveUnlocked_Waterfall(void)

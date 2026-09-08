@@ -1,4 +1,5 @@
 #include "global.h"
+#include "constants/vars.h"
 #include "daycare.h"
 #include "egg_hatch.h"
 #include "event_data.h"
@@ -271,4 +272,30 @@ TEST("(Daycare) Pokémon with regional forms give the correct offspring")
     STORE_IN_DAYCARE_AND_GET_EGG();
 
     EXPECT_EQ(GetMonData(&gPlayerParty[0], MON_DATA_SPECIES), offspring);
+}
+
+TEST("Pending Day-Care egg keeps its shiny result after a rate change")
+{
+    u32 expected;
+    PARAMETRIZE { expected = FALSE; }
+    PARAMETRIZE { expected = TRUE; }
+
+    ZeroPlayerPartyMons();
+    RUN_OVERWORLD_SCRIPT(
+        givemon SPECIES_PIKACHU, 50, gender=MON_MALE;
+        givemon SPECIES_PIKACHU, 50, gender=MON_FEMALE;
+    );
+    StorePokemonInDaycare(&gPlayerParty[0], &gSaveBlock1Ptr->daycare.mons[0]);
+    StorePokemonInDaycare(&gPlayerParty[0], &gSaveBlock1Ptr->daycare.mons[1]);
+    VarSet(VAR_SHINY_RATE, SHINY_RATE_256);
+    TriggerPendingDaycareEgg();
+    if (expected)
+        FlagSet(FLAG_PENDING_DAYCARE_EGG_SHINY);
+    else
+        FlagClear(FLAG_PENDING_DAYCARE_EGG_SHINY);
+    VarSet(VAR_SHINY_RATE, SHINY_RATE_1024);
+    RUN_OVERWORLD_SCRIPT( special GiveEggFromDaycare; );
+    EXPECT_EQ(GetMonData(&gPlayerParty[0], MON_DATA_IS_SHINY), expected);
+    VarSet(VAR_SHINY_RATE, SHINY_RATE_DEFAULT);
+    EXPECT_EQ(GetMonData(&gPlayerParty[0], MON_DATA_IS_SHINY), expected);
 }

@@ -2,6 +2,7 @@
 
 Mahoganytown_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, Mahoganytown_OnLoad
+	map_script MAP_SCRIPT_ON_TRANSITION, Mahoganytown_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Mahoganytown_OnFrame
 	.byte 0
 
@@ -16,12 +17,25 @@ MahoganyTown_EventScript_FixTree::
 	end
 
 Mahoganytown_OnFrame::
-	map_script_2 VAR_MAHOGANY_TOWN_STATE, 15, Mahoganytown_EventScript_RocketTrigger
+	map_script_2 VAR_TEMP_F, 1, Mahoganytown_EventScript_RocketTrigger
 	.2byte 0
 
+Mahoganytown_OnTransition::
+	call Common_EventScript_CheckElmRocketCall
+	end
+
+Common_EventScript_CheckElmRocketCall::
+	setvar VAR_TEMP_F, 0
+	goto_if_ne VAR_MAHOGANY_TOWN_STATE, 15, Common_EventScript_CheckElmRocketCall_Done
+	goto_if_lt VAR_NUM_BADGES, 7, Common_EventScript_CheckElmRocketCall_Done
+	goto_if_ge VAR_GOLDENROD_CITY_STATE, 6, Common_EventScript_CheckElmRocketCall_Done
+	setvar VAR_TEMP_F, 1
+Common_EventScript_CheckElmRocketCall_Done:
+	return
 
 Mahoganytown_EventScript_RocketTrigger::
 	lock
+	setvar VAR_TEMP_F, 0
 	pokenavcall ElmPhoneRadioTowerRocketTakeoverText
 	waitmessage
 	setvar VAR_GOLDENROD_CITY_STATE, 6

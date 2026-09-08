@@ -5691,6 +5691,16 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .breakable = B_UPDATED_ABILITY_DATA < GEN_8,
     },
 
+    [ABILITY_TRUESHOT_AURA] =
+    {
+        .name = _("Trueshot Aura"),
+        .description = COMPOUND_STRING("Raises team's critical hits."),
+        .longDescription = COMPOUND_STRING("Raises own and ally's\n"
+                                           "critical-hit ratio by two\n"
+                                           "stages."),
+        .aiRating = 10,
+    },
+
     [ABILITY_OGRE_FORCE] =
     {
         .name = _("Ogre Force"),

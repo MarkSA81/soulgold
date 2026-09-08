@@ -2334,6 +2334,11 @@ u16 GetOverworldWeatherSpecies(u16 species)
     return species;
 }
 
+bool32 IsFollowerMegaEnabled(void)
+{
+    return VarGet(VAR_FOLLOWER_MEGA_OFF) != 1;
+}
+
 static bool8 GetMonInfo(struct Pokemon *mon, u32 *species, bool32 *shiny, bool32 *female)
 {
     if (!mon)
@@ -2347,7 +2352,7 @@ static bool8 GetMonInfo(struct Pokemon *mon, u32 *species, bool32 *shiny, bool32
     *shiny = IsMonShiny(mon) ? OBJ_EVENT_MON_SHINY : 0;
     *female = GetMonGender(mon) == MON_FEMALE ? OBJ_EVENT_MON_FEMALE : 0;
 #if OW_BATTLE_ONLY_FORMS
-    if (CheckBagHasItem(ITEM_MEGA_RING, 1))
+    if (IsFollowerMegaEnabled() && CheckBagHasItem(ITEM_MEGA_RING, 1))
     {
         u32 megaSpecies = GetFormChangeTargetSpecies(mon, FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM);
 

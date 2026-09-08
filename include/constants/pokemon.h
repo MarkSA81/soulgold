@@ -104,6 +104,15 @@ enum __attribute__((packed)) Stat
 #define SHINY_ODDS 512 // playtest odds. Actual probability is SHINY_ODDS/65536.
 #define RELEASE_SHINY_ODDS 256
 
+enum ShinyRateOption
+{
+    SHINY_RATE_DEFAULT = 0, // Alpha saves
+    SHINY_RATE_256 = 1,
+    SHINY_RATE_512 = 2,
+    SHINY_RATE_1024 = 3,
+    SHINY_RATE_COUNT,
+};
+
 // Ribbon IDs used by TV and Pokénav
 #define CHAMPION_RIBBON       0
 #define COOL_RIBBON_NORMAL    1

@@ -17,8 +17,14 @@ order: 1
 
 ## Basics
 
+### What is the latest version of the hack?
+- 1.1.1 and it's only available on Hackdex
+
 ### Saves compatible between versions?
 - Always
+
+### Are there any cheats?
+- No, cheats are not supported and they are likely to corrupt your save, don't trust 3rd party sites offering them.
 
 ### Hard mode differences?
 - Gym battles are double battles unless enforced into singles by another setting
