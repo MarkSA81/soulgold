@@ -829,7 +829,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_WATER_1),
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_SHEER_FORCE },
-        .innates = { ABILITY_STRONG_JAW, ABILITY_INTIMIDATE, ABILITY_TOUGH_CLAWS },
+        .innates = { ABILITY_STRONG_JAW, ABILITY_INTIMIDATE, ABILITY_BATTLE_ARMOR },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Feraligatr"),
         .cryId = CRY_FERALIGATR,
@@ -905,7 +905,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_WATER_1),
         .abilities = { ABILITY_DRAGONIZE, ABILITY_DRAGONIZE, ABILITY_DRAGONIZE },
-        .innates = { ABILITY_STRONG_JAW, ABILITY_INTIMIDATE, ABILITY_TOUGH_CLAWS },
+        .innates = { ABILITY_STRONG_JAW, ABILITY_INTIMIDATE, ABILITY_BATTLE_ARMOR },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Feraligatr"),
     #if P_MODIFIED_MEGA_CRIES
