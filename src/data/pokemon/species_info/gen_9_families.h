@@ -66,6 +66,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
             gShinyOverworldPalette_Sprigatito
         )
         .levelUpLearnset = sSprigatitoLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sSprigatitoTeachableLearnset,
         .eggMoveLearnset = sSprigatitoEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_FLORAGATO}),
@@ -133,6 +134,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
             gShinyOverworldPalette_Floragato
         )
         .levelUpLearnset = sFloragatoLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sFloragatoTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_MEOWSCARADA}),
     },
@@ -199,6 +201,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
             gShinyOverworldPalette_Meowscarada
         )
         .levelUpLearnset = sMeowscaradaLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sMeowscaradaTeachableLearnset,
         .formSpeciesIdTable = sMeowscaradaFormSpeciesIdTable,
         .formChangeTable = sMeowscaradaFormChangeTable,
@@ -261,6 +264,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         SHADOW(-3, 14, SHADOW_SIZE_S)
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sMeowscaradaLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sMeowscaradaTeachableLearnset,
         .formSpeciesIdTable = sMeowscaradaFormSpeciesIdTable,
         .formChangeTable = sMeowscaradaFormChangeTable,
@@ -331,6 +335,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
             gShinyOverworldPalette_Fuecoco
         )
         .levelUpLearnset = sFuecocoLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sFuecocoTeachableLearnset,
         .eggMoveLearnset = sFuecocoEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_CROCALOR}),
@@ -398,6 +403,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
             gShinyOverworldPalette_Crocalor
         )
         .levelUpLearnset = sCrocalorLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sCrocalorTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_SKELEDIRGE}),
     },
@@ -464,6 +470,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
             gShinyOverworldPalette_Skeledirge
         )
         .levelUpLearnset = sSkeledirgeLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sSkeledirgeTeachableLearnset,
     },
 #endif //P_FAMILY_FUECOCO
@@ -531,6 +538,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
             gShinyOverworldPalette_Quaxly
         )
         .levelUpLearnset = sQuaxlyLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sQuaxlyTeachableLearnset,
         .eggMoveLearnset = sQuaxlyEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_QUAXWELL}),
@@ -598,6 +606,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
             gShinyOverworldPalette_Quaxwell
         )
         .levelUpLearnset = sQuaxwellLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sQuaxwellTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_QUAQUAVAL}),
     },
@@ -664,6 +673,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
             gShinyOverworldPalette_Quaquaval
         )
         .levelUpLearnset = sQuaquavalLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sQuaquavalTeachableLearnset,
     },
 #endif //P_FAMILY_QUAXLY
