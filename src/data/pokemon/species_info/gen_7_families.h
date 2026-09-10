@@ -70,6 +70,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         )
         .isSkyBattleBanned = B_SKY_BATTLE_STRICT_ELIGIBILITY,
         .levelUpLearnset = sRowletLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sRowletTeachableLearnset,
         .eggMoveLearnset = sRowletEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 17, SPECIES_DARTRIX}),
@@ -141,6 +142,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
             gShinyOverworldPalette_Dartrix
         )
         .levelUpLearnset = sDartrixLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sDartrixTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_DECIDUEYE, CONDITIONS({IF_NOT_TIME, TIME_NIGHT})}
                             #if P_HISUIAN_FORMS
@@ -214,6 +216,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
             gShinyOverworldPalette_Decidueye
         )
         .levelUpLearnset = sDecidueyeLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sDecidueyeTeachableLearnset,
         .formSpeciesIdTable = sDecidueyeFormSpeciesIdTable,
     },
@@ -282,6 +285,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         )
         .isHisuianForm = TRUE,
         .levelUpLearnset = sDecidueyeHisuiLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sDecidueyeHisuiTeachableLearnset,
         .formSpeciesIdTable = sDecidueyeFormSpeciesIdTable,
     },
@@ -354,6 +358,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
             gShinyOverworldPalette_Litten
         )
         .levelUpLearnset = sLittenLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sLittenTeachableLearnset,
         .eggMoveLearnset = sLittenEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 17, SPECIES_TORRACAT}),
@@ -424,6 +429,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
             gShinyOverworldPalette_Torracat
         )
         .levelUpLearnset = sTorracatLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sTorracatTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_INCINEROAR}),
     },
@@ -493,6 +499,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
             gShinyOverworldPalette_Incineroar
         )
         .levelUpLearnset = sIncineroarLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sIncineroarTeachableLearnset,
     },
 #endif //P_FAMILY_LITTEN
@@ -563,6 +570,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
             gShinyOverworldPalette_Popplio
         )
         .levelUpLearnset = sPopplioLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sPopplioTeachableLearnset,
         .eggMoveLearnset = sPopplioEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 17, SPECIES_BRIONNE}),
@@ -635,6 +643,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
             gShinyOverworldPalette_Brionne
         )
         .levelUpLearnset = sBrionneLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sBrionneTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_PRIMARINA}),
     },
@@ -706,6 +715,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
             gShinyOverworldPalette_Primarina
         )
         .levelUpLearnset = sPrimarinaLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sPrimarinaTeachableLearnset,
         .formSpeciesIdTable = sPrimarinaFormSpeciesIdTable,
         .formChangeTable = sPrimarinaFormChangeTable,
@@ -763,6 +773,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         SHADOW(-6, 11, SHADOW_SIZE_L)
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sPrimarinaLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sPrimarinaTeachableLearnset,
         .formSpeciesIdTable = sPrimarinaFormSpeciesIdTable,
         .formChangeTable = sPrimarinaFormChangeTable,
