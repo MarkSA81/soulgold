@@ -879,6 +879,11 @@ void FieldEffectFreePaletteIfUnused(u8 paletteNum)
     u8 i;
     u16 tag = GetSpritePaletteTagByPaletteNum(paletteNum);
 
+    // Shadows borrow this palette from the weather system. Keep it allocated
+    // even when the last shadow disappears (for example, during Fly).
+    if (tag == PALTAG_WEATHER)
+        return;
+
     if (tag != TAG_NONE)
     {
         for (i = 0; i < MAX_SPRITES; i++)
@@ -1506,7 +1511,9 @@ static void Task_FlyIntoMap(u8 taskId)
     task = &gTasks[taskId];
     if (taskState == tWaitPaletteFadeIn)
     {
-        if (gPaletteFade.active)
+        // Shade and rain fade through the weather task, without an active
+        // normal palette fade. Wait for those palettes before starting Fly.
+        if (gPaletteFade.active || !IsWeatherNotFadingIn())
         {
             return;
         }
@@ -3899,6 +3906,8 @@ static void FlyInFieldEffect_End(struct Task *task)
         }
         ObjectEventSetGraphicsId(objectEvent, GetPlayerAvatarGraphicsIdByStateId(state));
         ObjectEventTurn(objectEvent, DIR_SOUTH);
+        objectEvent->noShadow = FALSE;
+        objectEvent->triggerGroundEffectsOnMove = TRUE;
         gPlayerAvatar.flags = task->tAvatarFlags;
         gPlayerAvatar.preventStep = FALSE;
         FieldEffectActiveListRemove(FLDEFF_FLY_IN);

@@ -64,6 +64,7 @@ struct OamDimensions32
 
 static void SortSprites(u32 *spritePriorities, s32 n);
 static u32 CreateSpriteAt(u32 index, const struct SpriteTemplate *template, s16 x, s16 y, u32 subpriority, const void *creator);
+static bool8 TryInitSpriteAffineAnim(struct Sprite *sprite);
 static void ResetOamMatrices(void);
 static void ResetSprite(struct Sprite *sprite);
 static void ResetAllSprites(void);
@@ -611,8 +612,14 @@ u32 CreateSpriteAt(u32 index, const struct SpriteTemplate *template, s16 x, s16 
         SetSpriteSheetFrameTileNum(sprite);
     }
 
-    if (sprite->oam.affineMode & ST_OAM_AFFINE_ON_MASK)
-        InitSpriteAffineAnim(sprite);
+    if ((sprite->oam.affineMode & ST_OAM_AFFINE_ON_MASK) && !TryInitSpriteAffineAnim(sprite))
+    {
+        if (!sprite->usingSheet)
+            DestroySprite(sprite);
+        else
+            ResetSprite(sprite);
+        return MAX_SPRITES;
+    }
 
     if (template->paletteTag != TAG_NONE)
         sprite->oam.paletteNum = IndexOfSpritePaletteTag(template->paletteTag);
@@ -1537,16 +1544,22 @@ void FreeOamMatrix(u8 matrixNum)
     SetOamMatrix(matrixNum, 0x100, 0, 0, 0x100);
 }
 
-void InitSpriteAffineAnim(struct Sprite *sprite)
+static bool8 TryInitSpriteAffineAnim(struct Sprite *sprite)
 {
     u8 matrixNum = AllocOamMatrix();
-    if (matrixNum != 0xFF)
-    {
-        CalcCenterToCornerVec(sprite, sprite->oam.shape, sprite->oam.size, sprite->oam.affineMode);
-        sprite->oam.matrixNum = matrixNum;
-        sprite->affineAnimBeginning = TRUE;
-        AffineAnimStateReset(matrixNum);
-    }
+    if (matrixNum == 0xFF)
+        return FALSE;
+
+    CalcCenterToCornerVec(sprite, sprite->oam.shape, sprite->oam.size, sprite->oam.affineMode);
+    sprite->oam.matrixNum = matrixNum;
+    sprite->affineAnimBeginning = TRUE;
+    AffineAnimStateReset(matrixNum);
+    return TRUE;
+}
+
+void InitSpriteAffineAnim(struct Sprite *sprite)
+{
+    TryInitSpriteAffineAnim(sprite);
 }
 
 void SetOamMatrixRotationScaling(u8 matrixNum, s16 xScale, s16 yScale, u16 rotation)

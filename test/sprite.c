@@ -140,6 +140,24 @@ TEST("Sprite copy request queue reports overflow")
     EXPECT_EQ(gSpriteCopyRequestOverflowCount, 0);
 }
 
+TEST("Affine sprite creation fails safely when all OAM matrices are in use")
+{
+    struct OamData affineOam = gDummyOamData;
+    struct SpriteTemplate affineTemplate = gDummySpriteTemplate;
+    u32 i;
+
+    affineOam.affineMode = ST_OAM_AFFINE_NORMAL;
+    affineTemplate.oam = &affineOam;
+
+    ResetSpriteData_();
+    for (i = 0; i < OAM_MATRIX_COUNT; i++)
+        EXPECT_EQ(CreateSpriteUnchecked(&affineTemplate, 0, 0, 0), i);
+
+    EXPECT_EQ(CreateSpriteUnchecked(&affineTemplate, 0, 0, 0), MAX_SPRITES);
+    EXPECT(!gSprites[OAM_MATRIX_COUNT].inUse);
+    ResetSpriteData_();
+}
+
 TEST("Unchecked mon icon creation fails safely when sprite slots are full")
 {
     u32 i;

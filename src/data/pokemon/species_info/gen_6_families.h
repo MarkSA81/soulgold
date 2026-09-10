@@ -558,7 +558,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         OVERWORLD(
             sPicTable_DelphoxMega,
             SIZE_32x32,
-            SHADOW_SIZE_L,
+            SHADOW_SIZE_M,
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_DelphoxMega,
