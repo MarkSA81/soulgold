@@ -91,7 +91,7 @@ script BattleArcade_Registration_EventScript_TryEnterChallenge
 {
 	message(format("The Rocket Arcade offers two levels of challenge, Classic and Chaos. Which is your choice?"))
 	waitmessage
-	multichoice(17, 4, MULTI_LEVEL_MODE, FALSE)
+	multichoice(17, 2, MULTI_LEVEL_MODE, FALSE)
 	switch(var(VAR_RESULT))
 	{
 		case FRONTIER_LEVEL_CHOICE_INNATES:
@@ -389,9 +389,6 @@ script BattleArcade_Registration_EventScript_AskModeResultsBoard
 	switch(var(VAR_RESULT))
 	{
 		case 2:
-			setvar(VAR_RESULT,FRONTIER_MODE_LINK_MULTIS)
-			goto(BattleArcade_Registration_EventScript_ShowResults)
-		case 3:
 		case MULTI_B_PRESSED:
 			closemessage
 			releaseall
@@ -407,6 +404,7 @@ script BattleArcade_Registration_EventScript_ShowResults
 	copyvar(VAR_0x8006,VAR_RESULT)
 	fadescreen(FADE_TO_BLACK)
 	arcade_results(VAR_0x8006)
+	waitstate
 	goto(BattleArcade_Registration_EventScript_AskModeResultsBoard)
 }
 

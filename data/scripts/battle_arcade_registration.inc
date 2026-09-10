@@ -140,7 +140,7 @@ BattleArcade_Registration_EventScript_TryEnterChallenge::
 # 93 "data/scripts/battle_arcade_registration.pory"
 	waitmessage
 # 94 "data/scripts/battle_arcade_registration.pory"
-	multichoice 17, 4, MULTI_LEVEL_MODE, FALSE
+	multichoice 17, 2, MULTI_LEVEL_MODE, FALSE
 # 95 "data/scripts/battle_arcade_registration.pory"
 	switch VAR_RESULT
 # 97 "data/scripts/battle_arcade_registration.pory"
@@ -614,39 +614,32 @@ BattleArcade_Registration_EventScript_AskModeResultsBoard::
 	switch VAR_RESULT
 # 391 "data/scripts/battle_arcade_registration.pory"
 	case 2, BattleArcade_Registration_EventScript_AskModeResultsBoard_2
-# 394 "data/scripts/battle_arcade_registration.pory"
-	case 3, BattleArcade_Registration_EventScript_AskModeResultsBoard_3
-# 395 "data/scripts/battle_arcade_registration.pory"
-	case MULTI_B_PRESSED, BattleArcade_Registration_EventScript_AskModeResultsBoard_3
-# 400 "data/scripts/battle_arcade_registration.pory"
+# 392 "data/scripts/battle_arcade_registration.pory"
+	case MULTI_B_PRESSED, BattleArcade_Registration_EventScript_AskModeResultsBoard_2
+# 397 "data/scripts/battle_arcade_registration.pory"
 	goto BattleArcade_Registration_EventScript_ShowResults
 	return
 
 BattleArcade_Registration_EventScript_AskModeResultsBoard_2:
-# 392 "data/scripts/battle_arcade_registration.pory"
-	setvar VAR_RESULT, FRONTIER_MODE_LINK_MULTIS
 # 393 "data/scripts/battle_arcade_registration.pory"
-	goto BattleArcade_Registration_EventScript_ShowResults
-	return
-
-BattleArcade_Registration_EventScript_AskModeResultsBoard_3:
-# 396 "data/scripts/battle_arcade_registration.pory"
 	closemessage
-# 397 "data/scripts/battle_arcade_registration.pory"
+# 394 "data/scripts/battle_arcade_registration.pory"
 	releaseall
 	end
 
 
 BattleArcade_Registration_EventScript_ShowResults::
-# 406 "data/scripts/battle_arcade_registration.pory"
+# 403 "data/scripts/battle_arcade_registration.pory"
 	closemessage
-# 407 "data/scripts/battle_arcade_registration.pory"
+# 404 "data/scripts/battle_arcade_registration.pory"
 	copyvar VAR_0x8006, VAR_RESULT
-# 408 "data/scripts/battle_arcade_registration.pory"
+# 405 "data/scripts/battle_arcade_registration.pory"
 	fadescreen FADE_TO_BLACK
-# 409 "data/scripts/battle_arcade_registration.pory"
+# 406 "data/scripts/battle_arcade_registration.pory"
 	arcade_results VAR_0x8006
-# 410 "data/scripts/battle_arcade_registration.pory"
+# 407 "data/scripts/battle_arcade_registration.pory"
+	waitstate
+# 408 "data/scripts/battle_arcade_registration.pory"
 	goto BattleArcade_Registration_EventScript_AskModeResultsBoard
 	return
 
@@ -767,23 +760,23 @@ BattleArcade_Registration_EventScript_AskModeResultsBoard_Text_0:
 	.string "Which record would you like to see?$"
 
 BattleArcade_Entrance_Text_CongratulationsInHonorOf::
-# 413 "data/scripts/battle_arcade_registration.pory"
+# 411 "data/scripts/battle_arcade_registration.pory"
 	.string "Congratulations! In honor of your\n"
 	.string "victory, we present you with this\l"
 	.string "commemorative print!$"
 
 BattleArcade_Entrance_Text_OneTrainerShouldSelectBecome::
-# 420 "data/scripts/battle_arcade_registration.pory"
+# 418 "data/scripts/battle_arcade_registration.pory"
 	.string "One Trainer should select “Become\n"
 	.string "Leader.” The other Trainer must select\l"
 	.string "“Join Group.”$"
 
 BattleArcade_Entrance_Text_WeNeedToLaunchDs::
-# 424 "data/scripts/battle_arcade_registration.pory"
+# 422 "data/scripts/battle_arcade_registration.pory"
 	.string "We need to launch DS Wireless\n"
 	.string "Communications.$"
 
 BattleArcade_Entrance_Text_YouMustSaveTheGame::
-# 428 "data/scripts/battle_arcade_registration.pory"
+# 426 "data/scripts/battle_arcade_registration.pory"
 	.string "You must save the game before I show\n"
 	.string "you in. Please wait.$"

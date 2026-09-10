@@ -419,17 +419,21 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Guillotine"),
         .description = COMPOUND_STRING(
-            "A powerful pincer attack\n"
-            "that KOs if it hits."),
-        .effect = EFFECT_OHKO,
-        .power = 1,
+            "A crushing pincer attack.\n"
+            "The user must then recharge."),
+        .effect = EFFECT_HIT,
+        .power = 150,
         .type = TYPE_NORMAL,
-        .accuracy = 30,
+        .accuracy = 90,
         .pp = 5,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_RECHARGE,
+            .self = TRUE,
+        }),
         .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
@@ -959,17 +963,21 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Horn Drill"),
         .description = COMPOUND_STRING(
-            "A one-hit KO attack that\n"
-            "uses a horn like a drill."),
-        .effect = EFFECT_OHKO,
-        .power = 1,
+            "A powerful drilling attack.\n"
+            "The user must then recharge."),
+        .effect = EFFECT_HIT,
+        .power = 150,
         .type = TYPE_NORMAL,
-        .accuracy = 30,
+        .accuracy = 90,
         .pp = 5,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_RECHARGE,
+            .self = TRUE,
+        }),
         .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
@@ -2481,18 +2489,22 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Fissure"),
         .description = COMPOUND_STRING(
-            "A one-hit KO move that\n"
-            "drops the foe in a fissure."),
-        .effect = EFFECT_OHKO,
-        .power = 1,
+            "Drops the foe in a fissure.\n"
+            "The user must then recharge."),
+        .effect = EFFECT_HIT,
+        .power = 150,
         .type = TYPE_GROUND,
-        .accuracy = 30,
+        .accuracy = 90,
         .pp = 5,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .damagesUnderground = TRUE,
         .skyBattleBanned = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_RECHARGE,
+            .self = TRUE,
+        }),
         .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .contestComboStarterId = 0,
@@ -4453,7 +4465,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Slashes with claws, etc. Has\n"
             "a high critical-hit ratio."),
         .effect = EFFECT_HIT,
-        .power = 70,
+        .power = 80,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .criticalHitStage = B_UPDATED_MOVE_DATA >= GEN_3 ? 1 : 2,
@@ -8889,18 +8901,20 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Sheer Cold"),
         .description = COMPOUND_STRING(
-            "A chilling attack that\n"
-            "causes fainting if it hits."),
-        .effect = EFFECT_OHKO,
-        .power = 1,
+            "Blasts the foe with ice.\n"
+            "The user must then recharge."),
+        .effect = EFFECT_HIT,
+        .power = 150,
         .type = TYPE_ICE,
-        .accuracy = 30,
+        .accuracy = 90,
         .pp = 5,
         .target = TARGET_SELECTED,
         .priority = 0,
-        .noAffectOnSameTypeTarget = B_SHEER_COLD_IMMUNITY >= GEN_7,
-        .accIncreaseByTenOnSameType = B_SHEER_COLD_ACC >= GEN_7,
         .category = DAMAGE_CATEGORY_SPECIAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_RECHARGE,
+            .self = TRUE,
+        }),
         .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
         .contestComboStarterId = 0,
@@ -16131,7 +16145,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Hits hard and first.\n"
             "Only works first turn."),
         .effect = EFFECT_FIRST_TURN_ONLY,
-        .power = 90,
+        .power = 100,
         .type = TYPE_BUG,
         .accuracy = 100,
         .pp = 10,
@@ -17814,7 +17828,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "The user ignores effects\n"
             "that draw in moves."),
         .effect = EFFECT_SNIPE_SHOT,
-        .power = 80,
+        .power = 85,
         .type = TYPE_WATER,
         .accuracy = 100,
         .criticalHitStage = B_UPDATED_MOVE_DATA >= GEN_3 ? 1 : 2,
@@ -18583,7 +18597,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Attacks with a thick leek.\n"
             "The user must then rest."),
         .effect = EFFECT_HIT,
-        .power = 150,
+        .power = 170,
         .type = TYPE_FIGHTING,
         .accuracy = 100,
         .pp = 5,
@@ -20802,6 +20816,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
+        .punchingMove = TRUE,
         .metronomeBanned = TRUE,
         .argument = { .type = TYPE_ELECTRIC },
         .additionalEffects = ADDITIONAL_EFFECTS({

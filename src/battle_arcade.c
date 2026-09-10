@@ -262,7 +262,7 @@ static bool32 BattleArcade_DoNoEvent(void);
 
 // Arcade Records Window
 static void Task_OpenArcadeRecord(u8);
-static void ArcadeRecords_Init(MainCallback);
+static void ArcadeRecords_Init(void);
 static void ArcadeRecords_SetupCB(void);
 static bool8 ArcadeRecords_InitBgs(void);
 static bool32 ArcadeRecords_AllocTilemapBuffers(void);
@@ -2476,11 +2476,11 @@ static void Task_OpenArcadeRecord(u8 taskId)
         return;
 
     CleanupOverworldWindowsAndTilemaps();
-    ArcadeRecords_Init(CB2_ReturnToFieldFadeFromBlack);
+    ArcadeRecords_Init();
     DestroyTask(taskId);
 }
 
-static void ArcadeRecords_Init(MainCallback callback)
+static void ArcadeRecords_Init(void)
 {
     SetMainCallback2(ArcadeRecords_SetupCB);
 }
@@ -2594,7 +2594,7 @@ static void Task_ArcadeRecordWaitFadeAndBail(u8 taskId)
 {
     if (!gPaletteFade.active)
     {
-        SetMainCallback2(CB2_ReturnToFieldFadeFromBlack);
+        SetMainCallback2(CB2_ReturnToFieldContinueScript);
         ArcadeRecord_FreeResources();
         DestroyTask(taskId);
     }
@@ -2672,7 +2672,7 @@ static void Task_ArcadeRecordWaitFadeAndExitGracefully(u8 taskId)
 {
     if (!gPaletteFade.active)
     {
-        SetMainCallback2(CB2_ReturnToFieldFadeFromBlack);
+        SetMainCallback2(CB2_ReturnToFieldContinueScript);
         ArcadeRecord_FreeResources();
         DestroyTask(taskId);
     }

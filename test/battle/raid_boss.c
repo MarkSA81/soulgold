@@ -192,15 +192,15 @@ SINGLE_BATTLE_TEST("Raid boss: entering the last health bar preserves raised sta
     }
 }
 
-SINGLE_BATTLE_TEST("Raid boss: OHKO moves consume exactly one health bar")
+SINGLE_BATTLE_TEST("Raid boss: lethal damage consumes exactly one health bar")
 {
     GIVEN {
-        ASSUME(GetMoveEffect(MOVE_FISSURE) == EFFECT_OHKO);
-        PLAYER(SPECIES_DUGTRIO) { Speed(100); Moves(MOVE_FISSURE); }
+        ASSUME(GetMoveEffect(MOVE_POUND) == EFFECT_HIT);
+        PLAYER(SPECIES_DUGTRIO) { Speed(100); Attack(10000); Moves(MOVE_POUND); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(1); Moves(MOVE_CELEBRATE); }
         ConfigureTestBoss(3, SPECIES_NONE, 100);
     } WHEN {
-        TURN { MOVE(player, MOVE_FISSURE, hit: TRUE); MOVE(opponent, MOVE_CELEBRATE); }
+        TURN { MOVE(player, MOVE_POUND, hit: TRUE); MOVE(opponent, MOVE_CELEBRATE); }
     } THEN {
         EXPECT_EQ(gBattleStruct->boss.barsRemaining, 2);
         EXPECT_EQ(opponent->hp, opponent->maxHP);
@@ -501,8 +501,8 @@ SINGLE_BATTLE_TEST("Raid boss: Mewtwo phase profile cycles through stat-oriented
     PARAMETRIZE { phase = 3; }
 
     GIVEN {
-        ASSUME(GetMoveEffect(MOVE_HORN_DRILL) == EFFECT_OHKO);
-        PLAYER(SPECIES_MACHAMP) { Level(100); Ability(ABILITY_NO_GUARD); Speed(1000); HP(10000); MaxHP(10000); Moves(MOVE_HORN_DRILL, MOVE_CELEBRATE); }
+        ASSUME(GetMoveEffect(MOVE_POUND) == EFFECT_HIT);
+        PLAYER(SPECIES_MACHAMP) { Level(100); Ability(ABILITY_NO_GUARD); Speed(1000); HP(10000); MaxHP(10000); Attack(10000); Moves(MOVE_POUND, MOVE_CELEBRATE); }
         OPPONENT(SPECIES_MEWTWO) { Level(100); Speed(1); Moves(MOVE_PSYSTRIKE, MOVE_ICE_BEAM, MOVE_FIRE_BLAST, MOVE_TAUNT); }
         ConfigureTestBossProfile(BOSS_PHASE_PROFILE_MEWTWO);
     } WHEN {
@@ -512,11 +512,11 @@ SINGLE_BATTLE_TEST("Raid boss: Mewtwo phase profile cycles through stat-oriented
         }
         else
         {
-            TURN { MOVE(player, MOVE_HORN_DRILL); MOVE(opponent, moveSlot: 3); }
+            TURN { MOVE(player, MOVE_POUND); MOVE(opponent, moveSlot: 3); }
             if (phase >= 2)
-                TURN { MOVE(player, MOVE_HORN_DRILL); MOVE(opponent, moveSlot: 3); }
+                TURN { MOVE(player, MOVE_POUND); MOVE(opponent, moveSlot: 3); }
             if (phase >= 3)
-                TURN { MOVE(player, MOVE_HORN_DRILL); MOVE(opponent, moveSlot: 3); }
+                TURN { MOVE(player, MOVE_POUND); MOVE(opponent, moveSlot: 3); }
         }
     } THEN {
         u32 unboostedAttack = GetMonData(GetBattlerMon(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT)), MON_DATA_ATK);
@@ -542,12 +542,12 @@ SINGLE_BATTLE_TEST("Raid boss: Mewtwo phase profile cycles through stat-oriented
 SINGLE_BATTLE_TEST("Raid boss: phase-change messages name the boss rather than the player's Pokémon")
 {
     GIVEN {
-        ASSUME(GetMoveEffect(MOVE_HORN_DRILL) == EFFECT_OHKO);
-        PLAYER(SPECIES_LUGIA) { Level(100); Ability(ABILITY_NO_GUARD); Speed(1000); HP(10000); MaxHP(10000); Moves(MOVE_HORN_DRILL); }
+        ASSUME(GetMoveEffect(MOVE_POUND) == EFFECT_HIT);
+        PLAYER(SPECIES_LUGIA) { Level(100); Ability(ABILITY_NO_GUARD); Speed(1000); HP(10000); MaxHP(10000); Attack(10000); Moves(MOVE_POUND); }
         OPPONENT(SPECIES_MEWTWO) { Level(100); Speed(1); Moves(MOVE_PSYSTRIKE, MOVE_ICE_BEAM, MOVE_FIRE_BLAST, MOVE_TAUNT); }
         ConfigureTestBossProfile(BOSS_PHASE_PROFILE_MEWTWO);
     } WHEN {
-        TURN { MOVE(player, MOVE_HORN_DRILL); MOVE(opponent, moveSlot: 3); }
+        TURN { MOVE(player, MOVE_POUND); MOVE(opponent, moveSlot: 3); }
     } SCENE {
         MESSAGE("The opposing Mewtwo's barrier broke! It's still standing!");
         MESSAGE("The opposing Mewtwo is surging with power!");
@@ -586,8 +586,8 @@ SINGLE_BATTLE_TEST("Raid boss: Rayquaza stays base for two bars then finishes in
     PARAMETRIZE { phase = 3; }
 
     GIVEN {
-        ASSUME(GetMoveEffect(MOVE_HORN_DRILL) == EFFECT_OHKO);
-        PLAYER(SPECIES_MACHAMP) { Level(100); Ability(ABILITY_NO_GUARD); Speed(1000); HP(10000); MaxHP(10000); Moves(MOVE_HORN_DRILL, MOVE_CELEBRATE); }
+        ASSUME(GetMoveEffect(MOVE_POUND) == EFFECT_HIT);
+        PLAYER(SPECIES_MACHAMP) { Level(100); Ability(ABILITY_NO_GUARD); Speed(1000); HP(10000); MaxHP(10000); Attack(10000); Moves(MOVE_POUND, MOVE_CELEBRATE); }
         OPPONENT(SPECIES_RAYQUAZA) { Level(100); Speed(1); Moves(MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE, MOVE_EXTREMESPEED, MOVE_DRAGON_CLAW); }
         ConfigureTestBossProfile(BOSS_PHASE_PROFILE_RAYQUAZA);
     } WHEN {
@@ -597,11 +597,11 @@ SINGLE_BATTLE_TEST("Raid boss: Rayquaza stays base for two bars then finishes in
         }
         else
         {
-            TURN { MOVE(player, MOVE_HORN_DRILL); MOVE(opponent, moveSlot: 3); }
+            TURN { MOVE(player, MOVE_POUND); MOVE(opponent, moveSlot: 3); }
             if (phase >= 2)
-                TURN { MOVE(player, MOVE_HORN_DRILL); MOVE(opponent, moveSlot: 3); }
+                TURN { MOVE(player, MOVE_POUND); MOVE(opponent, moveSlot: 3); }
             if (phase >= 3)
-                TURN { MOVE(player, MOVE_HORN_DRILL); MOVE(opponent, moveSlot: 3); }
+                TURN { MOVE(player, MOVE_POUND); MOVE(opponent, moveSlot: 3); }
         }
     } THEN {
         EXPECT_EQ(gBattleStruct->boss.barsRemaining, 4 - phase);
@@ -615,17 +615,17 @@ SINGLE_BATTLE_TEST("Raid boss: Rayquaza stays base for two bars then finishes in
 WILD_BATTLE_TEST("Raid boss: captured Rayquaza reverts from Mega and restores its base moveset")
 {
     GIVEN {
-        ASSUME(GetMoveEffect(MOVE_HORN_DRILL) == EFFECT_OHKO);
+        ASSUME(GetMoveEffect(MOVE_POUND) == EFFECT_HIT);
         VICTORY_CATCH(ITEM_POKE_BALL);
         EXPECT_BOSS_CLEANUP;
-        PLAYER(SPECIES_MACHAMP) { Level(100); Ability(ABILITY_NO_GUARD); Speed(1000); HP(10000); MaxHP(10000); Moves(MOVE_HORN_DRILL); }
+        PLAYER(SPECIES_MACHAMP) { Level(100); Ability(ABILITY_NO_GUARD); Speed(1000); HP(10000); MaxHP(10000); Attack(10000); Moves(MOVE_POUND); }
         OPPONENT(SPECIES_RAYQUAZA) { Level(100); Speed(1); Moves(MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE, MOVE_EXTREMESPEED, MOVE_DRAGON_CLAW); }
         ConfigureTestBossProfile(BOSS_PHASE_PROFILE_RAYQUAZA);
     } WHEN {
-        TURN { MOVE(player, MOVE_HORN_DRILL); MOVE(opponent, moveSlot: 1); }
-        TURN { MOVE(player, MOVE_HORN_DRILL); MOVE(opponent, moveSlot: 1); }
-        TURN { MOVE(player, MOVE_HORN_DRILL); MOVE(opponent, moveSlot: 1); }
-        TURN { MOVE(player, MOVE_HORN_DRILL); MOVE(opponent, moveSlot: 1); }
+        TURN { MOVE(player, MOVE_POUND); MOVE(opponent, moveSlot: 1); }
+        TURN { MOVE(player, MOVE_POUND); MOVE(opponent, moveSlot: 1); }
+        TURN { MOVE(player, MOVE_POUND); MOVE(opponent, moveSlot: 1); }
+        TURN { MOVE(player, MOVE_POUND); MOVE(opponent, moveSlot: 1); }
     } THEN {
         EXPECT_EQ(gBattleOutcome, B_OUTCOME_CAUGHT);
         EXPECT_EQ(GetMonData(&gPlayerParty[1], MON_DATA_SPECIES), SPECIES_RAYQUAZA);
@@ -669,8 +669,8 @@ SINGLE_BATTLE_TEST("Raid boss: Ogerpon phase profile cycles all four Tera forms 
     PARAMETRIZE { phase = 3; }
 
     GIVEN {
-        ASSUME(GetMoveEffect(MOVE_HORN_DRILL) == EFFECT_OHKO);
-        PLAYER(SPECIES_MACHAMP) { Level(100); Ability(ABILITY_NO_GUARD); Speed(1000); HP(1000); MaxHP(1000); Moves(MOVE_HORN_DRILL, MOVE_CELEBRATE); }
+        ASSUME(GetMoveEffect(MOVE_POUND) == EFFECT_HIT);
+        PLAYER(SPECIES_MACHAMP) { Level(100); Ability(ABILITY_NO_GUARD); Speed(1000); HP(1000); MaxHP(1000); Attack(10000); Moves(MOVE_POUND, MOVE_CELEBRATE); }
         OPPONENT(SPECIES_OGERPON) { Level(100); Speed(1); Moves(MOVE_SWORDS_DANCE); }
         ConfigureTestBossProfile(BOSS_PHASE_PROFILE_OGERPON);
     } WHEN {
@@ -680,11 +680,11 @@ SINGLE_BATTLE_TEST("Raid boss: Ogerpon phase profile cycles all four Tera forms 
         }
         else
         {
-            TURN { MOVE(player, MOVE_HORN_DRILL); MOVE(opponent, MOVE_SWORDS_DANCE); }
+            TURN { MOVE(player, MOVE_POUND); MOVE(opponent, MOVE_SWORDS_DANCE); }
             if (phase >= 2)
-                TURN { MOVE(player, MOVE_HORN_DRILL); MOVE(opponent, MOVE_SWORDS_DANCE); }
+                TURN { MOVE(player, MOVE_POUND); MOVE(opponent, MOVE_SWORDS_DANCE); }
             if (phase >= 3)
-                TURN { MOVE(player, MOVE_HORN_DRILL); MOVE(opponent, MOVE_SWORDS_DANCE); }
+                TURN { MOVE(player, MOVE_POUND); MOVE(opponent, MOVE_SWORDS_DANCE); }
         }
     } THEN {
         EXPECT_EQ(opponent->species, sExpectedSpecies[phase]);
@@ -699,13 +699,13 @@ SINGLE_BATTLE_TEST("Raid boss: Ogerpon phase profile cycles all four Tera forms 
 SINGLE_BATTLE_TEST("Raid boss: Ogerpon targets the player with a remapped move after entering Cornerstone form")
 {
     GIVEN {
-        ASSUME(GetMoveEffect(MOVE_HORN_DRILL) == EFFECT_OHKO);
-        PLAYER(SPECIES_MACHAMP) { Level(100); Ability(ABILITY_NO_GUARD); Speed(1000); HP(10000); MaxHP(10000); Moves(MOVE_HORN_DRILL); }
+        ASSUME(GetMoveEffect(MOVE_POUND) == EFFECT_HIT);
+        PLAYER(SPECIES_MACHAMP) { Level(100); Ability(ABILITY_NO_GUARD); Speed(1000); HP(10000); MaxHP(10000); Attack(10000); Moves(MOVE_POUND); }
         OPPONENT(SPECIES_OGERPON) { Level(100); Speed(1); Moves(MOVE_IVY_CUDGEL, MOVE_HORN_LEECH, MOVE_PLAY_ROUGH, MOVE_SWORDS_DANCE); }
         ConfigureTestBossProfile(BOSS_PHASE_PROFILE_OGERPON);
     } WHEN {
-        TURN { MOVE(player, MOVE_HORN_DRILL); MOVE(opponent, moveSlot: 3); }
-        TURN { MOVE(player, MOVE_HORN_DRILL); MOVE(opponent, moveSlot: 2); }
+        TURN { MOVE(player, MOVE_POUND); MOVE(opponent, moveSlot: 3); }
+        TURN { MOVE(player, MOVE_POUND); MOVE(opponent, moveSlot: 2); }
     } THEN {
         EXPECT_EQ(opponent->species, SPECIES_OGERPON_CORNERSTONE_TERA);
         EXPECT_EQ(gBattleStruct->moveTarget[GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT)], GetBattlerAtPosition(B_POSITION_PLAYER_LEFT));
@@ -717,17 +717,17 @@ SINGLE_BATTLE_TEST("Raid boss: Ogerpon targets the player with a remapped move a
 WILD_BATTLE_TEST("Raid boss: capture restores the original encounter moves after profile phases")
 {
     GIVEN {
-        ASSUME(GetMoveEffect(MOVE_HORN_DRILL) == EFFECT_OHKO);
+        ASSUME(GetMoveEffect(MOVE_POUND) == EFFECT_HIT);
         VICTORY_CATCH(ITEM_POKE_BALL);
         EXPECT_BOSS_CLEANUP;
-        PLAYER(SPECIES_MACHAMP) { Level(100); Ability(ABILITY_NO_GUARD); Speed(1000); HP(10000); MaxHP(10000); Moves(MOVE_HORN_DRILL); }
+        PLAYER(SPECIES_MACHAMP) { Level(100); Ability(ABILITY_NO_GUARD); Speed(1000); HP(10000); MaxHP(10000); Attack(10000); Moves(MOVE_POUND); }
         OPPONENT(SPECIES_MEWTWO) { Level(100); Speed(1); Moves(MOVE_CELEBRATE, MOVE_SPLASH, MOVE_GROWL, MOVE_TAIL_WHIP); }
         ConfigureTestBossProfile(BOSS_PHASE_PROFILE_MEWTWO);
     } WHEN {
-        TURN { MOVE(player, MOVE_HORN_DRILL); MOVE(opponent, MOVE_CELEBRATE); }
-        TURN { MOVE(player, MOVE_HORN_DRILL); MOVE(opponent, MOVE_CELEBRATE); }
-        TURN { MOVE(player, MOVE_HORN_DRILL); MOVE(opponent, MOVE_CELEBRATE); }
-        TURN { MOVE(player, MOVE_HORN_DRILL); }
+        TURN { MOVE(player, MOVE_POUND); MOVE(opponent, MOVE_CELEBRATE); }
+        TURN { MOVE(player, MOVE_POUND); MOVE(opponent, MOVE_CELEBRATE); }
+        TURN { MOVE(player, MOVE_POUND); MOVE(opponent, MOVE_CELEBRATE); }
+        TURN { MOVE(player, MOVE_POUND); }
     } THEN {
         EXPECT_EQ(gBattleOutcome, B_OUTCOME_CAUGHT);
         EXPECT_EQ(GetMonData(&gPlayerParty[1], MON_DATA_SPECIES), SPECIES_MEWTWO);
@@ -742,17 +742,17 @@ WILD_BATTLE_TEST("Raid boss: capture restores the original encounter moves after
 WILD_BATTLE_TEST("Raid boss: captured Ogerpon reverts from its final Teal phase to its base form")
 {
     GIVEN {
-        ASSUME(GetMoveEffect(MOVE_HORN_DRILL) == EFFECT_OHKO);
+        ASSUME(GetMoveEffect(MOVE_POUND) == EFFECT_HIT);
         VICTORY_CATCH(ITEM_POKE_BALL);
         EXPECT_BOSS_CLEANUP;
-        PLAYER(SPECIES_MACHAMP) { Level(100); Ability(ABILITY_NO_GUARD); Speed(1000); HP(1000); MaxHP(1000); Moves(MOVE_HORN_DRILL); }
+        PLAYER(SPECIES_MACHAMP) { Level(100); Ability(ABILITY_NO_GUARD); Speed(1000); HP(1000); MaxHP(1000); Attack(10000); Moves(MOVE_POUND); }
         OPPONENT(SPECIES_OGERPON) { Level(100); Speed(1); Moves(MOVE_CELEBRATE); }
         ConfigureTestBossProfile(BOSS_PHASE_PROFILE_OGERPON);
     } WHEN {
-        TURN { MOVE(player, MOVE_HORN_DRILL); MOVE(opponent, MOVE_CELEBRATE); }
-        TURN { MOVE(player, MOVE_HORN_DRILL); MOVE(opponent, MOVE_CELEBRATE); }
-        TURN { MOVE(player, MOVE_HORN_DRILL); MOVE(opponent, MOVE_CELEBRATE); }
-        TURN { MOVE(player, MOVE_HORN_DRILL); }
+        TURN { MOVE(player, MOVE_POUND); MOVE(opponent, MOVE_CELEBRATE); }
+        TURN { MOVE(player, MOVE_POUND); MOVE(opponent, MOVE_CELEBRATE); }
+        TURN { MOVE(player, MOVE_POUND); MOVE(opponent, MOVE_CELEBRATE); }
+        TURN { MOVE(player, MOVE_POUND); }
     } THEN {
         EXPECT_EQ(gBattleOutcome, B_OUTCOME_CAUGHT);
         EXPECT_EQ(GetMonData(&gPlayerParty[1], MON_DATA_SPECIES), SPECIES_OGERPON);

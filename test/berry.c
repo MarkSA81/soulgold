@@ -9,7 +9,7 @@ TEST("Picked natural Berry trees regenerate their original Berry after 24 hours"
     struct BerryTree *tree;
 
     ClearBerryTrees();
-    PlantBerryTree(BERRY_TREE_CHERI_1, ITEM_TO_BERRY(ITEM_CHERI_BERRY), BERRY_STAGE_BERRIES, FALSE);
+    PlantBerryTree(BERRY_TREE_CHERI_1, ITEM_TO_BERRY(ITEM_PERSIM_BERRY), BERRY_STAGE_BERRIES, FALSE);
     RemoveBerryTree(BERRY_TREE_CHERI_1);
     tree = GetBerryTreeInfo(BERRY_TREE_CHERI_1);
 
@@ -21,7 +21,7 @@ TEST("Picked natural Berry trees regenerate their original Berry after 24 hours"
 
     BerryTreeTimeUpdate(1);
     EXPECT_EQ((u32)tree->stage, BERRY_STAGE_BERRIES);
-    EXPECT_EQ((u32)tree->berry, ITEM_TO_BERRY(ITEM_CHERI_BERRY));
+    EXPECT_EQ((u32)tree->berry, ITEM_TO_BERRY(ITEM_PERSIM_BERRY));
     EXPECT(tree->stopGrowth);
 }
 

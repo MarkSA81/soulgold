@@ -422,19 +422,4 @@ SINGLE_BATTLE_TEST("Keen Eye raises accuracy (Traits)")
     }
 }
 
-SINGLE_BATTLE_TEST("Keen eye does not affect OHKO moves (Traits)")
-{
-    PASSES_RANDOMLY(30, 100, RNG_ACCURACY);
-    GIVEN {
-        ASSUME(GetMoveAccuracy(MOVE_FISSURE) == 30);
-        ASSUME(GetMoveEffect(MOVE_FISSURE) == EFFECT_OHKO);
-        PLAYER(SPECIES_BUTTERFREE) { Ability(ABILITY_TINTED_LENS); Innates(ABILITY_KEEN_EYE); }
-        OPPONENT(SPECIES_WOBBUFFET);
-    } WHEN {
-        TURN { MOVE(player, MOVE_FISSURE); }
-    } SCENE {
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_FISSURE, player);
-        HP_BAR(opponent, hp: 0);
-    }
-}
 #endif

@@ -153,7 +153,7 @@ Name: Andrew
 Class: Pokemaniac
 Pic: Pokemaniac
 Gender: Male
-Music: Male
+Music: Hg Suspicious 1
 Double Battle: No
 AI: Basic Trainer
 
@@ -377,7 +377,7 @@ Name: Kuni
 Class: Kimono Girl
 Pic: Kimono Girl
 Gender: Female
-Music: Female
+Music: Hg Kimono Girl
 Double Battle: Yes
 AI: Smart Trainer
 
@@ -529,7 +529,7 @@ Name: Sayo
 Class: Kimono Girl
 Pic: Kimono Girl
 Gender: Female
-Music: Female
+Music: Hg Kimono Girl
 Double Battle: Yes
 AI: Smart Trainer
 
@@ -651,7 +651,7 @@ Name: Jose
 Class: Bird Keeper
 Pic: Bird Keeper
 Gender: Male
-Music: Male
+Music: Hg Boy 1
 Double Battle: No
 AI: Smart Trainer
 
@@ -871,7 +871,7 @@ Name: Karen
 Class: Elite Four
 Pic: Elite Four Karen
 Gender: Female
-Music: Elite Four
+Music: Dp Elite Four
 Double Battle: No
 AI: Smart Trainer
 Mugshot: Blue
@@ -941,7 +941,7 @@ Name: Karen
 Class: Elite Four
 Pic: Elite Four Karen
 Gender: Female
-Music: Elite Four
+Music: Dp Elite Four
 Double Battle: No
 AI: Smart Trainer
 Mugshot: Blue
@@ -1011,7 +1011,7 @@ Name: Giovanni
 Class: RocketA
 Pic: Giovanni
 Gender: Male
-Music: Male
+Music: Rocket
 Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
@@ -1123,7 +1123,7 @@ Name: Toby
 Class: Bird Keeper
 Pic: Bird Keeper
 Gender: Male
-Music: Male
+Music: Hg Boy 1
 Double Battle: Yes
 AI: Basic Trainer
 
@@ -1403,7 +1403,7 @@ Name: Clyde
 Class: Guitarist
 Pic: Guitarist
 Gender: Male
-Music: Male
+Music: Hg Suspicious 2
 Double Battle: No
 AI: Basic Trainer
 
@@ -1446,7 +1446,7 @@ Name: Bryan
 Class: Bird Keeper
 Pic: Bird Keeper
 Gender: Male
-Music: Male
+Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
 
@@ -1728,7 +1728,7 @@ Name: Peter
 Class: Bird Keeper
 Pic: Bird Keeper
 Gender: Male
-Music: Male
+Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
 
@@ -1745,7 +1745,7 @@ Name: Shane
 Class: Pokemaniac
 Pic: Pokemaniac
 Gender: Male
-Music: Male
+Music: Hg Suspicious 1
 Double Battle: No
 AI: Basic Trainer
 
@@ -2230,7 +2230,7 @@ Name: Bruno
 Class: Elite Four
 Pic: Elite Four Bruno
 Gender: Male
-Music: Elite Four
+Music: Dp Elite Four
 Double Battle: No
 AI: Smart Trainer
 Mugshot: Yellow
@@ -2294,7 +2294,7 @@ Name: Bruno
 Class: Elite Four
 Pic: Elite Four Bruno
 Gender: Male
-Music: Elite Four
+Music: Dp Elite Four
 Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Yellow
@@ -2365,7 +2365,7 @@ Name: Bruno
 Class: Elite Four
 Pic: Elite Four Bruno
 Gender: Male
-Music: Elite Four
+Music: Dp Elite Four
 Double Battle: No
 AI: Smart Trainer
 
@@ -2434,7 +2434,7 @@ Name: Bruno
 Class: Elite Four
 Pic: Elite Four Bruno
 Gender: Male
-Music: Elite Four
+Music: Dp Elite Four
 Double Battle: No
 AI: Smart Trainer
 Difficulty: Hard
@@ -2717,7 +2717,7 @@ Name: Cody
 Class: Dragon Tamer
 Pic: Dragon Tamer
 Gender: Male
-Music: Male
+Music: Dp Ace Trainer
 Double Battle: No
 AI: Basic Trainer
 
@@ -2930,7 +2930,7 @@ Name: Abe
 Class: Bird Keeper
 Pic: Bird Keeper
 Gender: Male
-Music: Male
+Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
 
@@ -3212,7 +3212,7 @@ Name: Miller
 Class: Pokemaniac
 Pic: Pokemaniac
 Gender: Male
-Music: Male
+Music: Hg Suspicious 1
 Double Battle: No
 AI: Basic Trainer
 
@@ -3284,7 +3284,7 @@ Name: Miki
 Class: Kimono Girl
 Pic: Kimono Girl
 Gender: Female
-Music: Female
+Music: Hg Kimono Girl
 Double Battle: Yes
 AI: Smart Trainer
 
@@ -3309,7 +3309,7 @@ Name: Mike
 Class: Dragon Tamer
 Pic: Dragon Tamer
 Gender: Male
-Music: Male
+Music: Dp Ace Trainer
 Double Battle: No
 AI: Basic Trainer
 
@@ -3559,7 +3559,7 @@ Name: Jed
 Class: Scientist
 Pic: Scientist
 Gender: Male
-Music: Male
+Music: Rocket
 Double Battle: No
 AI: Basic Trainer
 
@@ -4094,7 +4094,7 @@ Name: Alfred
 Class: Expert
 Pic: Expert M
 Gender: Male
-Music: Male
+Music: Dp Ace Trainer
 Double Battle: No
 AI: Basic Trainer
 
@@ -4378,7 +4378,7 @@ Name: Denis
 Class: Bird Keeper
 Pic: Bird Keeper
 Gender: Male
-Music: Male
+Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
 
@@ -4421,7 +4421,7 @@ Name: Darin
 Class: Dragon Tamer
 Pic: Dragon Tamer
 Gender: Male
-Music: Male
+Music: Dp Ace Trainer
 Double Battle: No
 AI: Basic Trainer
 
@@ -4484,7 +4484,7 @@ Name: Naoko
 Class: Kimono Girl
 Pic: Kimono Girl
 Gender: Female
-Music: Female
+Music: Hg Kimono Girl
 Double Battle: Yes
 AI: Smart Trainer
 
@@ -4982,7 +4982,7 @@ Name: Karen
 Class: Elite Four
 Pic: Elite Four Karen
 Gender: Male
-Music: Elite Four
+Music: Dp Elite Four
 Double Battle: No
 AI: Smart Trainer
 Mugshot: Blue
@@ -5045,7 +5045,7 @@ Name: Karen
 Class: Elite Four
 Pic: Elite Four Karen
 Gender: Male
-Music: Elite Four
+Music: Dp Elite Four
 Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Blue
@@ -5515,7 +5515,7 @@ Name: Will
 Class: Elite Four
 Pic: Elite Four Will
 Gender: Male
-Music: Elite Four
+Music: Dp Elite Four
 Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Purple
@@ -5581,7 +5581,7 @@ Name: Will
 Class: Elite Four
 Pic: Elite Four Will
 Gender: Male
-Music: Elite Four
+Music: Dp Elite Four
 Double Battle: No
 AI: Smart Trainer
 Mugshot: Purple
@@ -5740,7 +5740,7 @@ Name: Will
 Class: Elite Four
 Pic: Elite Four Will
 Gender: Male
-Music: Elite Four
+Music: Dp Elite Four
 Double Battle: No
 AI: Smart Trainer
 Mugshot: Purple
@@ -5805,7 +5805,7 @@ Name: Will
 Class: Elite Four
 Pic: Elite Four Will
 Gender: Male
-Music: Elite Four
+Music: Dp Elite Four
 Double Battle: No
 AI: Smart Trainer
 Mugshot: Purple
@@ -6103,7 +6103,7 @@ Name: Koga
 Class: Elite Four
 Pic: Elite Four Koga
 Gender: Male
-Music: Elite Four
+Music: Dp Elite Four
 Double Battle: No
 AI: Smart Trainer
 Mugshot: Pink
@@ -6170,7 +6170,7 @@ Name: Koga
 Class: Elite Four
 Pic: Elite Four Koga
 Gender: Male
-Music: Elite Four
+Music: Dp Elite Four
 Double Battle: No
 AI: Smart Trainer
 Mugshot: Pink
@@ -6238,7 +6238,7 @@ Name: Koga
 Class: Elite Four
 Pic: Elite Four Koga
 Gender: Male
-Music: Elite Four
+Music: Dp Elite Four
 Double Battle: No
 AI: Smart Trainer
 Mugshot: Pink
@@ -6300,7 +6300,7 @@ Name: Koga
 Class: Elite Four
 Pic: Elite Four Koga
 Gender: Male
-Music: Elite Four
+Music: Dp Elite Four
 Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Pink
@@ -6533,7 +6533,7 @@ Name: Calvin
 Class: Pokemaniac
 Pic: Pokemaniac
 Gender: Male
-Music: Male
+Music: Hg Suspicious 1
 Double Battle: No
 AI: Basic Trainer
 
@@ -7108,7 +7108,7 @@ Name: Duff & Eda
 Class: Young Couple
 Pic: Young Couple
 Gender: Male
-Music: Girl
+Music: Hg Girl 1
 Double Battle: Yes
 AI: Basic Trainer
 
@@ -7427,7 +7427,7 @@ Name: Ethan
 Class: Pokemaniac
 Pic: Pokemaniac
 Gender: Male
-Music: Male
+Music: Hg Suspicious 1
 Double Battle: No
 AI: Basic Trainer
 
@@ -7547,7 +7547,7 @@ Name: Brent
 Class: Pokemaniac
 Pic: Pokemaniac
 Gender: Male
-Music: Male
+Music: Hg Suspicious 1
 Double Battle: No
 AI: Basic Trainer
 
@@ -8141,7 +8141,7 @@ Name: Ronald
 Class: Expert
 Pic: Expert M
 Gender: Male
-Music: Male
+Music: Dp Ace Trainer
 Double Battle: No
 AI: Basic Trainer
 
@@ -8374,7 +8374,7 @@ Name: Perry
 Class: Bird Keeper
 Pic: Bird Keeper
 Gender: Male
-Music: Male
+Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
 
@@ -8783,7 +8783,7 @@ Name: Boris
 Class: Bird Keeper
 Pic: Bird Keeper
 Gender: Male
-Music: Male
+Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
 
@@ -9387,7 +9387,7 @@ Name: Larry
 Class: Pokemaniac
 Pic: Pokemaniac
 Gender: Male
-Music: Male
+Music: Hg Suspicious 1
 Double Battle: No
 AI: Basic Trainer
 
@@ -10175,7 +10175,7 @@ Name: Hank
 Class: Bird Keeper
 Pic: Bird Keeper
 Gender: Male
-Music: Male
+Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
 
@@ -10436,7 +10436,7 @@ Name: Thom & Kae
 Class: Young Couple
 Pic: Young Couple
 Gender: Male
-Music: Girl
+Music: Hg Girl 1
 Double Battle: Yes
 AI: Basic Trainer
 
@@ -10453,7 +10453,7 @@ Name: Theo
 Class: Bird Keeper
 Pic: Bird Keeper
 Gender: Male
-Music: Male
+Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
 
@@ -10568,7 +10568,7 @@ Name: Ron
 Class: Pokemaniac
 Pic: Pokemaniac
 Gender: Male
-Music: Male
+Music: Hg Suspicious 1
 Double Battle: No
 AI: Basic Trainer
 
@@ -10623,7 +10623,7 @@ Name: Rod
 Class: Bird Keeper
 Pic: Bird Keeper
 Gender: Male
-Music: Male
+Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
 
@@ -11298,7 +11298,7 @@ Name: Bob
 Class: Bird Keeper
 Pic: Bird Keeper
 Gender: Male
-Music: Male
+Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
 
@@ -11328,7 +11328,7 @@ Name: Vance
 Class: Bird Keeper
 Pic: Bird Keeper
 Gender: Male
-Music: Male
+Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
 
@@ -11717,7 +11717,7 @@ Name: Paul
 Class: Dragon Tamer
 Pic: Dragon Tamer
 Gender: Male
-Music: Male
+Music: Dp Ace Trainer
 Double Battle: No
 AI: Basic Trainer
 
@@ -11756,7 +11756,7 @@ Name: Zuki
 Class: Kimono Girl
 Pic: Kimono Girl
 Gender: Female
-Music: Female
+Music: Hg Kimono Girl
 Double Battle: Yes
 AI: Smart Trainer
 
@@ -12445,7 +12445,7 @@ Name: Zach
 Class: Pokemaniac
 Pic: Pokemaniac
 Gender: Male
-Music: Male
+Music: Hg Suspicious 1
 Double Battle: No
 AI: Basic Trainer
 
@@ -12694,7 +12694,7 @@ Name: Doris
 Class: Psychic
 Pic: Psychic F
 Gender: Female
-Music: Female
+Music: Dp Intense
 Double Battle: No
 AI: Basic Trainer
 
@@ -13367,7 +13367,7 @@ Name: Ben
 Class: Pokemaniac
 Pic: Pokemaniac
 Gender: Male
-Music: Male
+Music: Hg Suspicious 1
 Double Battle: No
 AI: Basic Trainer
 
@@ -13828,7 +13828,7 @@ Name: Douglas
 Class: Expert
 Pic: Expert M
 Gender: Male
-Music: Male
+Music: Dp Ace Trainer
 Double Battle: No
 AI: Basic Trainer
 
@@ -14775,7 +14775,7 @@ IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 Name: Kennedy
 Pic: Expert M
 Gender: Male
-Music: Male
+Music: Dp Ace Trainer
 Double Battle: No
 AI: Smart Trainer
 
@@ -17191,7 +17191,7 @@ Name: Maddie
 Class: Scientist
 Pic: Scientist
 Gender: Male
-Music: Male
+Music: Hg Suspicious 1
 Double Battle: No
 AI: Smart Trainer
 

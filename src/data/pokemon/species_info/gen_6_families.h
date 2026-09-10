@@ -558,7 +558,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         OVERWORLD(
             sPicTable_DelphoxMega,
             SIZE_32x32,
-            SHADOW_SIZE_L,
+            SHADOW_SIZE_M,
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_DelphoxMega,
@@ -7659,7 +7659,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_WATER_ABSORB, ABILITY_NONE, ABILITY_NONE },
-        .innates = { ABILITY_WHITE_SMOKE, ABILITY_DAMP, ABILITY_SMOULDERING },
+        .innates = { ABILITY_WHITE_SMOKE, ABILITY_DAMP, ABILITY_SOLIDIFY },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Volcanion"),
         .cryId = CRY_VOLCANION,

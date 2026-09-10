@@ -356,25 +356,6 @@ SINGLE_BATTLE_TEST("Parental Bond does not trigger on two turn attacks")
     }
 }
 
-SINGLE_BATTLE_TEST("Parental Bond does not trigger on OHKO moves")
-{
-    GIVEN {
-        ASSUME(GetMoveEffect(MOVE_FISSURE) == EFFECT_OHKO);
-        ASSUME(GetItemHoldEffect(ITEM_FOCUS_SASH) == HOLD_EFFECT_FOCUS_SASH);
-        PLAYER(SPECIES_KANGASKHAN) { Item(ITEM_NORMALITE); }
-        OPPONENT(SPECIES_MACHAMP) { Ability(ABILITY_NO_GUARD); Item(ITEM_FOCUS_SASH); }
-    } WHEN {
-        TURN { MOVE(player, MOVE_FISSURE, gimmick: GIMMICK_MEGA); }
-    } SCENE {
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_FISSURE, player);
-        HP_BAR(opponent, hp: 1);
-        MESSAGE("The opposing Machamp hung on using its Focus Sash!");
-        NOT HP_BAR(opponent);
-    } THEN {
-        EXPECT_EQ(opponent->hp, 1);
-    }
-}
-
 SINGLE_BATTLE_TEST("Parental Bond does not trigger on Uproar")
 {
     GIVEN {
