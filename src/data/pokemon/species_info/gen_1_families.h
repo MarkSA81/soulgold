@@ -1145,7 +1145,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         )
     #endif //OW_BATTLE_ONLY_FORMS
         .isMegaEvolution = TRUE,
-        .levelUpLearnset = sBlastoiseLevelUpLearnset,4
+        .levelUpLearnset = sBlastoiseLevelUpLearnset,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sBlastoiseTeachableLearnset,
         .formSpeciesIdTable = sBlastoiseFormSpeciesIdTable,
