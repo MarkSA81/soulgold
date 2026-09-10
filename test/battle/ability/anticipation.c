@@ -28,16 +28,16 @@ SINGLE_BATTLE_TEST("Anticipation does not trigger even when a move is super effe
     }
 }
 
-SINGLE_BATTLE_TEST("Anticipation causes notifies if an opponent has a One-hit KO move")
+SINGLE_BATTLE_TEST("Anticipation does not warn about neutral Fissure")
 {
     GIVEN {
-        ASSUME(GetMoveEffect(MOVE_FISSURE) == EFFECT_OHKO);
+        ASSUME(GetMoveEffect(MOVE_FISSURE) == EFFECT_HIT);
         PLAYER(SPECIES_EEVEE) { Ability(ABILITY_ANTICIPATION); }
         OPPONENT(SPECIES_WOBBUFFET) { Moves(MOVE_FISSURE, MOVE_SCRATCH, MOVE_POUND, MOVE_CELEBRATE); }
     } WHEN {
         TURN {}
     } SCENE {
-        ABILITY_POPUP(player, ABILITY_ANTICIPATION);
+        NOT ABILITY_POPUP(player, ABILITY_ANTICIPATION);
     }
 }
 
@@ -388,16 +388,16 @@ SINGLE_BATTLE_TEST("Anticipation does not trigger even when a move is super effe
     }
 }
 
-SINGLE_BATTLE_TEST("Anticipation causes notifies if an opponent has a One-hit KO move (Traits)")
+SINGLE_BATTLE_TEST("Anticipation does not warn about neutral Fissure (Traits)")
 {
     GIVEN {
-        ASSUME(GetMoveEffect(MOVE_FISSURE) == EFFECT_OHKO);
+        ASSUME(GetMoveEffect(MOVE_FISSURE) == EFFECT_HIT);
         PLAYER(SPECIES_EEVEE) { Ability(ABILITY_ADAPTABILITY); Innates(ABILITY_ANTICIPATION); }
         OPPONENT(SPECIES_WOBBUFFET) { Moves(MOVE_FISSURE, MOVE_SCRATCH, MOVE_POUND, MOVE_CELEBRATE); }
     } WHEN {
         TURN { }
     } SCENE {
-        ABILITY_POPUP(player, ABILITY_ANTICIPATION);
+        NOT ABILITY_POPUP(player, ABILITY_ANTICIPATION);
     }
 }
 

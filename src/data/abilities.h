@@ -1225,7 +1225,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Senses dangerous moves."),
         .longDescription = COMPOUND_STRING("On entry, shudders if a\n"
                                            "foe has a supereffective\n"
-                                           "or OHKO move."),
+                                           "move."),
         .aiRating = 2,
     },
 

@@ -77,19 +77,19 @@ SINGLE_BATTLE_TEST("Belch can still be used after fainting")
 {
     GIVEN {
         ASSUME(GetMoveEffect(MOVE_STUFF_CHEEKS) == EFFECT_STUFF_CHEEKS);
-        ASSUME(GetMoveEffect(MOVE_FISSURE) == EFFECT_OHKO);
+        ASSUME(GetMoveFixedHPDamage(MOVE_DRAGON_RAGE) == 40);
         ASSUME(GetMoveEffect(MOVE_REVIVAL_BLESSING) == EFFECT_REVIVAL_BLESSING);
-        PLAYER(SPECIES_GREEDENT) { Item(ITEM_ORAN_BERRY); }
+        PLAYER(SPECIES_GREEDENT) { HP(40); MaxHP(40); Item(ITEM_ORAN_BERRY); }
         PLAYER(SPECIES_SKWOVET);
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
-        TURN { MOVE(player, MOVE_STUFF_CHEEKS); MOVE(opponent, MOVE_FISSURE); SEND_OUT(player, 1); }
+        TURN { MOVE(player, MOVE_STUFF_CHEEKS); MOVE(opponent, MOVE_DRAGON_RAGE); SEND_OUT(player, 1); }
         TURN { MOVE(player, MOVE_REVIVAL_BLESSING, partyIndex: 0); }
         TURN { SWITCH(player, 0); }
         TURN { MOVE(player, MOVE_BELCH); }
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_STUFF_CHEEKS, player);
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_FISSURE, opponent);
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_DRAGON_RAGE, opponent);
         ANIMATION(ANIM_TYPE_MOVE, MOVE_REVIVAL_BLESSING, player);
         SWITCH_OUT_MESSAGE("Skwovet");
         ANIMATION(ANIM_TYPE_MOVE, MOVE_BELCH, player);
@@ -182,19 +182,19 @@ SINGLE_BATTLE_TEST("Belch can still be used after fainting (Items)")
 {
     GIVEN {
         ASSUME(GetMoveEffect(MOVE_STUFF_CHEEKS) == EFFECT_STUFF_CHEEKS);
-        ASSUME(GetMoveEffect(MOVE_FISSURE) == EFFECT_OHKO);
+        ASSUME(GetMoveFixedHPDamage(MOVE_DRAGON_RAGE) == 40);
         ASSUME(GetMoveEffect(MOVE_REVIVAL_BLESSING) == EFFECT_REVIVAL_BLESSING);
-        PLAYER(SPECIES_GREEDENT) { Items(ITEM_GREAT_BALL, ITEM_ORAN_BERRY); }
+        PLAYER(SPECIES_GREEDENT) { HP(40); MaxHP(40); Items(ITEM_GREAT_BALL, ITEM_ORAN_BERRY); }
         PLAYER(SPECIES_SKWOVET);
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
-        TURN { MOVE(player, MOVE_STUFF_CHEEKS); MOVE(opponent, MOVE_FISSURE); SEND_OUT(player, 1); }
+        TURN { MOVE(player, MOVE_STUFF_CHEEKS); MOVE(opponent, MOVE_DRAGON_RAGE); SEND_OUT(player, 1); }
         TURN { MOVE(player, MOVE_REVIVAL_BLESSING, partyIndex: 0); }
         TURN { SWITCH(player, 0); }
         TURN { MOVE(player, MOVE_BELCH); }
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_STUFF_CHEEKS, player);
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_FISSURE, opponent);
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_DRAGON_RAGE, opponent);
         ANIMATION(ANIM_TYPE_MOVE, MOVE_REVIVAL_BLESSING, player);
         SWITCH_OUT_MESSAGE("Skwovet");
         ANIMATION(ANIM_TYPE_MOVE, MOVE_BELCH, player);

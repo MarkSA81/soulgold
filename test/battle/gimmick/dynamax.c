@@ -219,10 +219,10 @@ SINGLE_BATTLE_TEST("Dynamax: Dynamaxed Pokemon cannot be hit by weight-based mov
     }
 }
 
-SINGLE_BATTLE_TEST("Dynamax: Dynamaxed Pokemon cannot be hit by OHKO moves")
+SINGLE_BATTLE_TEST("Dynamax: Dynamaxed Pokemon take normal damage from Fissure")
 {
     GIVEN {
-        ASSUME(GetMoveEffect(MOVE_FISSURE) == EFFECT_OHKO);
+        ASSUME(GetMoveEffect(MOVE_FISSURE) == EFFECT_HIT);
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_MACHAMP) { Ability(ABILITY_NO_GUARD); }
     } WHEN {
@@ -230,8 +230,7 @@ SINGLE_BATTLE_TEST("Dynamax: Dynamaxed Pokemon cannot be hit by OHKO moves")
     } SCENE {
         MESSAGE("Wobbuffet used Max Strike!");
         MESSAGE("The opposing Machamp used Fissure!");
-        MESSAGE("It doesn't affect Wobbuffet…");
-        NONE_OF { HP_BAR(player); }
+        HP_BAR(player);
     }
 }
 
