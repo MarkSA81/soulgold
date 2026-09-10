@@ -73,6 +73,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             gShinyOverworldPalette_Treecko
         )
         .levelUpLearnset = sTreeckoLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sTreeckoTeachableLearnset,
         .eggMoveLearnset = sTreeckoEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_GROVYLE}),
@@ -147,6 +148,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             gShinyOverworldPalette_Grovyle
         )
         .levelUpLearnset = sGrovyleLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sGrovyleTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_SCEPTILE}),
     },
@@ -224,6 +226,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             gShinyOverworldPalette_Sceptile
         )
         .levelUpLearnset = sSceptileLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sSceptileTeachableLearnset,
         .formSpeciesIdTable = sSceptileFormSpeciesIdTable,
         .formChangeTable = sSceptileFormChangeTable,
@@ -299,6 +302,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     #endif //OW_BATTLE_ONLY_FORMS
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sSceptileLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sSceptileTeachableLearnset,
         .formSpeciesIdTable = sSceptileFormSpeciesIdTable,
         .formChangeTable = sSceptileFormChangeTable,
@@ -388,6 +392,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             sAnimTable_Following
         )
         .levelUpLearnset = sTorchicLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sTorchicTeachableLearnset,
         .eggMoveLearnset = sTorchicEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_COMBUSKEN}),
@@ -473,6 +478,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             sAnimTable_Following
         )
         .levelUpLearnset = sCombuskenLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sCombuskenTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_BLAZIKEN}),
     },
@@ -564,6 +570,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             sAnimTable_Following
         )
         .levelUpLearnset = sBlazikenLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sBlazikenTeachableLearnset,
         .formSpeciesIdTable = sBlazikenFormSpeciesIdTable,
         .formChangeTable = sBlazikenFormChangeTable,
@@ -639,6 +646,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     #endif //OW_BATTLE_ONLY_FORMS
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sBlazikenLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sBlazikenTeachableLearnset,
         .formSpeciesIdTable = sBlazikenFormSpeciesIdTable,
         .formChangeTable = sBlazikenFormChangeTable,
@@ -716,6 +724,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             gShinyOverworldPalette_Mudkip
         )
         .levelUpLearnset = sMudkipLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sMudkipTeachableLearnset,
         .eggMoveLearnset = sMudkipEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_MARSHTOMP}),
@@ -794,6 +803,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             gShinyOverworldPalette_Marshtomp
         )
         .levelUpLearnset = sMarshtompLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sMarshtompTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_SWAMPERT}),
     },
@@ -873,6 +883,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             gShinyOverworldPalette_Swampert
         )
         .levelUpLearnset = sSwampertLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sSwampertTeachableLearnset,
         .formSpeciesIdTable = sSwampertFormSpeciesIdTable,
         .formChangeTable = sSwampertFormChangeTable,
@@ -948,6 +959,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     #endif //OW_BATTLE_ONLY_FORMS
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sSwampertLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sSwampertTeachableLearnset,
         .formSpeciesIdTable = sSwampertFormSpeciesIdTable,
         .formChangeTable = sSwampertFormChangeTable,
