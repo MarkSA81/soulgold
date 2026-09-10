@@ -70,6 +70,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             gShinyOverworldPalette_Turtwig
         )
         .levelUpLearnset = sTurtwigLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sTurtwigTeachableLearnset,
         .eggMoveLearnset = sTurtwigEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 18, SPECIES_GROTLE}),
@@ -142,6 +143,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             gShinyOverworldPalette_Grotle
         )
         .levelUpLearnset = sGrotleLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sGrotleTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_TORTERRA}),
     },
@@ -219,6 +221,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             gShinyOverworldPalette_Torterra
         )
         .levelUpLearnset = sTorterraLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sTorterraTeachableLearnset,
     },
 #endif //P_FAMILY_TURTWIG
@@ -294,6 +297,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             gShinyOverworldPalette_Chimchar
         )
         .levelUpLearnset = sChimcharLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sChimcharTeachableLearnset,
         .eggMoveLearnset = sChimcharEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 14, SPECIES_MONFERNO}),
@@ -369,6 +373,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             gShinyOverworldPalette_Monferno
         )
         .levelUpLearnset = sMonfernoLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sMonfernoTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_INFERNAPE}),
     },
@@ -448,6 +453,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             gShinyOverworldPalette_Infernape
         )
         .levelUpLearnset = sInfernapeLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sInfernapeTeachableLearnset,
     },
 #endif //P_FAMILY_CHIMCHAR
@@ -523,6 +529,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             gShinyOverworldPalette_Piplup
         )
         .levelUpLearnset = sPiplupLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sPiplupTeachableLearnset,
         .eggMoveLearnset = sPiplupEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_PRINPLUP}),
@@ -604,6 +611,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             gShinyOverworldPalette_Prinplup
         )
         .levelUpLearnset = sPrinplupLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sPrinplupTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_EMPOLEON}),
     },
@@ -684,6 +692,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             gShinyOverworldPalette_Empoleon
         )
         .levelUpLearnset = sEmpoleonLevelUpLearnset,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .teachableLearnset = sEmpoleonTeachableLearnset,
     },
 #endif //P_FAMILY_PIPLUP
