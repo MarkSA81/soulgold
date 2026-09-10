@@ -5013,7 +5013,6 @@ static const struct LevelUpMove sFeraligatrLevelUpLearnset[] = {
     LEVEL_UP_MOVE(59, MOVE_AQUA_TAIL),
     LEVEL_UP_MOVE(65, MOVE_SUPERPOWER),
     LEVEL_UP_MOVE(70, MOVE_HYDRO_PUMP),
-    LEVEL_UP_MOVE(76, MOVE_FISHIOUS_REND),
     LEVEL_UP_END
 };
 #endif //P_FAMILY_TOTODILE
