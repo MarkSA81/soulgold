@@ -28958,7 +28958,7 @@
         "ABILITY_WEAK_ARMOR"
       ],
       "innates": [
-        "ABILITY_STONE_FACE",
+        "ABILITY_SOLID_ROCK",
         "ABILITY_BURROWER"
       ],
       "sprite": "sprites/pokemon/onix.png",
@@ -39737,7 +39737,7 @@
         "ABILITY_MOXIE"
       ],
       "innates": [
-        "ABILITY_ANGER_POINT",
+        "ABILITY_CONSUME",
         "ABILITY_STRONG_JAW",
         "ABILITY_DRAGON_SOUL"
       ],
@@ -47268,7 +47268,7 @@
       ],
       "innates": [
         "ABILITY_NATURAL_CURE",
-        "ABILITY_FLOWER_VEIL"
+        "ABILITY_TRIAGE"
       ],
       "sprite": "sprites/pokemon/bayleef.png",
       "shinySprite": "sprites/pokemon/bayleef_shiny.png",
@@ -69834,8 +69834,8 @@
           "name": "Whirl Islands Lugia Chamber",
           "time": "",
           "method": "Legendary encounter",
-          "minLevel": 65,
-          "maxLevel": 65,
+          "minLevel": 80,
+          "maxLevel": 80,
           "rate": null
         },
         {
@@ -69843,8 +69843,8 @@
           "name": "Whirl Islands Lugia Chamber",
           "time": "",
           "method": "Legendary encounter",
-          "minLevel": 80,
-          "maxLevel": 80,
+          "minLevel": 65,
+          "maxLevel": 65,
           "rate": null
         }
       ],
@@ -70294,8 +70294,8 @@
           "name": "Tin Tower Roof Day",
           "time": "",
           "method": "Legendary encounter",
-          "minLevel": 80,
-          "maxLevel": 80,
+          "minLevel": 65,
+          "maxLevel": 65,
           "rate": null
         },
         {
@@ -70303,8 +70303,8 @@
           "name": "Tin Tower Roof Day",
           "time": "",
           "method": "Legendary encounter",
-          "minLevel": 65,
-          "maxLevel": 65,
+          "minLevel": 80,
+          "maxLevel": 80,
           "rate": null
         }
       ],
@@ -81309,7 +81309,7 @@
       ],
       "innates": [
         "ABILITY_JADE_BLOOM",
-        "ABILITY_FLOWER_VEIL"
+        "ABILITY_CORROSION"
       ],
       "sprite": "sprites/pokemon/roselia.png",
       "shinySprite": "sprites/pokemon/roselia_shiny.png",
@@ -84028,7 +84028,7 @@
         "ABILITY_WATER_ABSORB"
       ],
       "innates": [
-        "ABILITY_WATER_COMPACTION"
+        "ABILITY_ROUGH_SKIN"
       ],
       "sprite": "sprites/pokemon/cacnea.png",
       "shinySprite": "sprites/pokemon/cacnea_shiny.png",
@@ -84269,7 +84269,7 @@
         "ABILITY_WATER_ABSORB"
       ],
       "innates": [
-        "ABILITY_WATER_COMPACTION",
+        "ABILITY_ROUGH_SKIN",
         "ABILITY_STAKEOUT",
         "ABILITY_MERCILESS"
       ],
@@ -92167,8 +92167,8 @@
       ],
       "innates": [
         "ABILITY_ANALYTIC",
-        "ABILITY_PHALANX",
-        "ABILITY_HEAVY_METAL"
+        "ABILITY_IRON_FIST",
+        "ABILITY_PHALANX"
       ],
       "sprite": "sprites/pokemon/metagross.png",
       "shinySprite": "sprites/pokemon/metagross_shiny.png",
@@ -92384,8 +92384,8 @@
       ],
       "innates": [
         "ABILITY_ANALYTIC",
-        "ABILITY_PHALANX",
-        "ABILITY_HEAVY_METAL"
+        "ABILITY_BULLETPROOF",
+        "ABILITY_PHALANX"
       ],
       "sprite": "sprites/pokemon/metagross_mega.png",
       "shinySprite": "sprites/pokemon/metagross_mega_shiny.png",
@@ -99699,7 +99699,7 @@
       ],
       "innates": [
         "ABILITY_JADE_BLOOM",
-        "ABILITY_POISON_TOUCH",
+        "ABILITY_CORROSION",
         "ABILITY_MERCILESS"
       ],
       "sprite": "sprites/pokemon/roserade.png",
@@ -100743,7 +100743,7 @@
         "ABILITY_SAND_FORCE"
       ],
       "innates": [
-        "ABILITY_WATER_COMPACTION"
+        "ABILITY_STAMINA"
       ],
       "sprite": "sprites/pokemon/shellos_west.png",
       "shinySprite": "sprites/pokemon/shellos_west_shiny.png",
@@ -101053,7 +101053,7 @@
         "ABILITY_SAND_FORCE"
       ],
       "innates": [
-        "ABILITY_WATER_COMPACTION"
+        "ABILITY_STAMINA"
       ],
       "sprite": "sprites/pokemon/shellos_east.png",
       "shinySprite": "sprites/pokemon/shellos_east_shiny.png",
@@ -101264,7 +101264,7 @@
         "ABILITY_SAND_FORCE"
       ],
       "innates": [
-        "ABILITY_WATER_COMPACTION",
+        "ABILITY_STAMINA",
         "ABILITY_EARTH_EATER",
         "ABILITY_GOOEY"
       ],
@@ -101477,7 +101477,7 @@
         "ABILITY_SAND_FORCE"
       ],
       "innates": [
-        "ABILITY_WATER_COMPACTION",
+        "ABILITY_STAMINA",
         "ABILITY_EARTH_EATER",
         "ABILITY_GOOEY"
       ],
@@ -115552,7 +115552,7 @@
       "hiddenAbilities": [],
       "innates": [
         "ABILITY_ELECTROMORPHOSIS",
-        "ABILITY_WIND_POWER",
+        "ABILITY_WINDCALLER",
         "ABILITY_AERILATE"
       ],
       "sprite": "sprites/pokemon/rotom_fan.png",
@@ -161319,7 +161319,7 @@
       "innates": [
         "ABILITY_WHITE_SMOKE",
         "ABILITY_DAMP",
-        "ABILITY_SMOULDERING"
+        "ABILITY_SOLIDIFY"
       ],
       "sprite": "sprites/pokemon/volcanion.png",
       "shinySprite": "sprites/pokemon/volcanion_shiny.png",
@@ -167758,7 +167758,7 @@
       "innates": [
         "ABILITY_BATTLE_ARMOR",
         "ABILITY_TOUGH_CLAWS",
-        "ABILITY_MERCILESS"
+        "ABILITY_INDOMITABLE"
       ],
       "sprite": "sprites/pokemon/golisopod.png",
       "shinySprite": "sprites/pokemon/golisopod_shiny.png",
@@ -168011,16 +168011,21 @@
       ],
       "bst": 630,
       "abilities": [
-        "ABILITY_EMERGENCY_EXIT"
+        "ABILITY_TOUGH_CLAWS",
+        "ABILITY_TOUGH_CLAWS",
+        "ABILITY_TOUGH_CLAWS"
       ],
       "regularAbilities": [
-        "ABILITY_EMERGENCY_EXIT"
+        "ABILITY_TOUGH_CLAWS",
+        "ABILITY_TOUGH_CLAWS"
       ],
-      "hiddenAbilities": [],
+      "hiddenAbilities": [
+        "ABILITY_TOUGH_CLAWS"
+      ],
       "innates": [
         "ABILITY_BATTLE_ARMOR",
-        "ABILITY_TOUGH_CLAWS",
-        "ABILITY_MERCILESS"
+        "ABILITY_SWIFT_SWIM",
+        "ABILITY_INDOMITABLE"
       ],
       "sprite": "sprites/pokemon/golisopod_mega.png",
       "shinySprite": "sprites/pokemon/golisopod_mega_shiny.png",
@@ -183315,7 +183320,7 @@
       "innates": [
         "ABILITY_SWEET_VEIL",
         "ABILITY_AROMA_VEIL",
-        "ABILITY_CUTE_CHARM"
+        "ABILITY_JUSTIFIED"
       ],
       "sprite": "sprites/pokemon/zacian_hero.png",
       "shinySprite": "sprites/pokemon/zacian_hero_shiny.png",
@@ -183471,7 +183476,7 @@
       "innates": [
         "ABILITY_SWEET_VEIL",
         "ABILITY_AROMA_VEIL",
-        "ABILITY_CUTE_CHARM"
+        "ABILITY_JUSTIFIED"
       ],
       "sprite": "sprites/pokemon/zacian_crowned.png",
       "shinySprite": "sprites/pokemon/zacian_crowned_shiny.png",
@@ -183627,7 +183632,7 @@
       "innates": [
         "ABILITY_INNER_FOCUS",
         "ABILITY_SCRAPPY",
-        "ABILITY_DEFIANT"
+        "ABILITY_GUARDIAN"
       ],
       "sprite": "sprites/pokemon/zamazenta_hero.png",
       "shinySprite": "sprites/pokemon/zamazenta_hero_shiny.png",
@@ -183785,7 +183790,7 @@
       "innates": [
         "ABILITY_INNER_FOCUS",
         "ABILITY_SCRAPPY",
-        "ABILITY_DEFIANT"
+        "ABILITY_GUARDIAN"
       ],
       "sprite": "sprites/pokemon/zamazenta_crowned.png",
       "shinySprite": "sprites/pokemon/zamazenta_crowned_shiny.png",
@@ -185012,7 +185017,7 @@
       "hiddenAbilities": [],
       "innates": [
         "ABILITY_STATIC",
-        "ABILITY_LIGHTNING_ROD",
+        "ABILITY_SHOCKWIRING",
         "ABILITY_VOLT_ABSORB"
       ],
       "sprite": "sprites/pokemon/regieleki.png",
@@ -196466,11 +196471,11 @@
         },
         {
           "level": 56,
-          "move": "MOVE_EXPANDING_FORCE"
+          "move": "MOVE_ARMOR_CANNON"
         },
         {
           "level": 62,
-          "move": "MOVE_ARMOR_CANNON"
+          "move": "MOVE_EXPANDING_FORCE"
         }
       ],
       "tmhm": [
@@ -196646,11 +196651,11 @@
         },
         {
           "level": 48,
-          "move": "MOVE_BITTER_BLADE"
+          "move": "MOVE_PSYCHO_CUT"
         },
         {
           "level": 56,
-          "move": "MOVE_PSYCHO_CUT"
+          "move": "MOVE_BITTER_BLADE"
         },
         {
           "level": 62,
@@ -199896,7 +199901,7 @@
       "innates": [
         "ABILITY_GUTS",
         "ABILITY_ADRENALINE",
-        "ABILITY_ANGER_POINT"
+        "ABILITY_IRON_FIST"
       ],
       "sprite": "sprites/pokemon/annihilape.png",
       "shinySprite": "sprites/pokemon/annihilape_shiny.png",
@@ -203388,13 +203393,15 @@
       "bst": 700,
       "abilities": [
         "ABILITY_THERMAL_EXCHANGE",
-        "ABILITY_ICE_BODY"
+        "ABILITY_THERMAL_EXCHANGE",
+        "ABILITY_THERMAL_EXCHANGE"
       ],
       "regularAbilities": [
+        "ABILITY_THERMAL_EXCHANGE",
         "ABILITY_THERMAL_EXCHANGE"
       ],
       "hiddenAbilities": [
-        "ABILITY_ICE_BODY"
+        "ABILITY_THERMAL_EXCHANGE"
       ],
       "innates": [
         "ABILITY_STRONG_JAW",
@@ -206914,9 +206921,9 @@
       "id": 12,
       "constant": "MOVE_GUILLOTINE",
       "name": "Guillotine",
-      "description": "A powerful pincer attack that KOs if it hits.",
-      "power": 1,
-      "accuracy": 30,
+      "description": "A crushing pincer attack. The user must then recharge.",
+      "power": 150,
+      "accuracy": 90,
       "pp": 5,
       "priority": 0,
       "type": "TYPE_NORMAL",
@@ -207224,9 +207231,9 @@
       "id": 32,
       "constant": "MOVE_HORN_DRILL",
       "name": "Horn Drill",
-      "description": "A one-hit KO attack that uses a horn like a drill.",
-      "power": 1,
-      "accuracy": 30,
+      "description": "A powerful drilling attack. The user must then recharge.",
+      "power": 150,
+      "accuracy": 90,
       "pp": 5,
       "priority": 0,
       "type": "TYPE_NORMAL",
@@ -208051,9 +208058,9 @@
       "id": 90,
       "constant": "MOVE_FISSURE",
       "name": "Fissure",
-      "description": "A one-hit KO move that drops the foe in a fissure.",
-      "power": 1,
-      "accuracy": 30,
+      "description": "Drops the foe in a fissure. The user must then recharge.",
+      "power": 150,
+      "accuracy": 90,
       "pp": 5,
       "priority": 0,
       "type": "TYPE_GROUND",
@@ -209094,7 +209101,7 @@
       "constant": "MOVE_SLASH",
       "name": "Slash",
       "description": "Slashes with claws, etc. Has a high critical-hit ratio.",
-      "power": 70,
+      "power": 80,
       "accuracy": 100,
       "pp": 20,
       "priority": 0,
@@ -211521,9 +211528,9 @@
       "id": 329,
       "constant": "MOVE_SHEER_COLD",
       "name": "Sheer Cold",
-      "description": "A chilling attack that causes fainting if it hits.",
-      "power": 1,
-      "accuracy": 30,
+      "description": "Blasts the foe with ice. The user must then recharge.",
+      "power": 150,
+      "accuracy": 90,
       "pp": 5,
       "priority": 0,
       "type": "TYPE_ICE",
@@ -215813,7 +215820,7 @@
       "constant": "MOVE_FIRST_IMPRESSION",
       "name": "First Impression",
       "description": "Hits hard and first. Only works first turn.",
-      "power": 90,
+      "power": 100,
       "accuracy": 100,
       "pp": 10,
       "priority": 2,
@@ -216810,7 +216817,7 @@
       "constant": "MOVE_SNIPE_SHOT",
       "name": "Snipe Shot",
       "description": "The user ignores effects that draw in moves.",
-      "power": 80,
+      "power": 85,
       "accuracy": 100,
       "pp": 15,
       "priority": 0,
@@ -217264,7 +217271,7 @@
       "constant": "MOVE_METEOR_ASSAULT",
       "name": "Meteor Assault",
       "description": "Attacks with a thick leek. The user must then rest.",
-      "power": 150,
+      "power": 170,
       "accuracy": 100,
       "pp": 5,
       "priority": 0,
@@ -218699,7 +218706,12 @@
       "priority": 0,
       "type": "TYPE_ELECTRIC",
       "category": "DAMAGE_CATEGORY_PHYSICAL",
-      "abilityBoosts": [],
+      "abilityBoosts": [
+        {
+          "ability": "ABILITY_IRON_FIST",
+          "percent": 20
+        }
+      ],
       "slug": "double-shock"
     },
     "MOVE_GIGATON_HAMMER": {
@@ -223644,6 +223656,18 @@
             "sprite": "sprites/pokemon/aerodactyl_mega.png"
           },
           {
+            "species": "SPECIES_CACNEA",
+            "name": "Cacnea",
+            "dex": 259,
+            "sprite": "sprites/pokemon/cacnea.png"
+          },
+          {
+            "species": "SPECIES_CACTURNE",
+            "name": "Cacturne",
+            "dex": 260,
+            "sprite": "sprites/pokemon/cacturne.png"
+          },
+          {
             "species": "SPECIES_KYOGRE_PRIMAL",
             "name": "Kyogre",
             "dex": 295,
@@ -224825,12 +224849,6 @@
             "sprite": "sprites/pokemon/oricorio_pom_pom.png"
           },
           {
-            "species": "SPECIES_REGIELEKI",
-            "name": "Regieleki",
-            "dex": 611,
-            "sprite": "sprites/pokemon/regieleki.png"
-          },
-          {
             "species": "SPECIES_PAWMI",
             "name": "Pawmi",
             "dex": 632,
@@ -225117,6 +225135,12 @@
             "name": "Politoed",
             "dex": 163,
             "sprite": "sprites/pokemon/politoed.png"
+          },
+          {
+            "species": "SPECIES_GOLISOPOD_MEGA",
+            "name": "Golisopod",
+            "dex": 543,
+            "sprite": "sprites/pokemon/golisopod_mega.png"
           }
         ]
       }
@@ -228607,18 +228631,6 @@
             "sprite": "sprites/pokemon/mimikyu_disguised.png"
           },
           {
-            "species": "SPECIES_ZACIAN_HERO",
-            "name": "Zacian",
-            "dex": 605,
-            "sprite": "sprites/pokemon/zacian_hero.png"
-          },
-          {
-            "species": "SPECIES_ZACIAN_CROWNED",
-            "name": "Zacian",
-            "dex": 605,
-            "sprite": "sprites/pokemon/zacian_crowned.png"
-          },
-          {
             "species": "SPECIES_ENAMORUS_THERIAN",
             "name": "Enamorus",
             "dex": 622,
@@ -231758,12 +231770,6 @@
             "sprite": "sprites/pokemon/kangaskhan_mega.png"
           },
           {
-            "species": "SPECIES_GYARADOS",
-            "name": "Gyarados",
-            "dex": 113,
-            "sprite": "sprites/pokemon/gyarados.png"
-          },
-          {
             "species": "SPECIES_URSARING",
             "name": "Ursaring",
             "dex": 187,
@@ -231786,12 +231792,6 @@
             "name": "Crabominable",
             "dex": 534,
             "sprite": "sprites/pokemon/crabominable_mega.png"
-          },
-          {
-            "species": "SPECIES_ANNIHILAPE",
-            "name": "Annihilape",
-            "dex": 660,
-            "sprite": "sprites/pokemon/annihilape.png"
           },
           {
             "species": "SPECIES_KORAIDON",
@@ -232309,6 +232309,12 @@
             "sprite": "sprites/pokemon/medicham_mega.png"
           },
           {
+            "species": "SPECIES_METAGROSS",
+            "name": "Metagross",
+            "dex": 289,
+            "sprite": "sprites/pokemon/metagross.png"
+          },
+          {
             "species": "SPECIES_REGIROCK",
             "name": "Regirock",
             "dex": 290,
@@ -232337,6 +232343,12 @@
             "name": "Palafin",
             "dex": 653,
             "sprite": "sprites/pokemon/palafin_hero.png"
+          },
+          {
+            "species": "SPECIES_ANNIHILAPE",
+            "name": "Annihilape",
+            "dex": 660,
+            "sprite": "sprites/pokemon/annihilape.png"
           }
         ]
       }
@@ -234321,7 +234333,7 @@
     "ABILITY_ANTICIPATION": {
       "constant": "ABILITY_ANTICIPATION",
       "name": "Anticipation",
-      "description": "On entry, shudders if a foe has a supereffective or OHKO move.",
+      "description": "On entry, shudders if a foe has a supereffective move.",
       "power": 0,
       "accuracy": 0,
       "pp": 0,
@@ -235534,12 +235546,6 @@
             "name": "Baxcalibur",
             "dex": 679,
             "sprite": "sprites/pokemon/baxcalibur.png"
-          },
-          {
-            "species": "SPECIES_BAXCALIBUR_MEGA",
-            "name": "Baxcalibur",
-            "dex": 679,
-            "sprite": "sprites/pokemon/baxcalibur_mega.png"
           }
         ],
         "innate": [
@@ -235627,6 +235633,12 @@
           }
         ],
         "innate": [
+          {
+            "species": "SPECIES_ONIX",
+            "name": "Onix",
+            "dex": 85,
+            "sprite": "sprites/pokemon/onix.png"
+          },
           {
             "species": "SPECIES_SUDOWOODO",
             "name": "Sudowoodo",
@@ -237002,18 +237014,6 @@
             "sprite": "sprites/pokemon/marshadow.png"
           },
           {
-            "species": "SPECIES_ZAMAZENTA_HERO",
-            "name": "Zamazenta",
-            "dex": 606,
-            "sprite": "sprites/pokemon/zamazenta_hero.png"
-          },
-          {
-            "species": "SPECIES_ZAMAZENTA_CROWNED",
-            "name": "Zamazenta",
-            "dex": 606,
-            "sprite": "sprites/pokemon/zamazenta_crowned.png"
-          },
-          {
             "species": "SPECIES_OGERPON_TEAL_TERA",
             "name": "Ogerpon",
             "dex": 694,
@@ -237731,18 +237731,6 @@
           }
         ],
         "innate": [
-          {
-            "species": "SPECIES_METAGROSS",
-            "name": "Metagross",
-            "dex": 289,
-            "sprite": "sprites/pokemon/metagross.png"
-          },
-          {
-            "species": "SPECIES_METAGROSS_MEGA",
-            "name": "Metagross",
-            "dex": 289,
-            "sprite": "sprites/pokemon/metagross_mega.png"
-          },
           {
             "species": "SPECIES_MELTAN",
             "name": "Meltan",
@@ -238609,12 +238597,6 @@
             "name": "Gligar",
             "dex": 180,
             "sprite": "sprites/pokemon/gligar.png"
-          },
-          {
-            "species": "SPECIES_ROSERADE",
-            "name": "Roserade",
-            "dex": 316,
-            "sprite": "sprites/pokemon/roserade.png"
           },
           {
             "species": "SPECIES_SKORUPI",
@@ -239835,6 +239817,18 @@
             "name": "Entei",
             "dex": 208,
             "sprite": "sprites/pokemon/entei.png"
+          },
+          {
+            "species": "SPECIES_ZACIAN_HERO",
+            "name": "Zacian",
+            "dex": 605,
+            "sprite": "sprites/pokemon/zacian_hero.png"
+          },
+          {
+            "species": "SPECIES_ZACIAN_CROWNED",
+            "name": "Zacian",
+            "dex": 605,
+            "sprite": "sprites/pokemon/zacian_crowned.png"
           }
         ]
       }
@@ -240806,22 +240800,10 @@
         ],
         "innate": [
           {
-            "species": "SPECIES_BAYLEEF",
-            "name": "Bayleef",
-            "dex": 134,
-            "sprite": "sprites/pokemon/bayleef.png"
-          },
-          {
             "species": "SPECIES_BELLOSSOM",
             "name": "Bellossom",
             "dex": 159,
             "sprite": "sprites/pokemon/bellossom.png"
-          },
-          {
-            "species": "SPECIES_ROSELIA",
-            "name": "Roselia",
-            "dex": 250,
-            "sprite": "sprites/pokemon/roselia.png"
           },
           {
             "species": "SPECIES_SHAYMIN_SKY",
@@ -241174,6 +241156,12 @@
             "name": "Snorlax",
             "dex": 124,
             "sprite": "sprites/pokemon/snorlax_gmax.png"
+          },
+          {
+            "species": "SPECIES_METAGROSS_MEGA",
+            "name": "Metagross",
+            "dex": 289,
+            "sprite": "sprites/pokemon/metagross_mega.png"
           },
           {
             "species": "SPECIES_RHYPERIOR",
@@ -242019,6 +242007,12 @@
             "sprite": "sprites/pokemon/lycanroc_dusk.png"
           },
           {
+            "species": "SPECIES_GOLISOPOD_MEGA",
+            "name": "Golisopod",
+            "dex": 543,
+            "sprite": "sprites/pokemon/golisopod_mega.png"
+          },
+          {
             "species": "SPECIES_PERRSERKER",
             "name": "Perrserker",
             "dex": 594,
@@ -242157,12 +242151,6 @@
             "name": "Golisopod",
             "dex": 543,
             "sprite": "sprites/pokemon/golisopod.png"
-          },
-          {
-            "species": "SPECIES_GOLISOPOD_MEGA",
-            "name": "Golisopod",
-            "dex": 543,
-            "sprite": "sprites/pokemon/golisopod_mega.png"
           },
           {
             "species": "SPECIES_SNEASLER",
@@ -242731,6 +242719,30 @@
             "sprite": "sprites/pokemon/torterra.png"
           },
           {
+            "species": "SPECIES_SHELLOS_WEST",
+            "name": "Shellos",
+            "dex": 320,
+            "sprite": "sprites/pokemon/shellos_west.png"
+          },
+          {
+            "species": "SPECIES_SHELLOS_EAST",
+            "name": "Shellos",
+            "dex": 320,
+            "sprite": "sprites/pokemon/shellos_east.png"
+          },
+          {
+            "species": "SPECIES_GASTRODON_WEST",
+            "name": "Gastrodon",
+            "dex": 321,
+            "sprite": "sprites/pokemon/gastrodon_west.png"
+          },
+          {
+            "species": "SPECIES_GASTRODON_EAST",
+            "name": "Gastrodon",
+            "dex": 321,
+            "sprite": "sprites/pokemon/gastrodon_east.png"
+          },
+          {
             "species": "SPECIES_MAMOSWINE",
             "name": "Mamoswine",
             "dex": 361,
@@ -242870,12 +242882,6 @@
             "name": "Golisopod",
             "dex": 543,
             "sprite": "sprites/pokemon/golisopod.png"
-          },
-          {
-            "species": "SPECIES_GOLISOPOD_MEGA",
-            "name": "Golisopod",
-            "dex": 543,
-            "sprite": "sprites/pokemon/golisopod_mega.png"
           }
         ],
         "innate": []
@@ -242900,42 +242906,6 @@
             "name": "Corsola",
             "dex": 190,
             "sprite": "sprites/pokemon/corsola.png"
-          },
-          {
-            "species": "SPECIES_CACNEA",
-            "name": "Cacnea",
-            "dex": 259,
-            "sprite": "sprites/pokemon/cacnea.png"
-          },
-          {
-            "species": "SPECIES_CACTURNE",
-            "name": "Cacturne",
-            "dex": 260,
-            "sprite": "sprites/pokemon/cacturne.png"
-          },
-          {
-            "species": "SPECIES_SHELLOS_WEST",
-            "name": "Shellos",
-            "dex": 320,
-            "sprite": "sprites/pokemon/shellos_west.png"
-          },
-          {
-            "species": "SPECIES_SHELLOS_EAST",
-            "name": "Shellos",
-            "dex": 320,
-            "sprite": "sprites/pokemon/shellos_east.png"
-          },
-          {
-            "species": "SPECIES_GASTRODON_WEST",
-            "name": "Gastrodon",
-            "dex": 321,
-            "sprite": "sprites/pokemon/gastrodon_west.png"
-          },
-          {
-            "species": "SPECIES_GASTRODON_EAST",
-            "name": "Gastrodon",
-            "dex": 321,
-            "sprite": "sprites/pokemon/gastrodon_east.png"
           }
         ]
       }
@@ -243056,18 +243026,6 @@
             "name": "Crabominable",
             "dex": 534,
             "sprite": "sprites/pokemon/crabominable.png"
-          },
-          {
-            "species": "SPECIES_GOLISOPOD",
-            "name": "Golisopod",
-            "dex": 543,
-            "sprite": "sprites/pokemon/golisopod.png"
-          },
-          {
-            "species": "SPECIES_GOLISOPOD_MEGA",
-            "name": "Golisopod",
-            "dex": 543,
-            "sprite": "sprites/pokemon/golisopod_mega.png"
           },
           {
             "species": "SPECIES_SNEASLER",
@@ -243629,6 +243587,12 @@
         "base": [],
         "innate": [
           {
+            "species": "SPECIES_BAYLEEF",
+            "name": "Bayleef",
+            "dex": 134,
+            "sprite": "sprites/pokemon/bayleef.png"
+          },
+          {
             "species": "SPECIES_MEGANIUM",
             "name": "Meganium",
             "dex": 135,
@@ -243902,6 +243866,18 @@
             "name": "Slowking",
             "dex": 174,
             "sprite": "sprites/pokemon/slowking_galar.png"
+          },
+          {
+            "species": "SPECIES_ROSELIA",
+            "name": "Roselia",
+            "dex": 250,
+            "sprite": "sprites/pokemon/roselia.png"
+          },
+          {
+            "species": "SPECIES_ROSERADE",
+            "name": "Roserade",
+            "dex": 316,
+            "sprite": "sprites/pokemon/roserade.png"
           },
           {
             "species": "SPECIES_NAGANADEL",
@@ -246604,12 +246580,6 @@
             "name": "Yanma",
             "dex": 168,
             "sprite": "sprites/pokemon/yanma.png"
-          },
-          {
-            "species": "SPECIES_ROTOM_FAN",
-            "name": "Rotom",
-            "dex": 367,
-            "sprite": "sprites/pokemon/rotom_fan.png"
           },
           {
             "species": "SPECIES_EMOLGA",
@@ -251441,12 +251411,6 @@
             "sprite": "sprites/pokemon/magmortar.png"
           },
           {
-            "species": "SPECIES_VOLCANION",
-            "name": "Volcanion",
-            "dex": 520,
-            "sprite": "sprites/pokemon/volcanion.png"
-          },
-          {
             "species": "SPECIES_ORICORIO_BAILE",
             "name": "Oricorio",
             "dex": 535,
@@ -251522,6 +251486,12 @@
             "name": "Raticate",
             "dex": 20,
             "sprite": "sprites/pokemon/raticate_alola.png"
+          },
+          {
+            "species": "SPECIES_GYARADOS",
+            "name": "Gyarados",
+            "dex": 113,
+            "sprite": "sprites/pokemon/gyarados.png"
           },
           {
             "species": "SPECIES_SPINARAK",
@@ -251711,6 +251681,12 @@
             "name": "Salamence",
             "dex": 286,
             "sprite": "sprites/pokemon/salamence_mega.png"
+          },
+          {
+            "species": "SPECIES_ROTOM_FAN",
+            "name": "Rotom",
+            "dex": 367,
+            "sprite": "sprites/pokemon/rotom_fan.png"
           },
           {
             "species": "SPECIES_TALONFLAME",
@@ -252017,12 +251993,6 @@
         "base": [],
         "innate": [
           {
-            "species": "SPECIES_ONIX",
-            "name": "Onix",
-            "dex": 85,
-            "sprite": "sprites/pokemon/onix.png"
-          },
-          {
             "species": "SPECIES_OGERPON_CORNERSTONE",
             "name": "Ogerpon",
             "dex": 694,
@@ -252263,6 +252233,12 @@
             "name": "Oricorio",
             "dex": 535,
             "sprite": "sprites/pokemon/oricorio_pom_pom.png"
+          },
+          {
+            "species": "SPECIES_REGIELEKI",
+            "name": "Regieleki",
+            "dex": 611,
+            "sprite": "sprites/pokemon/regieleki.png"
           }
         ]
       }
@@ -252628,6 +252604,12 @@
             "name": "Goodra",
             "dex": 507,
             "sprite": "sprites/pokemon/goodra_hisui.png"
+          },
+          {
+            "species": "SPECIES_VOLCANION",
+            "name": "Volcanion",
+            "dex": 520,
+            "sprite": "sprites/pokemon/volcanion.png"
           }
         ]
       }
@@ -253956,6 +253938,18 @@
             "name": "Kyogre",
             "dex": 295,
             "sprite": "sprites/pokemon/kyogre.png"
+          },
+          {
+            "species": "SPECIES_GOLISOPOD",
+            "name": "Golisopod",
+            "dex": 543,
+            "sprite": "sprites/pokemon/golisopod.png"
+          },
+          {
+            "species": "SPECIES_GOLISOPOD_MEGA",
+            "name": "Golisopod",
+            "dex": 543,
+            "sprite": "sprites/pokemon/golisopod_mega.png"
           }
         ]
       }
@@ -254300,6 +254294,18 @@
             "name": "Gogoat",
             "dex": 485,
             "sprite": "sprites/pokemon/gogoat.png"
+          },
+          {
+            "species": "SPECIES_ZAMAZENTA_HERO",
+            "name": "Zamazenta",
+            "dex": 606,
+            "sprite": "sprites/pokemon/zamazenta_hero.png"
+          },
+          {
+            "species": "SPECIES_ZAMAZENTA_CROWNED",
+            "name": "Zamazenta",
+            "dex": 606,
+            "sprite": "sprites/pokemon/zamazenta_crowned.png"
           }
         ]
       }
@@ -283724,7 +283730,7 @@
           "constant": "SPECIES_ONIX",
           "displayName": "Onix",
           "innates": [
-            "ABILITY_STONE_FACE",
+            "ABILITY_SOLID_ROCK",
             "ABILITY_BURROWER"
           ],
           "itemConstant": "",
@@ -284864,7 +284870,7 @@
           "displayName": "Bayleef",
           "innates": [
             "ABILITY_NATURAL_CURE",
-            "ABILITY_FLOWER_VEIL"
+            "ABILITY_TRIAGE"
           ],
           "itemConstant": "",
           "itemName": "",
@@ -285196,7 +285202,7 @@
           "displayName": "Roselia",
           "innates": [
             "ABILITY_JADE_BLOOM",
-            "ABILITY_FLOWER_VEIL"
+            "ABILITY_CORROSION"
           ],
           "itemConstant": "",
           "itemName": "",
@@ -288386,7 +288392,7 @@
           "displayName": "Bayleef",
           "innates": [
             "ABILITY_NATURAL_CURE",
-            "ABILITY_FLOWER_VEIL"
+            "ABILITY_TRIAGE"
           ],
           "itemConstant": "",
           "itemName": "",
@@ -290739,7 +290745,7 @@
           "constant": "SPECIES_SHELLOS_WEST",
           "displayName": "Shellos West",
           "innates": [
-            "ABILITY_WATER_COMPACTION"
+            "ABILITY_STAMINA"
           ],
           "itemConstant": "",
           "itemName": "",
@@ -290766,7 +290772,7 @@
           "constant": "SPECIES_GASTRODON_WEST",
           "displayName": "Gastrodon West",
           "innates": [
-            "ABILITY_WATER_COMPACTION",
+            "ABILITY_STAMINA",
             "ABILITY_EARTH_EATER",
             "ABILITY_GOOEY"
           ],
@@ -291094,7 +291100,7 @@
           "constant": "SPECIES_SHELLOS_EAST",
           "displayName": "Shellos East",
           "innates": [
-            "ABILITY_WATER_COMPACTION"
+            "ABILITY_STAMINA"
           ],
           "itemConstant": "",
           "itemName": "",
@@ -292427,7 +292433,7 @@
           "constant": "SPECIES_ONIX",
           "displayName": "Onix",
           "innates": [
-            "ABILITY_STONE_FACE",
+            "ABILITY_SOLID_ROCK",
             "ABILITY_BURROWER"
           ],
           "itemConstant": "",
@@ -292784,7 +292790,7 @@
           "innates": [
             "ABILITY_BATTLE_ARMOR",
             "ABILITY_TOUGH_CLAWS",
-            "ABILITY_MERCILESS"
+            "ABILITY_INDOMITABLE"
           ],
           "itemConstant": "ITEM_QUICK_CLAW",
           "itemName": "Quick Claw",
@@ -293124,7 +293130,7 @@
           "constant": "SPECIES_CACTURNE",
           "displayName": "Cacturne",
           "innates": [
-            "ABILITY_WATER_COMPACTION",
+            "ABILITY_ROUGH_SKIN",
             "ABILITY_STAKEOUT",
             "ABILITY_MERCILESS"
           ],
@@ -294690,7 +294696,7 @@
           "innates": [
             "ABILITY_GUTS",
             "ABILITY_ADRENALINE",
-            "ABILITY_ANGER_POINT"
+            "ABILITY_IRON_FIST"
           ],
           "itemConstant": "ITEM_CHESTO_BERRY",
           "itemName": "Chesto Berry",
@@ -295044,7 +295050,7 @@
           "innates": [
             "ABILITY_GUTS",
             "ABILITY_ADRENALINE",
-            "ABILITY_ANGER_POINT"
+            "ABILITY_IRON_FIST"
           ],
           "itemConstant": "ITEM_CHESTO_BERRY",
           "itemName": "Chesto Berry",
@@ -297528,7 +297534,7 @@
           "innates": [
             "ABILITY_GUTS",
             "ABILITY_ADRENALINE",
-            "ABILITY_ANGER_POINT"
+            "ABILITY_IRON_FIST"
           ],
           "itemConstant": "ITEM_CHESTO_BERRY",
           "itemName": "Chesto Berry",
@@ -300851,7 +300857,7 @@
           "innates": [
             "ABILITY_GUTS",
             "ABILITY_ADRENALINE",
-            "ABILITY_ANGER_POINT"
+            "ABILITY_IRON_FIST"
           ],
           "itemConstant": "ITEM_CHESTO_BERRY",
           "itemName": "Chesto Berry",
@@ -304324,7 +304330,7 @@
           "constant": "SPECIES_GYARADOS",
           "displayName": "Gyarados",
           "innates": [
-            "ABILITY_ANGER_POINT",
+            "ABILITY_CONSUME",
             "ABILITY_STRONG_JAW",
             "ABILITY_DRAGON_SOUL"
           ],
@@ -304483,7 +304489,7 @@
           "constant": "SPECIES_CACTURNE",
           "displayName": "Cacturne",
           "innates": [
-            "ABILITY_WATER_COMPACTION",
+            "ABILITY_ROUGH_SKIN",
             "ABILITY_STAKEOUT",
             "ABILITY_MERCILESS"
           ],
@@ -304941,7 +304947,7 @@
           "displayName": "Roserade",
           "innates": [
             "ABILITY_JADE_BLOOM",
-            "ABILITY_POISON_TOUCH",
+            "ABILITY_CORROSION",
             "ABILITY_MERCILESS"
           ],
           "itemConstant": "ITEM_FOCUS_SASH",
@@ -307586,7 +307592,7 @@
           "constant": "SPECIES_GYARADOS",
           "displayName": "Gyarados",
           "innates": [
-            "ABILITY_ANGER_POINT",
+            "ABILITY_CONSUME",
             "ABILITY_STRONG_JAW",
             "ABILITY_DRAGON_SOUL"
           ],
@@ -308092,7 +308098,7 @@
           "constant": "SPECIES_GASTRODON_WEST",
           "displayName": "Gastrodon",
           "innates": [
-            "ABILITY_WATER_COMPACTION",
+            "ABILITY_STAMINA",
             "ABILITY_EARTH_EATER",
             "ABILITY_GOOEY"
           ],
@@ -308176,7 +308182,7 @@
           "constant": "SPECIES_GYARADOS",
           "displayName": "Gyarados",
           "innates": [
-            "ABILITY_ANGER_POINT",
+            "ABILITY_CONSUME",
             "ABILITY_STRONG_JAW",
             "ABILITY_DRAGON_SOUL"
           ],
@@ -312780,7 +312786,7 @@
           "displayName": "Roserade",
           "innates": [
             "ABILITY_JADE_BLOOM",
-            "ABILITY_POISON_TOUCH",
+            "ABILITY_CORROSION",
             "ABILITY_MERCILESS"
           ],
           "itemConstant": "ITEM_EXPERT_BELT",
@@ -313067,7 +313073,7 @@
           "innates": [
             "ABILITY_GUTS",
             "ABILITY_ADRENALINE",
-            "ABILITY_ANGER_POINT"
+            "ABILITY_IRON_FIST"
           ],
           "itemConstant": "ITEM_LEFTOVERS",
           "itemName": "Leftovers",
@@ -313453,7 +313459,7 @@
           "displayName": "Roserade",
           "innates": [
             "ABILITY_JADE_BLOOM",
-            "ABILITY_POISON_TOUCH",
+            "ABILITY_CORROSION",
             "ABILITY_MERCILESS"
           ],
           "itemConstant": "ITEM_GRASS_GEM",
@@ -313679,7 +313685,7 @@
           "constant": "SPECIES_GYARADOS",
           "displayName": "Gyarados",
           "innates": [
-            "ABILITY_ANGER_POINT",
+            "ABILITY_CONSUME",
             "ABILITY_STRONG_JAW",
             "ABILITY_DRAGON_SOUL"
           ],
@@ -314163,7 +314169,7 @@
           "innates": [
             "ABILITY_GUTS",
             "ABILITY_ADRENALINE",
-            "ABILITY_ANGER_POINT"
+            "ABILITY_IRON_FIST"
           ],
           "itemConstant": "ITEM_LEFTOVERS",
           "itemName": "Leftovers",
@@ -317169,7 +317175,7 @@
           "constant": "SPECIES_GASTRODON_WEST",
           "displayName": "Gastrodon",
           "innates": [
-            "ABILITY_WATER_COMPACTION",
+            "ABILITY_STAMINA",
             "ABILITY_EARTH_EATER",
             "ABILITY_GOOEY"
           ],
@@ -317331,7 +317337,7 @@
           "constant": "SPECIES_GASTRODON_WEST",
           "displayName": "Gastrodon",
           "innates": [
-            "ABILITY_WATER_COMPACTION",
+            "ABILITY_STAMINA",
             "ABILITY_EARTH_EATER",
             "ABILITY_GOOEY"
           ],
@@ -319478,7 +319484,7 @@
           "innates": [
             "ABILITY_GUTS",
             "ABILITY_ADRENALINE",
-            "ABILITY_ANGER_POINT"
+            "ABILITY_IRON_FIST"
           ],
           "itemConstant": "ITEM_LEFTOVERS",
           "itemName": "Leftovers",
@@ -319684,8 +319690,8 @@
           "displayName": "Metagross",
           "innates": [
             "ABILITY_ANALYTIC",
-            "ABILITY_PHALANX",
-            "ABILITY_HEAVY_METAL"
+            "ABILITY_IRON_FIST",
+            "ABILITY_PHALANX"
           ],
           "itemConstant": "ITEM_CHOICE_BAND",
           "itemName": "Choice Band",
@@ -320257,7 +320263,7 @@
           "innates": [
             "ABILITY_BATTLE_ARMOR",
             "ABILITY_TOUGH_CLAWS",
-            "ABILITY_MERCILESS"
+            "ABILITY_INDOMITABLE"
           ],
           "itemConstant": "ITEM_LIFE_ORB",
           "itemName": "Life Orb",
@@ -320811,7 +320817,7 @@
           "innates": [
             "ABILITY_GUTS",
             "ABILITY_ADRENALINE",
-            "ABILITY_ANGER_POINT"
+            "ABILITY_IRON_FIST"
           ],
           "itemConstant": "ITEM_LEFTOVERS",
           "itemName": "Leftovers",
@@ -321996,8 +322002,8 @@
           "displayName": "Metagross",
           "innates": [
             "ABILITY_ANALYTIC",
-            "ABILITY_PHALANX",
-            "ABILITY_HEAVY_METAL"
+            "ABILITY_IRON_FIST",
+            "ABILITY_PHALANX"
           ],
           "itemConstant": "ITEM_CHOICE_BAND",
           "itemName": "Choice Band",
@@ -322208,7 +322214,7 @@
           "innates": [
             "ABILITY_GUTS",
             "ABILITY_ADRENALINE",
-            "ABILITY_ANGER_POINT"
+            "ABILITY_IRON_FIST"
           ],
           "itemConstant": "ITEM_ASSAULT_VEST",
           "itemName": "Assault Vest",
@@ -322401,7 +322407,7 @@
           "innates": [
             "ABILITY_GUTS",
             "ABILITY_ADRENALINE",
-            "ABILITY_ANGER_POINT"
+            "ABILITY_IRON_FIST"
           ],
           "itemConstant": "ITEM_ASSAULT_VEST",
           "itemName": "Assault Vest",
@@ -323069,8 +323075,8 @@
           "displayName": "Metagross",
           "innates": [
             "ABILITY_ANALYTIC",
-            "ABILITY_PHALANX",
-            "ABILITY_HEAVY_METAL"
+            "ABILITY_IRON_FIST",
+            "ABILITY_PHALANX"
           ],
           "itemConstant": "ITEM_STEELTITE",
           "itemName": "Steeltite",
@@ -323664,8 +323670,8 @@
           "displayName": "Metagross",
           "innates": [
             "ABILITY_ANALYTIC",
-            "ABILITY_PHALANX",
-            "ABILITY_HEAVY_METAL"
+            "ABILITY_IRON_FIST",
+            "ABILITY_PHALANX"
           ],
           "itemConstant": "ITEM_STEELTITE",
           "itemName": "Steeltite",
@@ -323827,7 +323833,7 @@
           "innates": [
             "ABILITY_GUTS",
             "ABILITY_ADRENALINE",
-            "ABILITY_ANGER_POINT"
+            "ABILITY_IRON_FIST"
           ],
           "itemConstant": "ITEM_LEFTOVERS",
           "itemName": "Leftovers",
@@ -324063,7 +324069,7 @@
           "innates": [
             "ABILITY_GUTS",
             "ABILITY_ADRENALINE",
-            "ABILITY_ANGER_POINT"
+            "ABILITY_IRON_FIST"
           ],
           "itemConstant": "ITEM_LEFTOVERS",
           "itemName": "Leftovers",
@@ -324690,7 +324696,7 @@
           "innates": [
             "ABILITY_GUTS",
             "ABILITY_ADRENALINE",
-            "ABILITY_ANGER_POINT"
+            "ABILITY_IRON_FIST"
           ],
           "itemConstant": "ITEM_LEFTOVERS",
           "itemName": "Leftovers",
@@ -324817,7 +324823,7 @@
           "innates": [
             "ABILITY_INNER_FOCUS",
             "ABILITY_SCRAPPY",
-            "ABILITY_DEFIANT"
+            "ABILITY_GUARDIAN"
           ],
           "itemConstant": "ITEM_RUSTED_SHIELD",
           "itemName": "Rusted Shield",
@@ -324899,7 +324905,7 @@
           "innates": [
             "ABILITY_GUTS",
             "ABILITY_ADRENALINE",
-            "ABILITY_ANGER_POINT"
+            "ABILITY_IRON_FIST"
           ],
           "itemConstant": "ITEM_LEFTOVERS",
           "itemName": "Leftovers",
@@ -325030,7 +325036,7 @@
           "innates": [
             "ABILITY_INNER_FOCUS",
             "ABILITY_SCRAPPY",
-            "ABILITY_DEFIANT"
+            "ABILITY_GUARDIAN"
           ],
           "itemConstant": "ITEM_RUSTED_SHIELD",
           "itemName": "Rusted Shield",
@@ -326769,8 +326775,8 @@
           "displayName": "Metagross",
           "innates": [
             "ABILITY_ANALYTIC",
-            "ABILITY_PHALANX",
-            "ABILITY_HEAVY_METAL"
+            "ABILITY_IRON_FIST",
+            "ABILITY_PHALANX"
           ],
           "itemConstant": "ITEM_CHOICE_BAND",
           "itemName": "Choice Band",
@@ -326981,8 +326987,8 @@
           "displayName": "Metagross",
           "innates": [
             "ABILITY_ANALYTIC",
-            "ABILITY_PHALANX",
-            "ABILITY_HEAVY_METAL"
+            "ABILITY_IRON_FIST",
+            "ABILITY_PHALANX"
           ],
           "itemConstant": "ITEM_CHOICE_BAND",
           "itemName": "Choice Band",
@@ -327679,7 +327685,7 @@
           "displayName": "Roserade",
           "innates": [
             "ABILITY_JADE_BLOOM",
-            "ABILITY_POISON_TOUCH",
+            "ABILITY_CORROSION",
             "ABILITY_MERCILESS"
           ],
           "itemConstant": "ITEM_GRASS_GEM",
@@ -327914,7 +327920,7 @@
           "displayName": "Roserade",
           "innates": [
             "ABILITY_JADE_BLOOM",
-            "ABILITY_POISON_TOUCH",
+            "ABILITY_CORROSION",
             "ABILITY_MERCILESS"
           ],
           "itemConstant": "ITEM_GRASS_GEM",
@@ -329476,8 +329482,8 @@
           "displayName": "Metagross",
           "innates": [
             "ABILITY_ANALYTIC",
-            "ABILITY_PHALANX",
-            "ABILITY_HEAVY_METAL"
+            "ABILITY_IRON_FIST",
+            "ABILITY_PHALANX"
           ],
           "itemConstant": "ITEM_STEELTITE",
           "itemName": "Steeltite",
@@ -329670,8 +329676,8 @@
           "displayName": "Metagross",
           "innates": [
             "ABILITY_ANALYTIC",
-            "ABILITY_PHALANX",
-            "ABILITY_HEAVY_METAL"
+            "ABILITY_IRON_FIST",
+            "ABILITY_PHALANX"
           ],
           "itemConstant": "ITEM_STEELTITE",
           "itemName": "Steeltite",
@@ -332423,7 +332429,7 @@
           "displayName": "Roserade",
           "innates": [
             "ABILITY_JADE_BLOOM",
-            "ABILITY_POISON_TOUCH",
+            "ABILITY_CORROSION",
             "ABILITY_MERCILESS"
           ],
           "itemConstant": "ITEM_BLACK_SLUDGE",
@@ -332606,7 +332612,7 @@
           "innates": [
             "ABILITY_GUTS",
             "ABILITY_ADRENALINE",
-            "ABILITY_ANGER_POINT"
+            "ABILITY_IRON_FIST"
           ],
           "itemConstant": "ITEM_CHESTO_BERRY",
           "itemName": "Chesto Berry",
@@ -333994,7 +334000,7 @@
           "displayName": "Roserade",
           "innates": [
             "ABILITY_JADE_BLOOM",
-            "ABILITY_POISON_TOUCH",
+            "ABILITY_CORROSION",
             "ABILITY_MERCILESS"
           ],
           "itemConstant": "ITEM_BLACK_SLUDGE",
@@ -334202,7 +334208,7 @@
           "innates": [
             "ABILITY_GUTS",
             "ABILITY_ADRENALINE",
-            "ABILITY_ANGER_POINT"
+            "ABILITY_IRON_FIST"
           ],
           "itemConstant": "ITEM_CHESTO_BERRY",
           "itemName": "Chesto Berry",
