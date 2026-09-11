@@ -1,104 +1,267 @@
 #include "global.h"
 #include "test/battle.h"
 
-SINGLE_BATTLE_TEST("Former OHKO moves deal normal damage with No Guard and require one recharge turn")
+ASSUMPTIONS
 {
-    enum Move move;
-    PARAMETRIZE { move = MOVE_GUILLOTINE; }
-    PARAMETRIZE { move = MOVE_HORN_DRILL; }
-    PARAMETRIZE { move = MOVE_FISSURE; }
-    PARAMETRIZE { move = MOVE_SHEER_COLD; }
+    ASSUME(GetMoveEffect(MOVE_FISSURE) == EFFECT_OHKO);
+}
+
+SINGLE_BATTLE_TEST("OHKO moves can hit semi-invulnerable mons when the user has No-Guard")
+{
     GIVEN {
-        ASSUME(GetMoveEffect(move) == EFFECT_HIT);
-        ASSUME(GetMovePower(move) == 150);
-        ASSUME(GetMoveAccuracy(move) == 90);
-        ASSUME(GetMovePP(move) == 5);
-        ASSUME(MoveHasAdditionalEffectSelf(move, MOVE_EFFECT_RECHARGE));
-        PLAYER(SPECIES_MACHAMP) { Level(50); Ability(ABILITY_NO_GUARD); }
-        OPPONENT(SPECIES_WOBBUFFET) { Level(100); HP(1000); MaxHP(1000); }
+        ASSUME(GetItemHoldEffect(ITEM_FOCUS_SASH) == HOLD_EFFECT_FOCUS_SASH);
+        PLAYER(SPECIES_MACHAMP) { Ability(ABILITY_NO_GUARD); }
+        OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
-        TURN { MOVE(player, move); }
-        TURN { SKIP_TURN(player); }
-        TURN { MOVE(player, MOVE_TACKLE); }
+        TURN { MOVE(opponent, MOVE_FLY); }
+        TURN { MOVE(player, MOVE_FISSURE); }
     } SCENE {
-        ANIMATION(ANIM_TYPE_MOVE, move, player);
-        HP_BAR(opponent);
-        MESSAGE("Machamp must recharge!");
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_TACKLE, player);
-    } THEN {
-        EXPECT_GT(opponent->hp, 0);
-        EXPECT_LT(opponent->hp, opponent->maxHP);
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_FISSURE, player);
+        HP_BAR(opponent, hp: 0);
     }
 }
 
-SINGLE_BATTLE_TEST("Former OHKO moves do not require recharge after missing or Protect")
+SINGLE_BATTLE_TEST("OHKO moves can not hit semi-invulnerable")
 {
-    enum Move move;
-    bool32 protect;
-    PARAMETRIZE { move = MOVE_GUILLOTINE; protect = FALSE; }
-    PARAMETRIZE { move = MOVE_GUILLOTINE; protect = TRUE; }
-    PARAMETRIZE { move = MOVE_HORN_DRILL; protect = FALSE; }
-    PARAMETRIZE { move = MOVE_HORN_DRILL; protect = TRUE; }
-    PARAMETRIZE { move = MOVE_FISSURE; protect = FALSE; }
-    PARAMETRIZE { move = MOVE_FISSURE; protect = TRUE; }
-    PARAMETRIZE { move = MOVE_SHEER_COLD; protect = FALSE; }
-    PARAMETRIZE { move = MOVE_SHEER_COLD; protect = TRUE; }
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
-        if (protect)
-            TURN { MOVE(opponent, MOVE_PROTECT); MOVE(player, move); }
-        else
-            TURN { MOVE(player, move, hit: FALSE); }
-        TURN { MOVE(player, MOVE_TACKLE); }
+        TURN { MOVE(opponent, MOVE_FLY); MOVE(player, MOVE_FISSURE); }
     } SCENE {
-        NONE_OF {
-            ANIMATION(ANIM_TYPE_MOVE, move, player);
-            MESSAGE("Wobbuffet must recharge!");
-        }
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_TACKLE, player);
+        NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_FISSURE, player);
     }
 }
 
-SINGLE_BATTLE_TEST("Former OHKO moves can damage Sturdy targets below full HP")
+SINGLE_BATTLE_TEST("OHKO moves can can be endured by Focus Sash")
 {
-    enum Move move;
-    PARAMETRIZE { move = MOVE_GUILLOTINE; }
-    PARAMETRIZE { move = MOVE_HORN_DRILL; }
-    PARAMETRIZE { move = MOVE_FISSURE; }
-    PARAMETRIZE { move = MOVE_SHEER_COLD; }
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_WOBBUFFET) { Ability(ABILITY_STURDY); HP(999); MaxHP(1000); }
+        OPPONENT(SPECIES_WOBBUFFET) { Item(ITEM_FOCUS_SASH); }
     } WHEN {
-        TURN { MOVE(player, move); }
+        TURN { MOVE(player, MOVE_FISSURE); }
     } SCENE {
-        ANIMATION(ANIM_TYPE_MOVE, move, player);
-        HP_BAR(opponent);
-        NOT ABILITY_POPUP(opponent, ABILITY_STURDY);
-    } THEN {
-        EXPECT_GT(opponent->hp, 0);
-        EXPECT_LT(opponent->hp, 999);
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_FISSURE, player);
+        HP_BAR(opponent, hp: 1);
+        MESSAGE("The opposing Wobbuffet hung on using its Focus Sash!");
     }
 }
 
-#if MAX_MON_TRAITS > 1
-SINGLE_BATTLE_TEST("Mega Pinsir's innate No Guard does not make Guillotine an instant KO")
+SINGLE_BATTLE_TEST("OHKO moves can can be endured by Sturdy")
 {
     GIVEN {
-        PLAYER(SPECIES_PINSIR_MEGA) { Ability(ABILITY_AERILATE); Innates(ABILITY_NO_GUARD); }
-        OPPONENT(SPECIES_WOBBUFFET) { HP(1000); MaxHP(1000); Defense(500); }
+        PLAYER(SPECIES_WOBBUFFET);
+        OPPONENT(SPECIES_GEODUDE) { Ability(ABILITY_STURDY); }
     } WHEN {
-        TURN { MOVE(player, MOVE_GUILLOTINE); }
-        TURN { SKIP_TURN(player); }
+        TURN { MOVE(player, MOVE_FISSURE); }
     } SCENE {
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_GUILLOTINE, player);
-        HP_BAR(opponent);
-        MESSAGE("Pinsir must recharge!");
-    } THEN {
-        EXPECT_GT(opponent->hp, 0);
-        EXPECT_LT(opponent->hp, opponent->maxHP);
+        NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_FISSURE, player);
+        ABILITY_POPUP(opponent, ABILITY_STURDY);
+    }
+}
+
+SINGLE_BATTLE_TEST("OHKO moves always fails if the target has a higher level than the user")
+{
+    GIVEN {
+        PLAYER(SPECIES_WOBBUFFET) { Level(1); }
+        OPPONENT(SPECIES_WOBBUFFET) { Level(2); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_FISSURE); }
+    } SCENE {
+        NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_FISSURE, player);
+    }
+}
+
+SINGLE_BATTLE_TEST("OHKO moves fail by level before checking Sturdy")
+{
+    GIVEN {
+        PLAYER(SPECIES_WOBBUFFET) { Level(1); }
+        OPPONENT(SPECIES_GEODUDE) { Level(2); Ability(ABILITY_STURDY); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_FISSURE); }
+    } SCENE {
+        NONE_OF {
+            ANIMATION(ANIM_TYPE_MOVE, MOVE_FISSURE, player);
+            ABILITY_POPUP(opponent, ABILITY_STURDY);
+        }
+    }
+}
+
+SINGLE_BATTLE_TEST("OHKO moves fail if target protects")
+{
+    GIVEN {
+        PLAYER(SPECIES_WOBBUFFET);
+        OPPONENT(SPECIES_WOBBUFFET);
+    } WHEN {
+        TURN { MOVE(opponent, MOVE_PROTECT); MOVE(player, MOVE_FISSURE); }
+    } SCENE {
+        NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_FISSURE, player);
+    }
+}
+
+SINGLE_BATTLE_TEST("Sheer Cold can hit semi-invulnerable mons when the user has No-Guard")
+{
+    GIVEN {
+        ASSUME(GetItemHoldEffect(ITEM_FOCUS_SASH) == HOLD_EFFECT_FOCUS_SASH);
+        PLAYER(SPECIES_WOBBUFFET) { Ability(ABILITY_NO_GUARD); }
+        OPPONENT(SPECIES_WOBBUFFET);
+    } WHEN {
+        TURN { MOVE(opponent, MOVE_FLY); }
+        TURN { MOVE(player, MOVE_SHEER_COLD); }
+    } SCENE {
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_SHEER_COLD, player);
+        HP_BAR(opponent, hp: 0);
+    }
+}
+
+SINGLE_BATTLE_TEST("Sheer Cold can be endured by Focus Sash")
+{
+    GIVEN {
+        PLAYER(SPECIES_WOBBUFFET);
+        OPPONENT(SPECIES_WOBBUFFET) { Item(ITEM_FOCUS_SASH); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_SHEER_COLD); }
+    } SCENE {
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_SHEER_COLD, player);
+        HP_BAR(opponent, hp: 1);
+        MESSAGE("The opposing Wobbuffet hung on using its Focus Sash!");
+    }
+}
+
+SINGLE_BATTLE_TEST("Sheer Cold can be endured by Sturdy")
+{
+    GIVEN {
+        PLAYER(SPECIES_WOBBUFFET);
+        OPPONENT(SPECIES_GEODUDE) { Ability(ABILITY_STURDY); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_SHEER_COLD); }
+    } SCENE {
+        NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_SHEER_COLD, player);
+        ABILITY_POPUP(opponent, ABILITY_STURDY);
+    }
+}
+
+SINGLE_BATTLE_TEST("Sheer Cold doesn't affect Ice-type Pokémon (Gen3-6)")
+{
+    GIVEN {
+        WITH_CONFIG(B_SHEER_COLD_IMMUNITY, GEN_6);
+        ASSUME(GetSpeciesType(SPECIES_GLALIE, 0) == TYPE_ICE);
+        PLAYER(SPECIES_WYNAUT);
+        OPPONENT(SPECIES_GLALIE);
+    } WHEN {
+        TURN { MOVE(player, MOVE_SHEER_COLD); }
+    } SCENE {
+        NOT MESSAGE("It doesn't affect the opposing Glalie…");
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_SHEER_COLD, player);
+        HP_BAR(opponent, hp: 0);
+    }
+}
+
+SINGLE_BATTLE_TEST("Sheer Cold doesn't affect Ice-type Pokémon (Gen7+)")
+{
+    GIVEN {
+        WITH_CONFIG(B_SHEER_COLD_IMMUNITY, GEN_7);
+        ASSUME(GetSpeciesType(SPECIES_GLALIE, 0) == TYPE_ICE);
+        PLAYER(SPECIES_WYNAUT);
+        OPPONENT(SPECIES_GLALIE);
+    } WHEN {
+        TURN { MOVE(player, MOVE_SHEER_COLD); }
+    } SCENE {
+        NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_SHEER_COLD, player);
+        MESSAGE("It doesn't affect the opposing Glalie…");
+    }
+}
+
+TO_DO_BATTLE_TEST("OHKO moves faints the target, skipping regular damage calculations")
+TO_DO_BATTLE_TEST("OHKO moves's accuracy increases by 1% for every level the user has over the target")
+TO_DO_BATTLE_TEST("OHKO moves's ignores non-stage accuracy modifiers") // Gravity, Wide Lens, Compound Eyes
+TO_DO_BATTLE_TEST("OHKO moves ignore non-stage accuracy modifiers") // Gravity, Wide Lens, Compound Eyes
+TO_DO_BATTLE_TEST("OHKO: Sheer Cold's accuracy decreasaes by 10% if the user is not Ice type")
+
+#if MAX_MON_TRAITS > 1
+SINGLE_BATTLE_TEST("OHKO moves can hit semi-invulnerable mons when the user has No-Guard (Traits)")
+{
+    GIVEN {
+        ASSUME(GetItemHoldEffect(ITEM_FOCUS_SASH) == HOLD_EFFECT_FOCUS_SASH);
+        PLAYER(SPECIES_MACHAMP) { Ability(ABILITY_LIGHT_METAL); Innates(ABILITY_NO_GUARD); }
+        OPPONENT(SPECIES_WOBBUFFET);
+    } WHEN {
+        TURN { MOVE(opponent, MOVE_FLY); }
+        TURN { MOVE(player, MOVE_FISSURE); }
+    } SCENE {
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_FISSURE, player);
+        HP_BAR(opponent, hp: 0);
+    }
+}
+
+SINGLE_BATTLE_TEST("OHKO moves can can be endured by Sturdy (Traits)")
+{
+    GIVEN {
+        PLAYER(SPECIES_WOBBUFFET);
+        OPPONENT(SPECIES_GEODUDE) { Ability(ABILITY_ROCK_HEAD); Innates(ABILITY_STURDY); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_FISSURE); }
+    } SCENE {
+        NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_FISSURE, player);
+        ABILITY_POPUP(opponent, ABILITY_STURDY);
+    }
+}
+
+SINGLE_BATTLE_TEST("Sheer Cold can hit semi-invulnerable mons when the user has No-Guard (Traits)")
+{
+    GIVEN {
+        ASSUME(GetItemHoldEffect(ITEM_FOCUS_SASH) == HOLD_EFFECT_FOCUS_SASH);
+        PLAYER(SPECIES_WOBBUFFET) { Ability(ABILITY_LIGHT_METAL); Innates(ABILITY_NO_GUARD); }
+        OPPONENT(SPECIES_WOBBUFFET);
+    } WHEN {
+        TURN { MOVE(opponent, MOVE_FLY); }
+        TURN { MOVE(player, MOVE_SHEER_COLD); }
+    } SCENE {
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_SHEER_COLD, player);
+        HP_BAR(opponent, hp: 0);
+    }
+}
+
+SINGLE_BATTLE_TEST("Sheer Cold can be endured by Sturdy (Traits)")
+{
+    GIVEN {
+        PLAYER(SPECIES_WOBBUFFET);
+        OPPONENT(SPECIES_GEODUDE) { Ability(ABILITY_SAND_VEIL); Innates(ABILITY_STURDY); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_SHEER_COLD); }
+    } SCENE {
+        NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_SHEER_COLD, player);
+        ABILITY_POPUP(opponent, ABILITY_STURDY);
+    }
+}
+#endif
+
+#if MAX_MON_ITEMS > 1
+SINGLE_BATTLE_TEST("OHKO moves can can be endured by Focus Sash (Items)")
+{
+    GIVEN {
+        PLAYER(SPECIES_WOBBUFFET);
+        OPPONENT(SPECIES_WOBBUFFET) { Items(ITEM_PECHA_BERRY, ITEM_FOCUS_SASH); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_FISSURE); }
+    } SCENE {
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_FISSURE, player);
+        HP_BAR(opponent, hp: 1);
+        MESSAGE("The opposing Wobbuffet hung on using its Focus Sash!");
+    }
+}
+
+SINGLE_BATTLE_TEST("Sheer Cold can be endured by Focus Sash (Items)")
+{
+    GIVEN {
+        PLAYER(SPECIES_WOBBUFFET);
+        OPPONENT(SPECIES_WOBBUFFET) { Items(ITEM_PECHA_BERRY, ITEM_FOCUS_SASH); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_SHEER_COLD); }
+    } SCENE {
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_SHEER_COLD, player);
+        HP_BAR(opponent, hp: 1);
+        MESSAGE("The opposing Wobbuffet hung on using its Focus Sash!");
     }
 }
 #endif

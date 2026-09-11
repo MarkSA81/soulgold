@@ -11,16 +11,16 @@ SINGLE_BATTLE_TEST("Embargo blocks the effect of an affected Pokémon's held ite
     GIVEN {
         ASSUME(gItemsInfo[ITEM_FOCUS_SASH].holdEffect == HOLD_EFFECT_FOCUS_SASH);
         PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_WOBBUFFET) { HP(40); MaxHP(40); Item(ITEM_FOCUS_SASH); }
+        OPPONENT(SPECIES_WOBBUFFET) { Item(ITEM_FOCUS_SASH); }
     } WHEN {
         TURN { MOVE(player, MOVE_EMBARGO); }
-        TURN { MOVE(player, MOVE_DRAGON_RAGE); }
+        TURN { MOVE(player, MOVE_FISSURE); }
     } SCENE {
         // Turn 1
         MESSAGE("Wobbuffet used Embargo!");
         MESSAGE("The opposing Wobbuffet can't use items anymore!");
         // Turn 2
-        MESSAGE("Wobbuffet used Dragon Rage!");
+        MESSAGE("Wobbuffet used Fissure!");
         HP_BAR(opponent, hp: 0);
     }
 }
@@ -398,16 +398,16 @@ SINGLE_BATTLE_TEST("Embargo blocks the effect of an affected Pokémon's held ite
     GIVEN {
         ASSUME(gItemsInfo[ITEM_FOCUS_SASH].holdEffect == HOLD_EFFECT_FOCUS_SASH);
         PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_WOBBUFFET) { HP(40); MaxHP(40); Items(ITEM_PECHA_BERRY, ITEM_FOCUS_SASH); };
+        OPPONENT(SPECIES_WOBBUFFET) { Items(ITEM_PECHA_BERRY, ITEM_FOCUS_SASH); };
     } WHEN {
         TURN { MOVE(player, MOVE_EMBARGO); }
-        TURN { MOVE(player, MOVE_DRAGON_RAGE); }
+        TURN { MOVE(player, MOVE_FISSURE); }
     } SCENE {
         // Turn 1
         MESSAGE("Wobbuffet used Embargo!");
         MESSAGE("The opposing Wobbuffet can't use items anymore!");
         // Turn 2
-        MESSAGE("Wobbuffet used Dragon Rage!");
+        MESSAGE("Wobbuffet used Fissure!");
         HP_BAR(opponent, hp: 0);
     }
 }

@@ -16,6 +16,22 @@ SINGLE_BATTLE_TEST("Compound Eyes raises accuracy")
     }
 }
 
+SINGLE_BATTLE_TEST("Compound Eyes does not affect OHKO moves")
+{
+    PASSES_RANDOMLY(30, 100, RNG_ACCURACY);
+    GIVEN {
+        ASSUME(GetMoveAccuracy(MOVE_FISSURE) == 30);
+        ASSUME(GetMoveEffect(MOVE_FISSURE) == EFFECT_OHKO);
+        PLAYER(SPECIES_BUTTERFREE) { Ability(ABILITY_COMPOUND_EYES); }
+        OPPONENT(SPECIES_WOBBUFFET);
+    } WHEN {
+        TURN { MOVE(player, MOVE_FISSURE); }
+    } SCENE {
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_FISSURE, player);
+        HP_BAR(opponent, hp: 0);
+    }
+}
+
 #if MAX_MON_TRAITS > 1
 SINGLE_BATTLE_TEST("Compound Eyes raises accuracy (Traits)")
 {
@@ -32,4 +48,19 @@ SINGLE_BATTLE_TEST("Compound Eyes raises accuracy (Traits)")
     }
 }
 
+SINGLE_BATTLE_TEST("Compound Eyes does not affect OHKO moves (Traits)")
+{
+    PASSES_RANDOMLY(30, 100, RNG_ACCURACY);
+    GIVEN {
+        ASSUME(GetMoveAccuracy(MOVE_FISSURE) == 30);
+        ASSUME(GetMoveEffect(MOVE_FISSURE) == EFFECT_OHKO);
+        PLAYER(SPECIES_BUTTERFREE) { Ability(ABILITY_TINTED_LENS); Innates(ABILITY_COMPOUND_EYES); }
+        OPPONENT(SPECIES_WOBBUFFET);
+    } WHEN {
+        TURN { MOVE(player, MOVE_FISSURE); }
+    } SCENE {
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_FISSURE, player);
+        HP_BAR(opponent, hp: 0);
+    }
+}
 #endif

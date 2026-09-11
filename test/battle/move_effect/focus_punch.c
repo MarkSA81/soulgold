@@ -71,6 +71,72 @@ DOUBLE_BATTLE_TEST("Focus Punch activation is based on Speed")
     }
 }
 
+SINGLE_BATTLE_TEST("Focus Punch activates when Focus Band/Focus Sash blocks OHKO move")
+{
+    enum Item item;
+    PARAMETRIZE { item = ITEM_NONE; }
+    PARAMETRIZE { item = ITEM_FOCUS_BAND; }
+    PARAMETRIZE { item = ITEM_FOCUS_SASH; }
+
+    GIVEN {
+        ASSUME(GetMoveEffect(MOVE_FISSURE) == EFFECT_OHKO);
+        PLAYER(SPECIES_WOBBUFFET) { Item(item); };
+        OPPONENT(SPECIES_WOBBUFFET) {};
+    } WHEN {
+        TURN { MOVE(player, MOVE_FOCUS_PUNCH); MOVE(opponent, MOVE_FISSURE); }
+    } SCENE {
+        ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_FOCUS_PUNCH_SETUP, player);
+        MESSAGE("Wobbuffet is tightening its focus!");
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_FISSURE, opponent);
+
+        if (item) {
+            MESSAGE("Wobbuffet used Focus Punch!");
+            ANIMATION(ANIM_TYPE_MOVE, MOVE_FOCUS_PUNCH, player);
+            HP_BAR(opponent);
+        } else {
+            MESSAGE("Wobbuffet fainted!");
+            NONE_OF {
+                MESSAGE("Wobbuffet used Focus Punch!");
+                ANIMATION(ANIM_TYPE_MOVE, MOVE_FOCUS_PUNCH, player);
+                HP_BAR(opponent);
+            }
+        }
+    }
+}
+
+SINGLE_BATTLE_TEST("Focus Punch activates when Disguise block a OHKO move (Gen8+)")
+{
+    enum Move move;
+    bool32 activate;
+    PARAMETRIZE { move = MOVE_WATER_GUN; activate = FALSE; }
+    PARAMETRIZE { move = MOVE_FISSURE; activate = TRUE; }
+    GIVEN {
+        ASSUME(GetMoveEffect(MOVE_FISSURE) == EFFECT_OHKO);
+        WITH_CONFIG(B_DISGUISE_HP_LOSS, GEN_8);
+        PLAYER(SPECIES_MIMIKYU_DISGUISED) { Ability(ABILITY_DISGUISE); }
+        OPPONENT(SPECIES_WOBBUFFET) {};
+    } WHEN {
+        TURN { MOVE(player, MOVE_FOCUS_PUNCH); MOVE(opponent, move); }
+    } SCENE {
+        ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_FOCUS_PUNCH_SETUP, player);
+        MESSAGE("Mimikyu is tightening its focus!");
+        ANIMATION(ANIM_TYPE_MOVE, move, opponent);
+
+        if (activate) {
+            MESSAGE("Mimikyu used Focus Punch!");
+            ANIMATION(ANIM_TYPE_MOVE, MOVE_FOCUS_PUNCH, player);
+            HP_BAR(opponent);
+        } else {
+            MESSAGE("Mimikyu lost its focus and couldn't move!");
+            NONE_OF {
+                MESSAGE("Mimikyu used Focus Punch!");
+                ANIMATION(ANIM_TYPE_MOVE, MOVE_FOCUS_PUNCH, player);
+                HP_BAR(opponent);
+            }
+        }
+    }
+}
+
 SINGLE_BATTLE_TEST("Focus Punch does not activate when Focus Band/Focus Sash/Sturdy prevent getting one-shot by an attack")
 {
     enum Item item;

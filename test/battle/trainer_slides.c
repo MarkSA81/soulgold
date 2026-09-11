@@ -126,14 +126,15 @@ AI_SINGLE_BATTLE_TEST("Trainer Slide: Singles: Enemy Mon Unaffected")
     GIVEN {
         FLAG_SET(TESTING_FLAG_TRAINER_SLIDES);
         VAR_SET(TESTING_VAR_TRAINER_SLIDES, TRAINER_SLIDE_ENEMY_MON_UNAFFECTED);
-        ASSUME(GetSpeciesType(SPECIES_DUSKULL, 0) == TYPE_GHOST);
+        WITH_CONFIG(B_SHEER_COLD_IMMUNITY, GEN_7);
+        ASSUME(GetSpeciesType(SPECIES_GLALIE, 0) == TYPE_ICE);
         PLAYER(SPECIES_WYNAUT);
-        OPPONENT(SPECIES_DUSKULL) { Moves(MOVE_CELEBRATE); }
+        OPPONENT(SPECIES_GLALIE) { Moves(MOVE_CELEBRATE); }
     } WHEN {
-        TURN { MOVE(player, MOVE_POUND); }
+        TURN { MOVE(player, MOVE_SHEER_COLD); }
     } SCENE {
-        NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_POUND, player);
-        MESSAGE("It doesn't affect the opposing Duskull…");
+        NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_SHEER_COLD, player);
+        MESSAGE("It doesn't affect the opposing Glalie…");
         MESSAGE("Trainer A: Player attacked enemy with ineffective move.{PAUSE_UNTIL_PRESS}");
     }
 }
@@ -371,16 +372,17 @@ AI_DOUBLE_BATTLE_TEST("Trainer Slide: Doubles: Enemy Mon Unaffected")
     GIVEN {
         FLAG_SET(TESTING_FLAG_TRAINER_SLIDES);
         VAR_SET(TESTING_VAR_TRAINER_SLIDES, TRAINER_SLIDE_ENEMY_MON_UNAFFECTED);
-        ASSUME(GetSpeciesType(SPECIES_DUSKULL, 0) == TYPE_GHOST);
+        WITH_CONFIG(B_SHEER_COLD_IMMUNITY, GEN_7);
+        ASSUME(GetSpeciesType(SPECIES_GLALIE, 0) == TYPE_ICE);
         PLAYER(SPECIES_WYNAUT);
         PLAYER(SPECIES_WYNAUT);
-        OPPONENT(SPECIES_DUSKULL) { Moves(MOVE_CELEBRATE); }
-        OPPONENT(SPECIES_DUSKULL) { Moves(MOVE_CELEBRATE); }
+        OPPONENT(SPECIES_GLALIE) { Moves(MOVE_CELEBRATE); }
+        OPPONENT(SPECIES_GLALIE) { Moves(MOVE_CELEBRATE); }
     } WHEN {
-        TURN { MOVE(playerLeft, MOVE_POUND); }
+        TURN { MOVE(playerLeft, MOVE_SHEER_COLD); }
     } SCENE {
-        NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_POUND, playerLeft);
-        MESSAGE("It doesn't affect the opposing Duskull…");
+        NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_SHEER_COLD, playerLeft);
+        MESSAGE("It doesn't affect the opposing Glalie…");
         MESSAGE("Trainer A: Player attacked enemy with ineffective move.{PAUSE_UNTIL_PRESS}");
         NONE_OF {
             MESSAGE("Trainer A: Player attacked enemy with ineffective move.{PAUSE_UNTIL_PRESS}");

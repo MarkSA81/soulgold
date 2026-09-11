@@ -1,6 +1,23 @@
 #include "global.h"
 #include "test/battle.h"
 
+SINGLE_BATTLE_TEST("Sturdy prevents OHKO moves")
+{
+    GIVEN {
+        ASSUME(GetMoveEffect(MOVE_FISSURE) == EFFECT_OHKO);
+        PLAYER(SPECIES_GEODUDE) { Ability(ABILITY_STURDY); }
+        OPPONENT(SPECIES_WOBBUFFET);
+    } WHEN {
+        TURN { MOVE(opponent, MOVE_FISSURE); }
+    } SCENE {
+        MESSAGE("The opposing Wobbuffet used Fissure!");
+        ABILITY_POPUP(player, ABILITY_STURDY);
+        MESSAGE("Geodude was protected by Sturdy!");
+    } THEN {
+        EXPECT_EQ(player->hp, player->maxHP);
+    }
+}
+
 SINGLE_BATTLE_TEST("Sturdy prevents OHKOs (Gen5+)")
 {
     u32 config;
@@ -49,6 +66,23 @@ SINGLE_BATTLE_TEST("Sturdy does not prevent non-OHKOs")
 }
 
 #if MAX_MON_TRAITS > 1
+SINGLE_BATTLE_TEST("Sturdy prevents OHKO moves (Traits)")
+{
+    GIVEN {
+        ASSUME(GetMoveEffect(MOVE_FISSURE) == EFFECT_OHKO);
+        PLAYER(SPECIES_GEODUDE) { Ability(ABILITY_ROCK_HEAD); Innates(ABILITY_STURDY); }
+        OPPONENT(SPECIES_WOBBUFFET);
+    } WHEN {
+        TURN { MOVE(opponent, MOVE_FISSURE); }
+    } SCENE {
+        MESSAGE("The opposing Wobbuffet used Fissure!");
+        ABILITY_POPUP(player, ABILITY_STURDY);
+        MESSAGE("Geodude was protected by Sturdy!");
+    } THEN {
+        EXPECT_EQ(player->hp, player->maxHP);
+    }
+}
+
 SINGLE_BATTLE_TEST("Sturdy prevents OHKOs (Traits)")
 {
     GIVEN {

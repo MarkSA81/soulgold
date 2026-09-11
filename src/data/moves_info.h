@@ -419,21 +419,17 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Guillotine"),
         .description = COMPOUND_STRING(
-            "A crushing pincer attack.\n"
-            "The user must then recharge."),
-        .effect = EFFECT_HIT,
-        .power = 150,
+            "A powerful pincer attack\n"
+            "that KOs if it hits."),
+        .effect = EFFECT_OHKO,
+        .power = 1,
         .type = TYPE_NORMAL,
-        .accuracy = 90,
+        .accuracy = 30,
         .pp = 5,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
-        .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_RECHARGE,
-            .self = TRUE,
-        }),
         .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
@@ -963,21 +959,17 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Horn Drill"),
         .description = COMPOUND_STRING(
-            "A powerful drilling attack.\n"
-            "The user must then recharge."),
-        .effect = EFFECT_HIT,
-        .power = 150,
+            "A one-hit KO attack that\n"
+            "uses a horn like a drill."),
+        .effect = EFFECT_OHKO,
+        .power = 1,
         .type = TYPE_NORMAL,
-        .accuracy = 90,
+        .accuracy = 30,
         .pp = 5,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
-        .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_RECHARGE,
-            .self = TRUE,
-        }),
         .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
@@ -2489,22 +2481,18 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Fissure"),
         .description = COMPOUND_STRING(
-            "Drops the foe in a fissure.\n"
-            "The user must then recharge."),
-        .effect = EFFECT_HIT,
-        .power = 150,
+            "A one-hit KO move that\n"
+            "drops the foe in a fissure."),
+        .effect = EFFECT_OHKO,
+        .power = 1,
         .type = TYPE_GROUND,
-        .accuracy = 90,
+        .accuracy = 30,
         .pp = 5,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .damagesUnderground = TRUE,
         .skyBattleBanned = TRUE,
-        .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_RECHARGE,
-            .self = TRUE,
-        }),
         .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .contestComboStarterId = 0,
@@ -8901,20 +8889,18 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Sheer Cold"),
         .description = COMPOUND_STRING(
-            "Blasts the foe with ice.\n"
-            "The user must then recharge."),
-        .effect = EFFECT_HIT,
-        .power = 150,
+            "A chilling attack that\n"
+            "causes fainting if it hits."),
+        .effect = EFFECT_OHKO,
+        .power = 1,
         .type = TYPE_ICE,
-        .accuracy = 90,
+        .accuracy = 30,
         .pp = 5,
         .target = TARGET_SELECTED,
         .priority = 0,
+        .noAffectOnSameTypeTarget = B_SHEER_COLD_IMMUNITY >= GEN_7,
+        .accIncreaseByTenOnSameType = B_SHEER_COLD_ACC >= GEN_7,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_RECHARGE,
-            .self = TRUE,
-        }),
         .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
         .contestComboStarterId = 0,

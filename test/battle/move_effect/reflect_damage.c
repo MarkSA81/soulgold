@@ -226,7 +226,7 @@ SINGLE_BATTLE_TEST("Reflect Damage: Counter deals 1 damage when the attack recei
     }
 }
 
-SINGLE_BATTLE_TEST("Reflect Damage: Counter works when taking recharge move damage")
+SINGLE_BATTLE_TEST("Reflect Damage: Counter works when surviving OHKO move")
 {
     s16 normalDmg;
     s16 counterDmg;
@@ -246,7 +246,7 @@ SINGLE_BATTLE_TEST("Reflect Damage: Counter works when taking recharge move dama
     }
 }
 
-SINGLE_BATTLE_TEST("Reflect Damage: Counter works when taking recharge move damage with Disguise")
+SINGLE_BATTLE_TEST("Reflect Damage: Counter works when surviving OHKO move with Disguise")
 {
     s16 counterDmg;
     GIVEN {
@@ -420,7 +420,7 @@ SINGLE_BATTLE_TEST("Reflect Damage: Mirror Coat deals 1 damage when the attack r
     }
 }
 
-SINGLE_BATTLE_TEST("Reflect Damage: Mirror Coat works when taking recharge move damage")
+SINGLE_BATTLE_TEST("Reflect Damage: Mirror Coat works when surviving OHKO move")
 {
     s16 normalDmg;
     s16 mirrorCoatDmg;
@@ -440,7 +440,7 @@ SINGLE_BATTLE_TEST("Reflect Damage: Mirror Coat works when taking recharge move 
     }
 }
 
-SINGLE_BATTLE_TEST("Reflect Damage: Mirror Coat works when taking recharge move damage with Disguise")
+SINGLE_BATTLE_TEST("Reflect Damage: Mirror Coat works when surviving OHKO move with Disguise")
 {
     s16 mirrorCoatDmg;
     GIVEN {
@@ -597,7 +597,7 @@ SINGLE_BATTLE_TEST("Reflect Damage: Metal Burst deals 1 damage when the attack r
     }
 }
 
-SINGLE_BATTLE_TEST("Reflect Damage: Metal Burst works when taking recharge move damage")
+SINGLE_BATTLE_TEST("Reflect Damage: Metal Burst works when surviving OHKO move")
 {
     s16 normalDmg;
     s16 metalBurstDmg;
@@ -616,7 +616,7 @@ SINGLE_BATTLE_TEST("Reflect Damage: Metal Burst works when taking recharge move 
     }
 }
 
-SINGLE_BATTLE_TEST("Reflect Damage: Metal Burst works when taking recharge move damage with Disguise")
+SINGLE_BATTLE_TEST("Reflect Damage: Metal Burst works when surviving OHKO move with Disguise")
 {
     s16 metalBurstDmg;
     GIVEN {
