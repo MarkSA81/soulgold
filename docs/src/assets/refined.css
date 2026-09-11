@@ -203,6 +203,22 @@ p {
   gap: 13px;
 }
 
+.brand-title {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+}
+
+.header-version {
+  color: #bfc7ba;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
 .brand-mark {
   position: relative;
   display: block;
@@ -1933,7 +1949,8 @@ dialog::backdrop {
 
 body[data-active-tab="pokedex"] .type-filter,
 body[data-active-tab="moves"] .type-filter,
-body[data-active-tab="machines"] .type-filter {
+body[data-active-tab="machines"] .type-filter,
+body[data-active-tab="items"] .type-filter {
   display: block;
 }
 
@@ -4573,6 +4590,40 @@ dialog::backdrop {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 5px;
+}
+
+.item-category-grid {
+  display: grid;
+  gap: 5px;
+}
+
+.dex-category-chip.item-category-chip {
+  height: 32px;
+  padding: 0 9px;
+  text-align: left;
+}
+
+#items .item-category-heading td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line-strong);
+  background: var(--surface-soft);
+}
+
+#items .item-category-heading td::before {
+  display: none;
+}
+
+#items .item-category-heading h2 {
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+@media (max-width: 1100px) {
+  #items .item-category-heading {
+    display: block;
+    margin: 12px 0 7px;
+  }
 }
 
 .type-match-mode {

@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import re
 import shutil
+from html import escape
 
 from .c_parser import strip_c_comments
 from .models import (
@@ -82,8 +83,17 @@ def copy_static_sources() -> None:
         dest = OUT_DIR / relative
         if item.is_dir():
             dest.mkdir(parents=True, exist_ok=True)
+        elif relative.as_posix() == "index.html":
+            dest.write_text(read_site_template(), encoding="utf-8")
         else:
             shutil.copy2(item, dest)
+
+
+def read_site_template() -> str:
+    """Render the header version at build time so ordinary visits need no fetch."""
+    template = (SRC_DIR / "index.html").read_text(encoding="utf-8")
+    manifest = json.loads((SRC_DIR / "version.json").read_text(encoding="utf-8"))
+    return template.replace("{{LATEST_VERSION}}", escape(manifest["latestVersion"]))
 
 
 def write_version_manifest() -> None:
@@ -103,7 +113,7 @@ def refresh_static_site() -> None:
     write_section_routes()
     # The output index already contains Pokédex preloads. Start from the source
     # template so each detail route gets only its own data dependencies.
-    index_html = (SRC_DIR / "index.html").read_text(encoding="utf-8")
+    index_html = read_site_template()
     detail_html = index_html.replace('<base href="./">', '<base href="../../">', 1)
     for route in SECTION_ROUTES:
         for entry in (OUT_DIR / route).glob("*/index.html"):
@@ -147,7 +157,7 @@ def write_detail_routes(payload: DocsPayload) -> None:
     """Create static entry points for every shareable record URL."""
     # Read the source template so the Pokédex preloads added to docs/index.html
     # are not inherited by every detail route.
-    index_html = (SRC_DIR / "index.html").read_text(encoding="utf-8")
+    index_html = read_site_template()
     detail_html = index_html.replace('<base href="./">', '<base href="../../">', 1)
     if detail_html == index_html:
         raise ValueError('docs/src/index.html must contain <base href="./">')

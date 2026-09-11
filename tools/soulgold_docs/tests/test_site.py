@@ -16,7 +16,7 @@ class StaticSiteRefreshTests(unittest.TestCase):
             source = root / "source"
             output = root / "output"
             source.mkdir()
-            (source / "index.html").write_text('<head><base href="./">\n  </head><script src="assets/app.js?v=test-build"></script>')
+            (source / "index.html").write_text('<head><base href="./">\n  </head><span class="header-version">{{LATEST_VERSION}}</span><script src="assets/app.js?v=test-build"></script>')
             (source / "version.json").write_text('{"latestVersion":"v1.1.3"}')
             header = root / "version.h"
             header.write_text('#define DISPLAY_VERSION "v1.2.0"\n')
@@ -41,6 +41,7 @@ class StaticSiteRefreshTests(unittest.TestCase):
                 self.assertEqual((output / relative).read_bytes(), b"existing data")
             self.assertIn('<base href="../../">', detail.read_text())
             self.assertIn("assets/app.js?v=test-build", detail.read_text())
+            self.assertIn('<span class="header-version">v1.2.0</span>', detail.read_text())
             self.assertIn('href="data/species-details/bulbasaur.json?v=test-build"', detail.read_text())
             self.assertIn('href="data/species-meta.json?v=test-build"', detail.read_text())
             self.assertIn('href="data/guides.json?v=test-build"', guide_detail.read_text())
@@ -48,6 +49,7 @@ class StaticSiteRefreshTests(unittest.TestCase):
             for route in site.SECTION_ROUTES:
                 section_html = (output / route / "index.html").read_text()
                 self.assertIn('<base href="../">', section_html)
+                self.assertIn('<span class="header-version">v1.2.0</span>', section_html)
                 for filename in site.SECTION_PRELOADS[route]:
                     self.assertIn(f'href="data/{filename}?v=test-build"', section_html)
             self.assertEqual((output / "version.json").read_text(), (source / "version.json").read_text())
@@ -60,6 +62,7 @@ class StaticSiteRefreshTests(unittest.TestCase):
                 site.prepare_output_tree()
             self.assertEqual(json.loads((output / "version.json").read_text()), {"latestVersion": "v1.2.1"})
             self.assertEqual((output / "version.json").read_text(), (source / "version.json").read_text())
+            self.assertIn('<span class="header-version">v1.2.1</span>', (output / "index.html").read_text())
 
 
 if __name__ == "__main__":
