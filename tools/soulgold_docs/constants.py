@@ -235,7 +235,33 @@ ADDITIONAL_IMPORTANT_ITEMS = {
     "ITEM_VS_SEEKER",
     "ITEM_COIN_CASE",
     "ITEM_GRACIDEA",
+    "ITEM_BECKONING_BELL",
+    "ITEM_TIMER_BALL",
+    "ITEM_DUSK_BALL",
+    "ITEM_QUICK_BALL",
 }
+
+# Held berries that weaken a super-effective attack of the matching type.
+# Chilan Berry is deliberately omitted because Normal cannot be super effective.
+TYPE_RESIST_BERRY_ITEMS = (
+    "ITEM_OCCA_BERRY",
+    "ITEM_PASSHO_BERRY",
+    "ITEM_WACAN_BERRY",
+    "ITEM_RINDO_BERRY",
+    "ITEM_YACHE_BERRY",
+    "ITEM_CHOPLE_BERRY",
+    "ITEM_KEBIA_BERRY",
+    "ITEM_SHUCA_BERRY",
+    "ITEM_COBA_BERRY",
+    "ITEM_PAYAPA_BERRY",
+    "ITEM_TANGA_BERRY",
+    "ITEM_CHARTI_BERRY",
+    "ITEM_KASIB_BERRY",
+    "ITEM_HABAN_BERRY",
+    "ITEM_COLBUR_BERRY",
+    "ITEM_BABIRI_BERRY",
+    "ITEM_ROSELI_BERRY",
+)
 
 EXCLUDED_TRAINER_MAP_GROUPS = {
     "gMapGroup_IndoorPallet",

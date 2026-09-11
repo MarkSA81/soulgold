@@ -110,6 +110,11 @@ class ItemRecord(TypedDict):
     iconName: str
 
 
+class ItemIconRow(TypedDict):
+    name: str
+    src: str
+
+
 class ImportantItemRow(TypedDict):
     id: int
     constant: str
@@ -118,6 +123,7 @@ class ImportantItemRow(TypedDict):
     pocket: str
     sortType: str
     itemIcon: str | None
+    itemIcons: list[ItemIconRow]
     locations: list[ItemLocation]
     location: str
 

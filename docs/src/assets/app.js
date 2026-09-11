@@ -2443,9 +2443,29 @@ function machineLocation(tm) {
 }
 
 function itemIconHtml(item, className = "item-icon") {
+  if (item?.itemIcons?.length) {
+    return `<span class="item-icon-group" aria-hidden="true">${item.itemIcons.map((icon) => `
+      <img class="${className}" src="${escapeHtml(icon.src)}" alt="" title="${escapeHtml(icon.name)}" loading="lazy" decoding="async">
+    `).join("")}</span>`;
+  }
   return item?.itemIcon
     ? `<img class="${className}" src="${item.itemIcon}" alt="" loading="lazy" decoding="async">`
     : "";
+}
+
+function itemGroupMembers(item) {
+  if (!item?.itemIcons?.length) return "";
+  return `
+    <h3 class="section-title">Included Berries</h3>
+    <div class="item-group-members">
+      ${item.itemIcons.map((icon) => `
+        <div class="item-group-member">
+          <img class="item-icon" src="${escapeHtml(icon.src)}" alt="" loading="lazy" decoding="async">
+          <strong>${escapeHtml(icon.name)}</strong>
+        </div>
+      `).join("")}
+    </div>
+  `;
 }
 
 function itemLocationLines(location) {
@@ -2455,12 +2475,12 @@ function itemLocationLines(location) {
 
 function renderItems() {
   const tbody = document.getElementById("itemRows");
-  const rows = state.data.items.filter((item) => matches(`${item.name} ${item.description} ${item.location}`));
+  const rows = state.data.items.filter((item) => matches(`${item.name} ${item.description} ${item.location} ${(item.itemIcons || []).map((icon) => icon.name).join(" ")}`));
   tbody.innerHTML = "";
   rows.forEach((item) => {
     const row = el("tr", "item-row");
     row.innerHTML = `
-      <td data-label="Name"><span class="item-name-cell">${itemIconHtml(item)}<strong>${item.name}</strong></span></td>
+      <td data-label="Name"><span class="item-name-cell${item.itemIcons?.length ? " item-name-cell-group" : ""}">${itemIconHtml(item)}<strong>${item.name}</strong></span></td>
       <td data-label="Description">${item.description || "No description."}</td>
       <td data-label="Location" class="muted">${itemLocationLines(item.location)}</td>
     `;
@@ -2490,6 +2510,7 @@ function renderItemDetail(item) {
   document.getElementById("modalTitle").textContent = item.name;
   document.getElementById("modalBody").innerHTML = `
     <p>${item.description || "No description."}</p>
+    ${itemGroupMembers(item)}
     <h3 class="section-title">Locations</h3>
     ${item.locations?.length ? `
       <div class="item-location-list">

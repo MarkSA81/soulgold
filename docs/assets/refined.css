@@ -1641,6 +1641,40 @@ dialog::backdrop {
   image-rendering: pixelated;
 }
 
+.item-name-cell-group {
+  flex-direction: column-reverse;
+  align-items: flex-start;
+}
+
+.item-icon-group {
+  display: grid;
+  grid-template-columns: repeat(9, 16px);
+  gap: 1px;
+}
+
+.item-icon-group .item-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.item-group-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.item-group-member {
+  display: flex;
+  min-width: 0;
+  padding: 6px 8px;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--line);
+  background: var(--surface-raised);
+  font-size: 12px;
+}
+
 .trainer-party {
   display: flex;
   flex-wrap: wrap;

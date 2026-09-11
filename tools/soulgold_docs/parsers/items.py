@@ -16,6 +16,7 @@ from ..constants import (
     ITEMS_HIDDEN_CONSTANTS,
     ITEMS_HIDDEN_SORT_TYPES,
     ITEMS_HIDDEN_SUFFIXES,
+    TYPE_RESIST_BERRY_ITEMS,
 )
 from ..c_parser import clean_constant_name, collect_strings, extract_field, parse_enum_constants, parse_shared_strings, preprocess, read, split_designated_entries
 from ..image_utils import copy_item_icon
@@ -344,6 +345,7 @@ def build_important_items(
             "pocket": item.get("pocket", ""),
             "sortType": item.get("sortType", ""),
             "itemIcon": copy_item_icon(item, item_icon_dir),
+            "itemIcons": [],
             "locations": item_locations,
             "location": "; ".join(
                 (
@@ -354,7 +356,34 @@ def build_important_items(
                 for entry in item_locations
             ),
         })
-    return rows
+
+    berry_icons = []
+    for constant in TYPE_RESIST_BERRY_ITEMS:
+        berry = item_records.get(constant)
+        icon = copy_item_icon(berry, item_icon_dir)
+        if berry and icon:
+            berry_icons.append({
+                "name": berry.get("name") or clean_constant_name(constant, "ITEM_"),
+                "src": icon,
+            })
+    if berry_icons:
+        first_berry = item_records.get(TYPE_RESIST_BERRY_ITEMS[0], {})
+        rows.append({
+            "id": first_berry.get("id", 0),
+            "constant": "ITEM_TYPE_RESIST_BERRIES",
+            "name": "Type-effectiveness Berries",
+            "description": "Held Berries that weaken one super-effective attack of their corresponding type.",
+            "pocket": "POCKET_BERRIES",
+            "sortType": "ITEM_TYPE_BERRY",
+            "itemIcon": None,
+            "itemIcons": berry_icons,
+            "locations": [
+                {"map": "Goldenrod Flower Shop", "source": "After Jasmine's Badge"},
+            ],
+            "location": "Goldenrod Flower Shop (After Jasmine's Badge)",
+        })
+
+    return sorted(rows, key=lambda row: row["id"])
 
 
 def build_tms(

@@ -1,7 +1,7 @@
 import unittest
 from collections import defaultdict
 
-from tools.soulgold_docs.constants import ADDITIONAL_IMPORTANT_ITEMS
+from tools.soulgold_docs.constants import ADDITIONAL_IMPORTANT_ITEMS, TYPE_RESIST_BERRY_ITEMS
 from tools.soulgold_docs.parsers.items import (
     IMPORTANT_ITEM_LOCATION_OVERRIDES,
     add_bug_contest_reward_locations,
@@ -28,6 +28,10 @@ class ImportantItemExceptionTests(unittest.TestCase):
                 "ITEM_DOWSING_MACHINE",
                 "ITEM_VS_SEEKER",
                 "ITEM_COIN_CASE",
+                "ITEM_BECKONING_BELL",
+                "ITEM_TIMER_BALL",
+                "ITEM_DUSK_BALL",
+                "ITEM_QUICK_BALL",
             }.issubset(ADDITIONAL_IMPORTANT_ITEMS)
         )
 
@@ -40,6 +44,12 @@ class ImportantItemExceptionTests(unittest.TestCase):
             ),
             ("Mahogany Town Shop", "After Rocket Hideout event"),
         )
+
+    def test_type_resist_berry_group_excludes_chilan(self):
+        self.assertEqual(len(TYPE_RESIST_BERRY_ITEMS), 17)
+        self.assertIn("ITEM_OCCA_BERRY", TYPE_RESIST_BERRY_ITEMS)
+        self.assertIn("ITEM_PASSHO_BERRY", TYPE_RESIST_BERRY_ITEMS)
+        self.assertNotIn("ITEM_CHILAN_BERRY", TYPE_RESIST_BERRY_ITEMS)
 
     def test_gracidea_has_story_location_override(self):
         self.assertEqual(

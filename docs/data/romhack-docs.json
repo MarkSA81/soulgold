@@ -69834,8 +69834,8 @@
           "name": "Whirl Islands Lugia Chamber",
           "time": "",
           "method": "Legendary encounter",
-          "minLevel": 80,
-          "maxLevel": 80,
+          "minLevel": 65,
+          "maxLevel": 65,
           "rate": null
         },
         {
@@ -69843,8 +69843,8 @@
           "name": "Whirl Islands Lugia Chamber",
           "time": "",
           "method": "Legendary encounter",
-          "minLevel": 65,
-          "maxLevel": 65,
+          "minLevel": 80,
+          "maxLevel": 80,
           "rate": null
         }
       ],
@@ -257934,6 +257934,100 @@
   ],
   "items": [
     {
+      "id": 10,
+      "constant": "ITEM_DUSK_BALL",
+      "name": "Dusk Ball",
+      "description": "Works well if used in a dark place.",
+      "pocket": "POCKET_POKE_BALLS",
+      "sortType": "",
+      "itemIcon": "sprites/items/dusk_ball.png",
+      "itemIcons": [],
+      "locations": [
+        {
+          "map": "Route 42",
+          "source": "Hidden item"
+        },
+        {
+          "map": "Route 45",
+          "source": "Item ball"
+        },
+        {
+          "map": "Slowpoke Well B1F",
+          "source": "Item ball"
+        },
+        {
+          "map": "Blackthorn City Mart",
+          "source": "Mart"
+        },
+        {
+          "map": "Rinto Village Mart",
+          "source": "Mart"
+        }
+      ],
+      "location": "Route 42 (Hidden item); Route 45 (Item ball); Slowpoke Well B1F (Item ball); Blackthorn City Mart (Mart); Rinto Village Mart (Mart)",
+      "slug": "dusk-ball"
+    },
+    {
+      "id": 11,
+      "constant": "ITEM_TIMER_BALL",
+      "name": "Timer Ball",
+      "description": "A Ball that gains power in battles taking many turns.",
+      "pocket": "POCKET_POKE_BALLS",
+      "sortType": "",
+      "itemIcon": "sprites/items/timer_ball.png",
+      "itemIcons": [],
+      "locations": [
+        {
+          "map": "Ecruteak City Mart",
+          "source": "Mart"
+        }
+      ],
+      "location": "Ecruteak City Mart (Mart)",
+      "slug": "timer-ball"
+    },
+    {
+      "id": 12,
+      "constant": "ITEM_QUICK_BALL",
+      "name": "Quick Ball",
+      "description": "Works well if used on the first turn.",
+      "pocket": "POCKET_POKE_BALLS",
+      "sortType": "",
+      "itemIcon": "sprites/items/quick_ball.png",
+      "itemIcons": [],
+      "locations": [
+        {
+          "map": "Rocket Hideout B3F",
+          "source": "Item ball"
+        },
+        {
+          "map": "Route 43",
+          "source": "Hidden item"
+        },
+        {
+          "map": "Union Cave 1F",
+          "source": "Item ball"
+        },
+        {
+          "map": "Blackthorn City Mart",
+          "source": "Mart"
+        },
+        {
+          "map": "Ecruteak City Mart",
+          "source": "Mart"
+        },
+        {
+          "map": "Goldenrod City Radio Tower 2F",
+          "source": "Buena's Password prize"
+        },
+        {
+          "map": "Rinto Village Mart",
+          "source": "Mart"
+        }
+      ],
+      "location": "Rocket Hideout B3F (Item ball); Route 43 (Hidden item); Union Cave 1F (Item ball); Blackthorn City Mart (Mart); Ecruteak City Mart (Mart); Goldenrod City Radio Tower 2F (Buena's Password prize); Rinto Village Mart (Mart)",
+      "slug": "quick-ball"
+    },
+    {
       "id": 65,
       "constant": "ITEM_HP_UP",
       "name": "HP Up",
@@ -257941,6 +258035,7 @@
       "pocket": "POCKET_MEDICINE",
       "sortType": "ITEM_TYPE_STAT_BOOST_DRINK",
       "itemIcon": "sprites/items/hp_up.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 38",
@@ -257970,6 +258065,7 @@
       "pocket": "POCKET_MEDICINE",
       "sortType": "ITEM_TYPE_STAT_BOOST_DRINK",
       "itemIcon": "sprites/items/vitamin.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Blackthorn City",
@@ -257999,6 +258095,7 @@
       "pocket": "POCKET_MEDICINE",
       "sortType": "ITEM_TYPE_STAT_BOOST_DRINK",
       "itemIcon": "sprites/items/vitamin.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Ice Path B1F",
@@ -258028,6 +258125,7 @@
       "pocket": "POCKET_MEDICINE",
       "sortType": "ITEM_TYPE_STAT_BOOST_DRINK",
       "itemIcon": "sprites/items/vitamin.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Burned Tower B1F",
@@ -258049,6 +258147,7 @@
       "pocket": "POCKET_MEDICINE",
       "sortType": "ITEM_TYPE_STAT_BOOST_DRINK",
       "itemIcon": "sprites/items/vitamin.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Kitakami Border",
@@ -258070,6 +258169,7 @@
       "pocket": "POCKET_MEDICINE",
       "sortType": "ITEM_TYPE_STAT_BOOST_DRINK",
       "itemIcon": "sprites/items/vitamin.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Ice Path B2F",
@@ -258099,6 +258199,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_FIELD_USE",
       "itemIcon": "sprites/items/ability_capsule.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod Shore",
@@ -258124,6 +258225,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_FIELD_USE",
       "itemIcon": "sprites/items/ability_patch.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 27",
@@ -258165,6 +258267,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_SELLABLE",
       "itemIcon": "sprites/items/bottle_cap.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Battle Tower",
@@ -258186,6 +258289,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_SELLABLE",
       "itemIcon": "sprites/items/bottle_cap.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Cianwood City",
@@ -258215,6 +258319,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_STONE",
       "itemIcon": "sprites/items/strange_souvenir.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Olivine City",
@@ -258232,6 +258337,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_STONE",
       "itemIcon": "sprites/items/fire_stone.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Mt Mortar Depths 1",
@@ -258269,6 +258375,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_STONE",
       "itemIcon": "sprites/items/water_stone.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Ruins of Alph Puzzle And Reward Chambers",
@@ -258302,6 +258409,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_STONE",
       "itemIcon": "sprites/items/thunder_stone.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Olivine City Lighthouse",
@@ -258335,6 +258443,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_STONE",
       "itemIcon": "sprites/items/leaf_stone.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Ruins of Alph Puzzle And Reward Chambers",
@@ -258372,6 +258481,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_STONE",
       "itemIcon": "sprites/items/ice_stone.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Snowtop Mountain",
@@ -258401,6 +258511,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_STONE",
       "itemIcon": "sprites/items/sun_stone.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 43",
@@ -258438,6 +258549,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_STONE",
       "itemIcon": "sprites/items/moon_stone.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 27",
@@ -258491,6 +258603,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_STONE",
       "itemIcon": "sprites/items/shiny_stone.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Indigo Plateau Pokemon Center",
@@ -258516,6 +258629,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_STONE",
       "itemIcon": "sprites/items/dusk_stone.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Dark Cave South Side",
@@ -258545,6 +258659,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_STONE",
       "itemIcon": "sprites/items/dawn_stone.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 45",
@@ -258570,6 +258685,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/sweet_apple.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 40 House 5",
@@ -258587,6 +258703,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/tart_apple.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 40 House 5",
@@ -258604,6 +258721,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/cracked_pot.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Safari Zone Gate",
@@ -258621,6 +258739,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/chipped_pot.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Safari Zone Gate",
@@ -258638,6 +258757,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/galarica_cuff.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Azalea Town Mart",
@@ -258655,6 +258775,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/galarica_wreath.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Azalea Town Mart",
@@ -258672,6 +258793,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/dragon_scale.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Mt Mortar 2F",
@@ -258717,6 +258839,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/upgrade.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Safari Zone Gate",
@@ -258734,6 +258857,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/protector.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Kitakami Temple Storage",
@@ -258759,6 +258883,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/electirizer.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Electabuzz",
@@ -258784,6 +258909,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/magmarizer.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Rinto Village",
@@ -258813,6 +258939,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/dubious_disc.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Mahogany Town Shop",
@@ -258830,6 +258957,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/reaper_cloth.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Kitakami Mountain 4F",
@@ -258855,6 +258983,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/prism_scale.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 47",
@@ -258880,6 +259009,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/oval_stone.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Chansey",
@@ -258905,6 +259035,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/everstone.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Geodude",
@@ -258934,6 +259065,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/light_ball.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Pikachu",
@@ -258951,6 +259083,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/leek.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Farfetch'd",
@@ -258976,6 +259109,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/bone.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Cubone",
@@ -258997,6 +259131,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/lucky_punch.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 47",
@@ -259014,6 +259149,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/ditto_powder.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Ditto",
@@ -259031,6 +259167,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/ditto_powder.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Ditto",
@@ -259048,6 +259185,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/deep_sea_scale.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Chinchou",
@@ -259081,6 +259219,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/deep_sea_tooth.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Carvanha",
@@ -259110,6 +259249,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_SPECIAL_HELD_ITEM",
       "itemIcon": "sprites/items/soul_dew.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Lati Temple Souldew Room",
@@ -259127,6 +259267,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_SPECIAL_HELD_ITEM",
       "itemIcon": "sprites/items/adamant_orb.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Spear Pillar Top",
@@ -259144,6 +259285,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_SPECIAL_HELD_ITEM",
       "itemIcon": "sprites/items/lustrous_orb.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Spear Pillar Top",
@@ -259161,6 +259303,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_SPECIAL_HELD_ITEM",
       "itemIcon": "sprites/items/griseous_orb.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Spear Pillar Top",
@@ -259178,6 +259321,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_INCENSE",
       "itemIcon": "sprites/items/sea_incense.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 32",
@@ -259199,6 +259343,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_INCENSE",
       "itemIcon": "sprites/items/lax_incense.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Safari Zone Gate",
@@ -259216,6 +259361,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_INCENSE",
       "itemIcon": "sprites/items/odd_incense.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Ruins of Alph Puzzle And Reward Chambers",
@@ -259233,6 +259379,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_INCENSE",
       "itemIcon": "sprites/items/rock_incense.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Safari Zone Gate",
@@ -259250,6 +259397,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_INCENSE",
       "itemIcon": "sprites/items/full_incense.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Safari Zone Gate",
@@ -259267,6 +259415,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_INCENSE",
       "itemIcon": "sprites/items/wave_incense.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Safari Zone Gate",
@@ -259284,6 +259433,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_INCENSE",
       "itemIcon": "sprites/items/rose_incense.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Safari Zone Gate",
@@ -259301,6 +259451,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_INCENSE",
       "itemIcon": "sprites/items/luck_incense.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Safari Zone Gate",
@@ -259318,6 +259469,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_INCENSE",
       "itemIcon": "sprites/items/pure_incense.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Safari Zone Gate",
@@ -259335,6 +259487,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_EV_BOOST_HELD_ITEM",
       "itemIcon": "sprites/items/power_weight.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Department Store 3F",
@@ -259352,6 +259505,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_EV_BOOST_HELD_ITEM",
       "itemIcon": "sprites/items/power_bracer.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Department Store 3F",
@@ -259369,6 +259523,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_EV_BOOST_HELD_ITEM",
       "itemIcon": "sprites/items/power_belt.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Department Store 3F",
@@ -259386,6 +259541,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_EV_BOOST_HELD_ITEM",
       "itemIcon": "sprites/items/power_lens.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Department Store 3F",
@@ -259403,6 +259559,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_EV_BOOST_HELD_ITEM",
       "itemIcon": "sprites/items/power_band.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Department Store 3F",
@@ -259420,6 +259577,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_EV_BOOST_HELD_ITEM",
       "itemIcon": "sprites/items/power_anklet.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Department Store 3F",
@@ -259437,6 +259595,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_TYPE_BOOST_HELD_ITEM",
       "itemIcon": "sprites/items/silk_scarf.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 29",
@@ -259454,6 +259613,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_TYPE_BOOST_HELD_ITEM",
       "itemIcon": "sprites/items/charcoal.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Azalea Town House 1",
@@ -259483,6 +259643,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_TYPE_BOOST_HELD_ITEM",
       "itemIcon": "sprites/items/mystic_water.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Cherrygrove City",
@@ -259508,6 +259669,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_TYPE_BOOST_HELD_ITEM",
       "itemIcon": "sprites/items/magnet.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 37",
@@ -259533,6 +259695,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_TYPE_BOOST_HELD_ITEM",
       "itemIcon": "sprites/items/miracle_seed.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 32",
@@ -259554,6 +259717,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_TYPE_BOOST_HELD_ITEM",
       "itemIcon": "sprites/items/never_melt_ice.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Ice Path B4F",
@@ -259587,6 +259751,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_TYPE_BOOST_HELD_ITEM",
       "itemIcon": "sprites/items/black_belt.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Lake of Rage",
@@ -259608,6 +259773,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_TYPE_BOOST_HELD_ITEM",
       "itemIcon": "sprites/items/poison_barb.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 32",
@@ -259681,6 +259847,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_TYPE_BOOST_HELD_ITEM",
       "itemIcon": "sprites/items/sand.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 34",
@@ -259718,6 +259885,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_TYPE_BOOST_HELD_ITEM",
       "itemIcon": "sprites/items/sharp_beak.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 40",
@@ -259735,6 +259903,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_TYPE_BOOST_HELD_ITEM",
       "itemIcon": "sprites/items/twisted_spoon.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Abra",
@@ -259760,6 +259929,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_TYPE_BOOST_HELD_ITEM",
       "itemIcon": "sprites/items/silver_powder.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Butterfree",
@@ -259781,6 +259951,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_TYPE_BOOST_HELD_ITEM",
       "itemIcon": "sprites/items/hard_stone.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 110 Trick House End",
@@ -259814,6 +259985,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_TYPE_BOOST_HELD_ITEM",
       "itemIcon": "sprites/items/spell_tag.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Blackthorn City",
@@ -259851,6 +260023,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_TYPE_BOOST_HELD_ITEM",
       "itemIcon": "sprites/items/dragon_fang.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Dragon's Den Cavern",
@@ -259880,6 +260053,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_TYPE_BOOST_HELD_ITEM",
       "itemIcon": "sprites/items/black_glasses.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Dark Cave North Side",
@@ -259909,6 +260083,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_TYPE_BOOST_HELD_ITEM",
       "itemIcon": "sprites/items/metal_coat.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Mahogany Town Shop",
@@ -259958,6 +260133,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/choice_band.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Battle Tower",
@@ -259979,6 +260155,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/choice_specs.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "South Shore",
@@ -260000,6 +260177,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/choice_scarf.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 26",
@@ -260021,6 +260199,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/flame_orb.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Battle Frontier Battle Pyramid Lobby",
@@ -260042,6 +260221,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/toxic_orb.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Battle Frontier Battle Pyramid Lobby",
@@ -260063,6 +260243,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/damp_rock.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Union Cave B1F",
@@ -260084,6 +260265,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/heat_rock.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Mt Mortar Depths 1",
@@ -260105,6 +260287,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/smooth_rock.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Mt Mortar B1F",
@@ -260134,6 +260317,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/icy_rock.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Snowtop Mountain B1F",
@@ -260155,6 +260339,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/terrain_seed.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Battle Tower",
@@ -260172,6 +260357,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/terrain_seed.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Battle Tower",
@@ -260193,6 +260379,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/terrain_seed.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Battle Tower",
@@ -260214,6 +260401,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/terrain_seed.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Vajra Desert East",
@@ -260239,6 +260427,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/absorb_bulb.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Tohjo Pass",
@@ -260288,6 +260477,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/cell_battery.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Railway Cave 2F",
@@ -260321,6 +260511,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/luminous_moss.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Flower Shop",
@@ -260342,6 +260533,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/snowball.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Snowtop Mountain Outside",
@@ -260371,6 +260563,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/bright_powder.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Radio Tower 4F",
@@ -260388,6 +260581,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/in_battle_herb.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Battle Frontier Battle Pyramid Lobby",
@@ -260409,6 +260603,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/quick_claw.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "National Park Normal",
@@ -260438,6 +260633,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/soothe_bell.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "National Park Normal",
@@ -260455,6 +260651,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/in_battle_herb.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Sewaddle",
@@ -260480,6 +260677,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/kings_rock.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Mt Mortar 1F North",
@@ -260533,6 +260731,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/amulet_coin.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Department Store Basement",
@@ -260550,6 +260749,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/cleanse_tag.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Chimecho",
@@ -260571,6 +260771,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/smoke_ball.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Underground Switches",
@@ -260596,6 +260797,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/focus_band.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Machop",
@@ -260621,6 +260823,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/lucky_egg.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Kitakami Mountain",
@@ -260646,6 +260849,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/scope_lens.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 39 Barn",
@@ -260663,6 +260867,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/leftovers.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Underground Storage",
@@ -260688,6 +260893,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/shell_bell.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 47",
@@ -260705,6 +260911,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/wide_lens.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Rinto Village",
@@ -260734,6 +260941,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/muscle_band.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Mienfoo",
@@ -260755,6 +260963,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/wise_glasses.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Rinto Village",
@@ -260780,6 +260989,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/expert_belt.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Rinto Village",
@@ -260805,6 +261015,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/light_clay.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Baltoy",
@@ -260838,6 +261049,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/life_orb.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Tin Tower 5F",
@@ -260863,6 +261075,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/power_herb.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Battle Frontier Battle Pyramid Lobby",
@@ -260884,6 +261097,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/focus_sash.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Battle Frontier Battle Pyramid Lobby",
@@ -260905,6 +261119,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/zoom_lens.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Mt. Silver 1F Item Room",
@@ -260922,6 +261137,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/metronome.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Kitakami Mountain 2F",
@@ -260939,6 +261155,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/iron_ball.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Kitakami Houses",
@@ -260960,6 +261177,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/lagging_tail.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Slowpoke",
@@ -260985,6 +261203,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/destiny_knot.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 34 Day Care",
@@ -261002,6 +261221,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/black_sludge.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Battle Frontier Battle Pyramid Lobby",
@@ -261027,6 +261247,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/grip_claw.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Sandshrew",
@@ -261048,6 +261269,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/sticky_barb.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Cacnea",
@@ -261077,6 +261299,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/shed_shell.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Scraggy",
@@ -261106,6 +261329,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/big_root.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Meteor Island",
@@ -261131,6 +261355,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/razor_claw.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 41",
@@ -261164,6 +261389,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/razor_fang.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 47",
@@ -261185,6 +261411,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/eviolite.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Radio Tower 2F",
@@ -261206,6 +261433,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/float_stone.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Tohjo Pass",
@@ -261223,6 +261451,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/rocky_helmet.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Gate Route 39North",
@@ -261240,6 +261469,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/air_balloon.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Underground Tunnel",
@@ -261261,6 +261491,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/red_card.png",
+      "itemIcons": [],
       "locations": [],
       "location": "",
       "slug": "red-card"
@@ -261273,6 +261504,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/ring_target.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Rinto Village",
@@ -261290,6 +261522,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/binding_band.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Rinto Village",
@@ -261307,6 +261540,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/eject_button.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Rinto Village",
@@ -261324,6 +261558,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/weakness_policy.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Victory Road B2F",
@@ -261345,6 +261580,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/assault_vest.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Rocket Hideout B3F",
@@ -261366,6 +261602,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/safety_goggles.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Vajra Desert West",
@@ -261383,6 +261620,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/adrenaline_orb.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Blackthorn City",
@@ -261400,6 +261638,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/terrain_extender.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 32",
@@ -261417,6 +261656,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/protective_pads.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Kitakami Border",
@@ -261434,6 +261674,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/throat_spray.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Toxel",
@@ -261451,6 +261692,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/eject_pack.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Mt. Silver 1F Waterfall Room",
@@ -261468,6 +261710,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/heavy_duty_boots.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Ice Path Depths",
@@ -261489,6 +261732,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/blunder_policy.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 50",
@@ -261510,6 +261754,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/room_service.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 42",
@@ -261531,6 +261776,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/utility_umbrella.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Underground Tunnel",
@@ -261545,6 +261791,93 @@
       "slug": "utility-umbrella"
     },
     {
+      "id": 550,
+      "constant": "ITEM_TYPE_RESIST_BERRIES",
+      "name": "Type-effectiveness Berries",
+      "description": "Held Berries that weaken one super-effective attack of their corresponding type.",
+      "pocket": "POCKET_BERRIES",
+      "sortType": "ITEM_TYPE_BERRY",
+      "itemIcon": null,
+      "itemIcons": [
+        {
+          "name": "Occa Berry",
+          "src": "sprites/items/occa_berry.png"
+        },
+        {
+          "name": "Passho Berry",
+          "src": "sprites/items/passho_berry.png"
+        },
+        {
+          "name": "Wacan Berry",
+          "src": "sprites/items/wacan_berry.png"
+        },
+        {
+          "name": "Rindo Berry",
+          "src": "sprites/items/rindo_berry.png"
+        },
+        {
+          "name": "Yache Berry",
+          "src": "sprites/items/yache_berry.png"
+        },
+        {
+          "name": "Chople Berry",
+          "src": "sprites/items/chople_berry.png"
+        },
+        {
+          "name": "Kebia Berry",
+          "src": "sprites/items/kebia_berry.png"
+        },
+        {
+          "name": "Shuca Berry",
+          "src": "sprites/items/shuca_berry.png"
+        },
+        {
+          "name": "Coba Berry",
+          "src": "sprites/items/coba_berry.png"
+        },
+        {
+          "name": "Payapa Berry",
+          "src": "sprites/items/payapa_berry.png"
+        },
+        {
+          "name": "Tanga Berry",
+          "src": "sprites/items/tanga_berry.png"
+        },
+        {
+          "name": "Charti Berry",
+          "src": "sprites/items/charti_berry.png"
+        },
+        {
+          "name": "Kasib Berry",
+          "src": "sprites/items/kasib_berry.png"
+        },
+        {
+          "name": "Haban Berry",
+          "src": "sprites/items/haban_berry.png"
+        },
+        {
+          "name": "Colbur Berry",
+          "src": "sprites/items/colbur_berry.png"
+        },
+        {
+          "name": "Babiri Berry",
+          "src": "sprites/items/babiri_berry.png"
+        },
+        {
+          "name": "Roseli Berry",
+          "src": "sprites/items/roseli_berry.png"
+        }
+      ],
+      "locations": [
+        {
+          "map": "Goldenrod Flower Shop",
+          "source": "After Jasmine's Badge"
+        }
+      ],
+      "location": "Goldenrod Flower Shop (After Jasmine's Badge)",
+      "slug": "type-resist-berries"
+    },
+    {
       "id": 697,
       "constant": "ITEM_GRACIDEA",
       "name": "Gracidea",
@@ -261552,6 +261885,7 @@
       "pocket": "POCKET_KEY_ITEMS",
       "sortType": "",
       "itemIcon": "sprites/items/gracidea.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod Flower Shop by showing Shaymin",
@@ -261569,6 +261903,7 @@
       "pocket": "POCKET_KEY_ITEMS",
       "sortType": "",
       "itemIcon": "sprites/items/old_rod.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 32 Pokemon Center",
@@ -261586,6 +261921,7 @@
       "pocket": "POCKET_KEY_ITEMS",
       "sortType": "",
       "itemIcon": "sprites/items/good_rod.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Olivine City House 3",
@@ -261603,6 +261939,7 @@
       "pocket": "POCKET_KEY_ITEMS",
       "sortType": "",
       "itemIcon": "sprites/items/super_rod.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Blackthorn City",
@@ -261620,6 +261957,7 @@
       "pocket": "POCKET_KEY_ITEMS",
       "sortType": "",
       "itemIcon": "sprites/items/dowsing_machine.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Ecruteak City House 4",
@@ -261637,6 +261975,7 @@
       "pocket": "POCKET_KEY_ITEMS",
       "sortType": "",
       "itemIcon": "sprites/items/vs_seeker.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Radio Tower 1F",
@@ -261654,6 +261993,7 @@
       "pocket": "POCKET_KEY_ITEMS",
       "sortType": "",
       "itemIcon": "sprites/items/coin_case.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Underground Tunnel",
@@ -261671,6 +262011,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "",
       "itemIcon": "sprites/items/ability_shield.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Underground Tunnel",
@@ -261688,6 +262029,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/clear_amulet.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Underground Tunnel",
@@ -261705,6 +262047,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/punching_glove.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Department Store Basement",
@@ -261722,6 +262065,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/covert_cloak.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Underground Tunnel",
@@ -261739,6 +262083,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/loaded_dice.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod Shore",
@@ -261756,6 +262101,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/auspicious_armor.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Mt Mortar 1F North",
@@ -261777,6 +262123,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/booster_energy.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Meteor Island",
@@ -261874,6 +262221,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/leaders_crest.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Azalea Town",
@@ -261895,6 +262243,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/malicious_armor.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Burned Tower B1F",
@@ -261916,6 +262265,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/mirror_herb.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Southern Passage",
@@ -261933,6 +262283,7 @@
       "pocket": "POCKET_KEY_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/scroll_of_darkness.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod Battle Arcade",
@@ -261950,6 +262301,7 @@
       "pocket": "POCKET_KEY_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/scroll_of_waters.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod Battle Arcade",
@@ -261967,6 +262319,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/adamant_crystal.png",
+      "itemIcons": [],
       "locations": [],
       "location": "",
       "slug": "adamant-crystal"
@@ -261979,6 +262332,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/griseous_core.png",
+      "itemIcons": [],
       "locations": [],
       "location": "",
       "slug": "griseous-core"
@@ -261991,6 +262345,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/lustrous_globe.png",
+      "itemIcons": [],
       "locations": [],
       "location": "",
       "slug": "lustrous-globe"
@@ -262003,6 +262358,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/black_augurite.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Lake of Rage",
@@ -262020,6 +262376,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/linking_cord.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 38",
@@ -262049,6 +262406,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/peat_block.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Dark Cave North Side",
@@ -262066,6 +262424,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_HELD_ITEM",
       "itemIcon": "sprites/items/berserk_gene.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Ruins of Alph Puzzle And Reward Chambers",
@@ -262083,6 +262442,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_TYPE_BOOST_HELD_ITEM",
       "itemIcon": "sprites/items/fairy_feather.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Nameless Cave B2F",
@@ -262100,6 +262460,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/syrupy_apple.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 40 House 5",
@@ -262117,6 +262478,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/unremarkable_teacup.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Olivine City",
@@ -262138,6 +262500,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_SPECIAL_HELD_ITEM",
       "itemIcon": "sprites/items/cornerstone_mask.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Kitakami Temple Storage",
@@ -262155,6 +262518,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_SPECIAL_HELD_ITEM",
       "itemIcon": "sprites/items/wellspring_mask.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Kitakami Temple Storage",
@@ -262172,6 +262536,7 @@
       "pocket": "POCKET_BATTLE_ITEMS",
       "sortType": "ITEM_TYPE_SPECIAL_HELD_ITEM",
       "itemIcon": "sprites/items/hearthflame_mask.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Kitakami Temple Storage",
@@ -262189,6 +262554,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_EVOLUTION_ITEM",
       "itemIcon": "sprites/items/metal_alloy.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Duraludon",
@@ -262206,6 +262572,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_STAT_BOOST_DRINK",
       "itemIcon": "sprites/items/hp_up.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Battle Tower",
@@ -262227,6 +262594,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_STAT_BOOST_DRINK",
       "itemIcon": "sprites/items/vitamin.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Nameless Cave B1F",
@@ -262260,6 +262628,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_STAT_BOOST_DRINK",
       "itemIcon": "sprites/items/vitamin.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Battle Tower",
@@ -262281,6 +262650,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_STAT_BOOST_DRINK",
       "itemIcon": "sprites/items/vitamin.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Mt. Silver 1F Waterfall Room",
@@ -262314,6 +262684,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_STAT_BOOST_DRINK",
       "itemIcon": "sprites/items/vitamin.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Nameless Cave B1F",
@@ -262343,6 +262714,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_STAT_BOOST_DRINK",
       "itemIcon": "sprites/items/vitamin.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Mt. Silver 1F Waterfall Room",
@@ -262376,6 +262748,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_STAT_BOOST_FEATHER",
       "itemIcon": "sprites/items/mint.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Underground Tunnel",
@@ -262393,6 +262766,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_STAT_BOOST_FEATHER",
       "itemIcon": "sprites/items/mint.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Underground Tunnel",
@@ -262403,6 +262777,28 @@
       "slug": "goopy-herb"
     },
     {
+      "id": 900,
+      "constant": "ITEM_BECKONING_BELL",
+      "name": "Beckoning Bell",
+      "description": "An ornate bell that renews hidden grottos once.",
+      "pocket": "POCKET_ITEMS",
+      "sortType": "ITEM_TYPE_FIELD_USE",
+      "itemIcon": "sprites/items/beckoning_bell.png",
+      "itemIcons": [],
+      "locations": [
+        {
+          "map": "Battle Frontier Battle Factory Lobby",
+          "source": "Mart"
+        },
+        {
+          "map": "Ilex Forest",
+          "source": "Gift"
+        }
+      ],
+      "location": "Battle Frontier Battle Factory Lobby (Mart); Ilex Forest (Gift)",
+      "slug": "beckoning-bell"
+    },
+    {
       "id": 901,
       "constant": "ITEM_NORMALITE",
       "name": "Normalite",
@@ -262410,6 +262806,7 @@
       "pocket": "POCKET_MEGASTONES",
       "sortType": "ITEM_TYPE_MEGA_STONE",
       "itemIcon": "sprites/items/pidgeotite.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Tohjo Falls Cavern",
@@ -262427,6 +262824,7 @@
       "pocket": "POCKET_MEGASTONES",
       "sortType": "ITEM_TYPE_MEGA_STONE",
       "itemIcon": "sprites/items/charizardite_y.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Mt Mortar Depths 1",
@@ -262444,6 +262842,7 @@
       "pocket": "POCKET_MEGASTONES",
       "sortType": "ITEM_TYPE_MEGA_STONE",
       "itemIcon": "sprites/items/blastoisinite.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Whirl Islands B1F",
@@ -262461,6 +262860,7 @@
       "pocket": "POCKET_MEGASTONES",
       "sortType": "ITEM_TYPE_MEGA_STONE",
       "itemIcon": "sprites/items/ampharosite.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Railway Cave 2F",
@@ -262478,6 +262878,7 @@
       "pocket": "POCKET_MEGASTONES",
       "sortType": "ITEM_TYPE_MEGA_STONE",
       "itemIcon": "sprites/items/venusaurite.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Deep Ilex Forest",
@@ -262495,6 +262896,7 @@
       "pocket": "POCKET_MEGASTONES",
       "sortType": "ITEM_TYPE_MEGA_STONE",
       "itemIcon": "sprites/items/glalitite.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Ice Path Depths",
@@ -262512,6 +262914,7 @@
       "pocket": "POCKET_MEGASTONES",
       "sortType": "ITEM_TYPE_MEGA_STONE",
       "itemIcon": "sprites/items/medichamite.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Dark Cave North Side",
@@ -262529,6 +262932,7 @@
       "pocket": "POCKET_MEGASTONES",
       "sortType": "ITEM_TYPE_MEGA_STONE",
       "itemIcon": "sprites/items/dragalgite.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Lost Woods",
@@ -262546,6 +262950,7 @@
       "pocket": "POCKET_MEGASTONES",
       "sortType": "ITEM_TYPE_MEGA_STONE",
       "itemIcon": "sprites/items/garchompite.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Union Cave B2F",
@@ -262563,6 +262968,7 @@
       "pocket": "POCKET_MEGASTONES",
       "sortType": "ITEM_TYPE_MEGA_STONE",
       "itemIcon": "sprites/items/staraptite.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 47",
@@ -262580,6 +262986,7 @@
       "pocket": "POCKET_MEGASTONES",
       "sortType": "ITEM_TYPE_MEGA_STONE",
       "itemIcon": "sprites/items/alakazite.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Mt Mortar 2F",
@@ -262597,6 +263004,7 @@
       "pocket": "POCKET_MEGASTONES",
       "sortType": "ITEM_TYPE_MEGA_STONE",
       "itemIcon": "sprites/items/beedrillite.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "National Park Normal",
@@ -262614,6 +263022,7 @@
       "pocket": "POCKET_MEGASTONES",
       "sortType": "ITEM_TYPE_MEGA_STONE",
       "itemIcon": "sprites/items/aerodactylite.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 46",
@@ -262631,6 +263040,7 @@
       "pocket": "POCKET_MEGASTONES",
       "sortType": "ITEM_TYPE_MEGA_STONE",
       "itemIcon": "sprites/items/gengarite.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Sprout Tower Basement",
@@ -262648,6 +263058,7 @@
       "pocket": "POCKET_MEGASTONES",
       "sortType": "ITEM_TYPE_MEGA_STONE",
       "itemIcon": "sprites/items/dragoninite.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Dragon's Den Cavern",
@@ -262665,6 +263076,7 @@
       "pocket": "POCKET_MEGASTONES",
       "sortType": "ITEM_TYPE_MEGA_STONE",
       "itemIcon": "sprites/items/houndoominite.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Rocket Hideout B3F",
@@ -262682,6 +263094,7 @@
       "pocket": "POCKET_MEGASTONES",
       "sortType": "ITEM_TYPE_MEGA_STONE",
       "itemIcon": "sprites/items/steelixite.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Victory Road B1F",
@@ -262699,6 +263112,7 @@
       "pocket": "POCKET_MEGASTONES",
       "sortType": "ITEM_TYPE_MEGA_STONE",
       "itemIcon": "sprites/items/gardevoirite.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Route 30 Mr Pokemons House",
@@ -262716,6 +263130,7 @@
       "pocket": "POCKET_MEGASTONES",
       "sortType": "ITEM_TYPE_MEGA_STONE",
       "itemIcon": "sprites/items/audinite.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Given by Elm during the story after 8th badge.",
@@ -262733,6 +263148,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_STAT_BOOST_FEATHER",
       "itemIcon": "sprites/items/mint.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Underground Tunnel",
@@ -262750,6 +263166,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_STAT_BOOST_FEATHER",
       "itemIcon": "sprites/items/mint.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Underground Tunnel",
@@ -262767,6 +263184,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_STAT_BOOST_FEATHER",
       "itemIcon": "sprites/items/mint.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Underground Tunnel",
@@ -262784,6 +263202,7 @@
       "pocket": "POCKET_ITEMS",
       "sortType": "ITEM_TYPE_STAT_BOOST_FEATHER",
       "itemIcon": "sprites/items/mint.png",
+      "itemIcons": [],
       "locations": [
         {
           "map": "Goldenrod City Underground Tunnel",
