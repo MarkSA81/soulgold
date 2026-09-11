@@ -33,10 +33,20 @@ def parse_moves() -> dict[str, NamedRecord]:
     # Parse the complete enum so generation sentinels such as MOVES_COUNT_GEN9
     # and FIRST_Z_MOVE can resolve IDs assigned through aliases.
     move_ids, _ = parse_enum_constants(MOVES_H, "")
+    hidden_ranges = (
+        (move_ids.get("FIRST_Z_MOVE"), move_ids.get("LAST_Z_MOVE")),
+        (move_ids.get("FIRST_MAX_MOVE"), move_ids.get("LAST_MAX_MOVE")),
+    )
     rows: dict[str, NamedRecord] = {}
 
     for key, entry in entries.items():
         if not key.startswith(key_prefix):
+            continue
+        move_id = move_ids.get(key, len(rows))
+        if any(
+            first is not None and last is not None and first <= move_id <= last
+            for first, last in hidden_ranges
+        ):
             continue
         name_expr = extract_field(entry, "name") or ""
         desc_expr = extract_field(entry, "description") or ""
@@ -45,7 +55,7 @@ def parse_moves() -> dict[str, NamedRecord]:
         if not description and desc_expr in shared_strings:
             description = shared_strings[desc_expr]
         rows[key] = {
-            "id": move_ids.get(key, len(rows)),
+            "id": move_id,
             "constant": key,
             "name": name,
             "description": description,

@@ -31,6 +31,19 @@ class MoveAbilityBoostTests(unittest.TestCase):
     def test_non_damaging_sound_moves_are_not_marked_as_punk_rock_boosted(self) -> None:
         self.assertEqual(self.moves["MOVE_GROWL"]["abilityBoosts"], [])
 
+    def test_z_max_and_gmax_moves_are_hidden_from_the_movedex(self) -> None:
+        self.assertIn("MOVE_DARK_AERO", self.moves)
+        for move in (
+            "MOVE_BREAKNECK_BLITZ",
+            "MOVE_LETS_SNUGGLE_FOREVER",
+            "MOVE_MAX_GUARD",
+            "MOVE_MAX_OOZE",
+            "MOVE_G_MAX_TARTNESS",
+            "MOVE_G_MAX_RAPID_FLOW",
+        ):
+            with self.subTest(move=move):
+                self.assertNotIn(move, self.moves)
+
 
 if __name__ == "__main__":
     unittest.main()
