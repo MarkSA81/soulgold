@@ -938,6 +938,7 @@ function syncFilterHistory() {
     "",
     routeUrl(state.activeTab, null, currentViewState()),
   );
+  window.dispatchEvent(new Event("docs:routechange"));
 }
 
 async function applyLocationRoute(historyState = null) {
@@ -1094,6 +1095,7 @@ function syncActiveTabUi() {
     else link.removeAttribute("aria-current");
   });
   document.querySelectorAll(".panel").forEach((panel) => panel.classList.toggle("active", panel.id === state.activeTab));
+  window.dispatchEvent(new Event("docs:routechange"));
 }
 
 function openMobileNav() {

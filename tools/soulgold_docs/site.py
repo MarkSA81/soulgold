@@ -6,6 +6,7 @@ import json
 import re
 import shutil
 
+from .c_parser import strip_c_comments
 from .models import (
     AbilityUsage,
     DocsPayload,
@@ -19,7 +20,7 @@ from .models import (
     TrainerRow,
     WildEncounterRow,
 )
-from .paths import OUT_DIR, SRC_DIR
+from .paths import OUT_DIR, SRC_DIR, VERSION_H
 
 SECTION_ROUTES = ("pokedex", "moves", "encounters", "machines", "items", "trainers", "abilities", "guides")
 
@@ -58,6 +59,20 @@ def prepare_output_tree() -> OutputPaths:
         route_dir = OUT_DIR / route
         if route_dir.exists():
             shutil.rmtree(route_dir)
+    copy_static_sources()
+    write_section_routes()
+    (OUT_DIR / ".nojekyll").write_text("", encoding="utf-8")
+    (OUT_DIR / "data").mkdir(parents=True, exist_ok=True)
+    return OutputPaths(
+        sprite_dir=OUT_DIR / "sprites" / "pokemon",
+        trainer_sprite_dir=OUT_DIR / "sprites" / "trainers",
+        item_icon_dir=OUT_DIR / "sprites" / "items",
+    )
+
+
+def copy_static_sources() -> None:
+    """Refresh the ROM version and copy static files without rebuilding game data."""
+    write_version_manifest()
     for item in SRC_DIR.rglob("*"):
         relative = item.relative_to(SRC_DIR)
         # Guide Markdown is authoring source embedded into the JSON payload.
@@ -69,14 +84,33 @@ def prepare_output_tree() -> OutputPaths:
             dest.mkdir(parents=True, exist_ok=True)
         else:
             shutil.copy2(item, dest)
+
+
+def write_version_manifest() -> None:
+    """Generate the website's latest version from the ROM's display version."""
+    header = strip_c_comments(VERSION_H.read_text(encoding="utf-8"))
+    values = re.findall(r'^[ \t]*#[ \t]*define[ \t]+DISPLAY_VERSION[ \t]+("[^"\r\n]+")[ \t]*$', header, re.MULTILINE)
+    if len(values) != 1:
+        raise ValueError(f"{VERSION_H}: expected one quoted DISPLAY_VERSION definition")
+    manifest = {"latestVersion": json.loads(values[0])}
+    (SRC_DIR / "version.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+
+
+def refresh_static_site() -> None:
+    """Refresh the UI and existing routes, preserving generated data and sprites."""
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    copy_static_sources()
     write_section_routes()
-    (OUT_DIR / ".nojekyll").write_text("", encoding="utf-8")
-    (OUT_DIR / "data").mkdir(parents=True, exist_ok=True)
-    return OutputPaths(
-        sprite_dir=OUT_DIR / "sprites" / "pokemon",
-        trainer_sprite_dir=OUT_DIR / "sprites" / "trainers",
-        item_icon_dir=OUT_DIR / "sprites" / "items",
-    )
+    # The output index already contains Pokédex preloads. Start from the source
+    # template so each detail route gets only its own data dependencies.
+    index_html = (SRC_DIR / "index.html").read_text(encoding="utf-8")
+    detail_html = index_html.replace('<base href="./">', '<base href="../../">', 1)
+    for route in SECTION_ROUTES:
+        for entry in (OUT_DIR / route).glob("*/index.html"):
+            preloads = list(DETAIL_PRELOADS.get(route, ()))
+            if route == "pokedex":
+                preloads.append(f"species-details/{entry.parent.name}.json")
+            entry.write_text(add_data_preloads(detail_html, tuple(preloads)), encoding="utf-8")
 
 
 def add_data_preloads(index_html: str, filenames: tuple[str, ...]) -> str:
