@@ -50515,9 +50515,9 @@
         "ABILITY_SNIPER"
       ],
       "innates": [
-        "ABILITY_CONSUME",
-        "ABILITY_MERCILESS",
-        "ABILITY_TOUGH_CLAWS"
+        "ABILITY_CORROSION",
+        "ABILITY_TOUGH_CLAWS",
+        "ABILITY_POISON_PUPPETEER"
       ],
       "sprite": "sprites/pokemon/ariados.png",
       "shinySprite": "sprites/pokemon/ariados_shiny.png",
@@ -69834,8 +69834,8 @@
           "name": "Whirl Islands Lugia Chamber",
           "time": "",
           "method": "Legendary encounter",
-          "minLevel": 80,
-          "maxLevel": 80,
+          "minLevel": 65,
+          "maxLevel": 65,
           "rate": null
         },
         {
@@ -69843,8 +69843,8 @@
           "name": "Whirl Islands Lugia Chamber",
           "time": "",
           "method": "Legendary encounter",
-          "minLevel": 65,
-          "maxLevel": 65,
+          "minLevel": 80,
+          "maxLevel": 80,
           "rate": null
         }
       ],
@@ -70077,8 +70077,8 @@
           "name": "Whirl Islands Lugia Chamber",
           "time": "",
           "method": "Legendary encounter",
-          "minLevel": 65,
-          "maxLevel": 65,
+          "minLevel": 80,
+          "maxLevel": 80,
           "rate": null
         },
         {
@@ -70086,8 +70086,8 @@
           "name": "Whirl Islands Lugia Chamber",
           "time": "",
           "method": "Legendary encounter",
-          "minLevel": 80,
-          "maxLevel": 80,
+          "minLevel": 65,
+          "maxLevel": 65,
           "rate": null
         }
       ],
@@ -70294,8 +70294,8 @@
           "name": "Tin Tower Roof Day",
           "time": "",
           "method": "Legendary encounter",
-          "minLevel": 65,
-          "maxLevel": 65,
+          "minLevel": 80,
+          "maxLevel": 80,
           "rate": null
         },
         {
@@ -70303,8 +70303,8 @@
           "name": "Tin Tower Roof Day",
           "time": "",
           "method": "Legendary encounter",
-          "minLevel": 80,
-          "maxLevel": 80,
+          "minLevel": 65,
+          "maxLevel": 65,
           "rate": null
         }
       ],
@@ -241722,12 +241722,6 @@
             "sprite": "sprites/pokemon/arbok.png"
           },
           {
-            "species": "SPECIES_ARIADOS",
-            "name": "Ariados",
-            "dex": 145,
-            "sprite": "sprites/pokemon/ariados.png"
-          },
-          {
             "species": "SPECIES_QWILFISH",
             "name": "Qwilfish",
             "dex": 182,
@@ -242626,6 +242620,12 @@
             "name": "Slowbro",
             "dex": 72,
             "sprite": "sprites/pokemon/slowbro_galar.png"
+          },
+          {
+            "species": "SPECIES_ARIADOS",
+            "name": "Ariados",
+            "dex": 145,
+            "sprite": "sprites/pokemon/ariados.png"
           },
           {
             "species": "SPECIES_SLOWKING_GALAR",
@@ -246919,7 +246919,14 @@
             "sprite": "sprites/pokemon/pecharunt.png"
           }
         ],
-        "innate": []
+        "innate": [
+          {
+            "species": "SPECIES_ARIADOS",
+            "name": "Ariados",
+            "dex": 145,
+            "sprite": "sprites/pokemon/ariados.png"
+          }
+        ]
       }
     },
     "ABILITY_INVERSION": {
@@ -250264,12 +250271,6 @@
             "name": "Spinarak",
             "dex": 144,
             "sprite": "sprites/pokemon/spinarak.png"
-          },
-          {
-            "species": "SPECIES_ARIADOS",
-            "name": "Ariados",
-            "dex": 145,
-            "sprite": "sprites/pokemon/ariados.png"
           },
           {
             "species": "SPECIES_MAWILE",
@@ -293909,10 +293910,7 @@
           "level": 41,
           "ability": "Snow Warning",
           "nature": "Hasty",
-          "evs": {
-            "spa": 88,
-            "spe": 88
-          },
+          "evs": {},
           "ivs": {
             "hp": 30,
             "atk": 30,
@@ -293922,7 +293920,7 @@
             "spe": 30
           },
           "moves": [
-            "Aurora Veil",
+            "Ice Beam",
             "Blizzard",
             "Dazzling Gleam",
             "Freeze-Dry"
@@ -293946,10 +293944,7 @@
           "level": 41,
           "ability": "Thick Fat",
           "nature": "Mild",
-          "evs": {
-            "atk": 108,
-            "spa": 128
-          },
+          "evs": {},
           "ivs": {
             "hp": 30,
             "atk": 30,
@@ -293983,10 +293978,7 @@
           "level": 41,
           "ability": "Ice Body",
           "nature": "",
-          "evs": {
-            "spa": 84,
-            "spe": 92
-          },
+          "evs": {},
           "ivs": {
             "hp": 30,
             "atk": 30,
@@ -294020,10 +294012,7 @@
           "level": 42,
           "ability": "Pressure",
           "nature": "",
-          "evs": {
-            "atk": 116,
-            "spe": 128
-          },
+          "evs": {},
           "ivs": {
             "hp": 30,
             "atk": 30,
@@ -294057,11 +294046,7 @@
           "level": 42,
           "ability": "Snow Cloak",
           "nature": "",
-          "evs": {
-            "hp": 100,
-            "def": 148,
-            "spa": 156
-          },
+          "evs": {},
           "ivs": {
             "hp": 30,
             "atk": 30,
@@ -294448,9 +294433,9 @@
           "constant": "SPECIES_ARIADOS",
           "displayName": "Ariados",
           "innates": [
-            "ABILITY_CONSUME",
-            "ABILITY_MERCILESS",
-            "ABILITY_TOUGH_CLAWS"
+            "ABILITY_CORROSION",
+            "ABILITY_TOUGH_CLAWS",
+            "ABILITY_POISON_PUPPETEER"
           ],
           "itemConstant": "",
           "itemName": "",
@@ -296218,10 +296203,7 @@
           "level": 44,
           "ability": "",
           "nature": "",
-          "evs": {
-            "hp": 80,
-            "def": 80
-          },
+          "evs": {},
           "ivs": {
             "hp": 12,
             "atk": 12,
@@ -296255,10 +296237,7 @@
           "level": 45,
           "ability": "",
           "nature": "",
-          "evs": {
-            "hp": 80,
-            "atk": 80
-          },
+          "evs": {},
           "ivs": {
             "hp": 12,
             "atk": 12,
@@ -296292,10 +296271,7 @@
           "level": 44,
           "ability": "",
           "nature": "",
-          "evs": {
-            "spa": 80,
-            "spe": 80
-          },
+          "evs": {},
           "ivs": {
             "hp": 12,
             "atk": 12,
@@ -296329,10 +296305,7 @@
           "level": 45,
           "ability": "",
           "nature": "",
-          "evs": {
-            "hp": 80,
-            "atk": 80
-          },
+          "evs": {},
           "ivs": {
             "hp": 12,
             "atk": 12,
@@ -296366,10 +296339,7 @@
           "level": 45,
           "ability": "",
           "nature": "",
-          "evs": {
-            "atk": 80,
-            "def": 80
-          },
+          "evs": {},
           "ivs": {
             "hp": 12,
             "atk": 12,
@@ -296417,15 +296387,12 @@
           "level": 44,
           "ability": "Snow Warning",
           "nature": "Hasty",
-          "evs": {
-            "spa": 80,
-            "spe": 80
-          },
+          "evs": {},
           "ivs": {
             "atk": 0
           },
           "moves": [
-            "Aurora Veil",
+            "Ice Beam",
             "Blizzard",
             "Dazzling Gleam",
             "Freeze-Dry"
@@ -296449,10 +296416,7 @@
           "level": 45,
           "ability": "Thick Fat",
           "nature": "Mild",
-          "evs": {
-            "atk": 80,
-            "spa": 80
-          },
+          "evs": {},
           "ivs": {},
           "moves": [
             "Blizzard",
@@ -296479,10 +296443,7 @@
           "level": 44,
           "ability": "Ice Body",
           "nature": "",
-          "evs": {
-            "spa": 80,
-            "spe": 80
-          },
+          "evs": {},
           "ivs": {
             "atk": 0
           },
@@ -296511,10 +296472,7 @@
           "level": 45,
           "ability": "Pressure",
           "nature": "",
-          "evs": {
-            "atk": 80,
-            "spe": 80
-          },
+          "evs": {},
           "ivs": {},
           "moves": [
             "Brick Break",
@@ -296541,10 +296499,7 @@
           "level": 45,
           "ability": "Snow Cloak",
           "nature": "",
-          "evs": {
-            "spa": 80,
-            "spe": 80
-          },
+          "evs": {},
           "ivs": {},
           "moves": [
             "Blizzard",
@@ -296585,10 +296540,7 @@
           "level": 44,
           "ability": "Intimidate",
           "nature": "",
-          "evs": {
-            "atk": 80,
-            "spe": 80
-          },
+          "evs": {},
           "ivs": {
             "hp": 20,
             "atk": 20,
@@ -296622,10 +296574,7 @@
           "level": 45,
           "ability": "Regenerator",
           "nature": "",
-          "evs": {
-            "atk": 80,
-            "spe": 80
-          },
+          "evs": {},
           "ivs": {
             "hp": 12,
             "atk": 12,
@@ -296659,10 +296608,7 @@
           "level": 45,
           "ability": "",
           "nature": "",
-          "evs": {
-            "hp": 80,
-            "atk": 80
-          },
+          "evs": {},
           "ivs": {
             "hp": 12,
             "atk": 12,
@@ -296696,10 +296642,7 @@
           "level": 45,
           "ability": "",
           "nature": "",
-          "evs": {
-            "hp": 80,
-            "atk": 80
-          },
+          "evs": {},
           "ivs": {
             "hp": 20,
             "atk": 20,
@@ -296733,10 +296676,7 @@
           "level": 45,
           "ability": "Defiant",
           "nature": "",
-          "evs": {
-            "atk": 80,
-            "spe": 80
-          },
+          "evs": {},
           "ivs": {
             "hp": 20,
             "atk": 20,
@@ -298354,9 +298294,9 @@
           "constant": "SPECIES_ARIADOS",
           "displayName": "Ariados",
           "innates": [
-            "ABILITY_CONSUME",
-            "ABILITY_MERCILESS",
-            "ABILITY_TOUGH_CLAWS"
+            "ABILITY_CORROSION",
+            "ABILITY_TOUGH_CLAWS",
+            "ABILITY_POISON_PUPPETEER"
           ],
           "itemConstant": "",
           "itemName": "",
@@ -299510,10 +299450,7 @@
           "level": 47,
           "ability": "",
           "nature": "",
-          "evs": {
-            "hp": 80,
-            "def": 80
-          },
+          "evs": {},
           "ivs": {
             "hp": 24,
             "atk": 24,
@@ -299547,10 +299484,7 @@
           "level": 48,
           "ability": "",
           "nature": "",
-          "evs": {
-            "hp": 80,
-            "atk": 80
-          },
+          "evs": {},
           "ivs": {
             "hp": 24,
             "atk": 24,
@@ -299584,10 +299518,7 @@
           "level": 47,
           "ability": "",
           "nature": "",
-          "evs": {
-            "spa": 80,
-            "spe": 80
-          },
+          "evs": {},
           "ivs": {
             "hp": 24,
             "atk": 24,
@@ -299621,10 +299552,7 @@
           "level": 48,
           "ability": "",
           "nature": "",
-          "evs": {
-            "hp": 80,
-            "atk": 80
-          },
+          "evs": {},
           "ivs": {
             "hp": 24,
             "atk": 24,
@@ -299658,10 +299586,7 @@
           "level": 48,
           "ability": "",
           "nature": "",
-          "evs": {
-            "atk": 80,
-            "def": 80
-          },
+          "evs": {},
           "ivs": {
             "hp": 24,
             "atk": 24,
@@ -299709,10 +299634,7 @@
           "level": 47,
           "ability": "Snow Warning",
           "nature": "",
-          "evs": {
-            "spa": 40,
-            "spe": 40
-          },
+          "evs": {},
           "ivs": {
             "hp": 20,
             "atk": 20,
@@ -299746,10 +299668,7 @@
           "level": 48,
           "ability": "Thick Fat",
           "nature": "Mild",
-          "evs": {
-            "spa": 40,
-            "spe": 40
-          },
+          "evs": {},
           "ivs": {
             "hp": 20,
             "atk": 20,
@@ -299783,10 +299702,7 @@
           "level": 47,
           "ability": "Ice Body",
           "nature": "",
-          "evs": {
-            "spa": 40,
-            "spe": 40
-          },
+          "evs": {},
           "ivs": {
             "hp": 20,
             "atk": 20,
@@ -299820,10 +299736,7 @@
           "level": 48,
           "ability": "Pressure",
           "nature": "",
-          "evs": {
-            "spa": 40,
-            "spe": 40
-          },
+          "evs": {},
           "ivs": {
             "hp": 20,
             "atk": 20,
@@ -299857,10 +299770,7 @@
           "level": 48,
           "ability": "Snow Cloak",
           "nature": "",
-          "evs": {
-            "spa": 80,
-            "spe": 80
-          },
+          "evs": {},
           "ivs": {
             "hp": 20,
             "atk": 20,
@@ -299908,10 +299818,7 @@
           "level": 47,
           "ability": "Intimidate",
           "nature": "",
-          "evs": {
-            "atk": 80,
-            "spe": 80
-          },
+          "evs": {},
           "ivs": {
             "hp": 24,
             "atk": 24,
@@ -299945,10 +299852,7 @@
           "level": 48,
           "ability": "Regenerator",
           "nature": "",
-          "evs": {
-            "atk": 80,
-            "spe": 80
-          },
+          "evs": {},
           "ivs": {
             "hp": 24,
             "atk": 24,
@@ -299982,10 +299886,7 @@
           "level": 48,
           "ability": "",
           "nature": "",
-          "evs": {
-            "hp": 80,
-            "atk": 80
-          },
+          "evs": {},
           "ivs": {
             "hp": 24,
             "atk": 24,
@@ -300019,10 +299920,7 @@
           "level": 48,
           "ability": "",
           "nature": "",
-          "evs": {
-            "hp": 80,
-            "atk": 80
-          },
+          "evs": {},
           "ivs": {
             "hp": 24,
             "atk": 24,
@@ -300056,10 +299954,7 @@
           "level": 48,
           "ability": "Defiant",
           "nature": "",
-          "evs": {
-            "atk": 80,
-            "spe": 80
-          },
+          "evs": {},
           "ivs": {
             "hp": 24,
             "atk": 24,
@@ -311936,9 +311831,9 @@
           "constant": "SPECIES_ARIADOS",
           "displayName": "Ariados",
           "innates": [
-            "ABILITY_CONSUME",
-            "ABILITY_MERCILESS",
-            "ABILITY_TOUGH_CLAWS"
+            "ABILITY_CORROSION",
+            "ABILITY_TOUGH_CLAWS",
+            "ABILITY_POISON_PUPPETEER"
           ],
           "itemConstant": "ITEM_PAYAPA_BERRY",
           "itemName": "Payapa Berry",
@@ -315068,9 +314963,9 @@
           "constant": "SPECIES_ARIADOS",
           "displayName": "Ariados",
           "innates": [
-            "ABILITY_CONSUME",
-            "ABILITY_MERCILESS",
-            "ABILITY_TOUGH_CLAWS"
+            "ABILITY_CORROSION",
+            "ABILITY_TOUGH_CLAWS",
+            "ABILITY_POISON_PUPPETEER"
           ],
           "itemConstant": "ITEM_CHOICE_SCARF",
           "itemName": "Choice Scarf",
@@ -315171,9 +315066,9 @@
           "constant": "SPECIES_ARIADOS",
           "displayName": "Ariados",
           "innates": [
-            "ABILITY_CONSUME",
-            "ABILITY_MERCILESS",
-            "ABILITY_TOUGH_CLAWS"
+            "ABILITY_CORROSION",
+            "ABILITY_TOUGH_CLAWS",
+            "ABILITY_POISON_PUPPETEER"
           ],
           "itemConstant": "ITEM_CHOICE_SCARF",
           "itemName": "Choice Scarf",
@@ -318578,10 +318473,7 @@
           "level": 75,
           "ability": "Inner Focus",
           "nature": "",
-          "evs": {
-            "atk": 252,
-            "spe": 252
-          },
+          "evs": {},
           "ivs": {
             "hp": 31,
             "atk": 31,
@@ -318615,10 +318507,7 @@
           "level": 76,
           "ability": "Hustle",
           "nature": "",
-          "evs": {
-            "atk": 252,
-            "spe": 252
-          },
+          "evs": {},
           "ivs": {
             "hp": 31,
             "atk": 31,
@@ -318652,11 +318541,7 @@
           "level": 77,
           "ability": "Defiant",
           "nature": "Careful",
-          "evs": {
-            "hp": 240,
-            "spd": 252,
-            "spe": 16
-          },
+          "evs": {},
           "ivs": {},
           "moves": [
             "Bulk Up",
@@ -318683,11 +318568,7 @@
           "level": 76,
           "ability": "Iron Fist",
           "nature": "Jolly",
-          "evs": {
-            "atk": 252,
-            "def": 4,
-            "spe": 252
-          },
+          "evs": {},
           "ivs": {},
           "moves": [
             "Double Shock",
@@ -318714,12 +318595,7 @@
           "level": 77,
           "ability": "Mold Breaker",
           "nature": "Adamant",
-          "evs": {
-            "hp": 72,
-            "atk": 252,
-            "spd": 60,
-            "spe": 124
-          },
+          "evs": {},
           "ivs": {},
           "moves": [
             "Swords Dance",
@@ -318746,11 +318622,7 @@
           "level": 76,
           "ability": "Water Absorb",
           "nature": "Careful",
-          "evs": {
-            "hp": 248,
-            "spd": 164,
-            "spe": 96
-          },
+          "evs": {},
           "ivs": {},
           "moves": [
             "Bulk Up",
@@ -318791,12 +318663,7 @@
           "level": 75,
           "ability": "Sturdy",
           "nature": "Impish",
-          "evs": {
-            "hp": 248,
-            "def": 16,
-            "spd": 180,
-            "spe": 64
-          },
+          "evs": {},
           "ivs": {
             "atk": 0
           },
@@ -318825,12 +318692,7 @@
           "level": 76,
           "ability": "Analytic",
           "nature": "Modest",
-          "evs": {
-            "hp": 116,
-            "spa": 252,
-            "spd": 56,
-            "spe": 84
-          },
+          "evs": {},
           "ivs": {
             "atk": 0
           },
@@ -318859,11 +318721,7 @@
           "level": 77,
           "ability": "Clear Body",
           "nature": "Adamant",
-          "evs": {
-            "atk": 252,
-            "spd": 4,
-            "spe": 252
-          },
+          "evs": {},
           "ivs": {},
           "moves": [
             "Heavy Slam",
@@ -318890,11 +318748,7 @@
           "level": 76,
           "ability": "Sturdy",
           "nature": "Impish",
-          "evs": {
-            "hp": 252,
-            "atk": 4,
-            "spd": 252
-          },
+          "evs": {},
           "ivs": {},
           "moves": [
             "Sandstorm",
@@ -318921,11 +318775,7 @@
           "level": 77,
           "ability": "Stamina",
           "nature": "Timid",
-          "evs": {
-            "spa": 252,
-            "spd": 4,
-            "spe": 252
-          },
+          "evs": {},
           "ivs": {
             "atk": 0
           },
@@ -318954,11 +318804,7 @@
           "level": 78,
           "ability": "Inner Focus",
           "nature": "Jolly",
-          "evs": {
-            "spa": 252,
-            "spd": 4,
-            "spe": 252
-          },
+          "evs": {},
           "ivs": {},
           "moves": [
             "Aura Sphere",
@@ -320709,14 +320555,10 @@
           "level": 77,
           "ability": "Snow Warning",
           "nature": "Timid",
-          "evs": {
-            "hp": 252,
-            "spd": 4,
-            "spe": 252
-          },
+          "evs": {},
           "ivs": {},
           "moves": [
-            "Aurora Veil",
+            "Ice Beam",
             "Freeze-Dry",
             "Moonblast",
             "Encore"
@@ -320740,11 +320582,7 @@
           "level": 78,
           "ability": "Skill Link",
           "nature": "Adamant",
-          "evs": {
-            "atk": 252,
-            "spa": 4,
-            "spe": 252
-          },
+          "evs": {},
           "ivs": {},
           "moves": [
             "Shell Smash",
@@ -320771,11 +320609,7 @@
           "level": 78,
           "ability": "Pickpocket",
           "nature": "Jolly",
-          "evs": {
-            "atk": 252,
-            "spd": 4,
-            "spe": 252
-          },
+          "evs": {},
           "ivs": {},
           "moves": [
             "Swords Dance",
@@ -320802,11 +320636,7 @@
           "level": 78,
           "ability": "Gorilla Tactics",
           "nature": "Jolly",
-          "evs": {
-            "atk": 252,
-            "spd": 4,
-            "spe": 252
-          },
+          "evs": {},
           "ivs": {},
           "moves": [
             "U-turn",
@@ -320829,11 +320659,7 @@
           "level": 79,
           "ability": "Thermal Exchange",
           "nature": "Adamant",
-          "evs": {
-            "atk": 252,
-            "spd": 4,
-            "spe": 252
-          },
+          "evs": {},
           "ivs": {},
           "moves": [
             "Icicle Spear",
@@ -320860,11 +320686,7 @@
           "level": 80,
           "ability": "Water Absorb",
           "nature": "Modest",
-          "evs": {
-            "def": 196,
-            "spa": 252,
-            "spe": 60
-          },
+          "evs": {},
           "ivs": {
             "atk": 0
           },
