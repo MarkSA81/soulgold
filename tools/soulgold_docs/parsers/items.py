@@ -52,6 +52,17 @@ IMPORTANT_ITEM_LOCATION_OVERRIDES: dict[str, list[ItemLocation]] = {
     "ITEM_OVAL_CHARM": [
         {"map": "Obtained after finishing rival's postgame legendary story", "source": ""},
     ],
+    "ITEM_SQUIRTBOTTLE": [
+        {"map": "Goldenrod Flower Shop", "source": "After beating Whitney"},
+    ],
+    "ITEM_SHIN_GENOME": [
+        {"map": "Route 40", "source": "15-trophy achievement reward"},
+        {"map": "Rocket Arcade", "source": "Postgame"},
+        {"map": "Battle Cafe", "source": "Postgame"},
+    ],
+    "ITEM_GS_BALL": [
+        {"map": "Ruins of Alph Secret Room", "source": "After completing all 8 puzzles"},
+    ],
 }
 
 

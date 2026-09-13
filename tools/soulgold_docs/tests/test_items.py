@@ -35,6 +35,12 @@ class ImportantItemExceptionTests(unittest.TestCase):
                 "ITEM_QUICK_BALL",
                 "ITEM_EXP_SHARE",
                 "ITEM_OVAL_CHARM",
+                "ITEM_SQUIRTBOTTLE",
+                "ITEM_SHIN_GENOME",
+                "ITEM_ZEROMIN",
+                "ITEM_BLACK_MIRROR",
+                "ITEM_REVERSE_CANDY",
+                "ITEM_GS_BALL",
                 *EV_FEATHER_ITEMS,
             }.issubset(ADDITIONAL_IMPORTANT_ITEMS)
         )
@@ -60,6 +66,24 @@ class ImportantItemExceptionTests(unittest.TestCase):
                     {"map": "Fishing", "source": "Any rod"},
                     locations[item],
                 )
+
+    def test_special_key_items_use_player_facing_source_overrides(self):
+        self.assertEqual(
+            IMPORTANT_ITEM_LOCATION_OVERRIDES["ITEM_SQUIRTBOTTLE"],
+            [{"map": "Goldenrod Flower Shop", "source": "After beating Whitney"}],
+        )
+        self.assertEqual(
+            IMPORTANT_ITEM_LOCATION_OVERRIDES["ITEM_SHIN_GENOME"],
+            [
+                {"map": "Route 40", "source": "15-trophy achievement reward"},
+                {"map": "Rocket Arcade", "source": "Postgame"},
+                {"map": "Battle Cafe", "source": "Postgame"},
+            ],
+        )
+        self.assertEqual(
+            IMPORTANT_ITEM_LOCATION_OVERRIDES["ITEM_GS_BALL"],
+            [{"map": "Ruins of Alph Secret Room", "source": "After completing all 8 puzzles"}],
+        )
 
     def test_mahogany_shop_mentions_its_story_requirement(self):
         self.assertEqual(

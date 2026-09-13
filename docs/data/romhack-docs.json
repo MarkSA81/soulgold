@@ -70077,8 +70077,8 @@
           "name": "Whirl Islands Lugia Chamber",
           "time": "",
           "method": "Legendary encounter",
-          "minLevel": 65,
-          "maxLevel": 65,
+          "minLevel": 80,
+          "maxLevel": 80,
           "rate": null
         },
         {
@@ -70086,8 +70086,8 @@
           "name": "Whirl Islands Lugia Chamber",
           "time": "",
           "method": "Legendary encounter",
-          "minLevel": 80,
-          "maxLevel": 80,
+          "minLevel": 65,
+          "maxLevel": 65,
           "rate": null
         }
       ],
@@ -70294,8 +70294,8 @@
           "name": "Tin Tower Roof Day",
           "time": "",
           "method": "Legendary encounter",
-          "minLevel": 80,
-          "maxLevel": 80,
+          "minLevel": 65,
+          "maxLevel": 65,
           "rate": null
         },
         {
@@ -70303,8 +70303,8 @@
           "name": "Tin Tower Roof Day",
           "time": "",
           "method": "Legendary encounter",
-          "minLevel": 65,
-          "maxLevel": 65,
+          "minLevel": 80,
+          "maxLevel": 80,
           "rate": null
         }
       ],
@@ -260943,6 +260943,24 @@
       "slug": "coin-case"
     },
     {
+      "id": 722,
+      "constant": "ITEM_SQUIRTBOTTLE",
+      "name": "Squirtbottle",
+      "description": "A tool used for watering Berries and plants.",
+      "pocket": "POCKET_KEY_ITEMS",
+      "sortType": "",
+      "itemIcon": "sprites/items/wailmer_pail.png",
+      "itemIcons": [],
+      "locations": [
+        {
+          "map": "Goldenrod Flower Shop",
+          "source": "After beating Whitney"
+        }
+      ],
+      "location": "Goldenrod Flower Shop (After beating Whitney)",
+      "slug": "squirtbottle"
+    },
+    {
       "id": 760,
       "constant": "ITEM_ABILITY_SHIELD",
       "name": "Ability Shield",
@@ -262078,6 +262096,104 @@
       ],
       "location": "Given by Elm during the story after 8th badge.",
       "slug": "bondstone"
+    },
+    {
+      "id": 920,
+      "constant": "ITEM_SHIN_GENOME",
+      "name": "Shiny Genome",
+      "description": "A genome capable of turning Pokemon shiny.",
+      "pocket": "POCKET_ITEMS",
+      "sortType": "ITEM_TYPE_FIELD_USE",
+      "itemIcon": "sprites/items/ability_patch.png",
+      "itemIcons": [],
+      "locations": [
+        {
+          "map": "Route 40",
+          "source": "15-trophy achievement reward"
+        },
+        {
+          "map": "Rocket Arcade",
+          "source": "Postgame"
+        },
+        {
+          "map": "Battle Cafe",
+          "source": "Postgame"
+        }
+      ],
+      "location": "Route 40 (15-trophy achievement reward); Rocket Arcade (Postgame); Battle Cafe (Postgame)",
+      "slug": "shin-genome"
+    },
+    {
+      "id": 921,
+      "constant": "ITEM_BLACK_MIRROR",
+      "name": "Black Mirror",
+      "description": "An eerie mirror that does not show your own reflection.",
+      "pocket": "POCKET_KEY_ITEMS",
+      "sortType": "",
+      "itemIcon": "sprites/items/black_mirror.png",
+      "itemIcons": [],
+      "locations": [
+        {
+          "map": "Kitakami Mountain 4F",
+          "source": "Item ball"
+        }
+      ],
+      "location": "Kitakami Mountain 4F (Item ball)",
+      "slug": "black-mirror"
+    },
+    {
+      "id": 922,
+      "constant": "ITEM_GS_BALL",
+      "name": "GS Ball",
+      "description": "A strange ball with ornaments.",
+      "pocket": "POCKET_KEY_ITEMS",
+      "sortType": "",
+      "itemIcon": "sprites/items/gs_ball.png",
+      "itemIcons": [],
+      "locations": [
+        {
+          "map": "Ruins of Alph Secret Room",
+          "source": "After completing all 8 puzzles"
+        }
+      ],
+      "location": "Ruins of Alph Secret Room (After completing all 8 puzzles)",
+      "slug": "gs-ball"
+    },
+    {
+      "id": 924,
+      "constant": "ITEM_REVERSE_CANDY",
+      "name": "Reverse Candy",
+      "description": "Lowers the level of a Pokemon by one.",
+      "pocket": "POCKET_ITEMS",
+      "sortType": "ITEM_TYPE_LEVEL_UP_ITEM",
+      "itemIcon": "sprites/items/reverse_candy.png",
+      "itemIcons": [],
+      "locations": [
+        {
+          "map": "Goldenrod City Department Store 3F",
+          "source": "Mart"
+        }
+      ],
+      "location": "Goldenrod City Department Store 3F (Mart)",
+      "slug": "reverse-candy"
+    },
+    {
+      "id": 925,
+      "constant": "ITEM_ZEROMIN",
+      "name": "Zeromin",
+      "description": "Resets all effort values of one Pokemon to zero.",
+      "pocket": "POCKET_MEDICINE",
+      "sortType": "ITEM_TYPE_STAT_BOOST_DRINK",
+      "itemIcon": "sprites/items/vitamin.png",
+      "itemIcons": [],
+      "locations": [
+        {
+          "map": "Goldenrod City Department Store 3F",
+          "source": "Mart"
+        }
+      ],
+      "location": "Goldenrod City Department Store 3F (Mart)",
+      "slug": "zeromin"
     },
     {
       "id": 926,
