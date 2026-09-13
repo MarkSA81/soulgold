@@ -1,10 +1,11 @@
 import unittest
 from collections import defaultdict
 
-from tools.soulgold_docs.constants import ADDITIONAL_IMPORTANT_ITEMS, TYPE_RESIST_BERRY_ITEMS
+from tools.soulgold_docs.constants import ADDITIONAL_IMPORTANT_ITEMS, EV_FEATHER_ITEMS, TYPE_RESIST_BERRY_ITEMS
 from tools.soulgold_docs.parsers.items import (
     IMPORTANT_ITEM_LOCATION_OVERRIDES,
     add_bug_contest_reward_locations,
+    add_fishing_feather_locations,
     format_item_location,
 )
 
@@ -32,8 +33,33 @@ class ImportantItemExceptionTests(unittest.TestCase):
                 "ITEM_TIMER_BALL",
                 "ITEM_DUSK_BALL",
                 "ITEM_QUICK_BALL",
+                "ITEM_EXP_SHARE",
+                "ITEM_OVAL_CHARM",
+                *EV_FEATHER_ITEMS,
             }.issubset(ADDITIONAL_IMPORTANT_ITEMS)
         )
+
+    def test_exp_share_and_oval_charm_use_story_source_overrides(self):
+        self.assertEqual(
+            IMPORTANT_ITEM_LOCATION_OVERRIDES["ITEM_EXP_SHARE"],
+            [{"map": "Obtained from Rival before arriving in Violet City", "source": ""}],
+        )
+        self.assertEqual(
+            IMPORTANT_ITEM_LOCATION_OVERRIDES["ITEM_OVAL_CHARM"],
+            [{"map": "Obtained after finishing rival's postgame legendary story", "source": ""}],
+        )
+
+    def test_ev_feathers_include_fishing_as_a_source(self):
+        locations = defaultdict(list)
+
+        add_fishing_feather_locations(locations, set(EV_FEATHER_ITEMS))
+
+        for item in EV_FEATHER_ITEMS:
+            with self.subTest(item=item):
+                self.assertIn(
+                    {"map": "Fishing", "source": "Any rod"},
+                    locations[item],
+                )
 
     def test_mahogany_shop_mentions_its_story_requirement(self):
         self.assertEqual(

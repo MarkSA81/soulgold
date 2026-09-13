@@ -202,6 +202,15 @@ IMPORTANT_ITEM_POCKETS = {
     "POCKET_BATTLE_ITEMS",
 }
 
+EV_FEATHER_ITEMS = (
+    "ITEM_HEALTH_FEATHER",
+    "ITEM_MUSCLE_FEATHER",
+    "ITEM_RESIST_FEATHER",
+    "ITEM_GENIUS_FEATHER",
+    "ITEM_CLEVER_FEATHER",
+    "ITEM_SWIFT_FEATHER",
+)
+
 # Useful training consumables and player-facing key items live outside the
 # pockets and sort types used by the evolution-item index, so opt them into the
 # Items page explicitly.
@@ -239,6 +248,9 @@ ADDITIONAL_IMPORTANT_ITEMS = {
     "ITEM_TIMER_BALL",
     "ITEM_DUSK_BALL",
     "ITEM_QUICK_BALL",
+    "ITEM_EXP_SHARE",
+    "ITEM_OVAL_CHARM",
+    *EV_FEATHER_ITEMS,
 }
 
 # Held berries that weaken a super-effective attack of the matching type.

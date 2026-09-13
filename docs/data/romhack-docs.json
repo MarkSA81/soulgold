@@ -70077,8 +70077,8 @@
           "name": "Whirl Islands Lugia Chamber",
           "time": "",
           "method": "Legendary encounter",
-          "minLevel": 80,
-          "maxLevel": 80,
+          "minLevel": 65,
+          "maxLevel": 65,
           "rate": null
         },
         {
@@ -70086,8 +70086,8 @@
           "name": "Whirl Islands Lugia Chamber",
           "time": "",
           "method": "Legendary encounter",
-          "minLevel": 65,
-          "maxLevel": 65,
+          "minLevel": 80,
+          "maxLevel": 80,
           "rate": null
         }
       ],
@@ -256959,6 +256959,142 @@
       "slug": "carbos"
     },
     {
+      "id": 73,
+      "constant": "ITEM_HEALTH_FEATHER",
+      "name": "Health Feather",
+      "description": "An item that raises the Innate HP value of a Pokemon.",
+      "pocket": "POCKET_MEDICINE",
+      "sortType": "ITEM_TYPE_STAT_BOOST_FEATHER",
+      "itemIcon": "sprites/items/ev_feather.png",
+      "itemIcons": [],
+      "locations": [
+        {
+          "map": "Battle Frontier Battle Factory Lobby",
+          "source": "Mart"
+        },
+        {
+          "map": "Fishing",
+          "source": "Any rod"
+        }
+      ],
+      "location": "Battle Frontier Battle Factory Lobby (Mart); Fishing (Any rod)",
+      "slug": "health-feather"
+    },
+    {
+      "id": 74,
+      "constant": "ITEM_MUSCLE_FEATHER",
+      "name": "Muscle Feather",
+      "description": "An item that raises the Innate Attack value of a Pokemon.",
+      "pocket": "POCKET_MEDICINE",
+      "sortType": "ITEM_TYPE_STAT_BOOST_FEATHER",
+      "itemIcon": "sprites/items/ev_feather.png",
+      "itemIcons": [],
+      "locations": [
+        {
+          "map": "Union Cave 1F",
+          "source": "Item ball"
+        },
+        {
+          "map": "Battle Frontier Battle Factory Lobby",
+          "source": "Mart"
+        },
+        {
+          "map": "Fishing",
+          "source": "Any rod"
+        }
+      ],
+      "location": "Union Cave 1F (Item ball); Battle Frontier Battle Factory Lobby (Mart); Fishing (Any rod)",
+      "slug": "muscle-feather"
+    },
+    {
+      "id": 75,
+      "constant": "ITEM_RESIST_FEATHER",
+      "name": "Resist Feather",
+      "description": "An item that raises the Innate Defense value of a Pokemon.",
+      "pocket": "POCKET_MEDICINE",
+      "sortType": "ITEM_TYPE_STAT_BOOST_FEATHER",
+      "itemIcon": "sprites/items/ev_feather.png",
+      "itemIcons": [],
+      "locations": [
+        {
+          "map": "Battle Frontier Battle Factory Lobby",
+          "source": "Mart"
+        },
+        {
+          "map": "Fishing",
+          "source": "Any rod"
+        }
+      ],
+      "location": "Battle Frontier Battle Factory Lobby (Mart); Fishing (Any rod)",
+      "slug": "resist-feather"
+    },
+    {
+      "id": 76,
+      "constant": "ITEM_GENIUS_FEATHER",
+      "name": "Genius Feather",
+      "description": "An item that raises the Innate Sp. Atk value of a Pokemon.",
+      "pocket": "POCKET_MEDICINE",
+      "sortType": "ITEM_TYPE_STAT_BOOST_FEATHER",
+      "itemIcon": "sprites/items/ev_feather.png",
+      "itemIcons": [],
+      "locations": [
+        {
+          "map": "Battle Frontier Battle Factory Lobby",
+          "source": "Mart"
+        },
+        {
+          "map": "Fishing",
+          "source": "Any rod"
+        }
+      ],
+      "location": "Battle Frontier Battle Factory Lobby (Mart); Fishing (Any rod)",
+      "slug": "genius-feather"
+    },
+    {
+      "id": 77,
+      "constant": "ITEM_CLEVER_FEATHER",
+      "name": "Clever Feather",
+      "description": "An item that raises the Innate Sp. Def value of a Pokemon.",
+      "pocket": "POCKET_MEDICINE",
+      "sortType": "ITEM_TYPE_STAT_BOOST_FEATHER",
+      "itemIcon": "sprites/items/ev_feather.png",
+      "itemIcons": [],
+      "locations": [
+        {
+          "map": "Battle Frontier Battle Factory Lobby",
+          "source": "Mart"
+        },
+        {
+          "map": "Fishing",
+          "source": "Any rod"
+        }
+      ],
+      "location": "Battle Frontier Battle Factory Lobby (Mart); Fishing (Any rod)",
+      "slug": "clever-feather"
+    },
+    {
+      "id": 78,
+      "constant": "ITEM_SWIFT_FEATHER",
+      "name": "Swift Feather",
+      "description": "An item that raises the Innate Speed value of a Pokemon.",
+      "pocket": "POCKET_MEDICINE",
+      "sortType": "ITEM_TYPE_STAT_BOOST_FEATHER",
+      "itemIcon": "sprites/items/ev_feather.png",
+      "itemIcons": [],
+      "locations": [
+        {
+          "map": "Battle Frontier Battle Factory Lobby",
+          "source": "Mart"
+        },
+        {
+          "map": "Fishing",
+          "source": "Any rod"
+        }
+      ],
+      "location": "Battle Frontier Battle Factory Lobby (Mart); Fishing (Any rod)",
+      "slug": "swift-feather"
+    },
+    {
       "id": 79,
       "constant": "ITEM_ABILITY_CAPSULE",
       "name": "Ability Capsule",
@@ -259363,6 +259499,24 @@
       "slug": "white-herb"
     },
     {
+      "id": 461,
+      "constant": "ITEM_EXP_SHARE",
+      "name": "Exp. Share",
+      "description": "This device gives exp. to other party members.",
+      "pocket": "POCKET_KEY_ITEMS",
+      "sortType": "ITEM_TYPE_HELD_ITEM",
+      "itemIcon": "sprites/items/exp_share.png",
+      "itemIcons": [],
+      "locations": [
+        {
+          "map": "Obtained from Rival before arriving in Violet City",
+          "source": ""
+        }
+      ],
+      "location": "Obtained from Rival before arriving in Violet City",
+      "slug": "exp-share"
+    },
+    {
       "id": 462,
       "constant": "ITEM_QUICK_CLAW",
       "name": "Quick Claw",
@@ -260643,6 +260797,24 @@
       ],
       "location": "Goldenrod Flower Shop (After Jasmine's Badge)",
       "slug": "type-resist-berries"
+    },
+    {
+      "id": 692,
+      "constant": "ITEM_OVAL_CHARM",
+      "name": "Oval Charm",
+      "description": "Raises the chance of finding eggs at the daycare.",
+      "pocket": "POCKET_KEY_ITEMS",
+      "sortType": "",
+      "itemIcon": "sprites/items/oval_charm.png",
+      "itemIcons": [],
+      "locations": [
+        {
+          "map": "Obtained after finishing rival's postgame legendary story",
+          "source": ""
+        }
+      ],
+      "location": "Obtained after finishing rival's postgame legendary story",
+      "slug": "oval-charm"
     },
     {
       "id": 697,
