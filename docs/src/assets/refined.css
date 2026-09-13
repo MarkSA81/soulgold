@@ -1448,6 +1448,10 @@ dialog::backdrop {
   overflow-y: auto;
 }
 
+.acquisition-method-row {
+  background: var(--surface-soft);
+}
+
 .location-row {
   display: grid;
   grid-template-columns: minmax(140px, 1fr) minmax(110px, 150px) 80px 50px;

@@ -55,6 +55,20 @@ class SpeciesLocation(TypedDict):
     rate: int | None
 
 
+class AcquisitionStep(TypedDict):
+    kind: str
+    source: str
+    target: str
+    requirement: str
+    evolution: EvolutionRow | None
+
+
+class AcquisitionPath(TypedDict):
+    source: str
+    locations: list[SpeciesLocation]
+    steps: list[AcquisitionStep]
+
+
 class MoveAbilityBoost(TypedDict):
     ability: str
     percent: int
@@ -261,6 +275,7 @@ class SpeciesPayloadRow(TypedDict):
     eggMoves: list[str]
     evolutions: list[EvolutionRow]
     locations: list[SpeciesLocation]
+    acquisitionPaths: list[AcquisitionPath]
     heldItems: list[HeldItemRow]
     slug: str
 
@@ -295,6 +310,7 @@ class SpeciesRow:
     egg_moves: list[str] = field(default_factory=list)
     evolutions: list[EvolutionRow] = field(default_factory=list)
     locations: list[SpeciesLocation] = field(default_factory=list)
+    acquisition_paths: list[AcquisitionPath] = field(default_factory=list)
     held_items: list[HeldItemRow] = field(default_factory=list)
 
 

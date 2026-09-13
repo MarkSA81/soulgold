@@ -236,6 +236,7 @@ def build_docs_payload(
                 "eggMoves": row.egg_moves,
                 "evolutions": row.evolutions,
                 "locations": row.locations,
+                "acquisitionPaths": row.acquisition_paths,
                 "heldItems": row.held_items,
                 "slug": route_slug(row.constant, "SPECIES_"),
             }

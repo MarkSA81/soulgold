@@ -2199,15 +2199,17 @@ function megaFormLinks(mon) {
 }
 
 function locationRows(locations) {
-  if (!locations?.length) return `<p class="muted">No encounter, gift, trade, or Hidden Grotto location found.</p>`;
+  if (!locations?.length) return "";
   const showOdds = locations.some((location) => location.rate != null);
   return `<div class="location-list${showOdds ? "" : " without-odds"}">
     <div class="location-row location-head"><span>Area</span><span>Method</span><span>Level</span>${showOdds ? "<span>Odds</span>" : ""}</div>
     ${locations.map((location) => `
-      <div class="location-row">
+      <div class="location-row${location.rowClass ? ` ${location.rowClass}` : ""}">
         <strong>${location.name}</strong>
         <span>${location.time ? `${location.time} / ` : ""}${location.method}</span>
-        <span>${location.minLevel == null && location.maxLevel == null
+        <span>${location.levelLabel != null
+          ? location.levelLabel
+          : location.minLevel == null && location.maxLevel == null
           ? "—"
           : location.minLevel === location.maxLevel
             ? `Lv ${location.minLevel}`
@@ -2216,6 +2218,50 @@ function locationRows(locations) {
       </div>
     `).join("")}
   </div>`;
+}
+
+function acquisitionSpeciesName(constant) {
+  const mon = state.data.species.find((entry) => entry.constant === constant);
+  return mon ? speciesFormLabel(mon) : constant.replace("SPECIES_", "").replaceAll("_", " ");
+}
+
+function acquisitionSpeciesLink(constant) {
+  return `<button class="encounter-species species-link" type="button" data-species="${escapeHtml(constant)}">${escapeHtml(acquisitionSpeciesName(constant))}</button>`;
+}
+
+function acquisitionStepLabel(step) {
+  const requirement = step.requirement ? ` (${escapeHtml(step.requirement)})` : "";
+  if (step.kind === "breed") return `Breed ${acquisitionSpeciesLink(step.source)}${requirement}`;
+  return `Evolve ${acquisitionSpeciesLink(step.source)}`;
+}
+
+function acquisitionLevelLabel(step) {
+  if (step.kind === "breed") return "Lv 1";
+  const level = step.evolution?.label?.match(/^Level (\d+)$/i)?.[1];
+  return level ? `Lv ${level}` : "—";
+}
+
+function acquisitionRows(mon) {
+  if (mon.locations?.length) return locationRows(mon.locations);
+  if (!mon.acquisitionPaths?.length) {
+    return `<p class="muted">No known acquisition method found in the current documentation.</p>`;
+  }
+  const seen = new Set();
+  const rows = mon.acquisitionPaths.flatMap((path) => {
+    const step = path.steps.at(-1);
+    if (!step) return [];
+    const key = `${step.kind}:${step.source}:${step.requirement || ""}`;
+    if (seen.has(key)) return [];
+    seen.add(key);
+    return [{
+      name: acquisitionStepLabel(step),
+      method: step.kind === "breed" ? "Breeding" : "Evolution",
+      levelLabel: acquisitionLevelLabel(step),
+      rate: null,
+      rowClass: "acquisition-method-row",
+    }];
+  });
+  return locationRows(rows);
 }
 
 function heldItemRows(heldItems) {
@@ -2279,7 +2325,7 @@ function renderSpeciesDetail(mon) {
       ${accordionSection("Base Stats", statBars(mon), { mobileOpen: true })}
     </div>
     ${accordionSection("Evolution", `<div class="evolution-chain">${evolutionChain(mon)}${megaFormLinks(mon)}</div>`)}
-    ${accordionSection("Locations", locationRows(mon.locations), { className: "species-locations" })}
+    ${accordionSection("How to obtain", acquisitionRows(mon), { className: "species-locations" })}
     ${learnsetSection("Level-Up Learnset", mon.levelUp)}
     ${learnsetSection("TM Moves", mon.tmhm, { showLevel: false })}
     ${learnsetSection("Tutor Moves", mon.tutors, { showLevel: false, moveNotes: state.data.dedicatedTutors })}
